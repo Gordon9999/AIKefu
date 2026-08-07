@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightView 附录 01 · AI 客服之 Decagon</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+        .report-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .report-header h1 { font-size: 1.6rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem; }
+        .report-header .subtitle { font-size: 0.95rem; color: #64748b; }
+        .report-header .meta { font-size: 0.8rem; color: #94a3b8; margin-top: 0.5rem; }
+        .section-title {
+            font-size: 1.15rem; font-weight: 700; color: #0f172a;
+            margin-top: 2rem; margin-bottom: 0.5rem; padding-bottom: 0.4rem;
+            border-bottom: 1px solid #e2e8f0; display: flex; align-items: center; gap: 0.4rem;
+        }
+        .section-title .emoji { font-size: 1.1rem; }
+        .tweet { padding: 1.2rem 0 1.2rem 0.8rem; border-bottom: 1px solid #eef2f6; }
+        .tweet:last-of-type { border-bottom: none; }
+        .tweet .tweet-label { font-weight: 600; font-size: 0.9rem; color: #2563eb; margin-bottom: 0.2rem; }
+        .tweet .tweet-body { font-size: 1rem; color: #1e293b; line-height: 1.8; }
+        .tweet .tweet-body p { margin-bottom: 0.3rem; }
+        .tweet .tweet-body p:last-child { margin-bottom: 0; }
+        .highlight { color: #16a34a; font-weight: 500; }
+        .footer {
+            text-align: center; margin-top: 3rem; padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8;
+        }
+        @media (max-width: 640px) {
+            .container { padding: 1.5rem 1rem 3rem; }
+            .report-header h1 { font-size: 1.3rem; }
+            .section-title { font-size: 1.05rem; }
+            .tweet .tweet-body { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="report-header">
+        <h1>附录 01 · Decagon 90% 开源模型路线</h1>
+        <div class="subtitle">How Decagon Runs 90% of Its Agents on Open-Source Models（a16z 访谈）</div>
+        <div class="meta">InsightView · AI 客服之 Decagon · 2026-08-05</div>
+    </div>
+
+    <!-- 📌 核心观点 -->
+    <div class="section-title"><span class="emoji">📌</span> 核心观点</div>
+    <div class="tweet">
+        <div class="tweet-label">推 1 · 核心观点</div>
+        <div class="tweet-body">
+            <p>这篇访谈在讲一个更完整的逻辑：AI 应用公司要从调用大模型，走向<span class="highlight">自己掌握模型、评测、业务流程和交付系统</span>。</p>
+            <p>「90% 工作流跑在开源模型上」只是这个结果的一个表现——真正的驱动力是语音 Agent 的延迟与「更小但更专」的模型策略。</p>
+        </div>
+    </div>
+
+    <!-- 👤 访谈人背景 -->
+    <div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+    <div class="tweet">
+        <div class="tweet-label">推 2 · 录制信息</div>
+        <div class="tweet-body">
+            <p><span class="highlight">录制时间</span>：未提供（访谈于 2026 年上半年录制，正值开源 vs 闭源模型论战白热化）。</p>
+            <p><span class="highlight">访谈人</span>：a16z 合伙人；访谈嘉宾：Jesse Zhang 与 Ashwin Sreenivas；时长约 80 分钟。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 3 · 嘉宾身份</div>
+        <div class="tweet-body">
+            <p><span class="highlight">Jesse Zhang</span>，Decagon 联合创始人兼 CEO，主要谈模型策略、销售与公司发展；Ashwin Sreenivas 曾任 Palantir 部署策略师，主要谈产品与企业落地。</p>
+            <p>两人把一家企业级 AI 客服公司带到与 Sierra 双雄并立的位置，对模型选型有与主流叙事相反的实践。</p>
+        </div>
+    </div>
+
+    <!-- 💬 行业 -->
+    <div class="section-title"><span class="emoji">💬</span> 行业</div>
+    <div class="tweet">
+        <div class="tweet-label">推 4 · 开源 vs 闭源的叙事之争</div>
+        <div class="tweet-body">
+            <p>2026 年上半年的主流叙事是「Anthropic、OpenAI 是最后的创业公司」，应用层只是包着 FTE 的薄 UI。</p>
+            <p>Jesse 一篇谈「开源 vs 闭源、如何掌握自己的命运」的文章正中时代情绪，紧随其后的是 Thinking Machines、Kim K3 等开源模型发布。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 5 · 模型评估的三维框架</div>
+        <div class="tweet-body">
+            <p>任何模型都可以沿 <span class="highlight">成本、智能、延迟</span> 三个维度评估，根据需求取极限或做权衡。</p>
+            <p>Decagon 的经验是：用例固化后，开源模型严格更优——延迟与成本优势兼得，性能也不输。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 6 · 企业采用开源会慢但必然</div>
+        <div class="tweet-body">
+            <p>企业迁移有惯性：要搞定数据、评测、<span class="highlight">模型风险治理</span>与安全流程，一次只能推进有限的用例。</p>
+            <p>当前开源推理的份额占比其实在下降——新用例都用前沿模型，跑通后才迁回开源。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 7 · 应用层与 Labs 在互相渗透</div>
+        <div class="tweet-body">
+            <p>Labs 在往上做应用，因为这是企业看到 ROI 的方式；应用公司在往下做模型，因为要挤出性能、延迟与成本。</p>
+            <p>两边靠拢是长期趋势，但「Labs 是最后创业公司」的论调 Decagon 并不买账——软件本身不会消失。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 8 · 客服是第一个端到端 AI 用例</div>
+        <div class="tweet-body">
+            <p>与编码从结对编程起步不同，客服是第一个「整个岗位都被 AI 做完」的用例，也因此最早触发 AI 与就业的讨论。</p>
+            <p>CRM 不会消失：AI 管家需要地方存储工作、拉取信息、进行推理，未来 CRM 可能变成 Agent 直接调用的接口。</p>
+        </div>
+    </div>
+
+    <!-- 📦 公司 -->
+    <div class="section-title"><span class="emoji">📦</span> 公司</div>
+    <div class="tweet">
+        <div class="tweet-label">推 9 · 定位：执行业务流程的 Agent</div>
+        <div class="tweet-body">
+            <p>Decagon 做的不是「擅长客服的 Agent」，而是「<span class="highlight">擅长执行业务流程的 Agent</span>」。</p>
+            <p>客服只是最早成熟的业务流程，之后延伸到销售、运营与主动服务——这是从公司成立起就刻意为之的设计。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 10 · 愿景：AI Agent 成为企业前门</div>
+        <div class="tweet-body">
+            <p>AI 管家（concierge）的长期目标，是把每家企业的对客入口统一到一个 Agent 上，所有交互由 AI 处理。</p>
+            <p>模型能力一到，客服客户自然开始要求入站销售、运营工作流与主动触达。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 11 · 护城河：企业部署基础设施</div>
+        <div class="tweet-body">
+            <p>短期护城河是让模型在企业内部可用所需的一整套软件：权限控制、跨团队协作、监管测试、对话洞察提取。</p>
+            <p>创始人坦承，一旦 Agent 能现场自主搭建这些基础设施，护城河就会被商品化——三年后会怎样，现在不知道。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 12 · 竞争：玻璃盒 vs 黑盒</div>
+        <div class="tweet-body">
+            <p>客户在 Sierra 一年只建了 <span class="highlight">3 条新旅程</span>，转投 Decagon 后一个月内建了 <span class="highlight">7 条</span>。</p>
+            <p>Decagon 强调「玻璃盒」而非「黑盒」——客户自己可控、可快速迭代，而不是被 FDE 绑定、事事要过前线工程师。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 13 · 商业模式：创始人 80% 时间在销售</div>
+        <div class="tweet-body">
+            <p>Jesse 自述把约 <span class="highlight">80% 的时间花在销售</span>上——在大企业销售里，创始人负责推进节奏、切分项目与设计交易结构。</p>
+            <p>销售周期快得反常，部分客户甚至冷邮件主动找上门；早期销售团队聚集了非传统背景与常春藤运动员。</p>
+        </div>
+    </div>
+
+    <!-- 🧩 产品 -->
+    <div class="section-title"><span class="emoji">🧩</span> 产品</div>
+    <div class="tweet">
+        <div class="tweet-label">推 14 · 演化路径：从核心 Agent 到模型工厂</div>
+        <div class="tweet-body">
+            <p>核心客服 Agent 打磨了 1-2 年，随后语音 Agent 上线，延迟压力推动 <span class="highlight">90% 工作流迁到开源微调模型</span>。</p>
+            <p>AOPs 产品化后，演进到 Duet 与 Duet Autopilot，Decagon Labs 像一座「模型工厂」压缩模型迭代周期。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 15 · 技术栈：90% 开源 + 10% 前沿</div>
+        <div class="tweet-body">
+            <p>90% 工作流运行在微调的开源小模型上，主要为语音 Agent 优化延迟；剩余 10% 用前沿模型处理新项目与开放式探索。</p>
+            <p>微调的小模型在特定任务上能同时做到更准、更快、更便宜——三项兼得，而非牺牲智能换成本。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 16 · 关键组件：AOPs</div>
+        <div class="tweet-body">
+            <p><span class="highlight">AOPs</span>（Agent Operating Procedures）用纯文本而非代码编写业务流程，是业务逻辑与模型解耦的关键。</p>
+            <p>这是把 FDE 的重复劳动产品化的产物——先由人写流程、测试、读对话，再把重复工作交给产品或 Agent。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 17 · Duet：构建 Agent 的 Agent</div>
+        <div class="tweet-body">
+            <p>过去写 AOPs、写工具集成、写测试模拟、人工读对话都要人来做；<span class="highlight">Duet</span> 是一个更大更慢的第二 Agent，自动完成所有这些工作。</p>
+            <p>它还能监控线上对话、发现薄弱主题并起草改进方案——这在推理模型变强之前是不可能做到的。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 18 · Duet Autopilot：改进 Agent 的 Agent</div>
+        <div class="tweet-body">
+            <p>它回顾 <span class="highlight">百万条对话</span>、寻找趋势、创建主模型变体并做对照实验——开放式探索任务，适合用聪明的前沿模型。</p>
+            <p>产品改进逻辑始终围绕「从 FDE 工作中产品化」：AOPs、Duet、Autopilot 都是这个机制的产物。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 19 · 差异化：客户成果导向的评测</div>
+        <div class="tweet-body">
+            <p>模型评测不只看 loss 曲线，而是端到端衡量整个系统是否交付了客户要的成果。</p>
+            <p>与用例强耦合的训练与评估基础设施自建，标注数据等通用任务外购——唯一标准是如何最快把最好的模型送进生产。</p>
+        </div>
+    </div>
+
+    <!-- 🏗️ 组织 -->
+    <div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+    <div class="tweet">
+        <div class="tweet-label">推 20 · 组织演化：从手工作坊到模型工厂</div>
+        <div class="tweet-body">
+            <p>Decagon 的组织随产品演化而演进：早期团队靠人工写 <span class="highlight">AOPs</span>、写集成、写测试、读对话——一切手工。</p>
+            <p>随后 FDE/Agent PM 团队把重复劳动产品化进 Duet 与 Autopilot，同时养起昂贵的 <span class="highlight">Decagon Labs</span> 研究团队——组织从「服务客户」走向「模型工厂」。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 21 · 团队：FDE 吃痛点，产出产品</div>
+        <div class="tweet-body">
+            <p>Decagon 的 <span class="highlight">FDE（前线部署工程师）</span>与 Agent PM 直接构建核心产品，而不是做一次性定制。</p>
+            <p>产出回流产品，让接下来 10 个客户免费获得——内部有句话：前线部署工程师「吃下痛点，产出产品」。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 22 · 文化：团队运动，不设部门墙</div>
+        <div class="tweet-body">
+            <p>工程师会上早期销售电话，销售会调试产品，APM 横跨两端——办公室文化是为了最大化沟通，不强制周末出勤。</p>
+            <p>新员工入职先到旧金山总部浸泡几周，新办公室由核心 hub 派人驻扎数月，直到形成自己的 Decagon 文化。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 23 · 客户案例：需求被释放而非被消灭</div>
+        <div class="tweet-body">
+            <p>某早期客户月工单约 <span class="highlight">5 万条</span>，用 Decagon 后把支持入口放到每个页面、向免费用户开放，释放了被压抑的客服需求。</p>
+            <p>自动化没有导致裁员，反而让团队去做更多让客户更满意的事——「AI 会杀岗位，但不会杀职业」。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 24 · 战略执行：招人是最大瓶颈</div>
+        <div class="tweet-body">
+            <p>当前最大瓶颈不是模型，是<span class="highlight">招人</span>——AI 让所有对手的构建速度都变快了，竞争要求 Decagon 建得更多。</p>
+            <p>「一人独角兽」的论调不成立：最会用 AI 的编码创业公司也在疯狂招聘，因为大家都能用三倍速度构建，就需要建三倍多的东西。</p>
+        </div>
+    </div>
+
+    <div class="footer">InsightView · 附录 01 · AI 客服之 Decagon · 基于原始访谈转录提炼 · 2026-08-05</div>
+</div>
+</body>
+</html>
