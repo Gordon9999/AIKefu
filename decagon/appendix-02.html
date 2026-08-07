@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightView 附录 02 · AI 客服之 Decagon</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+        .report-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .report-header h1 { font-size: 1.6rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem; }
+        .report-header .subtitle { font-size: 0.95rem; color: #64748b; }
+        .report-header .meta { font-size: 0.8rem; color: #94a3b8; margin-top: 0.5rem; }
+        .section-title {
+            font-size: 1.15rem; font-weight: 700; color: #0f172a;
+            margin-top: 2rem; margin-bottom: 0.5rem; padding-bottom: 0.4rem;
+            border-bottom: 1px solid #e2e8f0; display: flex; align-items: center; gap: 0.4rem;
+        }
+        .section-title .emoji { font-size: 1.1rem; }
+        .tweet { padding: 1.2rem 0 1.2rem 0.8rem; border-bottom: 1px solid #eef2f6; }
+        .tweet:last-of-type { border-bottom: none; }
+        .tweet .tweet-label { font-weight: 600; font-size: 0.9rem; color: #2563eb; margin-bottom: 0.2rem; }
+        .tweet .tweet-body { font-size: 1rem; color: #1e293b; line-height: 1.8; }
+        .tweet .tweet-body p { margin-bottom: 0.3rem; }
+        .tweet .tweet-body p:last-child { margin-bottom: 0; }
+        .highlight { color: #16a34a; font-weight: 500; }
+        .footer {
+            text-align: center; margin-top: 3rem; padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8;
+        }
+        @media (max-width: 640px) {
+            .container { padding: 1.5rem 1rem 3rem; }
+            .report-header h1 { font-size: 1.3rem; }
+            .section-title { font-size: 1.05rem; }
+            .tweet .tweet-body { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="report-header">
+        <h1>附录 02 · Julia Hartz × Ashwin Sreenivas 对谈</h1>
+        <div class="subtitle">A conversation with Julia Hartz &amp; Ashwin Sreenivas（Decagon 官方播客）</div>
+        <div class="meta">InsightView · AI 客服之 Decagon · 2026-08-05</div>
+    </div>
+
+    <!-- 📌 核心观点 -->
+    <div class="section-title"><span class="emoji">📌</span> 核心观点</div>
+    <div class="tweet">
+        <div class="tweet-label">推 1 · 核心观点</div>
+        <div class="tweet-body">
+            <p>这是一场「<span class="highlight">两代创始人</span>」的对谈：Julia Hartz 用 20 年验证了可持续文化与资本纪律，Ashwin Sreenivas 代表 AI 时代的新一代创始人。</p>
+            <p>共同主线是稀缺心态、从失败与危机中学习，以及「文化是活的生命体」——而不是墙上写死的标语。</p>
+        </div>
+    </div>
+
+    <!-- 👤 访谈人背景 -->
+    <div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+    <div class="tweet">
+        <div class="tweet-label">推 2 · 录制信息</div>
+        <div class="tweet-body">
+            <p><span class="highlight">录制时间</span>：未提供（2026 年录制，Julia 已于 2026 年 3 月卸任 CEO）。</p>
+            <p><span class="highlight">访谈人</span>：Max Loenthal（Decagon 产品总监）；访谈嘉宾：Julia Hartz 与 Ashwin Sreenivas；时长约 65 分钟。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 3 · 嘉宾身份</div>
+        <div class="tweet-body">
+            <p><span class="highlight">Julia Hartz</span>：Eventbrite 联合创始人、前 CEO，20 年长跑的老牌创始人；Ashwin Sreenivas 是 Decagon 联合创始人兼总裁，也是 Julia 多年的朋友。</p>
+            <p>Julia 把 Eventbrite 带到售出 20 亿张票、纽交所上市，扛过 2008 与 COVID 两次危机；Ashwin 则身处 AI 浪潮中心，三年做到 45 亿美元估值。</p>
+        </div>
+    </div>
+
+    <!-- 💬 行业 -->
+    <div class="section-title"><span class="emoji">💬</span> 行业</div>
+    <div class="tweet">
+        <div class="tweet-label">推 4 · 今天的公司建设环境</div>
+        <div class="tweet-body">
+            <p>公司成长速度前所未有，烧钱速度也前所未有——<span class="highlight">GPU 军备竞赛</span>、资本军备竞赛与大量 hype 并存。</p>
+            <p>Julia 的观察是：能建成基业长青公司的创始人，想的绝不只是模型和内存，而是人们生命中那些重要的瞬间。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 5 · 过度融资是坏事</div>
+        <div class="tweet-body">
+            <p>Julia 直言「种子轮融 1 亿美元」是 <span class="highlight">terrible thing</span>：钱像从树上掉下来时，你根本无法想象 COVID 这种端掉整个业务基础的世界。</p>
+            <p>她甚至说想经历一场衰退来检验谁真正能办事——hype 周期让人更多地在预测泡沫，而不是思考好企业的基本原理。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 6 · 资本带来的复杂性</div>
+        <div class="tweet-body">
+            <p>大额融资会注入不同意见与所有权原则——投资人期望回报、期望 access、期望 respect，让公司治理复杂化。</p>
+            <p>而最好的想法不一定拿到最多的钱：把大笔现金交给「尚未完全成型」的年轻创始人也是一种风险。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 7 · AI 客户体验的价值主张</div>
+        <div class="tweet-body">
+            <p>Ashwin 给客户的建议是：AI 应创造「<span class="highlight">net better</span>」的体验——要么是经济上雇不起那么多人，要么利用 AI 的主动性与记忆能力，在问题发生前五步介入。</p>
+            <p>事件票务是特别典型的高风险购买：难以退款、价值波动大，消费者的决策压力极大。</p>
+        </div>
+    </div>
+
+    <!-- 📦 公司 -->
+    <div class="section-title"><span class="emoji">📦</span> 公司</div>
+    <div class="tweet">
+        <div class="tweet-label">推 8 · Decagon 与 Eventbrite 的现状</div>
+        <div class="tweet-body">
+            <p>Decagon 成立三年、估值 <span class="highlight">45 亿美元</span>，为数百家组织提供客户体验服务；Eventbrite 是客户，且刚续约数年。</p>
+            <p>Eventbrite 则是售出超 20 亿张票、覆盖 180 国、扛过 COVID、2025 年 12 月被 Bending Spoons 收购的老牌公司。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 9 · 资本纪律：Julia 的 27 次拒绝</div>
+        <div class="tweet-body">
+            <p>Eventbrite 用自有资金（两年不到 <span class="highlight">25 万美元</span>）做到 PMF 才去融资；2008 年秋见 27 家 VC 被全部拒绝，靠亲友钱撑过 2009 年。</p>
+            <p>结果 2009 年成为最好的一年，Q4 再融资时拿到多个 term sheet。她长期追踪人均营收 vs 融资额，发现每次融资后人均营收都会下滑。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 10 · 资本纪律：Ashwin 的军火库逻辑</div>
+        <div class="tweet-body">
+            <p>Decagon 每轮融资后账上现金都超过前几轮之和——A 轮后多于种子轮，B 轮后多于前两轮之和。</p>
+            <p>他的原则是：<span class="highlight">融资不等于花钱</span>，战时要有足够军火库，但要极其自律地不花；见过没钱日子的创始人更不敢乱花。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 11 · 创始人特质：互补与甜蜜点</div>
+        <div class="tweet-body">
+            <p>Julia 自认不是天生创业者（曾是芭蕾舞演员），Kevin Hartz 是「脑子里没有『这不可能』芯片」的永恒乐观者，两人互补。</p>
+            <p>她认为 Ashwin 与 Jesse 代表了「既不老派、又早早就见过失败」的创始人 <span class="highlight">甜蜜点</span>——失败让你成为更好的操盘手与思考者。</p>
+        </div>
+    </div>
+
+    <!-- 🧩 产品 -->
+    <div class="section-title"><span class="emoji">🧩</span> 产品</div>
+    <div class="tweet">
+        <div class="tweet-label">推 12 · 为什么 Eventbrite 引入 AI 客服</div>
+        <div class="tweet-body">
+            <p>Eventbrite 服务长尾市场——数十万创作者、数百万活动、数亿参与者，且不生产商品、是供给端平台，出问题时困惑极多。</p>
+            <p>活动策划是<span class="highlight">焦虑感最高的职业之一</span>（top 5），用户打电话来时往往已经「糟透了」。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 13 · 在产品里注入智能：提前五步介入</div>
+        <div class="tweet-body">
+            <p>Julia 的目标是在问题发生前<span class="highlight">五步介入</span>，而不是等用户来找；AI 要能越来越准地预测用户需求。</p>
+            <p>同时解决购票者长期无人回答的问题——停车在哪、能不能带小孩、为什么排队这么长——缓解后疫情时代高企的社交焦虑。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 14 · AI 的三个能力（Ashwin 视角）</div>
+        <div class="tweet-body">
+            <p>一是消化海量数据判断「这个人现在需要帮助」并<span class="highlight">主动出击</span>；二是记住用户的一切（比如「这个活动对五岁以下孩子友好」）。</p>
+            <p>三是把个性化服务的成本降到经济学上可行——这是过去只有高价值客户才能享有的待遇。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 15 · 技术是线下体验的顺风而非替代</div>
+        <div class="tweet-body">
+            <p>Julia 坚定认为真实体验、人与人在一起的瞬间<span class="highlight">无法被虚拟现实替代</span>——直播间的此刻，永远不会再次发生。</p>
+            <p>但 AI 会让活动创建更丰富、更好、更可及；回顾历史，Facebook、移动端都曾被预言要「杀死」活动，最终都成了顺风。</p>
+        </div>
+    </div>
+
+    <!-- 🏗️ 组织 -->
+    <div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+    <div class="tweet">
+        <div class="tweet-label">推 16 · 组织演化：从三人到 500 人</div>
+        <div class="tweet-body">
+            <p>Eventbrite 从三位联合创始人起步，融资后一年内<span class="highlight">三倍扩招</span>，巅峰期办公室 500 人、5 万平方英尺。</p>
+            <p>Julia 从「模糊的总统头衔」主动转型为文化守护者；疫情期间远程化让公司变得分散，成为她「最大的运营失误」——组织形态直接决定文化能否存活。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 17 · 文化的起点：一次主动请缨</div>
+        <div class="tweet-body">
+            <p>Julia 30 岁、公司融资后要三倍扩招时陷入存在主义危机，担心文化失控——她主动向联合创始人请缨，要求「在每一次重大决策的桌上，把员工放在第一位」。</p>
+            <p>她很快就意识到：文化不是 CEO 创造的，而是当下所有员工的集合体。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 18 · 文化的本质：活的生命体</div>
+        <div class="tweet-body">
+            <p>文化不是琥珀里封存的虫子，而是<span class="highlight">活生生的变形虫</span>，应该生长和变化；公司出问题时，文化就不该假装快乐。</p>
+            <p>Eventbrite 的文化不是「最好、最酷、最有趣」，而是「最可持续」的——这才是她最骄傲的地方。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 19 · 文化方法论：不做价值观标语</div>
+        <div class="tweet-body">
+            <p>不花时间写价值观海报——「<span class="highlight">一旦模板做好，它就变成了 meme</span>」；价值观应该从品牌价值自然长出。</p>
+            <p>最重要的会议问题是「什么是对的」，并永远选择做对的事，哪怕不是最快的路；员工用脚投票，一周就能读懂你们的价值观。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 20 · 文化压力测试：远程办公</div>
+        <div class="tweet-body">
+            <p>Julia 认为「<span class="highlight">远程办公杀死我们的公司比 COVID 更快</span>」——远程让公司变得分散、碎片化，无法以可负担的成本重新聚合。</p>
+            <p>2021 年的人才争夺战让她放松了对办公地点的要求，这是她最大的运营失误之一。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 21 · 经典轶事：Snackgate</div>
+        <div class="tweet-body">
+            <p>砍<span class="highlight">零食预算</span>差点引发公司「内战」，员工反应极端情绪化；一个月后 COVID 来袭，办公室从此关闭，「零食问题」瞬间消失。</p>
+            <p>她也靠「永远诚实、做对的事」赢得了员工的信任——Kevin 式的 true north 是她学到的核心。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 22 · 2020 第一周：14 天从盈利到负收入</div>
+        <div class="tweet-body">
+            <p>关闭办公室后，Kevin 把家变成「作战室」；14 天内公司从 14 年老店变成负收入（<span class="highlight">退款超过收入</span>），所有仪表盘崩掉、零可见性。</p>
+            <p>团队扔掉路线图，只为帮活动主办方活下来——「我们不想把整艘船拖下水」。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 23 · 从危机中学习：不必亲自经历失败</div>
+        <div class="tweet-body">
+            <p>Julia 在 COVID 第一周给所有人打电话求教——包括经历过 911 的 CFO Bob Milad，后者准确预言了「退款超过收入」会到来。</p>
+            <p>她的观点是：你不必亲自经历失败，只要知道<span class="highlight">该给谁打电话、如何提问、如何倾听</span>——学习的价值大于失败本身。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 24 · 乐观主义：8 分钟进 7000 人</div>
+        <div class="tweet-body">
+            <p>2011 年 will.i.am 中央公园免费演唱会（6 万人、暴雨取消）的故事，印证了 Kevin 式「永恒的乐观主义」。</p>
+            <p>「只用了 8 分钟就放进 7000 人，下次我们能做得更好」——找到愿意一直走下去的伙伴，人就真正「无限」；重来一次，她依然会义无反顾。</p>
+        </div>
+    </div>
+
+    <div class="footer">InsightView · 附录 02 · AI 客服之 Decagon · 基于原始访谈转录提炼 · 2026-08-05</div>
+</div>
+</body>
+</html>
