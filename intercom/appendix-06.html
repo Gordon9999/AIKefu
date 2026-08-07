@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>附录 06 · Fin 2026 年 2 月产品更新</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.8;
+}
+.container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+.back-link { font-size: 0.85rem; color: #2563eb; text-decoration: none; margin-bottom: 1rem; display: inline-block; }
+.back-link:hover { text-decoration: underline; }
+.report-header {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+.report-header .tag { font-size: 0.8rem; letter-spacing: 0.1em; opacity: 0.75; margin-bottom: 0.5rem; }
+.report-header h1 { font-size: 1.45rem; font-weight: 700; margin-bottom: 0.75rem; }
+.report-header p { font-size: 0.95rem; opacity: 0.85; }
+.section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 2rem 0 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eef2f6;
+    color: #0f172a;
+}
+.section-title .emoji { margin-right: 0.4rem; }
+.tweet {
+    padding: 1.2rem 0 1.2rem 0.8rem;
+    border-bottom: 1px solid #eef2f6;
+}
+.tweet:last-of-type { border-bottom: none; }
+.tweet .tweet-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #2563eb;
+    margin-bottom: 0.2rem;
+}
+.tweet .tweet-body {
+    font-size: 1rem;
+    color: #1e293b;
+    line-height: 1.8;
+}
+.tweet .tweet-body p { margin-bottom: 0.3rem; }
+.tweet .tweet-body p:last-child { margin-bottom: 0; }
+.highlight { color: #16a34a; font-weight: 500; }
+.footer {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eef2f6;
+}
+@media (max-width: 640px) {
+    .report-header h1 { font-size: 1.2rem; }
+    .container { padding: 1.25rem 1rem 3rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a class="back-link" href="index.html">← 返回主报告</a>
+
+<div class="report-header">
+    <div class="tag">InsightView · 附录 06 · By Deepseek-V4-Flash</div>
+    <h1>Fin Product Updates February 2026</h1>
+    <p>来源：Intercom 官方 YouTube · 产品更新第 3 期 · Brian Donohue（VP of Product）</p>
+</div>
+
+<div class="section-title"><span class="emoji">📌</span> 一句话总结</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 1 · 核心结论</div>
+    <div class="tweet-body">
+        <p>这是 Fin 月度产品更新第 3 期（2026 年 2 月），围绕 <span class="highlight">Fin Flywheel</span>（train → test → deploy → analyze）发布四大更新：Procedures & Simulations 改进、Fin Voice 三项语音更新、<span class="highlight">Shopify 2 分钟接入</span>电商购物助手、帮助台新指标。</p>
+        <p>产品承诺：<span class="highlight">每周都在改进 Fin</span>；今年已向帮助台交付 19 项功能。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 2 · 录制信息</div>
+    <div class="tweet-body">
+        <p><span class="highlight">录制时间</span>：2026 年 2 月（系列第 3 期）。</p>
+        <p>主讲：Brian Donohue（Intercom VP of Product）；特邀 Ali Han（ML 科学家）、Robert（PM/工程师）；时长约 14 分钟。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 3 · 素材性质</div>
+    <div class="tweet-body">
+        <p>官方月度产品更新系列，VP of Product 亲自演示最新功能——了解 Fin <span class="highlight">产品演进速度与方向</span>的一手材料。</p>
+        <p>与前几篇不同，本篇聚焦「最近一个月新交付的能力」，展现 train/test/deploy 环节的持续迭代。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">💬</span> 行业</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 4 · 复杂查询自动化的市场空白</div>
+    <div class="tweet-body">
+        <p>行业现状两种极端：<span class="highlight">通用 AI Agent 构建器</span>（易上手但缺可靠性、控制力与深度）vs <span class="highlight">高度技术化 bespoke 方案</span>（能处理复杂但每次改动要工程师）。</p>
+        <p>Fin 的定位：两者之间的 <span class="highlight">sweet spot</span>——不需要工程师、又保留处理复杂逻辑（退款、深层数据对接、高风险操作）的能力与可靠性。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 5 · 语音是「三维」Agent 空间</div>
+    <div class="tweet-body">
+        <p>语音客服比聊天更难：是更立体的交互，好体验的标准更高——每个发音细节都影响用户感知。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">📦</span> 公司</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 6 · Fin Flywheel 组织方式</div>
+    <div class="tweet-body">
+        <p>Fin 围绕 <span class="highlight">Fin Flywheel</span>（飞轮）组织：train → test → deploy → analyze 持续改进环，让客户容易训练、测试、部署并分析 Fin 表现。</p>
+        <p>产品承诺：每周交付改进；今年已向帮助台交付 <span class="highlight">19 项功能与改进</span>。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 7 · 战略愿景</div>
+    <div class="tweet-body">
+        <p>年度客户大会 Pioneer 提出的愿景：Fin 是<span class="highlight">一个统一的 AI Agent</span>，不止客服，而是处理整个客户体验中的各种交互——Shopify 购物助手就是这一愿景的落地。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🧩</span> 产品</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 8 · Procedures：自然语言构建复杂流程</div>
+    <div class="tweet-body">
+        <p>适用场景：签发退款等<span class="highlight">复杂业务逻辑</span>、需深度对接数据、出错风险高的查询。</p>
+        <p>AI 先把过程草拟成文档，客户补充打磨；最终 procedure 以<span class="highlight">自然语言为主</span>，可嵌入数据调用、业务逻辑、甚至代码做确定性控制。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 9 · Simulations：仿真测试建立信心</div>
+    <div class="tweet-body">
+        <p>左侧构建测试用例，逐步测试每步是否生效；可传入「要给终端用户的数据」看完整对话。</p>
+        <p><span class="highlight">每步全透明</span>，能看到 Fin 每一步在做什么，便于调试；最后按设定的标准评估——用这个过程建立「这是真能工作的」信心。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 10 · Fin Voice：发音规则</div>
+    <div class="tweet-body">
+        <p>Fin 出厂发音准确率高，但缺上下文——客户有行业术语、品牌名、产品名（demo：IKEA 的 SMASK GRÄS 被读错）。</p>
+        <p>可配置 <span class="highlight">phonetic rules（音标规则）或 IPA 字母</span>两种方式精确纠正发音。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 11 · Fin Voice：新声音与自动降噪</div>
+    <div class="tweet-body">
+        <p><span class="highlight">11 个新自然声音</span>，可匹配品牌基调与感觉（demo 用受欢迎的 Lydia 声音）。</p>
+        <p>自动背景降噪：客户常从餐厅、咖啡馆、机场打电话；Fin 持续监听背景噪音，噪音高时<span class="highlight">自动调高降噪</span>，聚焦用户声音——无需配置、开箱即用，解决「Fin 误以为用户没说完、尴尬沉默、互相打断」问题。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 12 · Fin on Shopify：2 分钟接入</div>
+    <div class="tweet-body">
+        <p>难点：Shopify 店铺成百上千商品、各自变体、滚动库存，映射进 agent 很难（怎么给目录？怎么保最新？怎么让它行动？）。</p>
+        <p>新接入体验：<span class="highlight">自动检测 Shopify 店铺</span> → 认证安装（背后建立 Fin 与店铺实时连接，掌握全部目录）→ 装 Messenger（免代码、几次点击）→ 部署，全程 <span class="highlight">2 分钟内</span>。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 13 · 购物助手能力</div>
+    <div class="tweet-body">
+        <p>demo：新手滑雪用户 → Fin 跨目录搜索（无「新手」属性时用<span class="highlight">推理</span>推断相关属性）→ 问身高体重做个性化 → 追加搜索 → <span class="highlight">实际操作加购物车</span>。</p>
+        <p>深度价值：实时连接让 Fin 知道店铺一切——案例：客户改网站内容宣布促销，Fin 主动推广在售商品、鼓励凑单享折扣；接入后 Fin 角色自动切换为「温柔引导购买」。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 14 · 帮助台更新</div>
+    <div class="tweet-body">
+        <p><span class="highlight">11 项新通话指标</span>：hold time、outbound dial time、missed/declined calls、call terminating party（谁挂的电话）等，评估通话效率、负载分布与团队绩效。</p>
+        <p><span class="highlight">假日办公时间</span>：无需每次公共假日手动调整；该功能是 Intercom 社区获票最多的请求。</p>
+        <p>Fin 可搭配任何帮助台使用（不强制换提供商），但客户倾向整合工具用原生集成。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 15 · 产品组织与更新节奏</div>
+    <div class="tweet-body">
+        <p>团队组合：VP of Product + ML 科学家 + PM/工程师（多面手），围绕 Fin Flywheel 分工。</p>
+        <p>节奏：每月产品更新 + <span class="highlight">每周 Fin 改进</span> + 年度客户大会（Pioneer）；「客户社区呼声」（假日办公时间获最多 upvotes）直接影响排期。</p>
+        <p>理念：复杂查询自动化要「团队自己管理、有十足信心」——降低对工程师的依赖是产品设计核心目标。</p>
+    </div>
+</div>
+
+<div class="footer">InsightView · 附录 06 · Fin Product Updates February 2026 · 15 条推文</div>
+
+</div>
+</body>
+</html>
