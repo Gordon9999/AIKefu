@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>附录 03 · Beyond Automation：用 Fin AI 达成 67% 解决率</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.8;
+}
+.container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+.back-link { font-size: 0.85rem; color: #2563eb; text-decoration: none; margin-bottom: 1rem; display: inline-block; }
+.back-link:hover { text-decoration: underline; }
+.report-header {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+.report-header .tag { font-size: 0.8rem; letter-spacing: 0.1em; opacity: 0.75; margin-bottom: 0.5rem; }
+.report-header h1 { font-size: 1.45rem; font-weight: 700; margin-bottom: 0.75rem; }
+.report-header p { font-size: 0.95rem; opacity: 0.85; }
+.section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 2rem 0 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eef2f6;
+    color: #0f172a;
+}
+.section-title .emoji { margin-right: 0.4rem; }
+.tweet {
+    padding: 1.2rem 0 1.2rem 0.8rem;
+    border-bottom: 1px solid #eef2f6;
+}
+.tweet:last-of-type { border-bottom: none; }
+.tweet .tweet-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #2563eb;
+    margin-bottom: 0.2rem;
+}
+.tweet .tweet-body {
+    font-size: 1rem;
+    color: #1e293b;
+    line-height: 1.8;
+}
+.tweet .tweet-body p { margin-bottom: 0.3rem; }
+.tweet .tweet-body p:last-child { margin-bottom: 0; }
+.highlight { color: #16a34a; font-weight: 500; }
+.footer {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eef2f6;
+}
+@media (max-width: 640px) {
+    .report-header h1 { font-size: 1.2rem; }
+    .container { padding: 1.25rem 1rem 3rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a class="back-link" href="index.html">← 返回主报告</a>
+
+<div class="report-header">
+    <div class="tag">InsightView · 附录 03 · By Deepseek-V4-Flash</div>
+    <h1>Beyond Automation: How Teams Reach 67% Resolution with Fin AI</h1>
+    <p>来源：Intercom 官方 Webinar 重放 · 主讲人：Marlex Basilio（DKM Echo 首席技术支持工程师）</p>
+</div>
+
+<div class="section-title"><span class="emoji">📌</span> 一句话总结</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 1 · 核心结论</div>
+    <div class="tweet-body">
+        <p>这是「Fin AI 实操方法论」webinar：Marlex 拆解了团队如何把 Fin 的对话解决率做到 <span class="highlight">67%</span>——不是 deflection（拦截/转人工），而是 Fin 真正端到端解决客户问题。</p>
+        <p>三大支柱：知识库掌握、AI 训练优化、监控与测量。核心信念：<span class="highlight">Fin 的强弱只取决于给它访问的知识内容</span>。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 2 · 录制信息</div>
+    <div class="tweet-body">
+        <p><span class="highlight">录制时间</span>：未提供。</p>
+        <p>主持人：Elaine（Intercom）；主讲人：Marlex Basilio（DKM Echo 首席技术支持工程师）；时长约 56 分钟（含 Q&A）。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 3 · 嘉宾身份</div>
+    <div class="tweet-body">
+        <p><span class="highlight">Marlex Basilio</span>：DKM Echo 技术支持负责人，有大量帮团队用 Intercom + Fin AI 降工单量、提解决率的实操经验——这是「客户视角」的 Fin 落地实践，而非官方宣传。</p>
+        <p>现场完整演示 Intercom 后台配置过程，含真实工作流与 Q&A 环节。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">💬</span> 行业</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 4 · 期望变了：从 deflection 到 resolution</div>
+    <div class="tweet-body">
+        <p>自动化不是新概念：多数团队早就有 bot、工作流、自助帮助中心。真正变的是<span class="highlight">客户期望</span>——要快速准确 + 人类级别的理解。</p>
+        <p>衡量标准从 deflection（拦截/分流）升级为 resolution（真正端到端解决）。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 5 · 67% 不是 vanity metric</div>
+    <div class="tweet-body">
+        <p>67% 不是「67% 的对话被拦截、忽略、重定向或转人工」。已解决 = 客户提出真实问题 → Fin 给出清晰准确答案 → 客户认为相关正确 → <span class="highlight">Fin 自信关闭对话</span>。</p>
+        <p>这是当下高绩效支持运营的基准线，正确配置 + 护栏 + 指导下可被持续达成。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">📦</span> 公司</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 6 · 知识驱动系统</div>
+    <div class="tweet-body">
+        <p>Fin AI 不孤立工作，它只和能访问的知识一样强——知识库是达到高解决率的<span class="highlight">第一前提</span>。</p>
+        <p>高绩效团队把知识库当作 living system：刻意设计、持续维护、与客户问题紧密对齐。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 7 · 产品叙事</div>
+    <div class="tweet-body">
+        <p>本篇是 Intercom 与客户 DKM Echo 联合呈现——「客户成功案例 + 官方产品能力」结合。</p>
+        <p>强调 Fin 不是「开了就灵」，而是需要管理员持续投入的运营体系。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🧩</span> 产品</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 8 · 知识库能力</div>
+    <div class="tweet-body">
+        <p>多类型内容：public article、internal article、snippet、<span class="highlight">website sync（网站同步）</span>，还可从 Zendesk、Guru、Notion、Confluence 导入。</p>
+        <p>website sync 是最进阶功能：把官网直接同步进知识库，Fin 即可回答网站内容问题（示例：NTUC 新加坡全国职工总会，代表 50 万工人）。</p>
+        <p>Help Center 用文章 + 集合（collection）两层结构组织（getting started / policy / payments），构建可扩展架构。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 9 · 文章级报告</div>
+    <div class="tweet-body">
+        <p>每篇文章可看：被查看次数、对话中被引用次数、CSAT、被 Fin 使用次数、解决的对话数——<span class="highlight">把文章表现数字化</span>。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 10 · Fin Insights 与内容缺口</div>
+    <div class="tweet-body">
+        <p>数据足够后 Fin Insights 自动激活，给出优化建议：<span class="highlight">content gaps</span> 识别 Fin 因内容缺失、不清晰、重复或矛盾而无法回答的领域。</p>
+        <p>Fin 分析失败响应并与成功人工回复对比，精确定位缺什么；持续处理建议是规模化 Fin 的最强杠杆。</p>
+        <p>还有 data gaps（工作流数据缺失）与 action gaps（未完成任务/冗余配置）。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 11 · Guidance：四类规则</div>
+    <div class="tweet-body">
+        <p><span class="highlight">Basics</span>：语气（friendly/professional/humorous 等）+ 回答长度（concise/standard/thorough）。</p>
+        <p><span class="highlight">Communication style</span>：让 Fin 主动追问（登录问题 → 问设备类型、是否改过密码）。</p>
+        <p><span class="highlight">Context and clarification</span>：注入上下文（如注明答案来源帮助中心）；<span class="highlight">Content and sources</span> 仍在 beta（未来可做故障排查）；<span class="highlight">Spam</span> 定义垃圾规则（政治话题等）。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 12 · Escalation：升级路径</div>
+    <div class="tweet-body">
+        <p><span class="highlight">Escalation rules</span>（技术维度）：按话题、客户类型硬性升级（如 VIP 客户直接转人工）。</p>
+        <p><span class="highlight">Escalation guidance</span>（人类语言维度）：情绪识别——客户愤怒时「不追问直接升级」；满意时「表达感谢」；主动要求转人工时「立即转、不问任何问题」——解决其他 bot 被要求转人工还硬要自己答的痛点。</p>
+        <p>主题维度：涉及 NDA/财务文件直接升级人工，避免合规风险。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 13 · Fin AI Test：人工训练 QA</div>
+    <div class="tweet-body">
+        <p>管理员手动提问并评分为正确/错误；答错时注明原因（如「没用对内容」），Fin 会<span class="highlight">直接定位到错误来源文章</span>，引导管理员修正——「我不是错的，是文章错了」。</p>
+        <p>价值：在问题到达客户之前完成优化，变被动响应为主动堵漏。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 14 · Workflows：拖拽式自动化</div>
+    <div class="tweet-body">
+        <p>纯拖拽、零代码：客户回复后 Fin 立即介入 → 识别话题（存款/取款 → e-services 团队）→ 打标签 → 创建工单（用 Fin 识别的话题转换），全程可追溯。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 15 · Procedures：人类语言执行复杂任务</div>
+    <div class="tweet-body">
+        <p>新增自动化工具：用<span class="highlight">人类语言规则</span>让 Fin 跨工作区、第三方应用、数据存储执行任务——从查询订单到取消订阅（带认证与规则）。</p>
+        <p>现场演示：Fin 通过「检索订阅信息 → 检查取消请求 → 处理取消 → 确认完成」真实完成了一次订阅取消。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 16 · 监控指标体系</div>
+    <div class="tweet-body">
+        <p><span class="highlight">Conversation topics</span>：Fin 与团队共同识别的话题，是整个工作区上下文的基础层，气泡图可视化各话题对话量。</p>
+        <p><span class="highlight">Topics explorer</span>：按话题看 CX score、Fin involvement、Fin automation、Fin resolution，定位表现好/差的话题。</p>
+        <p><span class="highlight">Automation overview</span>：自动化率、介入率、解决率三大核心指标。</p>
+        <p><span class="highlight">Trends</span>：每周自动数据分析，找最大变化（对话量、解决率、CX score）并用平实语言解释——早期预警系统。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 17 · 落地角色分工</div>
+    <div class="tweet-body">
+        <p>workspace admin 是 Fin 优化负责人：手动训练（Fin AI Test）、处理 Fin Insights 建议、修正知识库内容。</p>
+        <p>支持团队围绕话题组织分工（accounts / e-services / technical 团队），话题标签让问题归因可追溯。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 18 · Q&A：何时该转人工</div>
+    <div class="tweet-body">
+        <p>两种方式：一是 escalation 规则（账号类问题直接升级）；二是客户更常用的<span class="highlight">topic identification</span>工作流——问题无法由 Fin 回答或客户要求时，Fin 识别话题后直接转对应团队并建票。</p>
+        <p>关键：先识别话题、再转人工，跳过与 Fin 的无效对话，直接到对的人。</p>
+    </div>
+</div>
+
+<div class="footer">InsightView · 附录 03 · Beyond Automation: How Teams Reach 67% Resolution with Fin AI · 18 条推文</div>
+
+</div>
+</body>
+</html>
