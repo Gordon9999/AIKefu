@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>附录 02 · Cresta 联合创始人 Tim Shi × Stanford Hidden Layer 访谈</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.8;
+}
+.container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+.back-link { font-size: 0.85rem; color: #2563eb; text-decoration: none; margin-bottom: 1rem; display: inline-block; }
+.back-link:hover { text-decoration: underline; }
+.report-header {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+.report-header .tag { font-size: 0.8rem; letter-spacing: 0.1em; opacity: 0.75; margin-bottom: 0.5rem; }
+.report-header h1 { font-size: 1.45rem; font-weight: 700; margin-bottom: 0.75rem; }
+.report-header p { font-size: 0.95rem; opacity: 0.85; }
+.section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 2rem 0 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eef2f6;
+    color: #0f172a;
+}
+.section-title .emoji { margin-right: 0.4rem; }
+.tweet {
+    padding: 1.2rem 0 1.2rem 0.8rem;
+    border-bottom: 1px solid #eef2f6;
+}
+.tweet:last-of-type { border-bottom: none; }
+.tweet .tweet-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #2563eb;
+    margin-bottom: 0.2rem;
+}
+.tweet .tweet-body {
+    font-size: 1rem;
+    color: #1e293b;
+    line-height: 1.8;
+}
+.tweet .tweet-body p { margin-bottom: 0.3rem; }
+.tweet .tweet-body p:last-child { margin-bottom: 0; }
+.highlight { color: #16a34a; font-weight: 500; }
+.footer {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eef2f6;
+}
+@media (max-width: 640px) {
+    .report-header h1 { font-size: 1.2rem; }
+    .container { padding: 1.25rem 1rem 3rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a class="back-link" href="index.html">← 返回主报告</a>
+
+<div class="report-header">
+    <div class="tag">InsightView · 附录 02 · By GLM-5.2</div>
+    <h1>Cresta 联合创始人 Tim Shi × Stanford Hidden Layer 访谈</h1>
+    <p>来源：OpenAI/Cresta.ai - Tim Shi（Hidden Layer Podcast #102，Stanford）</p>
+</div>
+
+<div class="section-title"><span class="emoji">📌</span> 一句话总结</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 1 · 核心结论</div>
+    <div class="tweet-body">
+        <p>不急着用 AI 替代坐席，而是先用人类对话数据训练「建议引擎」，让每个坐席「第一天就像专家」。</p>
+        <p>AI 产品不是 SaaS 功能——模型质量就是价值、数据工程就是护城河，最终目标仍然是 <span class="highlight">99% 自动化</span>。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 2 · 录制信息</div>
+    <div class="tweet-body">
+        <p><span class="highlight">录制时间</span>：未提供（Stanford Hidden Layer Podcast #102）。</p>
+        <p>访谈人：Hidden Layer 播客主持人；访谈嘉宾：Tim Shi（Cresta 联合创始人、前 OpenAI 研究员）。时长：未提供。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 3 · 嘉宾身份</div>
+    <div class="tweet-body">
+        <p><span class="highlight">Tim Shi</span>：从中国赴斯坦福 AI Lab 读博士，研究 NLP 与强化学习，导师 Percy Liang，曾与 Chris Ré 轮转。</p>
+        <p>在 <span class="highlight">OpenAI</span> 做了一年 RL（World of Bits：让 AI 在数字世界用键盘鼠标操作电脑），随后与斯坦福同学 Michael 创立 Cresta，服务大量财富 500 公司。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">💬</span> 行业</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 4 · 聊天机器人时代的教训</div>
+    <div class="tweet-body">
+        <p>2017-2018 年聊天机器人遍地开花，「从移动端到对话」被看成下一个交互革命，但每个网站挂的机器人几乎全都不好用。</p>
+        <p>主流实现是<span class="highlight">规则式</span>（如 Dialogflow 画图、手工枚举对话路径），不可扩展也极难跑好——市场带着这波「后遗症」，早期连融资和销售都要先说服别人。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 5 · 与传统厂商的竞争</div>
+    <div class="tweet-body">
+        <p>传统联络中心软件（<span class="highlight">Five9</span>、NICE 等）都宣称「我们也能做 AI」，Cresta 起初把自己定位成这些平台之上的 AI 层，而非替代品。</p>
+        <p>当平台方也开始说自己有 AI，竞争就回到价值创造：任何人都能做 copilot 生成建议，关键是建议好不好、能否带来真实 ROI——靠 AB 测试案例说话。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 6 · 指标驱动的行业</div>
+    <div class="tweet-body">
+        <p>呼叫中心高度指标化：客服看平均处理时长与客户满意度，销售看转化率、附加率与收入目标。指标好定义，难在测量得准确、双方口径一致。</p>
+        <p>放大到 AI 行业：过去五年靠 scaling，前沿实验室正回到「算法重要」；<span class="highlight">agentic RL</span> 在长时程任务上样本效率低、扩展昂贵，金融等领域几乎没吃到 LLM 红利。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">📦</span> 公司</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 7 · 定位与反共识</div>
+    <div class="tweet-body">
+        <p>2017 年行业共识是「AI 替代人」，Cresta 却取<span class="highlight">反共识</span>：先增强人、不急着替代人，从人类对话数据学起、从与人协作做起。</p>
+        <p>原因很现实：当时模型能力不足，替代式聊天机器人全行业都失败了，而窄领域的「专家建议」能在真实对话中立刻创造价值。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 8 · 从 Intuit 起步</div>
+    <div class="tweet-body">
+        <p>联合创始人 Michael 以实习生身份进入 Intuit（创始人 Scott Cook 在斯坦福 GSB 授课），从内部摸清产品市场契合，靠 <span class="highlight">IP 归属协议</span>拿到源代码快照并签下合同。</p>
+        <p>在 Intuit 的销售聊天场景中，建议引擎让转化率显著提升——试点带来约 <span class="highlight">1 亿美元</span>增量收入，Cresta 只收取其中一小部分。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 9 · 商业模式：按价值收费</div>
+    <div class="tweet-body">
+        <p>2018 年 AI 推理成本极高，按席位收费走不通，于是尝试<span class="highlight">按价值定价</span>：跑 AB 测试对比用与不用 AI 的坐席结果，按差异收费。</p>
+        <p>难点在「如何测量价值」：你可以说自己创造了价值，但企业客户未必相信，必须用可量化的对比结果说话。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 10 · 数据战略与护城河</div>
+    <div class="tweet-body">
+        <p>早期是窄领域 AI：每个客户都要重新训练模型。合同里加默认条款——客户向共享领域对话仓库贡献数据并获得激励，约 50% 客户愿意分享。</p>
+        <p>安全上先做单租户：每家客户独立 <span class="highlight">VPC</span>、数据本地驻留、只用自家数据训练；LLM 时代后用领域数据做继续预训练（<span class="highlight">mid-training</span>）显著提升效果。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 11 · 规模与现状</div>
+    <div class="tweet-body">
+        <p>今天 Cresta 约 <span class="highlight">300-400 人</span>，几乎每年翻倍；每单客单价很大，客户集中在航空（United、Alaska）与银行（US Bank）。</p>
+        <p>Tim 已退出日常运营，转任董事会成员与技术顾问——他判断 Cresta 技术路线已成熟，正是回到 AGI 研究的时候。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🧩</span> 产品</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 12 · 建议引擎</div>
+    <div class="tweet-body">
+        <p>早期产品极度聚焦：一个叫 <span class="highlight">suggestion</span> 的功能——坐席打字时自动补全回复、提示「接下来该说什么」。</p>
+        <p>UI 表面很小（Chrome 插件式输入框），功夫全在建议质量上；对销售与客服场景，回复质量直接改变对话结果。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 13 · experts on day one</div>
+    <div class="tweet-body">
+        <p>愿景：让每个新坐席第一天就像专家——摄入呼叫录音与聊天记录，找出专家在做什么、新人没做什么，训练模型复刻专家行为。</p>
+        <p>模型从 LSTM 一路进化到 RNN、transformer，并叠加分类器等脚手架，逐步逼近「<span class="highlight">专家第一天</span>」。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 14 · 为每个客户定制</div>
+    <div class="tweet-body">
+        <p>当时没有今天的通用大模型，只有<span class="highlight">窄领域模型</span>：不同客户卖不同产品、对话不一样，必须各自微调——架构共享、微调定制。</p>
+        <p>所以只能做大客户，先服务 Intuit、AT&amp;T 这类——类似 <span class="highlight">Palantir</span> 的「每客定制」打法，寄望未来造出通用模型。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 15 · AI 产品 vs SaaS 产品</div>
+    <div class="tweet-body">
+        <p>SaaS 是确定性工程：有功能路线图，按客户需求堆功能；<span class="highlight">AI 产品</span>要先判断「做新功能」还是「全力押注模型质量」。</p>
+        <p>客户为模型准确率付钱，准确率提升 10% 直接换算成收入；Cursor 是很好的类比——UI 极小，价值全靠 agent。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 16 · 评估与 ML Ops</div>
+    <div class="tweet-body">
+        <p>工程实践「先评估再动手」：去客户现场建 benchmark、对齐「好是什么样」，再开始训练。学术界看新算法，生产里大部分功夫在<span class="highlight">数据工程</span>。</p>
+        <p>自建 <span class="highlight">ML Ops</span> 管线：持续训练、部署、评估，「像 DevOps，但是给 ML 模型的」——试一个新想法可以很快跑完训练循环。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 17 · 采用难题</div>
+    <div class="tweet-body">
+        <p>建议质量足够好仍有人不用——不用的人往往是老兵而非新人：他们自认为知道该怎么做，这是心态问题；新员工反而更容易上手。</p>
+        <p>解法很立体：客户成功团队培训、经理实时可见的用法工具，以及游戏化——用建议最多的人拿星巴克礼品卡，甚至一条 <span class="highlight">WWE 腰带</span>戴一整天。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 18 · 招聘的教训</div>
+    <div class="tweet-body">
+        <p>团队起步全是 PhD 辍学生，第一个复盘：应该非常早地招 <span class="highlight">GTM</span> 的人——这真正改变了公司，把销售从个人能力变成一台机器。</p>
+        <p>他们也招错过销售负责人、走过弯路；但「做对一次之后，你就确切知道该怎么做了」。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 19 · 从学术到创业</div>
+    <div class="tweet-body">
+        <p>学术界追求「最新最 novel 的方法」，创业要 deadline 与 <span class="highlight">getting things done</span>；呼叫中心服务不能早上 5 点宕机，研究者代码与工程级代码是两回事。</p>
+        <p>ML 团队像实验室：五六个想法跑实验、看结果迭代；模型能力不足的年代，性能卡住要靠硬推，充满不确定性。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 20 · 转型公司定位</div>
+    <div class="tweet-body">
+        <p>Cresta 自称「<span class="highlight">转型公司</span>」：无论你今天是 0% 还是 90% 自动化，都是渐进过程，不是一天全自动——伴随再培训、再教育、人往新角色迁移。</p>
+        <p>早期 Intuit 时代被帮助过的坐席，后来有的进了 Cresta，有的在 Intuit 升到更高级岗位——「让组织中的人升职」也是可度量的成功。</p>
+    </div>
+</div>
+
+<div class="footer">InsightView · 附录 02 · Cresta 联合创始人 Tim Shi × Stanford Hidden Layer 访谈 · 20 条推文</div>
+
+</div>
+</body>
+</html>
