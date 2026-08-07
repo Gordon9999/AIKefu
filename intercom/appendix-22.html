@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>附录 22 · Fin × Snowflake：企业级 Agentic AI 部署</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.8;
+}
+.container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+.back-link { font-size: 0.85rem; color: #2563eb; text-decoration: none; margin-bottom: 1rem; display: inline-block; }
+.back-link:hover { text-decoration: underline; }
+.report-header {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+.report-header .tag { font-size: 0.8rem; letter-spacing: 0.1em; opacity: 0.75; margin-bottom: 0.5rem; }
+.report-header h1 { font-size: 1.45rem; font-weight: 700; margin-bottom: 0.75rem; }
+.report-header p { font-size: 0.95rem; opacity: 0.85; }
+.section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 2rem 0 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eef2f6;
+    color: #0f172a;
+}
+.section-title .emoji { margin-right: 0.4rem; }
+.tweet {
+    padding: 1.2rem 0 1.2rem 0.8rem;
+    border-bottom: 1px solid #eef2f6;
+}
+.tweet:last-of-type { border-bottom: none; }
+.tweet .tweet-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #2563eb;
+    margin-bottom: 0.2rem;
+}
+.tweet .tweet-body {
+    font-size: 1rem;
+    color: #1e293b;
+    line-height: 1.8;
+}
+.tweet .tweet-body p { margin-bottom: 0.3rem; }
+.tweet .tweet-body p:last-child { margin-bottom: 0; }
+.highlight { color: #16a34a; font-weight: 500; }
+.footer {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eef2f6;
+}
+@media (max-width: 640px) {
+    .report-header h1 { font-size: 1.2rem; }
+    .container { padding: 1.25rem 1rem 3rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a class="back-link" href="index.html">← 返回主报告</a>
+
+<div class="report-header">
+    <div class="tag">InsightView · 附录 22 · By Deepseek-V4-Flash</div>
+    <h1>Fin × Snowflake: Deploying Agentic AI in the Enterprise</h1>
+    <p>来源：Intercom 旧金山线下活动（2026 年 3 月）· Jordan Neil（Intercom COO）× Barish（Snowflake AI 产品负责人）</p>
+</div>
+
+<div class="section-title"><span class="emoji">📌</span> 一句话总结</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 1 · 核心结论</div>
+    <div class="tweet-body">
+        <p>「企业级 Agentic AI 部署」对谈：<span class="highlight">技术 overhang 巨大——平均 Fin 客户 67% 解决率、Intercom 自己 80-85%，但多数企业还在用老一代 30% 解决率甚至完全没用</span>——「采用远远落后于能力」，瓶颈不是构建而是<span class="highlight">习惯与组织转型</span>（CEO 发邮件没用，需要资深领导深刻理解 + 全组织再造）。</p>
+        <p>方法论共识：①<span class="highlight">eval 是核心引擎</span>（Snowflake：自动 eval 循环「agents building other agents」；Intercom：eval 必需但<span class="highlight">无法替代真实世界</span>——Waymo 停电停满街）；②<span class="highlight">上下文是关键</span>（模型越强，瓶颈越是共享理解）；③自研模型：新东西先用最强 frontier 模型，再对「智能已饱和」任务做 task-specific 优化；④信任与治理是前提：<span class="highlight">「AI next to data」</span>（inference 在 Snowflake 安全边界内 = 巨大优势）。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 2 · 录制信息</div>
+    <div class="tweet-body">
+        <p><span class="highlight">录制时间/地点</span>：2026 年 3 月，旧金山（线下活动 + Q&A）；时长约 47 分钟。</p>
+        <p>主持：Jordan Neil（Intercom COO，过去两年专注 Fin）；嘉宾：Barish（Snowflake Head of Product for AI，创业公司 2.5 年前被收购并入成 AI 团队，CEO 即前 co-founder、极度 AI forward）。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 3 · 素材定位</div>
+    <div class="tweet-body">
+        <p>第三场「Fin × 知名公司」活动对谈（继 ×Linear、×PostHog），视角：<span class="highlight">企业级部署 + 自研模型策略 + 信任/治理/eval</span>。</p>
+        <p>与前篇互证：eval/自动化循环（呼应 16/20 篇）、自研模型（呼应第 7 篇 CX Apex）、结果导向定价（呼应 13/19/21 篇）。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">💬</span> 行业</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 4 · 技术 overhang：采用远落后于能力</div>
+    <div class="tweet-body">
+        <p>「未来已来，只是分布不均」：Fin 平均客户 <span class="highlight">67%</span> 解决率、Intercom 自己 <span class="highlight">80-85%</span>——但多数公司<span class="highlight">根本没用或还在用老一代（30% 解决率还觉得干得不错）</span>——「技术坐在那里等他们」。</p>
+        <p>企业心态轨迹：恐惧（数据怎么办/AI 治理委员会）→ POC 探索 → 过去几个月<span class="highlight">「紧迫感」：「这必须是核心，人人参与 AI，否则被落下」</span>——已有生产系统、看到真实 ROI。</p>
+        <p>为何还不是每家都在用：<span class="highlight">「习惯」</span>——CEO 发邮件没用，人们发一个 query 就回到老做法；最快路径是<span class="highlight">资深领导深刻理解可能 + 全组织一起转型</span>。</p>
+        <p>新购买心智：从「买软件帮人做客服」到<span class="highlight">「买软件直接做客服」</span>——别问「软件预算」，要看「<span class="highlight">客服 TCO</span>」；类似 2000 年代 SaaS 转型。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">📦</span> 公司</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 5 · Snowflake 的 AI 转型</div>
+    <div class="tweet-body">
+        <p>旅程：2.5 年前收购并入成 AI 团队，<span class="highlight">zero to one</span>；CEO「活在 AI 里」，同时驱动<span class="highlight">开发 AI 与全组织采用 AI</span>；「<span class="highlight">不断去够能力的极限，因为它很快就可能</span>」。</p>
+        <p>产品：<span class="highlight">Cortex Code</span>（数据向 coding agent：建管道、建 agents）；<span class="highlight">Snowflake Intelligence</span>（业务用户建 agent，必须准确——「问纽约收入必须精确答案，零容错」）。</p>
+        <p>内部应用：<span class="highlight">sales agent 部署给 6000 名销售</span>（book of business/消费走向/竞品分析，连 10+ 数据源）；营销负责人给自己建「PRD → 博客/新闻稿」agent——<span class="highlight">「角色已经失去意义，而且会继续」</span>；无编码销售用 coding agent 10-20 分钟建 anomaly detector。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 6 · 为什么两家都自研模型</div>
+    <div class="tweet-body">
+        <p>与 OpenAI/Anthropic 深合作（推理等 frontier 能力用他们的），但<span class="highlight">任务特定场景自研</span>——Snowflake：分类/情感/转录/翻译高吞吐函数、文档提取、自研 embedding（Neva 搜索团队遗产）；Intercom：reranker/retrieval/summarization——<span class="highlight">retrieval 模型的 base 竟是 Snowflake 开源模型 Arctic</span>，领域微调后同成本同延迟大幅提升。</p>
+        <p>决策框架：新东西先用<span class="highlight">最强大模型搞清楚</span>再优化；很多任务<span class="highlight">「智能已饱和」</span>——最新模型「overpowered」，task-specific 后训练性能/延迟/成本三赢。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🧩</span> 产品</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 7 · 质量：不同 agent 不同标准</div>
+    <div class="tweet-body">
+        <p>建 agent 容易（冰山问题：demo 容易、真实世界 messy；「周末 vibe code 原型 vs 规模化可靠」差距巨大）——<span class="highlight">质量标准因类型而异</span>：内部工具（专家 reviewer 容错高）vs <span class="highlight">Fin（面对非专家客户：必须极准、不编造、知道何时不回答）</span> vs Cortex Analyst（结构化数据零容错）。</p>
+        <p>单公司内部 agent vs 服务任意公司：不同 schema/semantic layer——<span class="highlight">「可靠处理任何东西」更难</span>（Fin 8000 客户 vs bespoke per company：改善一家不惠及他人）。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 8 · eval 与真实世界信号</div>
+    <div class="tweet-body">
+        <p>Snowflake：test harness + <span class="highlight">自动生成 eval 数据集 → 自动优化 → 自动迭代</span>——「agents building other agents」；隐私考量下用<span class="highlight">thumbs up/down → agent owner</span>，agent memory 跨用户学习向 admin 建议改进。</p>
+        <p>Intercom 反直觉观点：<span class="highlight">eval 必不可少（内部循环引擎），但无法替代真实世界</span>——Waymo 旧金山停电全停街中（「没建这个 eval」）；Fin 靠 8000 客户每周数百万对话获信号，<span class="highlight">用户会告诉你是否解决 + 公司有利益纠偏</span>。</p>
+        <p>人类时间未来：手动 query → <span class="highlight">steer/govern/monitor agents → 最终连最终行动也自动化</span>；「agent 改善 agent 的自主循环将远超人类可能」——但要配 guard rails。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 9 · 构建 Agent 是垂直集成栈</div>
+    <div class="tweet-body">
+        <p>客户配置 × harness 层 × 模型——<span class="highlight">三者紧密耦合：换模型/harness/术语全变</span>；「升级新 Sonnet 一定更好」是假象——没调 prompt 可能反而 underperform（有 eval 才能发现）。</p>
+        <p>最难问题：<span class="highlight">Fin 配置由客户编写</span>——产品迭代必须<span class="highlight">resilient：不意外破坏 8000 客户配置、不让客户持续改 prompt</span>；tone-of-voice 等配置要经<span class="highlight">「编译/插值步骤」</span>翻译（海盗物流客户 Pirate Ship 例子）；AI 工具帮客户识别矛盾 guidance。</p>
+        <p>可靠性：「退款 20% → 2000%」类灾难——<span class="highlight">人类也会犯错，但没人质疑人类、人人质疑 agent</span>；多步流程是硬前线：<span class="highlight">10 步 × 每步 95% 可靠 = 整体 ~50%（没用）</span>；解法：自然语言流程里<span class="highlight">混入确定性逻辑（直接写 Python，Fin 按代码执行）</span>。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 10 · 信任与治理是采用前提</div>
+    <div class="tweet-body">
+        <p>信任 = 答案准确 + 安全治理；Intercom：ISO/HIPAA + <span class="highlight">AI1 认证（专为 AI agent 的 ISO 式认证、第三方红队测试 Fin）</span>——「客户不必只信我们一面之词」。</p>
+        <p>Snowflake 核心设计原则：<span class="highlight">「把 AI 带到数据旁边，而不是把数据带出来给 AI」</span>——安全边界内运行、访问控制全被尊重；Intercom 用 Snowflake 跑 AI 时<span class="highlight">inference 发生在 Snowflake 安全边界内</span> = 巨大竞争优势。</p>
+        <p>能力 vs 安全：<span class="highlight">「没有 trade-off，安全/治理不可妥协」</span>（作为平台能力提供）；受监管行业客户要能描述 guard rails 并信任 Fin 遵守——<span class="highlight">让客户写 eval simulation tests（Fin 扮演用户/扮演自己/评判/给反馈，四个 AI 角色）</span>。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 11 · Build vs Buy 与创始人忠告</div>
+    <div class="tweet-body">
+        <p>答案「both」：<span class="highlight">在平台上构建</span>（不必 reinvent wheel）+ <span class="highlight">「外包非差异化重活，全力投入差异化领域专长」</span>；两家互相是客户（Snowflake 用 Fin、Intercom 用 Snowflake）。</p>
+        <p>构建时间下降：高质量 sales agent <span class="highlight">3 个月</span>，CEO 挑战「<span class="highlight">3 个月 → 3 天</span>」（Cortex Code 把 agent 创建/优化做成核心能力）；但<span class="highlight">构建不是瓶颈，采用才是</span>。</p>
+        <p>创始人两难：<span class="highlight">「正确的回应是偏执——只有偏执狂才能生存」</span>（做边缘差异化 + 深领域专长）；但选的问题要<span class="highlight">大到能独立存活——可一旦够大，Anthropic/OpenAI 也会在意</span>——「棘手的处境」。平台生态：「<span class="highlight">你们成功，我们就成功</span>」。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">💡</span> 变现与叙事</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 12 · 变现与叙事</div>
+    <div class="tweet-body">
+        <p>Snowflake：<span class="highlight">全部 consumption based（AI 同样）</span>——「只为用掉的付费」；叙事升级：<span class="highlight">「data cloud → AI data cloud」</span>——AI 让更多数据可被利用、洞察被民主化。</p>
+        <p>Fin：<span class="highlight">outcome based——解决才收费</span>，对齐 Intercom × 客户激励；甚至对齐内部：<span class="highlight">销售团队已按「好的 Fin 配置」计酬</span>（vs 坐席时代「卖掉坐席就完事」）；副作用：<span class="highlight">token 用量波动被封装进「一个解决单位 = 一个价」——波动是我们的问题，不是客户的问题</span>。</p>
+    </div>
+</div>
+
+<div class="footer">InsightView · 附录 22 · Fin × Snowflake: Deploying Agentic AI in the Enterprise · 12 条推文</div>
+
+</div>
+</body>
+</html>
