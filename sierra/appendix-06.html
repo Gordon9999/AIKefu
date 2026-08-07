@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightView 附录 06 · AI 客服之 Sierra</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+        .report-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .report-header h1 { font-size: 1.6rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem; }
+        .report-header .subtitle { font-size: 0.95rem; color: #64748b; }
+        .report-header .meta { font-size: 0.8rem; color: #94a3b8; margin-top: 0.5rem; }
+        .report-header .tag { font-size: 0.75rem; letter-spacing: 0.05em; color: #94a3b8; margin-bottom: 0.4rem; }
+        .section-title {
+            font-size: 1.15rem; font-weight: 700; color: #0f172a;
+            margin-top: 2rem; margin-bottom: 0.5rem; padding-bottom: 0.4rem;
+            border-bottom: 1px solid #e2e8f0; display: flex; align-items: center; gap: 0.4rem;
+        }
+        .section-title .emoji { font-size: 1.1rem; }
+        .tweet { padding: 1.2rem 0 1.2rem 0.8rem; border-bottom: 1px solid #eef2f6; }
+        .tweet:last-of-type { border-bottom: none; }
+        .tweet .tweet-label { font-weight: 600; font-size: 0.9rem; color: #2563eb; margin-bottom: 0.2rem; }
+        .tweet .tweet-body { font-size: 1rem; color: #1e293b; line-height: 1.8; }
+        .tweet .tweet-body p { margin-bottom: 0.3rem; }
+        .tweet .tweet-body p:last-child { margin-bottom: 0; }
+        .highlight { color: #16a34a; font-weight: 500; }
+        .footer {
+            text-align: center; margin-top: 3rem; padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8;
+        }
+        @media (max-width: 640px) {
+            .container { padding: 1.5rem 1rem 3rem; }
+            .report-header h1 { font-size: 1.3rem; }
+            .section-title { font-size: 1.05rem; }
+            .tweet .tweet-body { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="report-header">
+        <div class="tag">InsightView · 附录 06 · By Deepseek-V4-Flash</div>
+        <h1>附录 06 · CNBC Squawk Pod：AI Tokenomics 与护城河</h1>
+        <div class="subtitle">智力将被民主化，差异化来自客户关系与数据（2026-07-20）</div>
+        <div class="meta">InsightView · AI 客服之 Sierra · 2026-08-07</div>
+    </div>
+
+    <!-- 📌 核心观点 -->
+    <div class="section-title"><span class="emoji">📌</span> 核心观点</div>
+    <div class="tweet">
+        <div class="tweet-label">推 1 · 核心观点</div>
+        <div class="tweet-body">
+            <p><span class="highlight">智力将被民主化，差异化不能来自模型本身</span>——每个 CEO 最大的问题是「我的差异化在哪里」，答案在客户关系与数据。</p>
+            <p>Sierra 的实践：<span class="highlight">不按 token 付费，按成果付费</span>，并通过 Horizon 让客户交互数据沉淀为专属护城河。</p>
+        </div>
+    </div>
+
+    <!-- 👤 访谈人背景 -->
+    <div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+    <div class="tweet">
+        <div class="tweet-label">推 2 · 录制信息</div>
+        <div class="tweet-body">
+            <p><span class="highlight">录制时间</span>：2026-07-20。<span class="highlight">访谈人</span>：Andrew Ross Sorkin（CNBC Squawk Pod）。<span class="highlight">访谈嘉宾</span>：Bret Taylor。<span class="highlight">时长</span>：访谈部分约 15 分钟。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 3 · 嘉宾身份</div>
+        <div class="tweet-body">
+            <p><span class="highlight">Bret Taylor</span>：OpenAI 董事长、Sierra 联合创始人。他每月与约 100 位 CEO 交流，对 AI 时代企业最关心的问题有第一手观察。</p>
+        </div>
+    </div>
+
+    <!-- 💬 行业 -->
+    <div class="section-title"><span class="emoji">💬</span> 行业</div>
+    <div class="tweet">
+        <div class="tweet-label">推 4 · CEO 最关心的两大问题</div>
+        <div class="tweet-body">
+            <p><span class="highlight">AI 代币经济学</span>（token 花费是否物有所值）和<span class="highlight">主权/护城河</span>（AI 时代我的竞争优势是什么）。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 5 · Token 效率</div>
+        <div class="tweet-body">
+            <p>token 之于智能就像瓦特之于电力，但「不是每个 token 都等价」——<span class="highlight">前沿模型在 token 效率上仍具显著优势</span>，价值会流向那里。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 6 · 开源模型不一定更便宜</div>
+        <div class="tweet-body">
+            <p>关于开源权重模型（如中国的 Kimi/K3）：<span class="highlight">「不一定更便宜」——推理效率才是价值所在</span>。</p>
+            <p>模型选择需要多样性：信用卡交易要便宜，保险公司精算要最高智能。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 7 · 开法拉利去杂货店</div>
+        <div class="tweet-body">
+            <p>人们用最高端模型问天气导致过度支出——<span class="highlight">市场只是不成熟</span>：12 个月后 IT 部门会变得老练，营销用一个模型、软件工程师用另一个。</p>
+        </div>
+    </div>
+
+    <!-- 📦 公司 -->
+    <div class="section-title"><span class="emoji">📦</span> 公司</div>
+    <div class="tweet">
+        <div class="tweet-label">推 8 · 按成果付费</div>
+        <div class="tweet-body">
+            <p>Sierra 的商业模式：<span class="highlight">不按 token 付费，按成果付费</span>——按每笔发起的贷款或每次预先授权付费。</p>
+            <p>Sorkin 追问「客户付的钱是否超过生产成本」，Taylor 明确回答：<span class="highlight">是的</span>。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 9 · 摊销研发成本更容易</div>
+        <div class="tweet-body">
+            <p>作为应用 AI 公司，<span class="highlight">摊销为低延迟语音对话开发专用模型的研发成本更容易</span>——比世界上每家公司单独做更容易。</p>
+            <p>更多像 Sierra 这样的公司提供开箱即用方案，可以承担这个负担。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 10 · 应用型 AI 市场未成熟</div>
+        <div class="tweet-body">
+            <p>当前像 1997 年的互联网——<span class="highlight">想从技术中获得价值得自己构建</span>。这是对创业者的召唤：开发解决方案，让企业无需面对 token 层面的复杂问题。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 11 · Horizon：长时程代理</div>
+        <div class="tweet-body">
+            <p>Sierra 新产品 <span class="highlight">Horizon</span>：长时程代理，帮助发起贷款或做医疗程序预先授权，真正驱动收入。</p>
+        </div>
+    </div>
+
+    <!-- 🧩 产品 -->
+    <div class="section-title"><span class="emoji">🧩</span> 产品</div>
+    <div class="tweet">
+        <div class="tweet-label">推 12 · 客户关系是持久护城河</div>
+        <div class="tweet-body">
+            <p>「你和客户的关系、你和客户的互动，<span class="highlight">可以成为 AI 新时代的持久护城河</span>」。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 13 · 数据复利效应</div>
+        <div class="tweet-body">
+            <p>每次成功的销售电话 agent 都会学习并变好，但那是你的信息——<span class="highlight">不会流向竞争对手或前沿实验室</span>。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 14 · 别在模型层面差异化</div>
+        <div class="tweet-body">
+            <p>「如果公司以为可以在模型上差异化，那可能是个傻瓜的差事」——终极问题是「<span class="highlight">当超级智能被民主化时，我在这张竞争棋盘上的位置是什么</span>」。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 15 · 超越智能手机</div>
+        <div class="tweet-body">
+            <p>AI 将带来超越智能手机的设备：真正有趣的是<span class="highlight">我们现在可以跟计算机说话——不需要打字</span>。</p>
+        </div>
+    </div>
+
+    <!-- 🏗️ 组织 -->
+    <div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+    <div class="tweet">
+        <div class="tweet-label">推 16 · 数据主权</div>
+        <div class="tweet-body">
+            <p>「<span class="highlight">什么是我的，什么是 AI 模型的</span>」——CEO 必须理解所有权边界；大多数大型企业有合同承诺保证「我的就是我的」。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 17 · 网站不是竞争优势</div>
+        <div class="tweet-body">
+            <p>每个人都会有一个网站，有网站不是竞争优势——<span class="highlight">智能会相当民主化，客户关系才能持久</span>。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 18 · 对 OpenAI 与 Sam Altman</div>
+        <div class="tweet-body">
+            <p>对 Apple 诉讼：「我们对任何其他公司的商业机密没有兴趣」——信任是 OpenAI 的核心资产。</p>
+            <p>对 Sam Altman：「他用心也用脑领导，在社交媒体上很真实，我不会改变这一点。他是一个了不起的领导者。」</p>
+        </div>
+    </div>
+
+    <div class="footer">InsightView · 附录 06 · AI 客服之 Sierra · 基于 CNBC Squawk Pod 访谈转录提炼 · 2026-08-07</div>
+</div>
+</body>
+</html>
