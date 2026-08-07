@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>附录 11 · Monitors：Fin 可观测性与 QA 套件</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.8;
+}
+.container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+.back-link { font-size: 0.85rem; color: #2563eb; text-decoration: none; margin-bottom: 1rem; display: inline-block; }
+.back-link:hover { text-decoration: underline; }
+.report-header {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+.report-header .tag { font-size: 0.8rem; letter-spacing: 0.1em; opacity: 0.75; margin-bottom: 0.5rem; }
+.report-header h1 { font-size: 1.45rem; font-weight: 700; margin-bottom: 0.75rem; }
+.report-header p { font-size: 0.95rem; opacity: 0.85; }
+.section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 2rem 0 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eef2f6;
+    color: #0f172a;
+}
+.section-title .emoji { margin-right: 0.4rem; }
+.tweet {
+    padding: 1.2rem 0 1.2rem 0.8rem;
+    border-bottom: 1px solid #eef2f6;
+}
+.tweet:last-of-type { border-bottom: none; }
+.tweet .tweet-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #2563eb;
+    margin-bottom: 0.2rem;
+}
+.tweet .tweet-body {
+    font-size: 1rem;
+    color: #1e293b;
+    line-height: 1.8;
+}
+.tweet .tweet-body p { margin-bottom: 0.3rem; }
+.tweet .tweet-body p:last-child { margin-bottom: 0; }
+.highlight { color: #16a34a; font-weight: 500; }
+.footer {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eef2f6;
+}
+@media (max-width: 640px) {
+    .report-header h1 { font-size: 1.2rem; }
+    .container { padding: 1.25rem 1rem 3rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a class="back-link" href="index.html">← 返回主报告</a>
+
+<div class="report-header">
+    <div class="tag">InsightView · 附录 11 · By Deepseek-V4-Flash</div>
+    <h1>A Major Fin Product Update: Monitors | Fin Labs Paris</h1>
+    <p>来源：Intercom 官方 · Fin Labs 巴黎发布会 + 客户圆桌 · Paul（CPO）、Liz（demo）、Ruth（圆桌）</p>
+</div>
+
+<div class="section-title"><span class="emoji">📌</span> 一句话总结</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 1 · 核心结论</div>
+    <div class="tweet-body">
+        <p>Intercom 在巴黎 Fin Labs 发布 <span class="highlight">Monitors</span>——Fin 可观测性与 QA 套件的第三块拼图（Insights + Recommendations + Monitors 的「trifecta」），目标：打开 AI 黑盒、让客户「像管理新员工一样管理 Agent」。</p>
+        <p>Monitors 提供实时质量监控、<span class="highlight">自定义评分卡</span>（AI/人工评分、加权、critical 标记）、告警与审查队列，覆盖 Fin 与人工团队 100% 对话。信念：<span class="highlight">Agent 是新员工</span>——训练、反馈、观察，基础是 confidence。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 2 · 录制信息</div>
+    <div class="tweet-body">
+        <p><span class="highlight">录制时间</span>：未提供（提及 4 月 21 日将有新发布）。</p>
+        <p>主讲：Paul（CPO）、Liz（forward deployed engineer，live demo）；客户圆桌：Ruth（Intercom AI support team 负责人）主持 + Newman（Redian）与 Glean（Cat）；时长约 74 分钟。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 3 · 素材性质</div>
+    <div class="tweet-body">
+        <p>Fin Labs 巴黎场完整发布会：产品宣布 + live demo + 客户圆桌。</p>
+        <p>与第 3 篇（DKM Echo 实操）、第 9 篇（Procedures 深讲）互补——本篇聚焦「<span class="highlight">Analyze 环节最后一环：可观测性与 QA</span>」。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">💬</span> 行业</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 4 · Agent 是下一个大技术</div>
+    <div class="tweet-body">
+        <p>Paul 的判断：Agent 无疑是下一波重大技术浪潮，所有人都会用 Agent、<span class="highlight">管理多个 Agent</span>；光谱从「fully agent-pilled」到「被公司禁止用 AI」。</p>
+        <p>内部佐证：放开 Claude Code 后两到三周全公司各部门都在用（整理时间/邮件、建 dashboard、跑分析、写 app）。</p>
+        <p>行业主流不打开 AI 黑盒（要联系厂商帮你调）；Intercom 选择<span class="highlight">开放黑盒、客户自服务</span>——更难但坚持透明。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 5 · QA 市场的空白</div>
+    <div class="tweet-body">
+        <p>客户痛点：QA「手动、碎片化」（表格/导出/多工具），只审一小部分；「发现问题时已影响客户」——需要 <span class="highlight">always-on QA</span>；「找到问题不够，需要工作流指派修复并证明有效」。</p>
+        <p>传统 CSAT 覆盖率仅约 <span class="highlight">8%</span> 且自选样本有偏（Glean 甚至只有 1% 实际覆盖）。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">📦</span> 公司</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 6 · 规模与数据</div>
+    <div class="tweet-body">
+        <p>Fin 客户 <span class="highlight">8000</span> 家、平均解决率 <span class="highlight">67%</span>、每周解决 <span class="highlight">200 万</span>段客户查询。</p>
+        <p>客户跨行业、高度定制（「有的公司永远退款，有的除非特定条件绝不退款」）——每家都要 Fin 按自己的方式代表品牌。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 7 · 战略：Flywheel 第三块拼图</div>
+    <div class="tweet-body">
+        <p>可观测性套件三部分：<span class="highlight">Insights（CX Score/topics/trends）→ Recommendations（一键接受）→ Monitors</span>——今天发布第三块，补上「monitoring and scoring」缺口。</p>
+        <p>信念：「<span class="highlight">Agent 就像新员工</span>」——培训、反馈、观察、随时间变好；客户面对面的 Agent 容错率极低，confidence 是核心主题。</p>
+        <p>自家实践：Intercom AI support team 自动化率 <span class="highlight">83%</span>，被要求未来几个季度冲到至少 <span class="highlight">95%</span>。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🧩</span> 产品</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 8 · Monitors 核心能力</div>
+    <div class="tweet-body">
+        <p><span class="highlight">实时监控</span>：live 系统持续监控对话质量，按你的标准（含自定义）评估，覆盖 Fin 与人工对话；可覆盖全部或锁定窄集合。</p>
+        <p><span class="highlight">自然语言信号</span>：确定性过滤器不够——加自然语言指令捕捉细微信号（如「付不起账单」的财务脆弱性），可对样本测试调优。</p>
+        <p>监控模式：持续（实时告警）/ 定时抽样 / 一次性日期过滤。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 9 · 自定义评分卡</div>
+    <div class="tweet-body">
+        <p>自建标准、<span class="highlight">加权、排序</span>；AI 用评分卡<span class="highlight">一致地自动评分每段对话</span>（解放人工），也可指定某些标准由人工评分——AI 判断 + 人工流程结合。</p>
+        <p>可设通过/失败阈值、<span class="highlight">critical 标记</span>（不满足则整体判失败）；与 Fin 同一套知识/流程/guidance 评估；可分别给 Fin 与人工团队建评分卡。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 10 · 告警、审查队列与报告</div>
+    <div class="tweet-body">
+        <p><span class="highlight">告警</span>：对话跌破标准、高风险行为即时通知——在影响更多客户前捕获。</p>
+        <p><span class="highlight">审查队列</span>：未审查对话聚合视图；审查时看全对话 + AI 预评分；失败 → 标记需修复 → 流转到 <span class="highlight">fixes needed</span> 队列——QA 团队与 Fin 优化团队无缝交接。</p>
+        <p>Reporting：全部质量分汇入 Intercom 自定义报告，可叠加 CX Score。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 11 · Roadmap</div>
+    <div class="tweet-body">
+        <p><span class="highlight">Human QA</span>：扩展到人工坐席对话（同一框架覆盖 AI + 人工，可分别建评分卡）；<span class="highlight">Alerts</span>：高风险场景实时告警；<span class="highlight">评估对照知识库</span>：评分卡可对照知识库内容/政策评估回复；<span class="highlight">CX Score benchmarking</span>：与同行业对比。</p>
+        <p>技术细节：模型三层 = app 层 → <span class="highlight">RAG 系统（数百个 A/B 实验）</span> → 模型层（自研 + Anthropic）；MCP/API 开放探索中。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 12 · 客户落地：Newman（数字医疗）</div>
+    <div class="tweet-body">
+        <p>不是「AI first」而是「<span class="highlight">patient first</span>」——AI 释放坐席、临床查询分流到临床团队；满足监管、证明安全运营。</p>
+        <p>信任曲线：从 <span class="highlight">100% 人工审核 Fin 交互 → 如今每月约 5%</span>（定期临床治理会议）；monitors 将支持从 5% 走向 100% 审核。用 attributes 让财务困境等情绪化患者绕过 Fin 直达人工。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 13 · 客户落地：Glean（AI 公司）</div>
+    <div class="tweet-body">
+        <p>超高速增长需要可扩展方案；Fin 上外部渠道（帮助中心/社区/产品内），介入率 <span class="highlight">41% → 100%</span>、解决率稳定 <span class="highlight">80%+</span>；测试功能全 fair/good 建立信心；CX Score 用于与领导层对话（证明文档维护价值）。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 14 · 行业共同挑战</div>
+    <div class="tweet-body">
+        <p><span class="highlight">CSAT 局限</span>：覆盖率极低、自选样本、二元化——「坐席做得好但问题没解决，CSAT 照样低」；CX Score 更全面、可下钻。</p>
+        <p><span class="highlight">KPI 重构</span>：Fin 吃掉简单问题后，人工只剩复杂问题——TTR 上升、resolutions per hour 要调低预期、handle time 变长。</p>
+        <p><span class="highlight">Fin voice 态度转变</span>：从「打电话就要真人」到「问题能解决就愿意和 bot 说，解决不了要能转人工」——避免 bot loop of doom。</p>
+    </div>
+</div>
+
+<div class="footer">InsightView · 附录 11 · Monitors | Fin Labs Paris · 14 条推文</div>
+
+</div>
+</body>
+</html>
