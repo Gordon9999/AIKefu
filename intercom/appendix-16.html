@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>附录 16 · Fin 可观测性案例（Chapter 22）</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.8;
+}
+.container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+.back-link { font-size: 0.85rem; color: #2563eb; text-decoration: none; margin-bottom: 1rem; display: inline-block; }
+.back-link:hover { text-decoration: underline; }
+.report-header {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+.report-header .tag { font-size: 0.8rem; letter-spacing: 0.1em; opacity: 0.75; margin-bottom: 0.5rem; }
+.report-header h1 { font-size: 1.45rem; font-weight: 700; margin-bottom: 0.75rem; }
+.report-header p { font-size: 0.95rem; opacity: 0.85; }
+.section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 2rem 0 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eef2f6;
+    color: #0f172a;
+}
+.section-title .emoji { margin-right: 0.4rem; }
+.tweet {
+    padding: 1.2rem 0 1.2rem 0.8rem;
+    border-bottom: 1px solid #eef2f6;
+}
+.tweet:last-of-type { border-bottom: none; }
+.tweet .tweet-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #2563eb;
+    margin-bottom: 0.2rem;
+}
+.tweet .tweet-body {
+    font-size: 1rem;
+    color: #1e293b;
+    line-height: 1.8;
+}
+.tweet .tweet-body p { margin-bottom: 0.3rem; }
+.tweet .tweet-body p:last-child { margin-bottom: 0; }
+.highlight { color: #16a34a; font-weight: 500; }
+.footer {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eef2f6;
+}
+@media (max-width: 640px) {
+    .report-header h1 { font-size: 1.2rem; }
+    .container { padding: 1.25rem 1rem 3rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a class="back-link" href="index.html">← 返回主报告</a>
+
+<div class="report-header">
+    <div class="tag">InsightView · 附录 16 · By Deepseek-V4-Flash</div>
+    <h1>How Intercom Optimized AI Support Agent Fin | Observability Case Study</h1>
+    <p>来源：第三方 explainer · 案例作者：Qusai Makulov（Intercom staff product engineer）</p>
+</div>
+
+<div class="section-title"><span class="emoji">📌</span> 一句话总结</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 1 · 核心结论</div>
+    <div class="tweet-body">
+        <p>Fin 工程团队 2025 年初的困境：<span class="highlight">仪表盘全绿，客户却喊慢、财务发现毛利率下滑</span>——「共情驱动的可观测性」化解：引入 <span class="highlight">TTFT（首次 token 时间）</span>注入 trace 瀑布找到关键路径，用 <span class="highlight">eager requests</span> 大幅提速。</p>
+        <p>但 eager requests 有致命副作用：路由规则确认前就烧掉昂贵 LLM token——<span class="highlight">被丢弃的 token 静默烧钱、工程指标完全看不见</span>；最终把 <span class="highlight">llm.total_cost</span> 注入 trace + 成本 SLO 止损。金句：<span class="highlight">「在 AI 时代，共情就是你所需要的全部」</span>。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 2 · 录制信息</div>
+    <div class="tweet-body">
+        <p><span class="highlight">录制时间</span>：未提供。</p>
+        <p>讲述人：第三方 explainer 博主（未具名）；原始作者：Qusai Makulov（Intercom staff product engineer，案例 Chapter 22）；时长约 12 分钟。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 3 · 素材性质</div>
+    <div class="tweet-body">
+        <p>Fin 技术栈「<span class="highlight">工程与可观测性</span>」视角的内部案例（第三方转述）——与前几篇的产品/商业视角互补。</p>
+        <p>背景：<span class="highlight">20+ 团队、数百工程师、每天 100 次生产部署</span>；解决率当时每月 +1%。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">💬</span> 行业</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 4 · AI 时代工程的新张力</div>
+    <div class="tweet-body">
+        <p>AI 重写软件构建方式，也<span class="highlight">重创单元经济学与可观测性</span>——「快且好」与「经济可持续」成为核心矛盾。</p>
+        <p>传统监控盲区：组件级全绿（CPU/内存/200/零错误）但客户骂慢、公司烧钱；<span class="highlight">LLM 供应商混沌</span>（网络抖动/宕机/流量尖峰）让硬阈值告警天天误报。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">📦</span> 公司</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 5 · Fin 工程环境</div>
+    <div class="tweet-body">
+        <p>Fin 建在巨大既有客户沟通平台上，接入<span class="highlight">数千个复杂自定义支持工作流</span>；<span class="highlight">数百工程师、20 团队</span>共同触碰代码，每天发 <span class="highlight">100 个变更</span>。</p>
+        <p>主指标：解决率每月 +1%（AI 在变聪明）——但分布式复杂度让「定位延迟」成为噩梦。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🧩</span> 产品</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 6 · 误解与关键路径</div>
+    <div class="tweet-body">
+        <p>团队按传统思路狂发优化 PR——但基于误解：<span class="highlight">以为分布式 trace 是串行的</span>；现实是并发、混乱、后台任务重叠。</p>
+        <p>关键认知：<span class="highlight">让单组件变快 ≠ 用户更快拿到答案</span>——不知道哪些事务在 <span class="highlight">关键路径</span>（决定最终速度的最长依赖链）上。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 7 · TTFT 与 trace 瀑布</div>
+    <div class="tweet-body">
+        <p>引入 <span class="highlight">TTFT（time to first token）</span>：从点击提交到第一个 token 出现在 UI 的时长——LLM 流式输出，第一个字出现即释放「人等待的心理时长」。</p>
+        <p>把 TTFT 注入<span class="highlight">分布式 trace 瀑布视图</span>（黑暗房间开探照灯）——看到客户等待的完整时间块；重插桩暴露<span class="highlight">服务间交接</span>（「延迟藏在间隙里」）；顶部给 what、嵌套 span 给 why。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 8 · Eager Requests 与 SLO</div>
+    <div class="tweet-body">
+        <p>最大瓶颈是 LLM 本身，但调用前有「平凡的串行琐事」——于是<span class="highlight">跳过前置检查、立即并行发 LLM 请求</span>（假设会被批准），后台通过后<span class="highlight">直接流式发回复</span>——巨大提速。</p>
+        <p>保护速度：改用<span class="highlight">事件型 SLO</span>（7 天滚动窗口内快于基线的百分比）——平滑 LLM 尖峰，只关注真实系统性退化。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 9 · 剧情反转：静默烧钱</div>
+    <div class="tweet-body">
+        <p>Eager requests 致命缺陷：客户条件工作流（如「问计费就转人工」）规则未确认前，系统已<span class="highlight">疯狂发出昂贵 LLM 查询</span>；判定转人工后 token 被丢弃——<span class="highlight">昂贵无用的浪费</span>。</p>
+        <p>最糟：Fin「从未正式回复」，<span class="highlight">零指标/事件发给工程团队</span>——bug 完全隐形；「工程团队直到财务季度审查发现毛利率下滑才知道」。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 10 · 把成本注入遥测</div>
+    <div class="tweet-body">
+        <p>数据仓库分钟级查询 + 隔夜刷新——对「每天发 100 次」的工程团队<span class="highlight">毫无用处</span>（等不起 24 小时）。</p>
+        <p>范式转变：<span class="highlight">把 LLM 成本注入实时遥测</span>——每个请求 trace span 加 <span class="highlight">llm.total_cost</span>：工程师在延迟旁直接看到<span class="highlight">这笔交互花了几美元</span>（财务数据民主化）；成本 SLO——坏部署致单次成本飙升时 <span class="highlight">on-call 立即被 paging、几分钟止损</span>。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 11 · 共情是可观测性的本质</div>
+    <div class="tweet-body">
+        <p>Qusai 金句：<span class="highlight">「在 AI 时代，共情就是你所需要的全部」</span>——TTFT 建立对「人等待」的共情，llm.total_cost 建立对<span class="highlight">业务底线</span>的共情。</p>
+        <p>组织启示：可观测性是<span class="highlight">实时反馈闭环</span>；把财务数据搬进开发者原生工具，弥合「财务慢精度 vs 工程实时性」鸿沟——与 Fin 产品「Monitors/Observability」理念（第 11 篇）一脉相承（dogfooding 深入到工程文化）。</p>
+    </div>
+</div>
+
+<div class="footer">InsightView · 附录 16 · Fin Observability Case Study · 11 条推文</div>
+
+</div>
+</body>
+</html>
