@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightView 附录 06 · AI 客服之 Decagon</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+        .report-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .report-header h1 { font-size: 1.6rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem; }
+        .report-header .subtitle { font-size: 0.95rem; color: #64748b; }
+        .report-header .meta { font-size: 0.8rem; color: #94a3b8; margin-top: 0.5rem; }
+        .section-title {
+            font-size: 1.15rem; font-weight: 700; color: #0f172a;
+            margin-top: 2rem; margin-bottom: 0.5rem; padding-bottom: 0.4rem;
+            border-bottom: 1px solid #e2e8f0; display: flex; align-items: center; gap: 0.4rem;
+        }
+        .section-title .emoji { font-size: 1.1rem; }
+        .tweet { padding: 1.2rem 0 1.2rem 0.8rem; border-bottom: 1px solid #eef2f6; }
+        .tweet:last-of-type { border-bottom: none; }
+        .tweet .tweet-label { font-weight: 600; font-size: 0.9rem; color: #2563eb; margin-bottom: 0.2rem; }
+        .tweet .tweet-body { font-size: 1rem; color: #1e293b; line-height: 1.8; }
+        .tweet .tweet-body p { margin-bottom: 0.3rem; }
+        .tweet .tweet-body p:last-child { margin-bottom: 0; }
+        .highlight { color: #16a34a; font-weight: 500; }
+        .footer {
+            text-align: center; margin-top: 3rem; padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8;
+        }
+        @media (max-width: 640px) {
+            .container { padding: 1.5rem 1rem 3rem; }
+            .report-header h1 { font-size: 1.3rem; }
+            .section-title { font-size: 1.05rem; }
+            .tweet .tweet-body { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="report-header">
+        <h1>附录 06 · Proactive Agents：主动型 Agent</h1>
+        <div class="subtitle">Introducing Proactive Agents（Decagon 官方产品发布）</div>
+        <div class="meta">InsightView · AI 客服之 Decagon · 2026-08-05</div>
+    </div>
+
+    <!-- 📌 核心观点 -->
+    <div class="section-title"><span class="emoji">📌</span> 核心观点</div>
+    <div class="tweet">
+        <div class="tweet-label">推 1 · 核心观点</div>
+        <div class="tweet-body">
+            <p>Decagon 推出 <span class="highlight">Proactive Agents</span>——把 AI 管家从「被动等客服」升级为「主动找客户」。</p>
+            <p>核心是两大能力：<span class="highlight">用户记忆</span>（记住客户偏好与历史）与<span class="highlight">外呼语音</span>（主动打电话提供帮助）。</p>
+        </div>
+    </div>
+
+    <!-- 👤 访谈人背景 -->
+    <div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+    <div class="tweet">
+        <div class="tweet-label">推 2 · 录制信息</div>
+        <div class="tweet-body">
+            <p><span class="highlight">录制时间</span>：未提供（Decagon 官方产品发布视频）；时长约 1.5 分钟。</p>
+            <p><span class="highlight">访谈人/访谈嘉宾</span>：无——品牌旁白 + 情景演示形式的发布宣传片。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 3 · 素材定位</div>
+        <div class="tweet-body">
+            <p>这是 Decagon「<span class="highlight">Proactive Agents</span>」新产品的对外发布材料，用情景剧演示产品体验。</p>
+            <p>它代表 Decagon「concierge」愿景从理念走向具体产品落地的关键一步。</p>
+        </div>
+    </div>
+
+    <!-- 💬 行业 -->
+    <div class="section-title"><span class="emoji">💬</span> 行业</div>
+    <div class="tweet">
+        <div class="tweet-label">推 4 · 行业痛点：被动的客户体验</div>
+        <div class="tweet-body">
+            <p>视频开场用反讽呈现传统客服的糟糕体验——<span class="highlight">不断重复问题、无尽等待、没有回电</span>。</p>
+            <p>「为什么要有回电，我宁愿永远等下去」——这是每个消费者都经历过的场景。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 5 · 客服从「支持」走向「体验」</div>
+        <div class="tweet-body">
+            <p>Decagon 主张客户体验要「<span class="highlight">超越支持</span>」（beyond just support）——AI 管家应覆盖更广的客户旅程。</p>
+            <p>Agent 处理复杂请求并在 chat、voice、email、SMS 全渠道采取行动。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 6 · 主动 vs 被动的范式转变</div>
+        <div class="tweet-body">
+            <p>行业正在从「客户来找你」转向「<span class="highlight">AI 主动找客户</span>」——这是 Proactive Agents 要定义的新品类。</p>
+            <p>好管家的标准是「认识你、预见你的需求」，而不是等你有问题才出现。</p>
+        </div>
+    </div>
+
+    <!-- 📦 公司 -->
+    <div class="section-title"><span class="emoji">📦</span> 公司</div>
+    <div class="tweet">
+        <div class="tweet-label">推 7 · 产品定位：AI concierge</div>
+        <div class="tweet-body">
+            <p>Decagon 正在构建 <span class="highlight">AI concierge（AI 管家）</span>，支撑「超越支持」的客户体验。</p>
+            <p>Agent 在 chat、voice、email、SMS 全渠道处理复杂请求并采取行动——管家式体验是核心愿景。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 8 · 本次发布：两大能力</div>
+        <div class="tweet-body">
+            <p>Proactive Agents 包含 <span class="highlight">User Memory（用户记忆）</span>与 <span class="highlight">Outbound Voice（外呼语音）</span>两大能力。</p>
+            <p>记忆让体验个性化，外呼让帮助先于请求——两者共同定义「主动」的含义。</p>
+        </div>
+    </div>
+
+    <!-- 🧩 产品 -->
+    <div class="section-title"><span class="emoji">🧩</span> 产品</div>
+    <div class="tweet">
+        <div class="tweet-label">推 9 · User Memory：交互永不重置</div>
+        <div class="tweet-body">
+            <p>Agent 保留客户<span class="highlight">偏好与对话历史</span>，把关键上下文向前传递——交互不重置，对话始终个性化。</p>
+            <p>聊天中途掉线，或客户几周后再来电，都能<span class="highlight">无缝接续</span>上次的对话。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 10 · Outbound Voice：先于需求行动</div>
+        <div class="tweet-body">
+            <p>Agent 具备给客户<span class="highlight">打电话的能力与上下文</span>，在客户开口之前就主动提供帮助。</p>
+            <p>它是双向对话——客户和 Agent 都能在当下提问与采取行动。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 11 · 底层机制：AOPs 定义主动策略</div>
+        <div class="tweet-body">
+            <p>团队用<span class="highlight">自然语言</span>定义 Agent 何时外呼、能做什么——延续 AOPs 的产品理念。</p>
+            <p>业务逻辑由运营者配置，技术团队保留控制权，主动策略同样「产品化」。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 12 · 场景演示：记忆 + 主动 + 行动</div>
+        <div class="tweet-body">
+            <p>Kyra 的订单延误，Agent 主动来电：「你的订单延误了，我打电话来给你选项。」</p>
+            <p>「<span class="highlight">我记得你说这些是比赛日要用的</span>，所以我可以隔夜重新发货，可以吗？」——记忆、主动、行动三合一。</p>
+        </div>
+    </div>
+
+    <!-- 🏗️ 组织 -->
+    <div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+    <div class="tweet">
+        <div class="tweet-label">推 13 · 组织演化：产品矩阵扩张驱动组织分工</div>
+        <div class="tweet-body">
+            <p>Proactive Agents 的发布意味着产品从「被动客服」扩展到「主动触达」——组织也相应分化出<span class="highlight">外呼策略、记忆系统、语音工程</span>等新能力团队。</p>
+            <p>每一次产品矩阵扩张都带来新的组织分工与协作界面，这是 Decagon「执行业务流程的 Agent」定位下的组织演进路径。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 14 · 产品矩阵的又一扩展</div>
+        <div class="tweet-body">
+            <p>Proactive Agents 是从被动客服到主动触达的扩展，与其「<span class="highlight">执行业务流程的 Agent</span>」定位一脉相承。</p>
+            <p>这也呼应了 a16z 访谈中「AI Agent 应成为企业前门」的愿景——主动触达是前门的一部分。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 15 · 对客户的价值：问题发生前介入</div>
+        <div class="tweet-body">
+            <p>主动外呼把「<span class="highlight">问题发生前介入</span>」从愿景变成现实——在客户不满之前先处理。</p>
+            <p>延迟订单主动重发、提前告知选项——提升满意度并减少流失。</p>
+        </div>
+    </div>
+
+    <div class="footer">InsightView · 附录 06 · AI 客服之 Decagon · 基于原始视频转录提炼 · 2026-08-05</div>
+</div>
+</body>
+</html>
