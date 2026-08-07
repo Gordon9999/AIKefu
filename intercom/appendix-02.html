@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>附录 02 · A demo of Intercom's Fin AI Copilot</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.8;
+}
+.container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+.back-link { font-size: 0.85rem; color: #2563eb; text-decoration: none; margin-bottom: 1rem; display: inline-block; }
+.back-link:hover { text-decoration: underline; }
+.report-header {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+.report-header .tag { font-size: 0.8rem; letter-spacing: 0.1em; opacity: 0.75; margin-bottom: 0.5rem; }
+.report-header h1 { font-size: 1.45rem; font-weight: 700; margin-bottom: 0.75rem; }
+.report-header p { font-size: 0.95rem; opacity: 0.85; }
+.section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 2rem 0 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eef2f6;
+    color: #0f172a;
+}
+.section-title .emoji { margin-right: 0.4rem; }
+.tweet {
+    padding: 1.2rem 0 1.2rem 0.8rem;
+    border-bottom: 1px solid #eef2f6;
+}
+.tweet:last-of-type { border-bottom: none; }
+.tweet .tweet-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #2563eb;
+    margin-bottom: 0.2rem;
+}
+.tweet .tweet-body {
+    font-size: 1rem;
+    color: #1e293b;
+    line-height: 1.8;
+}
+.tweet .tweet-body p { margin-bottom: 0.3rem; }
+.tweet .tweet-body p:last-child { margin-bottom: 0; }
+.highlight { color: #16a34a; font-weight: 500; }
+.footer {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eef2f6;
+}
+@media (max-width: 640px) {
+    .report-header h1 { font-size: 1.2rem; }
+    .container { padding: 1.25rem 1rem 3rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a class="back-link" href="index.html">← 返回主报告</a>
+
+<div class="report-header">
+    <div class="tag">InsightView · 附录 02 · By Deepseek-V4-Flash</div>
+    <h1>A demo of Intercom's Fin AI Copilot</h1>
+    <p>来源：Intercom 官方 YouTube · 产品演示 · 讲述人：Olivia（产品营销团队）</p>
+</div>
+
+<div class="section-title"><span class="emoji">📌</span> 一句话总结</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 1 · 核心结论</div>
+    <div class="tweet-body">
+        <p>Fin AI Co-pilot 是 Intercom 为<strong>每一位客服坐席</strong>配备的「个人 AI 助手」：在 Inbox 里直接提问，扫描整个知识库生成即时答案，并给出可验证的来源引用。</p>
+        <p>独门优势：唯一能用<span class="highlight">团队历史对话</span>做答案源的 AI co-pilot。效果：坐席每天多关闭 <span class="highlight">31%</span> 对话，Deliverect 响应速度最高提升 <span class="highlight">75%</span>。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 2 · 录制信息</div>
+    <div class="tweet-body">
+        <p><span class="highlight">录制时间</span>：未提供。</p>
+        <p>讲述人：Olivia（Intercom 产品营销团队成员）；无访谈嘉宾——这是官方产品 demo 而非访谈；时长约 4 分钟。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 3 · 素材性质</div>
+    <div class="tweet-body">
+        <p>本篇是 Intercom 官方的产品演示视频，完整展示 Fin AI Co-pilot 在真实 Inbox 场景中的工作流——识别需求、生成答案、验证来源、一键发送、追问处理。</p>
+        <p>视角是官方对自身产品的定位与卖点陈述，重点在<span class="highlight">产品功能 + 效果数据</span>。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">💬</span> 行业</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 4 · 坐席的核心痛点</div>
+    <div class="tweet-body">
+        <p>客服坐席把大量时间花在「找答案」上：为回答客户问题，要在多个标签页、多种来源间来回搜索，人被拉离客户。</p>
+        <p>低效让坐席无法专注真正重要的事——<span class="highlight">建立更深、更持久的客户关系</span>。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 5 · AI co-pilot 的竞争格局</div>
+    <div class="tweet-body">
+        <p>市场上有多个 AI co-pilot 产品，都能连接外部文章、内部手册与第三方知识平台（Confluence、Notion、Guru）。</p>
+        <p>Fin 的差异化：<span class="highlight">唯一能基于团队历史对话溯源答案</span>——过往客服成功解决问题的对话，成为新一代答案源。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">📦</span> 公司</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 6 · 产品定位</div>
+    <div class="tweet-body">
+        <p>Fin AI Co-pilot 被定位为「<span class="highlight">每一位坐席的个人 AI 助手</span>」，直接内嵌 Intercom Inbox，目标是大规模提升客服团队效率。</p>
+        <p>它与 Fin 家族路线互补：Co-pilot 辅助坐席，Fin（自主 agent）直接解决客户问题。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 7 · 客户案例</div>
+    <div class="tweet-body">
+        <p><span class="highlight">Deliverect</span>：使用 Fin 后团队响应速度最高提升 <span class="highlight">75%</span>，能交付客户期待的个人化、高质量、快速响应。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🧩</span> 产品</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 8 · Inbox 内的即时问答</div>
+    <div class="tweet-body">
+        <p>Fin 直接出现在 Inbox 右侧面板，实时理解对话上下文；客户提出退款需求时，Fin 会自动建议坐席可以问的问题。</p>
+        <p>坐席提问后，Fin 扫描整个知识库，生成<span class="highlight">个性化到当前对话</span>的即时答案。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 9 · 多来源连接</div>
+    <div class="tweet-body">
+        <p>外部来源（如 Public Health Center 文章）、内部来源（如坐席手册）、第三方平台（Confluence、Notion、Guru）。</p>
+        <p>独有能力：<span class="highlight">团队过往对话历史</span>——把「以前怎么解决的」作为答案源。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 10 · 可验证的答案溯源</div>
+    <div class="tweet-body">
+        <p>每个答案附 top 2 最相关来源：悬停可见来源类型（公共文章 / 过往坐席对话），点击查看全文，且<span class="highlight">高亮 Fin 引用的具体段落</span>，便于坐席验证。</p>
+        <p>除 AI 生成答案外，坐席还能浏览 Fin 扫描到的全部相关来源——答案与来源浏览集中在 Inbox 一处。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 11 · 发送与个性化</div>
+    <div class="tweet-body">
+        <p>一键「add to the composer」加入编辑器；在编辑器内用 AI 一键<span class="highlight">翻译、调整语气</span>（更友好 / 更正式）。</p>
+        <p>支持上下文感知的追问：客户追问（如「订单超过 60 天怎么办」）时，Fin 会基于前一个问题继续合成相关来源作答。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 12 · 安全细节</div>
+    <div class="tweet-body">
+        <p>答案基于内部文章生成时，Fin 会提醒坐席<span class="highlight">确认内容可对外分享</span>后再发送——防止内部信息外泄。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 13 · 效果数据</div>
+    <div class="tweet-body">
+        <p>使用 Fin AI Co-pilot 的坐席，每天关闭的客户对话比不用者多 <span class="highlight">31%</span>；Deliverect 案例响应速度最高提升 <span class="highlight">75%</span>。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 14 · 官方叙事与客户验证</div>
+    <div class="tweet-body">
+        <p>本篇由 Intercom 产品营销团队出品，是面向客户与潜在客户的官方功能演示——体现 Intercom「用 AI 增强客服人力」的产品叙事。</p>
+        <p>客户证言：Deliverect 是 Fin 的落地客户之一，验证了「更快响应 + 高质量个性化」的实际效果。</p>
+    </div>
+</div>
+
+<div class="footer">InsightView · 附录 02 · A demo of Intercom's Fin AI Copilot · 14 条推文</div>
+
+</div>
+</body>
+</html>
