@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>附录 09 · Procedures & Simulations 产品深讲</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.8;
+}
+.container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+.back-link { font-size: 0.85rem; color: #2563eb; text-decoration: none; margin-bottom: 1rem; display: inline-block; }
+.back-link:hover { text-decoration: underline; }
+.report-header {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+.report-header .tag { font-size: 0.8rem; letter-spacing: 0.1em; opacity: 0.75; margin-bottom: 0.5rem; }
+.report-header h1 { font-size: 1.45rem; font-weight: 700; margin-bottom: 0.75rem; }
+.report-header p { font-size: 0.95rem; opacity: 0.85; }
+.section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 2rem 0 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eef2f6;
+    color: #0f172a;
+}
+.section-title .emoji { margin-right: 0.4rem; }
+.tweet {
+    padding: 1.2rem 0 1.2rem 0.8rem;
+    border-bottom: 1px solid #eef2f6;
+}
+.tweet:last-of-type { border-bottom: none; }
+.tweet .tweet-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #2563eb;
+    margin-bottom: 0.2rem;
+}
+.tweet .tweet-body {
+    font-size: 1rem;
+    color: #1e293b;
+    line-height: 1.8;
+}
+.tweet .tweet-body p { margin-bottom: 0.3rem; }
+.tweet .tweet-body p:last-child { margin-bottom: 0; }
+.highlight { color: #16a34a; font-weight: 500; }
+.footer {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eef2f6;
+}
+@media (max-width: 640px) {
+    .report-header h1 { font-size: 1.2rem; }
+    .container { padding: 1.25rem 1rem 3rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a class="back-link" href="index.html">← 返回主报告</a>
+
+<div class="report-header">
+    <div class="tag">InsightView · 附录 09 · By Deepseek-V4-Flash</div>
+    <h1>Fin Product Announcement: Procedures & Simulations</h1>
+    <p>来源：Intercom 官方 YouTube · 产品发布深讲 · Paul、Chris & Sze（产品）、Luis（Solutions）</p>
+</div>
+
+<div class="section-title"><span class="emoji">📌</span> 一句话总结</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 1 · 核心结论</div>
+    <div class="tweet-body">
+        <p>这是第 6 篇预告的「产品发布深讲」——完整演示 <span class="highlight">Procedures + Simulations</span> 如何让 Fin 端到端解决复杂查询：AI 起草自然语言流程 → 数据连接器读写外部系统 → 条件代码锁定精确逻辑 → 人机协作留痕 → 仿真逐步测试建立信心。</p>
+        <p>客户成效：Raylo 达 <span class="highlight">94% 解决率</span>；Money Group 自建数十流程、解决率 +<span class="highlight">10%</span>。愿景：<span class="highlight">单一客户 Agent</span> 覆盖整个客户旅程。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 2 · 录制信息</div>
+    <div class="tweet-body">
+        <p><span class="highlight">录制时间</span>：未提供（Procedures & Simulations 发布期）。</p>
+        <p>主讲：Paul（主持人）；Chris & Sze（产品团队，开发与演示）；Luis（Solutions 团队，客户成功）；时长约 22 分钟。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 3 · 素材性质</div>
+    <div class="tweet-body">
+        <p>官方产品发布「深讲版」——与第 6 篇（2 月更新里 Procedures 的快速预览）互补，本篇用<span class="highlight">完整 demo</span>拆解设计、能力与客户案例。</p>
+        <p>讲述者组合：产品开发者（Chris/Sze）+ 一线客户成功（Luis），兼顾「怎么建」与「客户怎么用」。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">💬</span> 行业</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 4 · 复杂查询自动化的光谱两端</div>
+    <div class="tweet-body">
+        <p>一端：<span class="highlight">通用 AI Agent 构建器</span>——快速易上手，但缺控制力、可靠性、深度。</p>
+        <p>另一端：<span class="highlight">高度 bespoke 定制方案</span>——能处理前沿复杂度，但所有变更都要经过工程师，拖慢迭代飞轮。</p>
+        <p>Procedures 定位：取两者之长的<span class="highlight">中间地带</span>——无需工程师，同时拥有前沿 AI 的可靠性与深度。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">📦</span> 公司</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 5 · Fin Flywheel：不只是框架</div>
+    <div class="tweet-body">
+        <p><span class="highlight">Fin Flywheel</span>（train → test → deploy → analyze）不只是理念，而是产品本身的架构——进产品就能训练、测试、部署、分析，越用越好。</p>
+        <p>愿景：每一次、每一位客户的完美体验；更长远——<span class="highlight">单一客户 Agent</span>，覆盖销售、成功、服务的整个客户旅程。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 6 · 规模与客户成效</div>
+    <div class="tweet-body">
+        <p><span class="highlight">7000+</span> 客户在使用 Fin；数百家客户在用 Procedures。</p>
+        <p><strong>Raylo</strong>：用 Fin + Procedures 处理支付费率类复杂查询，解决率达 <span class="highlight">94%</span>——「以前完全不可能」。</p>
+        <p><strong>Money Group</strong>（高度监管的科技储蓄平台）：自建数十个流程（多数自己搭），整体解决率提升 <span class="highlight">10%</span>。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🧩</span> 产品</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 7 · Procedures 的结构</div>
+    <div class="tweet-body">
+        <p>两大部分：<span class="highlight">Trigger</span>（何时使用）+ <span class="highlight">Instructions</span>（Fin 该做什么）；整体像一份<span class="highlight">以自然语言为主的文档</span>，像写给同事的操作手册。</p>
+        <p><span class="highlight">AI 起草</span>：给摘要 → Fin 检索工作区（历史对话/文档/集成）增强 prompt + 澄清问题 → 生成高质量初稿，解决「写指令最耗时」痛点。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 8 · 数据连接器与条件</div>
+    <div class="tweet-body">
+        <p><span class="highlight">Data connectors</span>：Fin 与第三方/内部系统交互——不仅能<span class="highlight">读取</span>数据（订阅信息）辅助决策，还能<span class="highlight">执行操作</span>（真正完成降级）——端到端处理。</p>
+        <p><span class="highlight">Conditions</span>：可自然语言、也可<span class="highlight">用代码写</span>以获得更高精度——关键动作（如按续费金额拉入客户留存团队）用代码锁定，兼顾灵活与控制。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 9 · 人机协作</div>
+    <div class="tweet-body">
+        <p>流程中可随时<span class="highlight">拉入任何团队/同事</span>；Fin 也能在对话上留 note，交接无缝。</p>
+        <p>不限于 Intercom——配 Salesforce/Zendesk 同样具备协作能力。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 10 · Simulations：上线前的信心工程</div>
+    <div class="tweet-body">
+        <p>自动化 AI 测试，检查 Fin 在各场景下是否符合预期；可配置：客户开场消息、附加细节、<span class="highlight">成功标准</span>、预期数据连接器、Fin 应说什么。</p>
+        <p>运行过程：模拟对话完整跑一遍；<span class="highlight">事件级透明</span>——甚至能看到 Fin 的推理过程；结束后按成功标准自动评估。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 11 · 端用户体验：agentic 自适应</div>
+    <div class="tweet-body">
+        <p>演示：用户说「想取消套餐」→ Fin 按意图匹配 Trigger → 调用数据连接器、检查条件 → 告知降级时间与当前套餐。</p>
+        <p>关键能力：用户中途问「会失去哪些功能？」→ Fin <span class="highlight">暂停流程</span>查帮助中心回答，再<span class="highlight">把用户拉回流程</span>——流程里根本没写这个分支，靠 agentic 能力自然应对，体验接近真人。</p>
+        <p>客户侧亮点（Money Group）：流程中终端用户可<span class="highlight">上传图片</span>（索赔凭证），Fin 直接摄取进入下一步。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 12 · 客户成功模式</div>
+    <div class="tweet-body">
+        <p>典型旅程：带<span class="highlight">一个用例</span>进来 → 测试、生产验证 → 建立信心后<span class="highlight">自己扩展</span>——无需 Intercom 甚至无需自己工程团队。</p>
+        <p>落地最好的场景：<span class="highlight">复杂多步流程</span>（退款、押金查询、数据删除等敏感场景）。</p>
+        <p>合作方式：<span class="highlight">伙伴式共创 + 知识转移</span>（Money Group 案例），而非代做交付。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 13 · 路线图与设计哲学</div>
+    <div class="tweet-body">
+        <p>下一步：<span class="highlight">Insights 产品更新</span>（analyze 环节——仿真测再多也要上线后用真实世界学习）；随后推进<span class="highlight">单一客户 Agent</span>愿景。</p>
+        <p>设计哲学：让客户「永远在控制中」——可深度合作，但必须能自己动手、每天做实验：<span class="highlight">学习 → 再试 → 学习 → 再试</span>。</p>
+    </div>
+</div>
+
+<div class="footer">InsightView · 附录 09 · Procedures & Simulations 产品深讲 · 13 条推文</div>
+
+</div>
+</body>
+</html>
