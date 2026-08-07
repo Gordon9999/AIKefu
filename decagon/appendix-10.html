@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightView 附录 10 · AI 客服之 Decagon</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+        .report-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .report-header h1 { font-size: 1.6rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem; }
+        .report-header .subtitle { font-size: 0.95rem; color: #64748b; }
+        .report-header .meta { font-size: 0.8rem; color: #94a3b8; margin-top: 0.5rem; }
+        .section-title {
+            font-size: 1.15rem; font-weight: 700; color: #0f172a;
+            margin-top: 2rem; margin-bottom: 0.5rem; padding-bottom: 0.4rem;
+            border-bottom: 1px solid #e2e8f0; display: flex; align-items: center; gap: 0.4rem;
+        }
+        .section-title .emoji { font-size: 1.1rem; }
+        .tweet { padding: 1.2rem 0 1.2rem 0.8rem; border-bottom: 1px solid #eef2f6; }
+        .tweet:last-of-type { border-bottom: none; }
+        .tweet .tweet-label { font-weight: 600; font-size: 0.9rem; color: #2563eb; margin-bottom: 0.2rem; }
+        .tweet .tweet-body { font-size: 1rem; color: #1e293b; line-height: 1.8; }
+        .tweet .tweet-body p { margin-bottom: 0.3rem; }
+        .tweet .tweet-body p:last-child { margin-bottom: 0; }
+        .highlight { color: #16a34a; font-weight: 500; }
+        .footer {
+            text-align: center; margin-top: 3rem; padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8;
+        }
+        @media (max-width: 640px) {
+            .container { padding: 1.5rem 1rem 3rem; }
+            .report-header h1 { font-size: 1.3rem; }
+            .section-title { font-size: 1.05rem; }
+            .tweet .tweet-body { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="report-header">
+        <h1>附录 10 · Jesse 详解 AOP 方法论</h1>
+        <div class="subtitle">Agent Operating Procedures: Decagon's approach to AI agents for CX</div>
+        <div class="meta">InsightView · AI 客服之 Decagon · 2026-08-05</div>
+    </div>
+
+    <!-- 📌 核心观点 -->
+    <div class="section-title"><span class="emoji">📌</span> 核心观点</div>
+    <div class="tweet">
+        <div class="tweet-label">推 1 · 核心观点</div>
+        <div class="tweet-body">
+            <p>Jesse 亲自讲解 <span class="highlight">AOP 的完整方法论</span>：自然语言的力量与灵活性 + 代码的精确与严谨——二者结合，交付安全、可靠、可规模化的 AI 原生客户体验。</p>
+            <p>核心是「<span class="highlight">CX 团队成为 CX 架构师，技术团队仍掌控核心代码</span>」的双层分工。</p>
+        </div>
+    </div>
+
+    <!-- 👤 访谈人背景 -->
+    <div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+    <div class="tweet">
+        <div class="tweet-label">推 2 · 录制信息</div>
+        <div class="tweet-body">
+            <p><span class="highlight">录制时间</span>：未提供（Decagon 官方讲解视频）；时长约 2 分钟。</p>
+            <p><span class="highlight">访谈人/访谈嘉宾</span>：Jesse Zhang（Decagon 联合创始人兼 CEO）直接面向镜头主讲。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 3 · 素材定位</div>
+        <div class="tweet-body">
+            <p>这是 AOP 概念的「<span class="highlight">官方完整版</span>」讲解——比 Dialogues '25 的对话版更完整，由联合创始人本人阐述设计哲学。</p>
+            <p>可与附录 09（AOP 概念版）对照阅读，理解从概念到方法论的完整逻辑。</p>
+        </div>
+    </div>
+
+    <!-- 💬 行业 -->
+    <div class="section-title"><span class="emoji">💬</span> 行业</div>
+    <div class="tweet">
+        <div class="tweet-label">推 4 · AI 原生客户体验的规模化难题</div>
+        <div class="tweet-body">
+            <p>行业需要「安全、可靠、可规模化」的 <span class="highlight">AI 原生客户体验</span>，但多数方案在灵活性与可控性之间难以兼得。</p>
+            <p>Decagon 的方法论试图同时拿到两者——这正是 AOP 的出发点。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 5 · SOP 的 AI 时代类比</div>
+        <div class="tweet-body">
+            <p>人类客服通过<span class="highlight">标准操作规程（SOP）</span>学习新事物；AOP 是 AI 时代的对应物。</p>
+            <p>它让 Agent 动态处理非常复杂的情况、执行多步骤工作流。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 6 · 交付速度的行业标准</div>
+        <div class="tweet-body">
+            <p>Decagon 主张「<span class="highlight">数周上线，而非数月</span>」——这是与传统专业服务路线的核心差异。</p>
+            <p>速度来自 AOP 的自然语言配置：改逻辑不需要写代码，也就不需要排期。</p>
+        </div>
+    </div>
+
+    <!-- 📦 公司 -->
+    <div class="section-title"><span class="emoji">📦</span> 公司</div>
+    <div class="tweet">
+        <div class="tweet-label">推 7 · 技术路线：新颖的构建方法</div>
+        <div class="tweet-body">
+            <p>Decagon 开发了一套「<span class="highlight">新颖的</span>」AI 客服 Agent 构建方法——AOPs 是其方法论的品牌化表达。</p>
+            <p>自然语言（力量与灵活性）+ 代码（精确与严谨）= 安全可靠的规模化 AI 原生体验。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 8 · 结果承诺</div>
+        <div class="tweet-body">
+            <p>客户交互更<span class="highlight">个性化、更直觉化、更令人满意</span>——因为「你的问题真的被解决了」。</p>
+            <p>这是 Decagon 销售叙事中反复出现的「concierge 体验」在方法论层的支撑。</p>
+        </div>
+    </div>
+
+    <!-- 🧩 产品 -->
+    <div class="section-title"><span class="emoji">🧩</span> 产品</div>
+    <div class="tweet">
+        <div class="tweet-label">推 9 · AOP 的双重能力</div>
+        <div class="tweet-body">
+            <p>像 SOP 之于人类，AOP 让 AI Agent <span class="highlight">动态处理复杂情况、执行多步骤工作流</span>。</p>
+            <p>一套自然语言描述的业务逻辑，可以应对千变万化的真实对话。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 10 · 分工设计：谁控制什么</div>
+        <div class="tweet-body">
+            <p>CX 团队/非技术业务用户按自己的意愿<span class="highlight">塑造 AI 逻辑</span>；工程师保留控制权——钩住底层代码、执行规则与护栏、连接内部系统。</p>
+            <p>业务侧拉数据或执行动作，技术侧保障安全与集成——两层各司其职。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 11 · 速度、透明度、可扩展</div>
+        <div class="tweet-body">
+            <p><span class="highlight">速度</span>：数周上线而非数月；<span class="highlight">透明度</span>：既能看单个对话中 AI 在做什么，也能跨对话看它如何学习改进。</p>
+            <p><span class="highlight">企业级护栏</span>：内置护栏允许安全稳妥地把 Agent 扩展到巨大规模。</p>
+        </div>
+    </div>
+
+    <!-- 🏗️ 组织 -->
+    <div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+    <div class="tweet">
+        <div class="tweet-label">推 12 · 组织演化：角色边界的重构</div>
+        <div class="tweet-body">
+            <p>AOP 方法论推动客户组织内部角色重新定义：CX 团队从「提需求的人」升级为「<span class="highlight">CX 架构师</span>」，技术团队聚焦系统接入与护栏。</p>
+            <p>这种「业务塑造体验、技术保障安全」的分工，正是 Decagon 所倡导的客户组织演化方向——AI 时代的组织形态随之重构。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 13 · 角色升级：CX 架构师</div>
+        <div class="tweet-body">
+            <p>因为 AOP 结合自然语言与代码，CX 团队被赋权成为「<span class="highlight">CX 架构师</span>」；技术团队仍掌控核心代码。</p>
+            <p>这是「业务塑造体验、技术保障安全」的明确分工——也是 Decagon「产品驱动」叙事的组织学基础。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 14 · 文化延伸</div>
+        <div class="tweet-body">
+            <p>Jesse 的讲解与「<span class="highlight">intensity 文化」「客户第一</span>」一脉相承。</p>
+            <p>AOP 让客户团队第一次能真正主导 AI 体验——产品化的终极形态是「客户自己就是开发者」。</p>
+        </div>
+    </div>
+
+    <div class="footer">InsightView · 附录 10 · AI 客服之 Decagon · 基于原始视频转录提炼 · 2026-08-05</div>
+</div>
+</body>
+</html>
