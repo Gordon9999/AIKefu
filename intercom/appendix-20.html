@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>附录 20 · Fin × Linear：交付高质量 AI 体验</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.8;
+}
+.container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+.back-link { font-size: 0.85rem; color: #2563eb; text-decoration: none; margin-bottom: 1rem; display: inline-block; }
+.back-link:hover { text-decoration: underline; }
+.report-header {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+.report-header .tag { font-size: 0.8rem; letter-spacing: 0.1em; opacity: 0.75; margin-bottom: 0.5rem; }
+.report-header h1 { font-size: 1.45rem; font-weight: 700; margin-bottom: 0.75rem; }
+.report-header p { font-size: 0.95rem; opacity: 0.85; }
+.section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 2rem 0 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eef2f6;
+    color: #0f172a;
+}
+.section-title .emoji { margin-right: 0.4rem; }
+.tweet {
+    padding: 1.2rem 0 1.2rem 0.8rem;
+    border-bottom: 1px solid #eef2f6;
+}
+.tweet:last-of-type { border-bottom: none; }
+.tweet .tweet-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #2563eb;
+    margin-bottom: 0.2rem;
+}
+.tweet .tweet-body {
+    font-size: 1rem;
+    color: #1e293b;
+    line-height: 1.8;
+}
+.tweet .tweet-body p { margin-bottom: 0.3rem; }
+.tweet .tweet-body p:last-child { margin-bottom: 0; }
+.highlight { color: #16a34a; font-weight: 500; }
+.footer {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eef2f6;
+}
+@media (max-width: 640px) {
+    .report-header h1 { font-size: 1.2rem; }
+    .container { padding: 1.25rem 1rem 3rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a class="back-link" href="index.html">← 返回主报告</a>
+
+<div class="report-header">
+    <div class="tag">InsightView · 附录 20 · By Deepseek-V4-Flash</div>
+    <h1>Fin × Linear: Delivering High Quality AI Experiences</h1>
+    <p>来源：Intercom 伦敦线下活动（2026 年 3 月）· Brian（Intercom 产品）× Matias（Linear 工程师）· 组织：Laura Secat</p>
+</div>
+
+<div class="section-title"><span class="emoji">📌</span> 一句话总结</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 1 · 核心结论</div>
+    <div class="tweet-body">
+        <p>「高质量 AI」双视角对谈：<span class="highlight">AI 质量 = 宏观指标 + 单条对话的原子级迭代</span>——Fin 度量分层（resolution rate 软 → <span class="highlight">hard resolution</span> 最可靠 → CX/CSAT 主观但用户视角 → LLM 判幻觉率）；Linear 是<span class="highlight">非指标驱动文化</span>的反面样本，但 AI 组正在重塑它。</p>
+        <p>双方共识：<span class="highlight">一切最终回到「读单条对话/trace」</span>——「原子单位是对话，你永远无法完全离开它」；信任靠<span class="highlight">小爆炸半径渐进建立</span>；把<span class="highlight">自家工具给客户</span>（客户正在变成工程师）；UI 未来：<span class="highlight">软件形状剧变——越来越多软件是给 agent 用的</span>。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 2 · 录制信息</div>
+    <div class="tweet-body">
+        <p><span class="highlight">录制时间/地点</span>：2026 年 3 月，伦敦（线下活动 + 观众 Q&A）；时长约 50 分钟。</p>
+        <p>组织：Laura Secat（Intercom 客服 QA 与持续改进项目经理，Fin 自家客服）；嘉宾：Brian（Intercom 产品，在司 12 年、近 3 年专注 Fin）、Matias（Linear 软件工程师，主做 Linear Agent）。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 3 · 素材定位</div>
+    <div class="tweet-body">
+        <p>全系列首次<span class="highlight">「产品方 × 另一家 AI 产品公司」双视角对谈</span>——Intercom（客服 agent 供应商，自家就是 Fin 标杆客户）× Linear（给开发者做 agent 产品、「自己挠自己痒」）。</p>
+        <p>与第 16 篇（可观测性工程案例：TTFT/成本注入）互补：那篇讲 Fin 内部 trace，这篇讲两家公司对<span class="highlight">「质量循环」的完整方法论</span>。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">💬</span> 行业</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 4 · AI 质量的定义：数字 + vibe</div>
+    <div class="tweet-body">
+        <p>「高质量」一半是量化指标，一半是<span class="highlight">vibe</span>：你给 agent 任务、它按你预期的方式完成且一致可靠——「难以用数字捕捉，但你见到就知道」。</p>
+        <p>Fin 质量度量分层：<span class="highlight">①resolution rate</span>（是否转人工，仍有点软）→ <span class="highlight">②hard resolution</span>（用户明确回「答对了」，最可靠）→ <span class="highlight">③CX/CSAT</span>（主观但终端用户定性）→ <span class="highlight">④LLM 判幻觉率/guidance 遵循</span>（最难）。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 5 · 指标即 trade-off（记忆与延迟的反直觉）</div>
+    <div class="tweet-body">
+        <p>Fin 加记忆功能——<span class="highlight">解决率反而掉 0.5%</span>，直接回滚没再上：「当然 agent 应该有记忆，但数据说不行」。</p>
+        <p>latency 反直觉：<span class="highlight">太快反而让人不信任</span>（「怎么可能这么快就弄明白」）——曾需要人为拉高延迟又降回来；voice 要极快、chat 可耐心、<span class="highlight">email 完全无所谓</span>。</p>
+        <p>Linear：不跑 AB 测试，「体验由架构方式决定」；真正权衡是<span class="highlight">「在仍感觉交互式的延迟内做到够好的质量」</span>。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">📦</span> 公司</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 6 · 两种组织文化碰撞</div>
+    <div class="tweet-body">
+        <p>Intercom：大规模下以<span class="highlight">gold benchmarks + 全量 AB 测试</span>驱动——「AI 不可预测，必须看它如何影响指标」；AI 组（rigor/科学/全测试）与产品组（客户直觉）是两个独立 R&amp;D 组织的张力。</p>
+        <p>Linear：<span class="highlight">隐私敏感</span>——opt-in 反馈 + 标记好/坏对话；<span class="highlight">「很多人用且没人关掉」是合理信号</span>；新手段：<span class="highlight">让 agent 自己报告「用户要求了但它做不到的事」</span>——直接变成功能 backlog（发现用户未预见的用法）。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 7 · 信任：多年度旅程与晴雨表</div>
+    <div class="tweet-body">
+        <p>信任不是「信不信 agent」，而是<span class="highlight">「你信任 agent 去做什么」</span>——Linear 的 triage intelligence 给足 guidance 后，用户愿意逐步授权自动化；建立信任靠<span class="highlight">小爆炸半径</span>：先让 agent 展示能力、不碰危险的事。</p>
+        <p>Intercom 信任 barometer：<span class="highlight">involvement rate（多少比例对话交给 Fin）</span>；工具链递进：透明 → CX score → CX score reasons → <span class="highlight">Monitors 完全自定义</span>——取舍：<span class="highlight">「CX score 我们控制 rigor，客户自定义归客户」</span>。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🧩</span> 产品</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 8 · 给客户我们自己的工具：客户正在变成工程师</div>
+    <div class="tweet-body">
+        <p>Fin 的定位：<span class="highlight">「几乎要把它当作软件开发生命周期来思考」</span>——客户从使用者变成「用我们软件做自己产品的工程师/产品人」。</p>
+        <p><span class="highlight">Procedures + Simulations</span>：simulation 用<span class="highlight">三个 LLM 角色</span>（扮演终端用户 → 应用你的规则 → 当裁判评估）——Intercom 内部就是这么干的，现在暴露给客户迭代到有信心。</p>
+        <p>Linear 的<span class="highlight">code review / diff 产品</span>：agent 产出 diff、人类评论并 steer——<span class="highlight">「跟 agent 协作坍缩成『看 diff → 评论 → 引导方向』」</span>，减少上下文切换。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 9 · 人类监督的滑动标尺</div>
+    <div class="tweet-body">
+        <p>取决于<span class="highlight">底层模型能力 + 代码库是否便于 agent 迭代</span>；从「完全放手」到「两人签字」都是合法端点——<span class="highlight">「监督是滑动标尺，随 agent 变强而移动」</span>。</p>
+        <p>审查方式会变：逐行 review → <span class="highlight">review preview build / 验证能不能跑</span>；产品要「<span class="highlight">逐步拆掉『批准 agent 输出』的障碍</span>」。</p>
+        <p>「人-人协作」隐喻成立但差一块：<span class="highlight">agent 没有持久学习</span>（记忆 flaky/fuzzy）——要么等模型原生解决，要么<span class="highlight">用 harness/skills/tools 把知识「写下来」</span>（Memento 贴纸条比喻）；Anthropic 警告：<span class="highlight">「别建太多脚手架，模型会拆掉它」</span>。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 10 · 可观测性：为什么「读 trace」无可替代</div>
+    <div class="tweet-body">
+        <p>最有趣的时刻：agent 犯的错<span class="highlight">「人类永远不会那样错」</span>（如 Fin 深植在模型里反复说「请联系客服」——各种 hack 压不住，<span class="highlight">直到自研模型 CX Apex 才可能根治</span>）——需要「对 agent 有 theory of mind」。</p>
+        <p>迭代小循环是未来：<span class="highlight">identify → understand → change → test（回放/模拟/backtest）→ validate</span>；「微改进」的验证点仍是<span class="highlight">开放问题</span>（可能就 10 段对话的小样本难在公共指标上验证）；锚点指标仍是 resolution rate/CX/CSAT。</p>
+        <p>人类读 trace 的时间：<span class="highlight">「很多——有日子半天都在盯 trace」</span>；原子单位是对话，<span class="highlight">「你永远无法完全离开它」</span>；Linear 零 bug 政策延伸到 agent：<span class="highlight">7 天内修完能修的 misbehavior</span>。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 11 · 给客户可定制性的边界</div>
+    <div class="tweet-body">
+        <p>客户用文本即可定制工作流（triage automations：路由/研究/翻译）——<span class="highlight">「整个功能就是定制」</span>，每月跑几百上千次；因此要把<span class="highlight">我们自己的工具（指标 + trace 内省）给客户</span>，让他们改进自己的 prompt/指令。</p>
+        <p>边界在移动：<span class="highlight">「agent 没设计来干这个、你该用 integration」的线，随模型变强持续外移</span>——保持 stance 灵活，但承认有不该让 agent 干的事。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">💡</span> UI 的未来</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 12 · 软件形状剧变</div>
+    <div class="tweet-body">
+        <p>Linear：<span class="highlight">信息消费型 UI 仍不可替代</span>（比 AI 文字墙密度高）——方向是<span class="highlight">「建一个 agent 能往里填信息的 UI，而不是让你自己解析文本」</span>；操作类工作流会大量被 prompt 取代。</p>
+        <p>Brian（更激进）：<span class="highlight">软件形状在变：谁在用（人→agent）、为谁建（越来越为 agent 建）、在哪发生</span>——「刚把 Monitors/Procedures 的 UI 磨到极致，但我真在问：这是不是已经过时了？」<span class="highlight">「很多 UI 会被冲走，剩下 monitors、基础报表、基础列表」</span>；agent-driven 产品导览：<span class="highlight">「agent 为什么要解释？它应该直接做」</span>。</p>
+        <p>「任何人对软件形状有信心都可能是过度自信」——已有客户<span class="highlight">「三个月没人登录 Linear」</span>（standup 转录 → agent 建 ticket；MCP + claw 循环自动匹配 PR）——<span class="highlight">「假设 agent 会消费你的 primitives（API-first 升级版）」</span>。</p>
+    </div>
+</div>
+
+<div class="footer">InsightView · 附录 20 · Fin × Linear: Delivering High Quality AI Experiences · 12 条推文</div>
+
+</div>
+</body>
+</html>
