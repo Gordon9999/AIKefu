@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightView 附录 04 · AI 客服之 Sierra</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+        .report-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .report-header h1 { font-size: 1.6rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem; }
+        .report-header .subtitle { font-size: 0.95rem; color: #64748b; }
+        .report-header .meta { font-size: 0.8rem; color: #94a3b8; margin-top: 0.5rem; }
+        .report-header .tag { font-size: 0.75rem; letter-spacing: 0.05em; color: #94a3b8; margin-bottom: 0.4rem; }
+        .section-title {
+            font-size: 1.15rem; font-weight: 700; color: #0f172a;
+            margin-top: 2rem; margin-bottom: 0.5rem; padding-bottom: 0.4rem;
+            border-bottom: 1px solid #e2e8f0; display: flex; align-items: center; gap: 0.4rem;
+        }
+        .section-title .emoji { font-size: 1.1rem; }
+        .tweet { padding: 1.2rem 0 1.2rem 0.8rem; border-bottom: 1px solid #eef2f6; }
+        .tweet:last-of-type { border-bottom: none; }
+        .tweet .tweet-label { font-weight: 600; font-size: 0.9rem; color: #2563eb; margin-bottom: 0.2rem; }
+        .tweet .tweet-body { font-size: 1rem; color: #1e293b; line-height: 1.8; }
+        .tweet .tweet-body p { margin-bottom: 0.3rem; }
+        .tweet .tweet-body p:last-child { margin-bottom: 0; }
+        .highlight { color: #16a34a; font-weight: 500; }
+        .footer {
+            text-align: center; margin-top: 3rem; padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8;
+        }
+        @media (max-width: 640px) {
+            .container { padding: 1.5rem 1rem 3rem; }
+            .report-header h1 { font-size: 1.3rem; }
+            .section-title { font-size: 1.05rem; }
+            .tweet .tweet-body { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="report-header">
+        <div class="tag">InsightView · 附录 04 · By Deepseek-V4-Flash</div>
+        <h1>附录 04 · OpenAI 董事长 3 万字深度访谈</h1>
+        <div class="subtitle">不要用今天的逻辑看 12 个月后的世界（腾讯《划重点》编译）</div>
+        <div class="meta">InsightView · AI 客服之 Sierra · 2026-08-07</div>
+    </div>
+
+    <!-- 📌 核心观点 -->
+    <div class="section-title"><span class="emoji">📌</span> 核心观点</div>
+    <div class="tweet">
+        <div class="tweet-label">推 1 · 核心观点</div>
+        <div class="tweet-body">
+            <p><span class="highlight">不要对眼前的事实做出反应，要从根本上思考 12 个月后的世界</span>——否则做出正确战略决策的可能性几乎为零。</p>
+            <p>由此展开他对软件工程革命、AI Agent 三种类型、按结果收费（RASS）、创始人模式与 AGI 的完整判断。</p>
+        </div>
+    </div>
+
+    <!-- 👤 访谈人背景 -->
+    <div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+    <div class="tweet">
+        <div class="tweet-label">推 2 · 录制信息</div>
+        <div class="tweet-body">
+            <p><span class="highlight">录制时间</span>：2025 年上半年（原文发布于 2025-06-04）。<span class="highlight">访谈人</span>：知名播客节目（腾讯《划重点》独家编译）。<span class="highlight">访谈嘉宾</span>：Bret Taylor。<span class="highlight">时长</span>：约 2 小时。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 3 · 嘉宾身份</div>
+        <div class="tweet-body">
+            <p><span class="highlight">Bret Taylor</span>：OpenAI 董事长、Sierra 创始人。创始人、大厂高管（Facebook CTO、Salesforce 联席 CEO）与董事会成员（OpenAI、Shopify）的多重身份。</p>
+        </div>
+    </div>
+
+    <!-- 💬 行业 -->
+    <div class="section-title"><span class="emoji">💬</span> 行业</div>
+    <div class="tweet">
+        <div class="tweet-label">推 4 · 与工业革命同等重要的时代</div>
+        <div class="tweet-body">
+            <p>AI 时代软件处于<span class="highlight">与工业革命同等重要的全新时代</span>：软件不仅能提高效率，还能真正独立完成任务。</p>
+            <p>构建模型的公司会像云基础设施一样整合，最终由极少数拥有巨大资本预算的公司主导。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 5 · 开源模型并不免费</div>
+        <div class="tweet-body">
+            <p><span class="highlight">推理需要成本，托管开源模型的总成本可能高于直接使用顶级闭源模型</span>。</p>
+            <p>基础模型将像云计算基础设施一样被广泛租用；前沿模型由追求 AGI 的实验室构建。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 6 · 推动 AGI 的三要素</div>
+        <div class="tweet-body">
+            <p><span class="highlight">数据</span>（合成数据与模拟是数据墙突破口）、<span class="highlight">计算</span>（关键瓶颈，推理模型改变了经济性）、<span class="highlight">算法</span>（Transformer 是最大突破）。</p>
+            <p>缩放定律不会永远持续，但没人知道何时停止。</p>
+        </div>
+    </div>
+
+    <!-- 📦 公司 -->
+    <div class="section-title"><span class="emoji">📦</span> 公司</div>
+    <div class="tweet">
+        <div class="tweet-label">推 7 · RASS：按结果收费</div>
+        <div class="tweet-body">
+            <p>Sierra 的商业模式是 <span class="highlight">RASS（Result as a Service）</span>：只向客户收取结果费用——AI Agent 是否解决了客户的问题。</p>
+            <p>在 AI 时代，正确的商业模式是对出色完成的工作收费，而非对使用软件的特权收费。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 8 · 透明度下的定价革命</div>
+        <div class="tweet-body">
+            <p>AI Agent 改变了方程式：客户清楚知道问题是被 Agent 解决的，也知道满意度分数——<span class="highlight">在这种透明度下，按成果收费更对齐厂商和客户利益</span>。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 9 · 科技公司没有资格获得未来</div>
+        <div class="tweet-body">
+            <p>以 SGI 和 Sun Microsystems 的衰落为例——<span class="highlight">科技公司并没有资格获得未来的成功</span>。</p>
+            <p>AI 将基于座位的传统软件模型真正伤害一些公司，同时帮助另一些公司。</p>
+        </div>
+    </div>
+
+    <!-- 🧩 产品 -->
+    <div class="section-title"><span class="emoji">🧩</span> 产品</div>
+    <div class="tweet">
+        <div class="tweet-label">推 10 · AI Agent 的三种类型</div>
+        <div class="tweet-body">
+            <p><span class="highlight">①个人代理</span>（分类邮件、安排行程，难度大但前景广阔）；<span class="highlight">②角色代理</span>（编码 Agent、律师助理，商业价值明确）；<span class="highlight">③品牌客户代理</span>（「公司的数字化实例」，覆盖客服到复杂咨询）。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 11 · 工程师变成机器操作者</div>
+        <div class="tweet-body">
+            <p>工程师从代码编写者变为<span class="highlight">「代码生成机器的操作者」</span>；当前困境是我们仍用为人类作者设计的语言（如 Python）生成代码。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 12 · 新的编程系统</div>
+        <div class="tweet-body">
+            <p>未来需要为「正确性与验证」设计全新编程系统：<span class="highlight">形式验证、更安全的语言（如 Rust 思路）、测试驱动开发</span>。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 13 · ChatGPT 的定位</div>
+        <div class="tweet-body">
+            <p>「这个古怪的名字已经成为 AI 的代名词，<span class="highlight">它将成为 AGI 生产的交付机制</span>。」</p>
+        </div>
+    </div>
+
+    <!-- 🏗️ 组织 -->
+    <div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+    <div class="tweet">
+        <div class="tweet-label">推 14 · 创始人模式的双面性</div>
+        <div class="tweet-body">
+            <p>创始人领导的公司往往产生更好结果，但创始人模式可被武器化为「公开的微观管理」。</p>
+            <p>关键区别在于<span class="highlight">微观管理（窒息管控）与深度问责（如贝佐斯的问号邮件）</span>——不是「穿着黑色高领毛衣对员工大喊大叫」。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 15 · 避免自满的两种表现</div>
+        <div class="tweet-body">
+            <p><span class="highlight">官僚主义</span>（流程 30 年后演变成官僚机器）与<span class="highlight">现实扭曲场</span>（内部叙述比客户真相更有力，如微软坚信 Windows Phone 会赢）。</p>
+            <p>消除官僚主义必须自上而下，高层提供「空中掩护」；伟大公司最重要特质是极度关注客户。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 16 · 工程师作为领导者</div>
+        <div class="tweet-body">
+            <p>工程师具备第一性原理和系统设计思维，但伟大的 CEO 必须成长为通才——<span class="highlight">不是所有问题都是工程问题</span>，过度工程思维会导致分析瘫痪。</p>
+        </div>
+    </div>
+
+    <div class="footer">InsightView · 附录 04 · AI 客服之 Sierra · 基于腾讯《划重点》编译稿提炼 · 2026-08-07</div>
+</div>
+</body>
+</html>
