@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>附录 07 · Fin Apex 1.0：客服专用模型</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.8;
+}
+.container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+.back-link { font-size: 0.85rem; color: #2563eb; text-decoration: none; margin-bottom: 1rem; display: inline-block; }
+.back-link:hover { text-decoration: underline; }
+.report-header {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+.report-header .tag { font-size: 0.8rem; letter-spacing: 0.1em; opacity: 0.75; margin-bottom: 0.5rem; }
+.report-header h1 { font-size: 1.45rem; font-weight: 700; margin-bottom: 0.75rem; }
+.report-header p { font-size: 0.95rem; opacity: 0.85; }
+.section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 2rem 0 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eef2f6;
+    color: #0f172a;
+}
+.section-title .emoji { margin-right: 0.4rem; }
+.tweet {
+    padding: 1.2rem 0 1.2rem 0.8rem;
+    border-bottom: 1px solid #eef2f6;
+}
+.tweet:last-of-type { border-bottom: none; }
+.tweet .tweet-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #2563eb;
+    margin-bottom: 0.2rem;
+}
+.tweet .tweet-body {
+    font-size: 1rem;
+    color: #1e293b;
+    line-height: 1.8;
+}
+.tweet .tweet-body p { margin-bottom: 0.3rem; }
+.tweet .tweet-body p:last-child { margin-bottom: 0; }
+.highlight { color: #16a34a; font-weight: 500; }
+.footer {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eef2f6;
+}
+@media (max-width: 640px) {
+    .report-header h1 { font-size: 1.2rem; }
+    .container { padding: 1.25rem 1rem 3rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a class="back-link" href="index.html">← 返回主报告</a>
+
+<div class="report-header">
+    <div class="tag">InsightView · 附录 07 · By Deepseek-V4-Flash</div>
+    <h1>Fin Apex 1.0: The best-performing model for customer service</h1>
+    <p>来源：Intercom 官方 YouTube · 技术发布 · Fergal Reid（AI 负责人）、Pedro（core Fin 负责人）</p>
+</div>
+
+<div class="section-title"><span class="emoji">📌</span> 一句话总结</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 1 · 核心结论</div>
+    <div class="tweet-body">
+        <p>Intercom 发布自研客服专用模型 <span class="highlight">Fin CX Apex</span>，号称「世界上最好的客服模型」，支撑 Fin 核心、每周处理超 <span class="highlight">100 万段对话</span>。</p>
+        <p>全面碾压此前方案：解决率↑、幻觉率↓、答案质量↑，回答还快了近 <span class="highlight">2 秒</span>。战略判断：模型够聪明后，<span class="highlight">mid/post-training 的领域定制</span>是客服 AI 差异化的主战场。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 2 · 录制信息</div>
+    <div class="tweet-body">
+        <p><span class="highlight">录制时间</span>：未提供（Fin CX Apex 发布时）。</p>
+        <p>讲述人：Fergal Reid（Intercom AI 负责人）、Pedro（core Fin work stream 负责人）；无访谈嘉宾（官方技术发布）；时长约 6 分钟。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 3 · 嘉宾身份</div>
+    <div class="tweet-body">
+        <p><span class="highlight">Fergal Reid</span>：Intercom 首席 AI 官（Eoghan 在 Lenny 访谈中预告过其升任 CAIO），主导 Fin 模型战略。</p>
+        <p><span class="highlight">Pedro</span>：core Fin work stream 负责人，掌握「哪个模型上线」的决策权，评估解决率、CSAT、幻觉率、延迟等。</p>
+        <p>本篇是 Fin 技术栈的「模型层」揭秘——与前几篇的产品层/运营层形成纵深。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">💬</span> 行业</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 4 · 客服场景的独特要求</div>
+    <div class="tweet-body">
+        <p>客服对模型有独特要求：解决率最重要但非唯一指标，还看 <span class="highlight">CSAT、幻觉率、延迟</span>。</p>
+        <p>幻觉的行业特殊性：客服「最不能给错答案」，但完全无幻觉不现实（模型需要世界知识）——目标是把幻觉压到最低，<span class="highlight">通过 RL 压低的幻觉，prompting 永远做不到</span>。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 5 · 通用 vs 定制模型之争</div>
+    <div class="tweet-body">
+        <p>主流玩家多用最强通用模型（Intercom 早期用 GPT-4 → Claude Sonnet 3.5），但 Intercom 的结论：<span class="highlight">最好的客服 AI = 为客服深度定制训练的模型</span>。</p>
+        <p>证据：自建 retrieval/re-ranker 模型超过一切可测的外部模型；Apex 进一步全面领先。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">📦</span> 公司</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 6 · Fin 模型战略</div>
+    <div class="tweet-body">
+        <p>北极星：让 Fin 尽可能有用、高质量；策略方向是<span class="highlight">自己训练模型</span>。</p>
+        <p>历史里程碑：GPT-4（"terrible"）→ Claude Sonnet 3.5 是此前最大突破；Apex 是「所有指标同时改善」的最好一次发布。</p>
+        <p>模型组合：Apex 承担绝大部分流量；<span class="highlight">Sonnet 仍用于 Fin procedures</span>（需极复杂工具调用）。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 7 · 组织投入</div>
+    <div class="tweet-body">
+        <p>AI 组下设 post-training 团队；Apex 是「大团队近一年的投入」。</p>
+        <p>数据规模是训练与测试的底气——数十亿数据点让自训模型成为可能。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🧩</span> 产品</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 8 · Apex 的技术路径</div>
+    <div class="tweet-body">
+        <p>底座：<span class="highlight">大型开源权重模型</span>之上构建；自研通用 post-training 流水线可适配多种开源模型。</p>
+        <p>训练方法：<span class="highlight">SFT（监督微调）+ RL（强化学习）</span>，构建并迭代多个 reward models。</p>
+        <p>研发策略：先在更小模型上做大部分 R&D，发布前再放大到另一模型——低成本快速验证。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 9 · 全面且互斥指标同时改善</div>
+    <div class="tweet-body">
+        <p>解决率大幅提升：assumed resolution 与 confirmed resolution（用户正反馈确认）双双改善。</p>
+        <p>客户案例：Top 10 客户之一未解决对话减少 <span class="highlight">20%</span>——20% 更少对话转人工。</p>
+        <p>幻觉率进一步下降；答案更简洁、格式更好、更准确遵循客户 guidance。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 10 · 打破质量与延迟的权衡</div>
+    <div class="tweet-body">
+        <p>延迟降低近 <span class="highlight">2 秒</span>——用自建推理栈/基础设施服务模型，打破「质量↑ ⇔ 延迟↑」的传统权衡。</p>
+        <p>以前 Fin 也做大量 prompt engineering；Apex 证明：要拿最佳客服表现，必须为领域构建模型本身——<span class="highlight">模型成为第一性壁垒</span>。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 11 · AI 团队分工与评估体系</div>
+    <div class="tweet-body">
+        <p>团队分工：Fergal（AI 负责人/战略）↔ Pedro（core Fin/模型上线评估）↔ post-training 团队（训练 Apex）——研发、评估、上线分离。</p>
+        <p>评估体系：不只看单一指标——resolution rate、CSAT、hallucination、latency 组合评估，平衡质量与效率。</p>
+        <p>产品哲学：持续用「最好的模型」服务 Fin，愿投入近一年自研——「自定义模型」成为组织级技术信仰。</p>
+    </div>
+</div>
+
+<div class="footer">InsightView · 附录 07 · Fin Apex 1.0 · 11 条推文</div>
+
+</div>
+</body>
+</html>
