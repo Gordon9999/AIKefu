@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightView 附录 03 · AI 客服之 Decagon</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+        .report-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .report-header h1 { font-size: 1.6rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem; }
+        .report-header .subtitle { font-size: 0.95rem; color: #64748b; }
+        .report-header .meta { font-size: 0.8rem; color: #94a3b8; margin-top: 0.5rem; }
+        .section-title {
+            font-size: 1.15rem; font-weight: 700; color: #0f172a;
+            margin-top: 2rem; margin-bottom: 0.5rem; padding-bottom: 0.4rem;
+            border-bottom: 1px solid #e2e8f0; display: flex; align-items: center; gap: 0.4rem;
+        }
+        .section-title .emoji { font-size: 1.1rem; }
+        .tweet { padding: 1.2rem 0 1.2rem 0.8rem; border-bottom: 1px solid #eef2f6; }
+        .tweet:last-of-type { border-bottom: none; }
+        .tweet .tweet-label { font-weight: 600; font-size: 0.9rem; color: #2563eb; margin-bottom: 0.2rem; }
+        .tweet .tweet-body { font-size: 1rem; color: #1e293b; line-height: 1.8; }
+        .tweet .tweet-body p { margin-bottom: 0.3rem; }
+        .tweet .tweet-body p:last-child { margin-bottom: 0; }
+        .highlight { color: #16a34a; font-weight: 500; }
+        .footer {
+            text-align: center; margin-top: 3rem; padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8;
+        }
+        @media (max-width: 640px) {
+            .container { padding: 1.5rem 1rem 3rem; }
+            .report-header h1 { font-size: 1.3rem; }
+            .section-title { font-size: 1.05rem; }
+            .tweet .tweet-body { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="report-header">
+        <h1>附录 03 · 新一代 Simulations 测试套件</h1>
+        <div class="subtitle">The next generation of Simulations（Decagon 官方产品介绍）</div>
+        <div class="meta">InsightView · AI 客服之 Decagon · 2026-08-05</div>
+    </div>
+
+    <!-- 📌 核心观点 -->
+    <div class="section-title"><span class="emoji">📌</span> 核心观点</div>
+    <div class="tweet">
+        <div class="tweet-label">推 1 · 核心观点</div>
+        <div class="tweet-body">
+            <p>Decagon 推出新一代 <span class="highlight">Simulations</span>——一套「自维护」的 AI Agent <span class="highlight">黄金测试集</span>（golden test set）。</p>
+            <p>它把测试从黑盒变成可控、可解释、可随 Agent 演进的系统，并为 Duet Autopilot 的自我改进闭环铺路。</p>
+        </div>
+    </div>
+
+    <!-- 👤 访谈人背景 -->
+    <div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+    <div class="tweet">
+        <div class="tweet-label">推 2 · 录制信息</div>
+        <div class="tweet-body">
+            <p><span class="highlight">录制时间</span>：未提供（Decagon 官方产品发布介绍视频）。</p>
+            <p><span class="highlight">访谈人</span>：Ariana（产品营销）；访谈嘉宾：Eric（产品管理）；时长约 3 分钟。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 3 · 嘉宾身份</div>
+        <div class="tweet-body">
+            <p>Ariana 来自 <span class="highlight">产品营销团队</span>，Eric 来自产品管理团队——本视频是 Decagon 面向客户的产品能力宣发。</p>
+            <p>内容围绕「为什么做、解决什么问题、带来什么价值」展开，是理解 Decagon 测试产品线的第一手材料。</p>
+        </div>
+    </div>
+
+    <!-- 💬 行业 -->
+    <div class="section-title"><span class="emoji">💬</span> 行业</div>
+    <div class="tweet">
+        <div class="tweet-label">推 4 · 行业现状：AI 测试像黑盒</div>
+        <div class="tweet-body">
+            <p>很多 AI 平台已有测试方案，且往往也是由 AI 驱动的；但客户反馈这种测试方式「<span class="highlight">像黑盒</span>」。</p>
+            <p>这是 Decagon 要解决的行业级痛点——测试的透明性与可控性正在成为客户信任的分水岭。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 5 · 测试被当作「点解决方案」</div>
+        <div class="tweet-body">
+            <p>多数人做测试的方式是「我改了一处，就测这一处」——这是典型的点解决方案。</p>
+            <p>Decagon 主张更整体的思路：拥有一套可对任何版本 Agent 运行的黄金测试集，判断新版更好还是更差。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 6 · 为什么几乎没有人有黄金测试集</div>
+        <div class="tweet-body">
+            <p>构建黄金测试集又慢又繁琐，维护它极其困难——因为 <span class="highlight">Agent 演进太快</span>。</p>
+            <p>保持测试「一直相关」是永无止境的手工追赶工作，这让大多数客户望而却步。</p>
+        </div>
+    </div>
+
+    <!-- 📦 公司 -->
+    <div class="section-title"><span class="emoji">📦</span> 公司</div>
+    <div class="tweet">
+        <div class="tweet-label">推 7 · 产品定位：自维护测试套件</div>
+        <div class="tweet-body">
+            <p>新一代 Simulations 是 Decagon 为 AI Agent 打造的「<span class="highlight">自维护</span>」测试套件（self-maintaining testing suite）。</p>
+            <p>核心交付物是 golden test set——一套可持续演进、始终相关的黄金测试集。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 8 · 黑盒问题的两端</div>
+        <div class="tweet-body">
+            <p>第一端在<span class="highlight">生成</span>：AI 生成的测试往往给不了用户足够控制权，不清楚测的是什么、检查的是什么。</p>
+            <p>第二端在<span class="highlight">结果</span>：测试失败时，说不清哪里出错、在对话哪个环节出错、以及如何修复。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 9 · 设计优先级：控制、粒度、灵活性</div>
+        <div class="tweet-body">
+            <p>这一代测试明确修复黑盒的两个问题，给用户更多 <span class="highlight">控制</span>、更细的粒度、更多的灵活性。</p>
+            <p>「信任」是设计原点——客户只有看得懂测试，才敢把 Agent 交给平台。</p>
+        </div>
+    </div>
+
+    <!-- 🧩 产品 -->
+    <div class="section-title"><span class="emoji">🧩</span> 产品</div>
+    <div class="tweet">
+        <div class="tweet-label">推 10 · 核心创新：让黄金测试集可创建、可维护、可保鲜</div>
+        <div class="tweet-body">
+            <p>创建、维护并持续更新黄金测试集，是新一代 Simulations 最大的<span class="highlight">创新点</span>。</p>
+            <p>它让过去「不现实」的测试方案变得现实——这是测试从点方案走向系统方案的关键一跃。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 11 · 与 Duet 的协作</div>
+        <div class="tweet-body">
+            <p>可以用 <span class="highlight">Duet</span> 生成单个 Simulation、随 Agent 变化而更新它们、长期管理整套黄金测试集。</p>
+            <p>测试的维护从「人工苦力」变成了「Agent 协作」——这是自维护能力的核心机制。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 12 · 从生产到测试的一步转化</div>
+        <div class="tweet-body">
+            <p>可以把一条真实的<span class="highlight">生产对话</span>一键变成 Simulation，让测试反映客户实际在做什么。</p>
+            <p>这大幅降低了构建黄金测试集的门槛，也让测试集始终贴近真实用户行为。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 13 · 为 Duet Autopilot 铺路</div>
+        <div class="tweet-body">
+            <p>Simulations 现在可靠且清晰，因此可以被 Agent 直接操作——这是解锁 <span class="highlight">Duet Autopilot</span> 的前提。</p>
+            <p>Autopilot 是 Decagon 让平台「自我改进」的方案：运行测试、精准定位需要改进之处、把修复路由回 Duet 供人审查批准。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 14 · 产品闭环：构建-测试-改进</div>
+        <div class="tweet-body">
+            <p>Simulations 与 Duet、Duet Autopilot 共同构成「<span class="highlight">构建-测试-改进</span>」的自我改进闭环。</p>
+            <p>最终效果是让 Agent 构建变成一个持续自我优化的过程，而不是一次性上线后就放任不管。</p>
+        </div>
+    </div>
+
+    <!-- 🏗️ 组织 -->
+    <div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+    <div class="tweet">
+        <div class="tweet-label">推 15 · 组织演化：测试从人工苦力走向系统化</div>
+        <div class="tweet-body">
+            <p>Simulations 的诞生本身就是组织演化的结果：过去黄金测试集靠<span class="highlight">人工维护</span>、缓慢且繁琐，是组织的「手工包袱」。</p>
+            <p>新一代 Simulations 把「构建-维护-保鲜」交给 Duet 与 Agent，让测试团队从永无止境的追赶中解放出来——组织能力随产品系统化而升级。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 16 · 产品协作模式</div>
+        <div class="tweet-body">
+            <p>本视频由产品营销（Ariana）与产品管理（Eric）<span class="highlight">跨团队配合</span>完成。</p>
+            <p>体现了 Decagon 产品团队内部「营销-产品」一体化的对外沟通方式——面向客户讲清产品价值。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 17 · 客户共创的设计起点</div>
+        <div class="tweet-body">
+            <p>设计起点来自客户反馈——「<span class="highlight">AI 测试像黑盒</span>」。</p>
+            <p>产品方向（控制、粒度、灵活性、可解释性）直接回应客户的信任诉求，是典型的客户驱动型产品迭代。</p>
+        </div>
+    </div>
+
+    <div class="footer">InsightView · 附录 03 · AI 客服之 Decagon · 基于原始视频转录提炼 · 2026-08-05</div>
+</div>
+</body>
+</html>
