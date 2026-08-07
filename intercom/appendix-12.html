@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>附录 12 · Fin Sales Agent：Fin 开始卖自己了</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.8;
+}
+.container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+.back-link { font-size: 0.85rem; color: #2563eb; text-decoration: none; margin-bottom: 1rem; display: inline-block; }
+.back-link:hover { text-decoration: underline; }
+.report-header {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+.report-header .tag { font-size: 0.8rem; letter-spacing: 0.1em; opacity: 0.75; margin-bottom: 0.5rem; }
+.report-header h1 { font-size: 1.45rem; font-weight: 700; margin-bottom: 0.75rem; }
+.report-header p { font-size: 0.95rem; opacity: 0.85; }
+.section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 2rem 0 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eef2f6;
+    color: #0f172a;
+}
+.section-title .emoji { margin-right: 0.4rem; }
+.tweet {
+    padding: 1.2rem 0 1.2rem 0.8rem;
+    border-bottom: 1px solid #eef2f6;
+}
+.tweet:last-of-type { border-bottom: none; }
+.tweet .tweet-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #2563eb;
+    margin-bottom: 0.2rem;
+}
+.tweet .tweet-body {
+    font-size: 1rem;
+    color: #1e293b;
+    line-height: 1.8;
+}
+.tweet .tweet-body p { margin-bottom: 0.3rem; }
+.tweet .tweet-body p:last-child { margin-bottom: 0; }
+.highlight { color: #16a34a; font-weight: 500; }
+.footer {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eef2f6;
+}
+@media (max-width: 640px) {
+    .report-header h1 { font-size: 1.2rem; }
+    .container { padding: 1.25rem 1rem 3rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a class="back-link" href="index.html">← 返回主报告</a>
+
+<div class="report-header">
+    <div class="tag">InsightView · 附录 12 · By Deepseek-V4-Flash</div>
+    <h1>Scaling AI Across Support and Sales: Fin Now Sells Itself</h1>
+    <p>来源：The Ticket Podcast（Intercom 官方）· Ruth O'Brien × Fred Walton</p>
+</div>
+
+<div class="section-title"><span class="emoji">📌</span> 一句话总结</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 1 · 核心结论</div>
+    <div class="tweet-body">
+        <p>Fin 有了「第二份工作」：<span class="highlight">Fin Sales Agent</span>——从客服扩展到销售。Intercom 自家客服自动化率已达 <span class="highlight">81%</span>，现在把 Fin 放官网当「销售顾问」：提问 → 按自定义标准给潜客分桶 → 合格者转 SDR、不合格者给自助信息。</p>
+        <p>核心愿景（Eoghan 在 Pioneer 提出）：<span class="highlight">一个客户 Agent 做多种工作</span>，不让客户感觉在和公司不同部门打交道。Sales Agent 封闭测试中，今年晚些时候 GA。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 2 · 录制信息</div>
+    <div class="tweet-body">
+        <p><span class="highlight">录制时间</span>：未提供（2026 年，Sales Agent 公测期）。</p>
+        <p>主持：Ruth O'Brien（Intercom AI Support 高级总监）；嘉宾：Fred Walton（AI Conversation Designer，拥有 Fin 端到端自动化与 guidance/profile 职责）；时长约 15 分钟。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 3 · 嘉宾身份</div>
+    <div class="tweet-body">
+        <p><span class="highlight">Fred Walton</span>：从 Fin Service Agent 时代就在 Intercom（经历「拆旧自动化、all in Fin」），掌握最佳实践——是「客户 Agent 多工种」愿景的实际操盘手。</p>
+        <p>本篇是 Intercom 内部视角：自家 81% 自动化率 + Fin 应用的横向扩展。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">💬</span> 行业</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 4 · 两种 Agent 工种</div>
+    <div class="tweet-body">
+        <p><span class="highlight">Service Agent</span>：尽快解决或转给对的人——目标是「结束对话」。</p>
+        <p><span class="highlight">Sales Agent</span>：<span class="highlight">打开对话、挖掘信息、推动销售旅程</span>——目标是「推进」。</p>
+        <p>行业趋势：AI 正从客服职能向 GTM（销售/成功）扩展——「Fin Now Sells Itself」：Intercom 用 Fin 卖 Fin。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">📦</span> 公司</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 5 · 自家使用数据</div>
+    <div class="tweet-body">
+        <p>Intercom 自家客服组织自动化率 <span class="highlight">81%</span>——复杂产品上 81% 入站由 Fin Service Agent 解决；自家是 power user，总是抢先 beta 测试。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 6 · 客户 Agent 愿景（Pioneer 大会）</div>
+    <div class="tweet-body">
+        <p>Eoghan 提出的概念：<span class="highlight">一个客户 Agent 做许多不同的工作</span>，而非许多碎片化、交接混乱的 Agent。</p>
+        <p>目标：客户不觉得在和公司不同部门打交道——<span class="highlight">不把公司内部 silos 暴露给客户</span>；延伸：已在探索 Fin 进入 success 空间。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🧩</span> 产品</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 7 · Sales Agent 产品设计</div>
+    <div class="tweet-body">
+        <p>形态：官网上的<span class="highlight">销售顾问</span>（intercom.com / fin.ai）；销售团队完全控制应答。</p>
+        <p>潜客分桶：企业级销售有专门标准，达标升级转团队；不达标但符合其他产品的（如 early stage program）<span class="highlight">提供自助信息与链接</span>而非粗暴忽略——避免不合格潜客误入 SDR 队列造成摩擦。</p>
+        <p>价值：让 SDR 专注高价值工作、专注培养真正合格的企业级潜客。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 8 · 落地路径：以信任开场</div>
+    <div class="tweet-body">
+        <p>销售团队对「AI 做潜客开发」是全新概念——先从 <span class="highlight">A/B 测试/beta</span> 验证价值，指标改善后全量上线。</p>
+        <p>精细化迭代：按来源网站定制体验、决定优先收集哪些数据点、<span class="highlight">弃单/掉线跟进</span>（收集联系方式后营销/销售可回触）。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 9 · 路线图</div>
+    <div class="tweet-body">
+        <p><span class="highlight">Booking 集成</span>：潜客达标后自助预约 demo/真人通话（按时区匹配）——「以 Sales Agent 的好体验开始、以真人的好体验结束」。</p>
+        <p><span class="highlight">Salesforce 直接集成</span>：目前 MQL 经 Intercom 后再进 Salesforce；打通后无缝传数据、细追踪 MQL → S1/S2 → closed won/lost。</p>
+        <p>多渠道：目前仅 web，探索 email；状态：封闭测试，<span class="highlight">今年晚些时候 GA</span>。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 10 · 由客服侧对话设计师统筹</div>
+    <div class="tweet-body">
+        <p>销售问题与支持问题会互相转化——两套自动化要<span class="highlight">无缝衔接</span>，由同一人（Fred）统筹最合理；体现「客户 Agent」的组织形态：一个角色 oversee 多种工作。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 11 · GTM 与客服的指标差异与共性</div>
+    <div class="tweet-body">
+        <p>差异：销售看 <span class="highlight">MQL、S1/S2 转化、closed won/lost</span>、无摩擦（只接触真潜客）；客服看解决率、自动化率、首响时间。</p>
+        <p>共性：都是客户面对团队——<span class="highlight">客户体验、响应速度、结果导向</span>是共同语言；Fin 接过低价值工作，让人类聚焦高价值。</p>
+    </div>
+</div>
+
+<div class="footer">InsightView · 附录 12 · Fin Now Sells Itself · 11 条推文</div>
+
+</div>
+</body>
+</html>
