@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>附录 08 · Fin 2026 年 1 月产品更新</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.8;
+}
+.container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+.back-link { font-size: 0.85rem; color: #2563eb; text-decoration: none; margin-bottom: 1rem; display: inline-block; }
+.back-link:hover { text-decoration: underline; }
+.report-header {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+.report-header .tag { font-size: 0.8rem; letter-spacing: 0.1em; opacity: 0.75; margin-bottom: 0.5rem; }
+.report-header h1 { font-size: 1.45rem; font-weight: 700; margin-bottom: 0.75rem; }
+.report-header p { font-size: 0.95rem; opacity: 0.85; }
+.section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 2rem 0 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eef2f6;
+    color: #0f172a;
+}
+.section-title .emoji { margin-right: 0.4rem; }
+.tweet {
+    padding: 1.2rem 0 1.2rem 0.8rem;
+    border-bottom: 1px solid #eef2f6;
+}
+.tweet:last-of-type { border-bottom: none; }
+.tweet .tweet-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #2563eb;
+    margin-bottom: 0.2rem;
+}
+.tweet .tweet-body {
+    font-size: 1rem;
+    color: #1e293b;
+    line-height: 1.8;
+}
+.tweet .tweet-body p { margin-bottom: 0.3rem; }
+.tweet .tweet-body p:last-child { margin-bottom: 0; }
+.highlight { color: #16a34a; font-weight: 500; }
+.footer {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eef2f6;
+}
+@media (max-width: 640px) {
+    .report-header h1 { font-size: 1.2rem; }
+    .container { padding: 1.25rem 1rem 3rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a class="back-link" href="index.html">← 返回主报告</a>
+
+<div class="report-header">
+    <div class="tag">InsightView · 附录 08 · By Deepseek-V4-Flash</div>
+    <h1>Fin Product Updates January 2026</h1>
+    <p>来源：Intercom 官方 YouTube · 产品更新第 2 期 · Brian Donohue（VP of Product）</p>
+</div>
+
+<div class="section-title"><span class="emoji">📌</span> 一句话总结</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 1 · 核心结论</div>
+    <div class="tweet-body">
+        <p>Fin 月度更新第 2 期（2026 年 1 月）发布 15 项功能，三大重点：① 新性能报告引入 <span class="highlight">automation rate</span> 作北极星指标——resolution × involvement，戳穿「68% 解决率但实际自动化率 32%」的真相；② Optimize 建议引擎升级（content/data/actions 三类）；③ Fin 能<span class="highlight">发送图片/GIF 答案</span>——约 1000 万段对话 A/B 测试，零延迟成本。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 2 · 录制信息</div>
+    <div class="tweet-body">
+        <p><span class="highlight">录制时间</span>：2026 年 1 月（系列第 2 期）。</p>
+        <p>主讲：Brian Donohue（VP of Product）；特邀 Christine（产品总监）、Pedro（首席 ML 科学家）；时长约 14 分钟。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 3 · 素材性质</div>
+    <div class="tweet-body">
+        <p>官方月度产品更新系列，聚焦「<span class="highlight">Analyze（分析）</span>」环节的迭代——度量哲学、建议引擎、多模态能力。</p>
+        <p>与第 6 篇（2 月版，train/test 的 Procedures、deploy 的 Voice/Shopify）互补，两期完整呈现 Fin Flywheel 的演进。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">💬</span> 行业</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 4 · 度量哲学：解决率会骗人</div>
+    <div class="tweet-body">
+        <p>行业普遍锚定 <span class="highlight">resolution rate</span>（Intercom 客户平均 67-68%），但单看它掩盖了 <span class="highlight">involvement rate</span>——你到底把多少对话送给了 Fin。</p>
+        <p>真相公式：<span class="highlight">automation rate = resolution rate × involvement rate</span>——68% 解决率 × 50% 介入率 = 只有 32% 自动化率。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">📦</span> 公司</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 5 · 产品方向与自证数据</div>
+    <div class="tweet-body">
+        <p>一切围绕 <span class="highlight">Fin Flywheel</span>（train → test → deploy → analyze）组织；1 月发布 15 项功能，主打 Analyze 环节。</p>
+        <p>自证：自家 CS 团队几天审完 <span class="highlight">21 条内容建议</span>，带来 <span class="highlight">3000 次额外解决</span>；图片答案客户数据显示 <span class="highlight">CX 高 7%、解决率高 10%</span>。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🧩</span> 产品</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 6 · 新性能报告</div>
+    <div class="tweet-body">
+        <p>Fin 表现 = 有效性（解决多少）+ 质量（<span class="highlight">CX score</span>，覆盖所有有意义对话、评估一致）。</p>
+        <p>CX score reasons：不只给分，还解释「为什么」；可下钻切片。</p>
+        <p>Automation rate = 新北极星指标：全部入站对话中 Fin 解决了多少。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 7 · Sankey 图与漏斗细分</div>
+    <div class="tweet-body">
+        <p><span class="highlight">Sankey 图</span>可视化所有对话流向；提升介入率的最大杠杆通常是「其他渠道」——很多客户根本没把 Fin 暴露给 email/voice/Slack/社交。</p>
+        <p>漏斗细分：Fin 升级的对话中多少是用户主动要求 vs 来自你配置的 guidance 规则——Intercom 发现客户<span class="highlight">过度自动升级</span>，没给 Fin 回答机会。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 8 · Optimize：Content 建议</div>
+    <div class="tweet-body">
+        <p><span class="highlight">Add content</span>：建议新增缺失知识条目（如 email troubleshooting），可加为 snippet/文章/并入现有内容，并展示源对话。</p>
+        <p><span class="highlight">Edit content</span>：对现有文章给出 redline 式增删建议，逐条 approve/reject。</p>
+        <p><span class="highlight">Duplicate content</span>：识别冗余文章——相似文章占用 Fin 的 context window，建议合并去噪。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 9 · Optimize：Data 与 Action 建议</div>
+    <div class="tweet-body">
+        <p><span class="highlight">Data suggestions</span>：让 Fin 访问外部系统数据（如内部订阅数据，回答「账户余额」类问题）；每条含价值概述、连接器指引、示例查询、预估工作量，甚至<span class="highlight">示例 API 文档</span>。</p>
+        <p><span class="highlight">Action suggestions</span>：让 Fin 去外部系统执行操作（如为试用客户延长试用期），同样结构。</p>
+        <p>分配规律：约一半入站对话改进来自内容建议，<span class="highlight">25-50% 来自数据建议</span>——补数据缺口是拉高自动化率的关键。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 10 · 为什么不自动批准</div>
+    <div class="tweet-body">
+        <p>客户是「<span class="highlight">source of truth</span>」——系统给建议、人做最终决定，把决策权留给客户。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 11 · Fin 图片答案</div>
+    <div class="tweet-body">
+        <p>Fin 回答时现可<span class="highlight">附带图片/GIF</span>：从帮助中心检索截图等视觉内容，提供即时视觉线索（如「如何加 guidance」的截图）。</p>
+        <p>支持所有内容类型（articles、HTML、PDF），可一次发多图（多步骤排障按顺序）、支持 GIF；email 内嵌图片。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 12 · 图片答案的工程投入</div>
+    <div class="tweet-body">
+        <p>为了「该发才发、不该发不发」，多轮 A/B 测试横跨约 <span class="highlight">1000 万段对话</span>；最终解决率整体提升、<span class="highlight">零延迟成本</span>（答案流式输出不变，有用时才追加图片）。</p>
+        <p>已全量上线、无额外成本，只需帮助中心有图片内容；全渠道生效（email、Slack、WhatsApp、社交）。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 13 · 团队与产品哲学</div>
+    <div class="tweet-body">
+        <p>团队配置：VP of Product（Brian）+ 产品总监（Christine）+ 首席 ML 科学家（Pedro）+ CS 团队（真实试用并自证数据）。</p>
+        <p>哲学：度量做「诚实」（automation rate 戳穿解决率幻觉）、建议做到「一键可执行」、决策权留给客户——「我们指出方向，客户拥有真相」。Brian 称建议引擎是「市场上最强大直观的 AI 改进引擎」。</p>
+    </div>
+</div>
+
+<div class="footer">InsightView · 附录 08 · Fin Product Updates January 2026 · 13 条推文</div>
+
+</div>
+</body>
+</html>
