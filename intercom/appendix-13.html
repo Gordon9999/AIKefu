@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>附录 13 · 结果导向定价与 GTM 转型</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.8;
+}
+.container { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+.back-link { font-size: 0.85rem; color: #2563eb; text-decoration: none; margin-bottom: 1rem; display: inline-block; }
+.back-link:hover { text-decoration: underline; }
+.report-header {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+.report-header .tag { font-size: 0.8rem; letter-spacing: 0.1em; opacity: 0.75; margin-bottom: 0.5rem; }
+.report-header h1 { font-size: 1.45rem; font-weight: 700; margin-bottom: 0.75rem; }
+.report-header p { font-size: 0.95rem; opacity: 0.85; }
+.section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 2rem 0 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eef2f6;
+    color: #0f172a;
+}
+.section-title .emoji { margin-right: 0.4rem; }
+.tweet {
+    padding: 1.2rem 0 1.2rem 0.8rem;
+    border-bottom: 1px solid #eef2f6;
+}
+.tweet:last-of-type { border-bottom: none; }
+.tweet .tweet-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #2563eb;
+    margin-bottom: 0.2rem;
+}
+.tweet .tweet-body {
+    font-size: 1rem;
+    color: #1e293b;
+    line-height: 1.8;
+}
+.tweet .tweet-body p { margin-bottom: 0.3rem; }
+.tweet .tweet-body p:last-child { margin-bottom: 0; }
+.highlight { color: #16a34a; font-weight: 500; }
+.footer {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eef2f6;
+}
+@media (max-width: 640px) {
+    .report-header h1 { font-size: 1.2rem; }
+    .container { padding: 1.25rem 1rem 3rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<a class="back-link" href="index.html">← 返回主报告</a>
+
+<div class="report-header">
+    <div class="tag">InsightView · 附录 13 · By Deepseek-V4-Flash</div>
+    <h1>How Intercom Built the Highest-Performing AI Agent Using Outcome Based Pricing</h1>
+    <p>来源：GTM Now 播客 · Archana Agrawal（Intercom 总裁）</p>
+</div>
+
+<div class="section-title"><span class="emoji">📌</span> 一句话总结</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 1 · 核心结论</div>
+    <div class="tweet-body">
+        <p>Intercom 总裁 Archana 复盘 Fin 的定价革命：<span class="highlight">99 美分/解决的结果导向定价</span>（客户「不想为 activity 付费」，由客户判定问题解决触发计费）+ <span class="highlight">百万美元解决率保证</span>——把定价变成战略武器。</p>
+        <p>成效：Fin 第一年 <span class="highlight">100 万 → 1200 万美元 ARR</span>，即将跨过 <span class="highlight">1 亿美元收入</span>；自家客服自动化率 80%+，人工坐席转型为 <span class="highlight">AI Operator</span>。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 2 · 录制信息</div>
+    <div class="tweet-body">
+        <p><span class="highlight">录制时间</span>：未提供（2026 年，Fin 即将跨 1 亿美元收入）。</p>
+        <p>主持：GTM Now 主持人；嘉宾：Archana Agrawal（Intercom 总裁，管销售/营销/成功/支持；前 Atlassian 7 年+、前 Airtable CMO）；时长约 46 分钟。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 3 · 嘉宾身份</div>
+    <div class="tweet-body">
+        <p>本篇是「定价与 GTM」视角——补上 Fin 商业化与组织转型的一环。</p>
+        <p>Archana 兼具 <span class="highlight">PLG（Atlassian）→ PLG 转企业（Airtable）→ AI 转型（Intercom）</span>三段经历，是「GTM 随产品转型」的权威视角。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">💬</span> 行业</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 4 · 定价成为 GTM 战略核心</div>
+    <div class="tweet-body">
+        <p>定价曾经「可以错再改」，现在必须<span class="highlight">一开始就正确</span>——定价是嵌入 GTM 的战略优势。</p>
+        <p>客户调研：客户<span class="highlight">不想为 activity 付费</span>（消息数/token/时长都不是价值）——要更少消息、要真结果；供应商应与客户关心的 outcome 同向激励。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 5 · 客服行业的转变</div>
+    <div class="tweet-body">
+        <p>客服是 24/7 业务：客户要即时准确答案，现实却是电话树、24-48 小时才回复——「<span class="highlight">规模化个人化服务</span>」第一次真正可能。</p>
+        <p>Fin 每周处理约 <span class="highlight">100 万段查询 ≈ 6500 个人工坐席</span>；行业长期未来是<span class="highlight">「人类 + AI」</span>并存。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">📦</span> 公司</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 6 · 结果导向定价（99 美分）</div>
+    <div class="tweet-body">
+        <p>工单<span class="highlight">被完全解决</span>时才收费；触发定价的是<span class="highlight">客户自己判定「问题已解决」</span>——把客户放在定价中心。</p>
+        <p>2023 年随 Fin 推出，是「按坐席卖软件 → 按结果卖软件」的<span class="highlight">完整运营模型转变</span>（销售/支持/成功/专业服务/计量/计费/定价全改）。</p>
+        <p>配套 <span class="highlight">百万美元保证</span>：大客户未达承诺解决率则赔付——来自产品信心（head-to-head 全胜、易配置、改进普惠所有客户）。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 7 · 定价灵活性与增长数据</div>
+    <div class="tweet-body">
+        <p>从 <span class="highlight">self-serve → pay-as-you-go（99 美分/解决）→ 长期合同</span>全覆盖，适配不同采用速度的客户；帮助台（seat）+ Fin（outcome）双轨售卖。</p>
+        <p>Fin 第一年 <span class="highlight">100 万 → 1200 万美元 ARR</span>，即将跨 <span class="highlight">1 亿美元</span>，增速加快；7000+ 客户；平均解决率 <span class="highlight">mid-20s% → 67%+</span>（2023 至今，产品级普惠改进）。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🧩</span> 产品</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 8 · Fin 产品定位与演进</div>
+    <div class="tweet-body">
+        <p>Fin 管理所有客服咨询——提供信息或<span class="highlight">代替人类执行操作</span>；不只跑 Intercom，也可跑 Zendesk、Service Cloud 等。</p>
+        <p>高度可编程（品牌/政策/语气/体验定制）；演进趋势：从「AI 回答问题」走向「<span class="highlight">AI 执行操作</span>」（退款、换卡、换货、改订阅）。</p>
+        <p>产品承担「自管理」重担：自助试用/购买/配置/部署/管理；企业级功能 + 消费级体验并重。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 9 · GTM 全链条转型（最大挑战：同时变）</div>
+    <div class="tweet-body">
+        <p>销售：不再卖坐席数，而是卖「<span class="highlight">客服量、想自动化多少、转型计划</span>」——consultative selling；revops/激励/赋能重构。</p>
+        <p>成功团队：从看活跃度变为<span class="highlight">帮 AI agent 做性能管理</span>；财务：<span class="highlight">预测 AI 解决量</span>、计量计费透明化。</p>
+        <p>支持团队：客服坐席转型为 <span class="highlight">AI Operator</span>——管理 AI、处理 AI 转交的高复杂度查询（客服部门人手未增）。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 10 · 人才观与学习</div>
+    <div class="tweet-body">
+        <p>招聘：<span class="highlight">没有 playbook</span>——找能「发现路径」的 builder、第一性原理、不依赖旧规则、有<span class="highlight">grit 与韧性</span>；学习者心态 + 对现状的适度不满；hire A+ expert 组队。</p>
+        <p>持续赋能：产品迭代太快——「以前产品是瓶颈，现在 <span class="highlight">GTM 是瓶颈</span>」。</p>
+        <p>学习：播客 + 经典书（《The Hard Thing About Hard Things》《Qualified Sales Leader》）+ 团队 + 客户渠道；GTM hack：「<span class="highlight">跟对一个好产品</span>」。</p>
+    </div>
+</div>
+
+<div class="footer">InsightView · 附录 13 · Outcome Based Pricing (GTM Now) · 10 条推文</div>
+
+</div>
+</body>
+</html>
