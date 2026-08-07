@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightView 附录 09 · AI 客服之 Decagon</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+        .report-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .report-header h1 { font-size: 1.6rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem; }
+        .report-header .subtitle { font-size: 0.95rem; color: #64748b; }
+        .report-header .meta { font-size: 0.8rem; color: #94a3b8; margin-top: 0.5rem; }
+        .section-title {
+            font-size: 1.15rem; font-weight: 700; color: #0f172a;
+            margin-top: 2rem; margin-bottom: 0.5rem; padding-bottom: 0.4rem;
+            border-bottom: 1px solid #e2e8f0; display: flex; align-items: center; gap: 0.4rem;
+        }
+        .section-title .emoji { font-size: 1.1rem; }
+        .tweet { padding: 1.2rem 0 1.2rem 0.8rem; border-bottom: 1px solid #eef2f6; }
+        .tweet:last-of-type { border-bottom: none; }
+        .tweet .tweet-label { font-weight: 600; font-size: 0.9rem; color: #2563eb; margin-bottom: 0.2rem; }
+        .tweet .tweet-body { font-size: 1rem; color: #1e293b; line-height: 1.8; }
+        .tweet .tweet-body p { margin-bottom: 0.3rem; }
+        .tweet .tweet-body p:last-child { margin-bottom: 0; }
+        .highlight { color: #16a34a; font-weight: 500; }
+        .footer {
+            text-align: center; margin-top: 3rem; padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8;
+        }
+        @media (max-width: 640px) {
+            .container { padding: 1.5rem 1rem 3rem; }
+            .report-header h1 { font-size: 1.3rem; }
+            .section-title { font-size: 1.05rem; }
+            .tweet .tweet-body { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="report-header">
+        <h1>附录 09 · 什么是 AOP（Agent Operating Procedure）</h1>
+        <div class="subtitle">What is an Agent Operating Procedure?（Decagon Dialogues '25）</div>
+        <div class="meta">InsightView · AI 客服之 Decagon · 2026-08-05</div>
+    </div>
+
+    <!-- 📌 核心观点 -->
+    <div class="section-title"><span class="emoji">📌</span> 核心观点</div>
+    <div class="tweet">
+        <div class="tweet-label">推 1 · 核心观点</div>
+        <div class="tweet-body">
+            <p><span class="highlight">AOP（Agent Operating Procedure）</span>是 Decagon AI Agent 的「核心大脑」——用自然语言描述 Agent 需要执行的业务逻辑。</p>
+            <p>任何能用自然语言写作的人——PM、CX 领导者，都能编写和迭代 Agent，无需工程师或专业服务专家。</p>
+        </div>
+    </div>
+
+    <!-- 👤 访谈人背景 -->
+    <div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+    <div class="tweet">
+        <div class="tweet-label">推 2 · 录制信息</div>
+        <div class="tweet-body">
+            <p><span class="highlight">录制时间</span>：未提供（Decagon Dialogues '25 系列）；时长约 1 分钟。</p>
+            <p><span class="highlight">访谈人</span>：Decagon 团队成员（对话形式）；访谈嘉宾：Decagon 产品侧成员。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 3 · 素材定位</div>
+        <div class="tweet-body">
+            <p>这是 Decagon 面向客户与潜在用户的<span class="highlight">产品概念解释</span>，把 AOP 这个核心技术概念讲得通俗易懂。</p>
+            <p>它回答了一个关键问题：非技术用户如何配置 AI Agent？</p>
+        </div>
+    </div>
+
+    <!-- 💬 行业 -->
+    <div class="section-title"><span class="emoji">💬</span> 行业</div>
+    <div class="tweet">
+        <div class="tweet-label">推 4 · 行业痛点：配置 AI 需要技术门槛</div>
+        <div class="tweet-body">
+            <p>传统上，配置 AI 客服的行为与业务流程通常需要<span class="highlight">技术工程师或专业服务团队</span>。</p>
+            <p>这导致业务侧想改 AI 行为，要么排队等工程、要么花钱买服务。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 5 · Decagon 的回答：从写代码到写文字</div>
+        <div class="tweet-body">
+            <p>用自然语言描述业务逻辑，让配置 AI 从「<span class="highlight">写代码</span>」变成「<span class="highlight">写文字</span>」。</p>
+            <p>这是对行业既有配置方式的一次去门槛化——也是「产品驱动 vs 专业服务」叙事的核心技术支撑。</p>
+        </div>
+    </div>
+
+    <!-- 📦 公司 -->
+    <div class="section-title"><span class="emoji">📦</span> 公司</div>
+    <div class="tweet">
+        <div class="tweet-label">推 6 · 产品定位：AOP 是基石概念</div>
+        <div class="tweet-body">
+            <p>AOP 是 Decagon 产品体系的<span class="highlight">基石概念</span>——AI Agent 执行企业业务逻辑的「核心大脑」。</p>
+            <p>它贯穿客服、销售、运营等所有 Agent 场景，是全书产品线的共同底座。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 7 · 价值主张：一致、可靠、贴合品牌</div>
+        <div class="tweet-body">
+            <p>让 CX 领导者<span class="highlight">精确控制</span> AI Agent 的表现——确保一致、可靠、贴合品牌（on brand）。</p>
+            <p>业务逻辑掌握在业务人手里，品牌体验才能由品牌方自己定义。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 8 · 协作模式：两团队并行</div>
+        <div class="tweet-body">
+            <p>业务侧（CX 领导者、PM）快速迭代 Agent；技术侧（IT、工程）保留对<span class="highlight">护栏、集成、工具</span>的控制。</p>
+            <p>两个团队并行工作，互不阻塞——这是「业务快、技术稳」分工的具体实现。</p>
+        </div>
+    </div>
+
+    <!-- 🧩 产品 -->
+    <div class="section-title"><span class="emoji">🧩</span> 产品</div>
+    <div class="tweet">
+        <div class="tweet-label">推 9 · AOP 的定义</div>
+        <div class="tweet-body">
+            <p>Agent Operating Procedure（<span class="highlight">Agent 操作规程</span>）——用自然语言描述 AI Agent 需要遵循的全部业务逻辑。</p>
+            <p>覆盖所有渠道，包括<span class="highlight">语音</span>——一套逻辑，全渠道执行。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 10 · 使用门槛：会写作就行</div>
+        <div class="tweet-body">
+            <p>不需要是技术工程负责人或专业服务专家——<span class="highlight">PM、CX 领导者</span>，任何能用自然语言写作的人都能写 AOP。</p>
+            <p>「只要你能用自然语言写出任何东西，你就能写 AOP。」</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 11 · 控制权分离的设计</div>
+        <div class="tweet-body">
+            <p>业务逻辑由运营者用<span class="highlight">自然语言配置</span>；护栏/集成/工具由技术团队掌控。</p>
+            <p>这既给了业务侧迭代速度，又保留了技术治理的安全底线。</p>
+        </div>
+    </div>
+
+    <!-- 🏗️ 组织 -->
+    <div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+    <div class="tweet">
+        <div class="tweet-label">推 12 · 组织演化：技术门槛的逐步下放</div>
+        <div class="tweet-body">
+            <p>AOP 的出现重构了客户组织内部的分工：过去配置 AI 需要<span class="highlight">工程师或专业服务</span>，现在 CX/PM 用自然语言就能完成。</p>
+            <p>客户组织因此从「技术团队独占」走向「<span class="highlight">业务团队主导 + 技术团队治理</span>」——这是 AI 时代客户组织形态的普遍演化方向。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 13 · 组织含义：非技术角色自主驱动</div>
+        <div class="tweet-body">
+            <p>AOP 的设计本质上是<span class="highlight">组织分工的产物</span>——让非技术角色（CX/PM）能自主驱动 AI 产品。</p>
+            <p>这也解释了 Decagon 为何不需要依赖专业服务公司——配置能力内置在客户自己手里。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 14 · 与 FDE/Agent PM 文化呼应</div>
+        <div class="tweet-body">
+            <p>AOP 让「业务人员直接构建产品」成为可能，与 Decagon 的 <span class="highlight">FDE/Agent PM</span> 文化一脉相承。</p>
+            <p>产品化的核心就是：把过去工程师才做的事，变成任何人用自然语言就能做的事。</p>
+        </div>
+    </div>
+
+    <div class="footer">InsightView · 附录 09 · AI 客服之 Decagon · 基于原始视频转录提炼 · 2026-08-05</div>
+</div>
+</body>
+</html>
