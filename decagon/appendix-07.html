@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightView 附录 07 · AI 客服之 Decagon</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+        .report-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .report-header h1 { font-size: 1.6rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem; }
+        .report-header .subtitle { font-size: 0.95rem; color: #64748b; }
+        .report-header .meta { font-size: 0.8rem; color: #94a3b8; margin-top: 0.5rem; }
+        .section-title {
+            font-size: 1.15rem; font-weight: 700; color: #0f172a;
+            margin-top: 2rem; margin-bottom: 0.5rem; padding-bottom: 0.4rem;
+            border-bottom: 1px solid #e2e8f0; display: flex; align-items: center; gap: 0.4rem;
+        }
+        .section-title .emoji { font-size: 1.1rem; }
+        .tweet { padding: 1.2rem 0 1.2rem 0.8rem; border-bottom: 1px solid #eef2f6; }
+        .tweet:last-of-type { border-bottom: none; }
+        .tweet .tweet-label { font-weight: 600; font-size: 0.9rem; color: #2563eb; margin-bottom: 0.2rem; }
+        .tweet .tweet-body { font-size: 1rem; color: #1e293b; line-height: 1.8; }
+        .tweet .tweet-body p { margin-bottom: 0.3rem; }
+        .tweet .tweet-body p:last-child { margin-bottom: 0; }
+        .highlight { color: #16a34a; font-weight: 500; }
+        .footer {
+            text-align: center; margin-top: 3rem; padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8;
+        }
+        @media (max-width: 640px) {
+            .container { padding: 1.5rem 1rem 3rem; }
+            .report-header h1 { font-size: 1.3rem; }
+            .section-title { font-size: 1.05rem; }
+            .tweet .tweet-body { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="report-header">
+        <h1>附录 07 · Decagon Labs 自研模型部门</h1>
+        <div class="subtitle">Introducing Decagon Labs（Decagon 官方发布）</div>
+        <div class="meta">InsightView · AI 客服之 Decagon · 2026-08-05</div>
+    </div>
+
+    <!-- 📌 核心观点 -->
+    <div class="section-title"><span class="emoji">📌</span> 核心观点</div>
+    <div class="tweet">
+        <div class="tweet-label">推 1 · 核心观点</div>
+        <div class="tweet-body">
+            <p><span class="highlight">Decagon Labs</span> 是 Decagon 的自研模型与 Agent 编排部门——从「用前沿模型」走向「自训专用模型」。</p>
+            <p>目前超过 <span class="highlight">80%</span> 的流量运行在自研模型上，专注用「更窄、更应用」的研究打造 concierge 客户体验。</p>
+        </div>
+    </div>
+
+    <!-- 👤 访谈人背景 -->
+    <div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+    <div class="tweet">
+        <div class="tweet-label">推 2 · 录制信息</div>
+        <div class="tweet-body">
+            <p><span class="highlight">录制时间</span>：未提供（Decagon Labs 成立/公开时录制的官方发布视频）；时长约 2 分钟。</p>
+            <p><span class="highlight">访谈人/访谈嘉宾</span>：无——品牌旁白形式的官方发布片。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 3 · 素材定位</div>
+        <div class="tweet-body">
+            <p>这是 Decagon Labs 的<span class="highlight">官方介绍</span>，代表 Decagon「自研模型 + 研究驱动」战略的对外宣示。</p>
+            <p>与篇目 01 的「90% 开源模型」访谈相互印证——研究能力是模型策略可行的前提。</p>
+        </div>
+    </div>
+
+    <!-- 💬 行业 -->
+    <div class="section-title"><span class="emoji">💬</span> 行业</div>
+    <div class="tweet">
+        <div class="tweet-label">推 4 · 前沿模型的局限</div>
+        <div class="tweet-body">
+            <p>Decagon 起步时与其他公司一样用前沿模型——它们强大但<span class="highlight">通用</span>，不是为客服体验专门构建的。</p>
+            <p>这是 Decagon 决定自研模型的起点。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 5 · 客户面 AI 的特定要求</div>
+        <div class="tweet-body">
+            <p>面向客户的 AI 有特殊需求：每一次交互都要<span class="highlight">快、准、一致、有对话感</span>。</p>
+            <p>通用模型无法完全满足这些「客服专属」要求——这就是专用模型的立足点。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 6 · 与基础 Labs 的差异</div>
+        <div class="tweet-body">
+            <p>基础实验室（foundation labs）在解决<span class="highlight">广泛问题</span>；Decagon Labs 的焦点「更窄、更应用」。</p>
+            <p>「我们正在为世界上每个人构建最好的 concierge 客户体验模型」——专注让 Decagon 移动更快、挖掘更深。</p>
+        </div>
+    </div>
+
+    <!-- 📦 公司 -->
+    <div class="section-title"><span class="emoji">📦</span> 公司</div>
+    <div class="tweet">
+        <div class="tweet-label">推 7 · Decagon Labs 的定位</div>
+        <div class="tweet-body">
+            <p>Decagon Labs 是工程团队的<span class="highlight">研究与 Agent 编排部门</span>（research and agent orchestration arm）。</p>
+            <p>使命简单直接：让平台变得更好。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 8 · 关键数据：80%+ 自研流量</div>
+        <div class="tweet-body">
+            <p>超过 <span class="highlight">80%</span> 的 Decagon 流量运行在自研模型上，且在自身用例上达到 <span class="highlight">SOTA</span>（state-of-the-art）性能。</p>
+            <p>Agent 已支撑全球最大型企业数以百万计的客户交互。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 9 · 研究方法</div>
+        <div class="tweet-body">
+            <p>通过<span class="highlight">后训练（post-training）、新架构、评估方法</span>三管齐下，构建支撑 concierge 体验的最佳 Agent。</p>
+            <p>「还是早期，但已经得到回报」——研究栈投入直接体现在生产性能上。</p>
+        </div>
+    </div>
+
+    <!-- 🧩 产品 -->
+    <div class="section-title"><span class="emoji">🧩</span> 产品</div>
+    <div class="tweet">
+        <div class="tweet-label">推 10 · 自研模型的起源：专用小模型</div>
+        <div class="tweet-body">
+            <p>公司很早就决定训练<span class="highlight">专用模型来补充前沿模型</span>：一个检测用户何时说完话、一个选择正确的 AOP、一个捕捉幻觉。</p>
+            <p>这些专用小模型各司其职，共同支撑客服对话的完整流程。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 11 · 研究栈投入</div>
+        <div class="tweet-body">
+            <p>包括<span class="highlight">人工标注流水线</span>、端到端评估基础设施、训练平台——这是自研模型的地基。</p>
+            <p>与篇目 01 提到的「客户成果导向评测」一脉相承。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 12 · 研究内容与开放分享</div>
+        <div class="tweet-body">
+            <p>研究覆盖<span class="highlight">后训练技术、Agent 编排、高级检索系统</span>。</p>
+            <p>「我们所发布的一切都反映着已经在生产环境中改进 Agent 的东西」——研究与生产零距离。</p>
+        </div>
+    </div>
+
+    <!-- 🏗️ 组织 -->
+    <div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+    <div class="tweet">
+        <div class="tweet-label">推 13 · 组织演化：从「用模型」到「造模型」</div>
+        <div class="tweet-body">
+            <p>Decagon Labs 的成立标志着组织能力的质变：从「用前沿模型」的纯应用团队，演进为「<span class="highlight">自训专用模型</span>」的研究 + Agent 编排组织。</p>
+            <p>组织内部因此新增了人工标注流水线、端到端评估、训练平台等<span class="highlight">研究基础设施</span>——研究从「文化」变成「正式建制」。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 14 · 组织形态：内建研究部门</div>
+        <div class="tweet-body">
+            <p>Decagon Labs 作为<span class="highlight">工程团队内建的研究部门</span>存在，而非独立公司——研究与产品紧密耦合。</p>
+            <p>这保证了研究直接服务生产，生产反馈又驱动研究选题。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 15 · 战略闭环</div>
+        <div class="tweet-body">
+            <p>自研模型支撑「<span class="highlight">concierge 客户体验</span>」愿景，与 90% 开源模型策略形成完整闭环。</p>
+            <p>研究能力让模型策略可行——Decagon 不只是应用公司，也是垂直模型公司。</p>
+        </div>
+    </div>
+
+    <div class="footer">InsightView · 附录 07 · AI 客服之 Decagon · 基于原始视频转录提炼 · 2026-08-05</div>
+</div>
+</body>
+</html>
