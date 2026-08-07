@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightView 附录 07 · AI 客服之 Sierra</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+        .report-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .report-header h1 { font-size: 1.6rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem; }
+        .report-header .subtitle { font-size: 0.95rem; color: #64748b; }
+        .report-header .meta { font-size: 0.8rem; color: #94a3b8; margin-top: 0.5rem; }
+        .report-header .tag { font-size: 0.75rem; letter-spacing: 0.05em; color: #94a3b8; margin-bottom: 0.4rem; }
+        .section-title {
+            font-size: 1.15rem; font-weight: 700; color: #0f172a;
+            margin-top: 2rem; margin-bottom: 0.5rem; padding-bottom: 0.4rem;
+            border-bottom: 1px solid #e2e8f0; display: flex; align-items: center; gap: 0.4rem;
+        }
+        .section-title .emoji { font-size: 1.1rem; }
+        .tweet { padding: 1.2rem 0 1.2rem 0.8rem; border-bottom: 1px solid #eef2f6; }
+        .tweet:last-of-type { border-bottom: none; }
+        .tweet .tweet-label { font-weight: 600; font-size: 0.9rem; color: #2563eb; margin-bottom: 0.2rem; }
+        .tweet .tweet-body { font-size: 1rem; color: #1e293b; line-height: 1.8; }
+        .tweet .tweet-body p { margin-bottom: 0.3rem; }
+        .tweet .tweet-body p:last-child { margin-bottom: 0; }
+        .highlight { color: #16a34a; font-weight: 500; }
+        .footer {
+            text-align: center; margin-top: 3rem; padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8;
+        }
+        @media (max-width: 640px) {
+            .container { padding: 1.5rem 1rem 3rem; }
+            .report-header h1 { font-size: 1.3rem; }
+            .section-title { font-size: 1.05rem; }
+            .tweet .tweet-body { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="report-header">
+        <div class="tag">InsightView · 附录 07 · By Deepseek-V4-Flash</div>
+        <h1>附录 07 · Sierra Agent OS 2.0：从答案到记忆与行动</h1>
+        <div class="subtitle">8 个新产品，三条演进主线（官网发布文）</div>
+        <div class="meta">InsightView · AI 客服之 Sierra · 2026-08-07</div>
+    </div>
+
+    <!-- 📌 核心观点 -->
+    <div class="section-title"><span class="emoji">📌</span> 核心观点</div>
+    <div class="tweet">
+        <div class="tweet-label">推 1 · 核心观点</div>
+        <div class="tweet-body">
+            <p>这是 Sierra 产品演进的最佳单篇资料：Sierra Summit 一口气发布 <span class="highlight">8 个新产品</span>，用三条主线勾勒方向——<span class="highlight">多渠道 → 单一 Agent</span>、<span class="highlight">技术 → 产品</span>、<span class="highlight">对话 → 关系</span>。</p>
+            <p>产品从「提供答案」走向「<span class="highlight">记忆与行动</span>」——对话正在成为界面，Agent 需要记忆和上下文去建立持久客户关系。</p>
+        </div>
+    </div>
+
+    <!-- 👤 访谈人背景 -->
+    <div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+    <div class="tweet">
+        <div class="tweet-label">推 2 · 发布信息</div>
+        <div class="tweet-body">
+            <p><span class="highlight">发布时间</span>：2025-11-05（Sierra Summit 首届客户大会）。<span class="highlight">作者</span>：Bret Taylor、Clay Bavor。<span class="highlight">类型</span>：官方产品发布文（非访谈）。</p>
+        </div>
+    </div>
+
+    <!-- 💬 行业 -->
+    <div class="section-title"><span class="emoji">💬</span> 行业</div>
+    <div class="tweet">
+        <div class="tweet-label">推 3 · 单一 agent 世界</div>
+        <div class="tweet-body">
+            <p>客户体验正从<span class="highlight">多渠道走向单一 agent 世界</span>：今天大多数公司仍为呼叫中心、网站、App 设置独立团队和独立体验，但 AI 能全部处理——现在 agent 还能接电话了。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 4 · 对话成为界面</div>
+        <div class="tweet-body">
+            <p><span class="highlight">AI 助手是互联网的前门</span>，就像过去 25 年搜索一样——ChatGPT 周活超 8 亿，是史上增长最快的产品，很快每个人都会有自己的个人 agent。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 5 · agent 构建的 1997 时代</div>
+        <div class="tweet-body">
+            <p>当年公司花数千万美元只是为了上线网站；今天的「无代码」工具能快速到一垒但处理不了企业级复杂用例——<span class="highlight">商业价值恰恰在复杂的订阅流失管理、受监管工作流、多步骤销售流程里</span>。</p>
+        </div>
+    </div>
+
+    <!-- 📦 公司 -->
+    <div class="section-title"><span class="emoji">📦</span> 公司</div>
+    <div class="tweet">
+        <div class="tweet-label">推 6 · 构建一次部署到任何地方</div>
+        <div class="tweet-body">
+            <p><span class="highlight">构建一次，部署到任何地方</span>——chat、voice、email、SMS，以及两个新地方：ChatGPT 和你的呼叫中心。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 7 · agent 是客户交互的起点</div>
+        <div class="tweet-body">
+            <p>在单一 agent 世界里，公司的 AI agent 是<span class="highlight">每次客户交互的起点</span>——从产品发现、推荐到销售、注册、排障、忠诚度、留存，还会协助服务与销售坐席。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 8 · 像 Shopify 之于电商</div>
+        <div class="tweet-body">
+            <p>Agent OS 产品化 agent 构建过程——<span class="highlight">让每个人（不只是工程师）都能成为 AI 架构师</span>，构建有真正 agency 的工业级 agent，而不是披着 agent 外衣的标准操作流程。</p>
+        </div>
+    </div>
+
+    <!-- 🧩 产品 -->
+    <div class="section-title"><span class="emoji">🧩</span> 产品</div>
+    <div class="tweet">
+        <div class="tweet-label">推 9 · Agent Studio 2.0</div>
+        <div class="tweet-body">
+            <p>Journeys 让每个团队获得开发者同等的控制力（自然语言定义目标和护栏）；Workspaces 带来 <span class="highlight">GitHub 式跨 CX、运营、工程协作</span>；Integrations 几分钟连接系统。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 10 · Insights 2.0</div>
+        <div class="tweet-body">
+            <p>Explorer 能即时分析海量交互诊断问题；<span class="highlight">Expert Answers 把呼叫中心专业知识变成有根据的文章</span>，自动增强 agent 表现——用 AI 持续改进 AI。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 11 · Publish to ChatGPT</div>
+        <div class="tweet-body">
+            <p>一键把 agent 发布到 ChatGPT，支持交互式地图、可填表单、详细图表——<span class="highlight">不需要在分发与去中介之间做选择</span>，完全控制哪些旅程、数据、能力出现在 ChatGPT。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 12 · Live Assist</div>
+        <div class="tweet-body">
+            <p>把 AI agent 超能力带入每次客户交互：实时指导支持团队、自动捕获细节、即时答案、推荐下一步。<span class="highlight">不是每段对话都该由 AI 处理，有时需要人情味</span>。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 13 · Agent Data Platform</div>
+        <div class="tweet-body">
+            <p><span class="highlight">ADP 是 Agent OS 的记忆与智能层</span>：统一每次对话（非结构化）与结构化数据（客户、计费、库存、政策、交易）。</p>
+            <p>有了统一视图，agent 获得真正 agency：跨时间连接点、预判需求、主动代表客户行动——<span class="highlight">甚至在问题发生前解决它</span>。</p>
+        </div>
+    </div>
+
+    <!-- 🏗️ 组织 -->
+    <div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+    <div class="tweet">
+        <div class="tweet-label">推 14 · 组织协作模式改变</div>
+        <div class="tweet-body">
+            <p>Workspaces 让 <span class="highlight">CX、运营、工程团队以 GitHub 式协作构建 agent</span>——agent 构建不再是工程师的专属领地。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 15 · 人机协作的设计</div>
+        <div class="tweet-body">
+            <p>「不是每段对话都该由 AI 处理」——Live Assist 的定位反映产品对<span class="highlight">人机协作</span>的设计：AI 增强人类坐席，而非完全替代。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 16 · 用 AI 持续改进 AI</div>
+        <div class="tweet-body">
+            <p>「它给 agent 从交易走向关系、从被动走向主动所需的记忆和上下文，<span class="highlight">它用 AI 持续改进 AI</span>」——这是 Agent OS 的闭环设计。</p>
+        </div>
+    </div>
+
+    <div class="footer">InsightView · 附录 07 · AI 客服之 Sierra · 基于 Sierra 官网发布文提炼 · 2026-08-07</div>
+</div>
+</body>
+</html>
