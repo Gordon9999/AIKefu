@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightView · AI 客服之 Sierra</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+        .report-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .report-header h1 { font-size: 1.6rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem; }
+        .report-header .subtitle { font-size: 0.95rem; color: #64748b; }
+        .report-header .meta { font-size: 0.8rem; color: #94a3b8; margin-top: 0.5rem; }
+        .report-header .tag { font-size: 0.75rem; letter-spacing: 0.05em; color: #94a3b8; margin-bottom: 0.4rem; }
+        .section-title {
+            font-size: 1.15rem; font-weight: 700; color: #0f172a;
+            margin-top: 2rem; margin-bottom: 0.5rem; padding-bottom: 0.4rem;
+            border-bottom: 1px solid #e2e8f0; display: flex; align-items: center; gap: 0.4rem;
+        }
+        .section-title .emoji { font-size: 1.1rem; }
+        .tweet { padding: 1.2rem 0 1.2rem 0.8rem; border-bottom: 1px solid #eef2f6; }
+        .tweet:last-of-type { border-bottom: none; }
+        .tweet .tweet-label { font-weight: 600; font-size: 0.9rem; color: #2563eb; margin-bottom: 0.2rem; }
+        .tweet .tweet-body { font-size: 1rem; color: #1e293b; line-height: 1.8; }
+        .tweet .tweet-body p { margin-bottom: 0.3rem; }
+        .tweet .tweet-body p:last-child { margin-bottom: 0; }
+        .highlight { color: #16a34a; font-weight: 500; }
+        .product-evo {
+            margin: 1rem 0 1.5rem; padding: 1.2rem 1.2rem 0.8rem;
+            background: #fff; border: 1px solid #e2e8f0; border-radius: 12px;
+        }
+        .product-evo h3 { font-size: 1rem; font-weight: 700; color: #0f172a; margin-bottom: 0.8rem; }
+        .product-evo svg { width: 100%; height: auto; display: block; }
+        .product-evo ul { margin: 0.8rem 0 0.4rem 1.3rem; font-size: 0.92rem; color: #334155; }
+        .product-evo li { margin-bottom: 0.35rem; }
+        .appendix-index {
+            margin-top: 3rem; padding: 1.5rem; background: #fff;
+            border: 1px solid #e2e8f0; border-radius: 8px;
+            counter-reset: appendix-counter;
+        }
+        .appendix-index h3 { font-size: 1rem; font-weight: 700; color: #0f172a; margin: 1.2rem 0 0.6rem; }
+        .appendix-index h3:first-child { margin-top: 0; }
+        .appendix-index ol { list-style: none; margin: 0 0 0.8rem; }
+        .appendix-index li {
+            padding: 0.5rem 0; border-bottom: 1px solid #f1f5f9; font-size: 0.9rem;
+            counter-increment: appendix-counter;
+        }
+        .appendix-index li:last-child { border-bottom: none; }
+        .appendix-index li::before {
+            content: counter(appendix-counter, decimal-leading-zero) " · ";
+            color: #94a3b8; font-weight: 600;
+        }
+        .appendix-index a { color: #2563eb; text-decoration: none; }
+        .appendix-index a:hover { text-decoration: underline; }
+        .badge {
+            display: inline-block; padding: 0.1rem 0.5rem; font-size: 0.75rem;
+            font-weight: 600; border-radius: 4px; background: #dcfce7; color: #16a34a; margin-left: 0.5rem;
+        }
+        .footer {
+            text-align: center; margin-top: 3rem; padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8;
+        }
+        @media (max-width: 640px) {
+            .container { padding: 1.5rem 1rem 3rem; }
+            .report-header h1 { font-size: 1.3rem; }
+            .section-title { font-size: 1.05rem; }
+            .tweet .tweet-body { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="report-header">
+        <div class="tag">InsightView · 主题阅读综合报告 · By Deepseek-V4-Flash</div>
+        <h1>InsightView · AI 客服之 Sierra</h1>
+        <div class="subtitle">主题阅读综合报告</div>
+        <div class="meta">生成日期：2026-08-07 · 共 9 篇素材</div>
+    </div>
+
+    <!-- 📌 核心观点 -->
+    <div class="section-title"><span class="emoji">📌</span> 核心观点</div>
+    <div class="tweet">
+        <div class="tweet-label">推 1 · 核心结论</div>
+        <div class="tweet-body">
+            <p><span class="highlight">什么变了</span>：游戏规则从「软件辅助人」翻转为「软件替代人」——AI Agent 自主完成任务，软件行业从卖工具变成卖结果，定价从订阅制走向按成果付费。</p>
+            <p><span class="highlight">战略</span>：Sierra 押注「<span class="highlight">结果即服务</span>」——只对成功解决的案件收费，转人工免费，把软件公司从「卖出即结束」变成「客户成功我才赚钱」，从而绕过创新者困境、绑定客户利益。</p>
+            <p><span class="highlight">产品</span>：真正壁垒不是模型本身，而是 <span class="highlight">Supervisor 模型（90%×90% 叠加到 99% 可靠性）</span>、模型星座编排、模拟测试与 AI 监控 AI 组成的可靠性体系——「解决 AI 问题的方案永远是更多 AI」。</p>
+            <p><span class="highlight">组织</span>：创始人 Bret Taylor 自我颠覆——逼自己对代码不再有情感依恋，把文档当持久资产；用「流程优先」思维重组组织，让超级多面手（Hyper-generalist）崛起。</p>
+            <p><span class="highlight">一句话总结</span>：模型是原材料，流程才是产品——Sierra 用结果定价把 AI 客服变成可衡量、可收费、可规模化的流程生意，三者缺一不可。</p>
+        </div>
+    </div>
+
+    <!-- 🏢 主题简介 -->
+    <div class="section-title"><span class="emoji">🏢</span> 主题简介</div>
+    <div class="tweet">
+        <div class="tweet-label">推 2 · Sierra 是谁</div>
+        <div class="tweet-body">
+            <p>Sierra 是面向大型企业的 AI 客服平台，2023 年创立，<span class="highlight">7 个季度突破 1 亿美元 ARR</span>、如今约 1.65 亿，估值超 150 亿美元——史上增长最快的企业软件之一。</p>
+            <p>它帮企业搭建能接电话、能聊天、能执行真实操作的 AI Agent，客户中 1/3 收入超 100 亿美元。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 3 · 创始人：Bret Taylor</div>
+        <div class="tweet-body">
+            <p><span class="highlight">Bret Taylor</span>：Google Maps 联合创造者、点赞按钮发明者、Facebook 前 CTO、Salesforce 前联席 CEO、OpenAI 董事会主席。</p>
+            <p>联合创始人 <span class="highlight">Clay Bavor</span> 是前 Google 高管，掌舵过 Gmail、Google Drive 与 Gemini——一个懂企业软件，一个懂消费级 AI。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 4 · 典型客户案例</div>
+        <div class="tweet-body">
+            <p><span class="highlight">Ramp</span> 自动解决 90% 客服案件；<span class="highlight">SoFi</span> NPS 提升 33 点、自动解决率 61%；<span class="highlight">Weight Watchers</span> 处理近 70% 会话、满意度 4.6/5。</p>
+            <p><span class="highlight">SiriusXM</span> 电话、官网、App 由同一个 Agent「Harmony」应答；Rocket Mortgage 从搜索房源到办完贷款全程 AI 介入。</p>
+        </div>
+    </div>
+
+    <!-- 📦 公司战略 -->
+    <div class="section-title"><span class="emoji">📦</span> 公司战略</div>
+    <div class="tweet">
+        <div class="tweet-label">推 5 · 定位：AI agent 是数字前门</div>
+        <div class="tweet-body">
+            <p>「如果我们是在 1994 年做这期播客，我们会谈论网站是你的数字前门」——<span class="highlight">AI agent 将成为企业绝大多数数字交互的入口</span>，而数字已经包括了电话。</p>
+            <p>AI 把最后一个模拟渠道——电话——数字化，单次交互成本从 10-20 美元降到 10-20 美分。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 6 · 商业模式：只为结果收费</div>
+        <div class="tweet-body">
+            <p>AI Agent 自主解决了问题才收费，<span class="highlight">转人工则免费</span>——按效果收费将像 SaaS 订阅制革命买断制一样，成为 AI 时代的标准定价。</p>
+            <p>Token 用量与价值没有必然关联，客户在意的是商业结果；软件公司因此有强烈动机帮客户走过「最后一英里」。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 7 · 竞争格局：在巨头与双雄之间</div>
+        <div class="tweet-body">
+            <p>与传统 SaaS 巨头是经典创新者困境：问题不是「Salesforce 会不会变成 chatbot」，而是「你价值主张的 agentic 形态是什么」。</p>
+            <p>在竞争市场中 AI 客服是<span class="highlight">必需品而非竞争优势</span>——像 ATM 没有减少银行网点，AI 带来的不是岗位替代，而是完全不同的事。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 8 · 护城河：创新节奏而非技术点</div>
+        <div class="tweet-body">
+            <p>Sierra 很多代码计划以后扔掉（<span class="highlight">计划性报废</span>），因为底层模型进步太快——护城河不在某个技术点，而在持续的创新节奏。</p>
+            <p>对 MCP 越来越怀疑：未来 agent 的上下文组织方式可能更像一堆 markdown 文件，而不是 MCP 服务器。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 9 · 护城河：客户关系与数据</div>
+        <div class="tweet-body">
+            <p><span class="highlight">智力将被民主化</span>——每个 CEO 最大的问题是「我的差异化在哪里」，答案在客户关系与数据。</p>
+            <p>「你和客户的关系、你和客户的互动，<span class="highlight">可以成为 AI 新时代的持久护城河</span>」；每次成功的交互 agent 都会学习变好，但那是你的信息，不会流向竞争对手或前沿实验室。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 10 · 定价 2x2：高 agency 高归因</div>
+        <div class="tweet-body">
+            <p>Sierra 用 2x2 框架定位自己：横轴是软件的 agency，纵轴是结果可归因性。<span class="highlight">左下席位制 SaaS、左上用量制 API（OpenAI/AWS）、右下混合（Cursor）、右上是 Sierra</span>。</p>
+            <p>按成果定价要求软件<span class="highlight">高度自主且高度可归因</span>——工作不自主你只是卖工具，结果不能干净归因会陷入无休止争论，这本身构成护城河条件。</p>
+        </div>
+    </div>
+
+    <!-- 🧩 产品战略 -->
+    <div class="section-title"><span class="emoji">🧩</span> 产品战略</div>
+    <div class="product-evo">
+        <h3>🔄 产品本身演进：会答 → 会协作 → 会做事 → 会决策</h3>
+        <svg viewBox="0 0 680 514" xmlns="http://www.w3.org/2000/svg" role="img">
+            <title>Sierra 产品演进时间线</title>
+            <desc>从会答到会决策的四个阶段演进</desc>
+            <line x1="90" y1="80" x2="90" y2="460" stroke="#B5D4F4" stroke-width="2"/>
+            <text x="40" y="110" font-size="12" fill="#5F5E5A" text-anchor="middle">早期</text>
+            <circle cx="90" cy="113" r="6" fill="#185FA5"/>
+            <rect x="130" y="70" width="490" height="86" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+            <text x="148" y="93" font-size="13" font-weight="500" fill="#0C447C">会答 · 问答 bot → 知识库 agent</text>
+            <text x="148" y="116" font-size="12" fill="#185FA5">企业客服从单选菜单进化为可对话的 Agent</text>
+            <text x="148" y="136" font-size="12" fill="#185FA5">Sonos 案例：LLM 的全人类知识是任务起点</text>
+            <text x="40" y="210" font-size="12" fill="#5F5E5A" text-anchor="middle">2025</text>
+            <circle cx="90" cy="213" r="6" fill="#185FA5"/>
+            <rect x="130" y="176" width="490" height="86" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+            <text x="148" y="199" font-size="13" font-weight="500" fill="#0C447C">会协作 · 多渠道统一</text>
+            <text x="148" y="222" font-size="12" fill="#185FA5">电话、官网、App、WhatsApp 由同一 Agent 应答</text>
+            <text x="148" y="242" font-size="12" fill="#185FA5">语音上线后超过文字，成为最大交互渠道</text>
+            <text x="40" y="310" font-size="12" fill="#5F5E5A" text-anchor="middle">近期</text>
+            <circle cx="90" cy="313" r="6" fill="#185FA5"/>
+            <rect x="130" y="282" width="490" height="86" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+            <text x="148" y="305" font-size="13" font-weight="500" fill="#0C447C">会做事 · 复杂任务执行者</text>
+            <text x="148" y="328" font-size="12" fill="#185FA5">处理退货、审核理赔、远程重置卫星收音机</text>
+            <text x="148" y="348" font-size="12" fill="#185FA5">20+ 次模型推理调用的星座编排</text>
+            <text x="40" y="410" font-size="12" fill="#5F5E5A" text-anchor="middle">现在</text>
+            <circle cx="90" cy="413" r="6" fill="#185FA5"/>
+            <rect x="130" y="388" width="490" height="86" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+            <text x="148" y="411" font-size="13" font-weight="500" fill="#0C447C">会决策 · 全旅程 agent + 自我监控</text>
+            <text x="148" y="434" font-size="12" fill="#185FA5">Rocket Mortgage：搜房到办完贷款全程无人介入</text>
+            <text x="148" y="454" font-size="12" fill="#185FA5">Supervisor 模型自查，99% 可靠性</text>
+        </svg>
+        <ul>
+            <li><span class="highlight">会答</span>：知识库 Agent 让客服从选择题变成对话，LLM 先验知识（如 Wi-Fi 排查）成为天然起点。</li>
+            <li><span class="highlight">会协作</span>：同一 Agent 横跨电话/官网/App/WhatsApp，语音渠道成为最大交互入口。</li>
+            <li><span class="highlight">会做事</span>：执行真实业务操作——退货、理赔、设备远程重置，模型星座编排 20+ 次推理。</li>
+            <li><span class="highlight">会决策</span>：端到端全旅程 Agent，Supervisor 模型自我监控，把可靠性从 90% 叠到 99%。</li>
+        </ul>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 11 · 产品演进主线：对话成为界面</div>
+        <div class="tweet-body">
+            <p>Agent OS 2.0 用三条主线勾勒产品方向：<span class="highlight">多渠道 → 单一 Agent</span>（一个 agent 接所有渠道）、<span class="highlight">技术 → 产品</span>（任何人能构建工业级 agent）、<span class="highlight">对话 → 关系</span>（agent 有记忆，从交易走向持久关系）。</p>
+            <p><span class="highlight">对话正在成为界面</span>——AI 助手是互联网的前门，agent 是每次客户交互的起点。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 12 · 演化路径：从客服到全旅程</div>
+        <div class="tweet-body">
+            <p>产品从「会答」的知识库 Agent 演进到「会协作」的多渠道统一、再到「会做事」的真实操作执行、直至「会决策」的全旅程 Agent。</p>
+            <p>每一步的驱动都是<span class="highlight">模型能力与语音革命</span>——说话是人类最自然的交互方式，语音上线后增长极快。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 13 · 模型星座与编排</div>
+        <div class="tweet-body">
+            <p>每一条用户消息触发 <span class="highlight">20+ 次模型推理调用</span>，多个模型各司其职——速度、质量、特定语言分开负责。</p>
+            <p>这不是单一 LLM 的处理，而是「星座」式的编排系统。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 14 · Supervisor 模型：90%×90%→99%</div>
+        <div class="tweet-body">
+            <p>推理模型 90% 正确率 + 监督模型 90% 准确率，<span class="highlight">两层叠加达到 99% 可靠性</span>。</p>
+            <p>监督 Agent 发现 Agent 脱离脚本就「打回去重做」：「你没有权限做这个决定，理由如下，重新做。」</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 15 · 可靠性体系：模拟 + 监控 + 人机协作</div>
+        <div class="tweet-body">
+            <p>每个客户有数百到数千次<span class="highlight">模拟对话的回归测试套件</span>，发布前模拟愤怒客户、异常案例、不同语言口音。</p>
+            <p>AI 监控 AI 检测幻觉与细微问题，运营团队只看有潜在问题的对话——「解决 AI 问题的方案永远是更多 AI」。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 16 · 纵深防御：AI 的不完美可控化</div>
+        <div class="tweet-body">
+            <p>借用资安概念 <span class="highlight">defense-in-depth（纵深防御）</span>：锁好所有门，但加监控确保一旦闯入能快速侦测并限制损害。</p>
+            <p>第一层是即时的<span class="highlight">监督模型</span>（对话当下检查幻觉/偏离 SOP/违反护栏）；第二层是事后<span class="highlight">深度评估</span>（更强大的模型回顾整段互动，把有问题的对话筛进人类审查队列——「把针放到干草堆最上面」）。</p>
+        </div>
+    </div>
+
+    <!-- 🏗️ 组织文化 -->
+    <div class="section-title"><span class="emoji">🏗️</span> 组织文化</div>
+    <div class="tweet">
+        <div class="tweet-label">推 17 · 客户使用全景：结果数据</div>
+        <div class="tweet-body">
+            <p>官网客户页展示了 30 个客户案例：<span class="highlight">Rocket Mortgage 转化率 4 倍、月度贷款 10 亿美元；SoFi NPS +33；Airtable 解决率 80%；Sun & Ski 转化率 3 倍；Redfin 房源浏览 2 倍</span>。</p>
+            <p>客户横跨十余个行业（金融、医疗、电信、零售、娱乐、公用事业），Singtel 上线短于 10 周——<span class="highlight">价值直接作用在收入与客户忠诚度上</span>，多位 C 级别高管公开背书。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 18 · 流程优先：不按部门堆 AI</div>
+        <div class="tweet-body">
+            <p>「法务装一个 AI，财务装一个 AI」是 <span class="highlight">shipping our org charts</span>——企业要按流程重组，让某个人真正对一个端到端流程负责。</p>
+            <p>比如让 17 天的供应商引入流程变成 17 小时，而不是让法务审合同更快。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 19 · 超级多面手崛起</div>
+        <div class="tweet-body">
+            <p>高自主性、关心客户、多学科的通才被 AI 赋能，价值是其他人的<span class="highlight">一千倍</span>。</p>
+            <p>Collison 确认 Stripe 也有同样观察：以前执行力有限的通才，有了 AI 后所有方案都能变成现实。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 20 · 杰文斯悖论与客户成功</div>
+        <div class="tweet-body">
+            <p>一个零售客户部署 AI 后总交互量增长几乎抵消成本节省——「以前的聊天机器人太烂没人用，现在 Agent 好用了人们反而联系更多」。</p>
+            <p>CEO 很开心：「<span class="highlight">我们终于在倾听客户了</span>。」在竞争市场，AI 的成本节省最终会变成消费者剩余。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 21 · 创始人模式与避免自满</div>
+        <div class="tweet-body">
+            <p>创始人模式不是「穿着黑色高领毛衣对员工大喊大叫」——关键是区分<span class="highlight">微观管理（窒息）与深度问责（如贝佐斯的问号邮件）</span>。</p>
+            <p>大公司两大自满：<span class="highlight">官僚主义</span>（流程演变成官僚机器）与<span class="highlight">现实扭曲场</span>（内部叙述比客户真相更有力）——消除须自上而下，伟大公司最重要的特质是极度关注客户。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 22 · 浪潮与领导者</div>
+        <div class="tweet-body">
+            <p><span class="highlight">浪潮总是比你更强大</span>——Amazon、Google、Salesforce 都是诞生于重大技术时刻、顺势而为；Sierra 没有创造 AI 浪潮，而是在驾驭它。</p>
+            <p>领导者的两条建议：<span class="highlight">①寻找聪明人并深度倾听</span>（如 Dwarkesh 采访 Tyler Cowen 改变了他的判断）；<span class="highlight">②保持亲手使用工具</span>——直觉在当下非常重要。</p>
+        </div>
+    </div>
+    <div class="tweet">
+        <div class="tweet-label">推 23 · 2026 展望</div>
+        <div class="tweet-body">
+            <p>① 真正的「<span class="highlight">Agent 之年</span>」——企业与消费者大规模采用；② AI 编写代码成为默认；③ 至少一个主流科学突破登上头条。</p>
+            <p>个人 AI agent 会成为通往互联网的前门——不是 10 个蓝色链接，而是委托。</p>
+        </div>
+    </div>
+
+    <!-- 附录索引 -->
+    <div class="appendix-index">
+        <h3>附录索引</h3>
+        <h3>🎙️ 高管访谈（创始人 / 高管）</h3>
+        <ol>
+            <li><a href="appendix-01.html">Cheeky Pint 播客：Bret Taylor 深度访谈（101 分钟）</a> <span class="badge">已生成</span></li>
+            <li><a href="appendix-02.html">Big Technology：Is AI Killing Software?（达沃斯）</a> <span class="badge">已生成</span></li>
+            <li><a href="appendix-03.html">Pigment Perspectives：垂直代理与企业软件未来</a> <span class="badge">已生成</span></li>
+            <li><a href="appendix-04.html">OpenAI 董事长 3 万字深度访谈（腾讯《划重点》编译）</a> <span class="badge">已生成</span></li>
+            <li><a href="appendix-05.html">《经济学人》Boss Class：AI 会犯错，但人犯得更多</a> <span class="badge">已生成</span></li>
+            <li><a href="appendix-06.html">CNBC Squawk Pod：AI Tokenomics 与护城河（2026-07）</a> <span class="badge">已生成</span></li>
+        </ol>
+        <h3>📣 官方产品推广与客户案例（官网）</h3>
+        <ol>
+            <li><a href="appendix-07.html">Agent OS 2.0：从答案到记忆与行动（Sierra Summit）</a> <span class="badge">已生成</span></li>
+            <li><a href="appendix-08.html">官网客户案例页：30 个客户的使用情况</a> <span class="badge">已生成</span></li>
+            <li><a href="appendix-09.html">Outcomemaxxing：按成果定价的深度思考</a> <span class="badge">已生成</span></li>
+        </ol>
+    </div>
+
+    <div class="footer">InsightView · AI 客服之 Sierra · 基于 9 篇原始访谈与官网资料提炼 · 2026-08-07</div>
+</div>
+</body>
+</html>
