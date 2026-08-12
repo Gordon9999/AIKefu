@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI客服Agent的三大工程：Intercom与Decagon拆解</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+        .article-header {
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .article-header .kicker {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: #2563eb;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.6rem;
+        }
+        .article-header h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0f172a;
+            line-height: 1.35;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.01em;
+        }
+        .article-header .standfirst {
+            font-size: 1.05rem;
+            color: #475569;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+        .part-title {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 2px solid #1e293b;
+            letter-spacing: 0.02em;
+        }
+        .section-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-top: 1.8rem;
+            margin-bottom: 0.6rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .article-body p {
+            font-size: 1rem;
+            color: #1e293b;
+            line-height: 1.8;
+            margin-bottom: 0.6rem;
+        }
+        .article-body p:last-child { margin-bottom: 0; }
+        .highlight {
+            color: #16a34a;
+            font-weight: 500;
+        }
+        .quote-block {
+            margin: 1.5rem 0;
+            padding: 1rem 1.2rem;
+            border-left: 3px solid #2563eb;
+            background: #f8fafc;
+            font-size: 0.95rem;
+            color: #475569;
+            line-height: 1.7;
+        }
+        .footer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+        .footer .footer-meta { margin-bottom: 0.3rem; line-height: 1.6; }
+        .footer .footer-meta:last-child { margin-bottom: 0; }
+        @media (max-width: 640px) {
+            .container { padding: 1.5rem 1rem 3rem; }
+            .article-header h1 { font-size: 1.4rem; }
+            .article-header .standfirst { font-size: 0.95rem; }
+            .article-header .kicker { font-size: 0.72rem; }
+            .part-title { font-size: 1.15rem; }
+            .section-title { font-size: 1.05rem; }
+            .article-body p { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="article-header">
+        <div class="kicker">技术解读</div>
+        <h1>AI客服Agent的三大工程：Intercom与Decagon拆解</h1>
+        <div class="standfirst">以"退票"为例，拆解 Prompt / Context / Harness 三层工程如何驱动 AI 客服，以及 Intercom Fin AI 与 Decagon 的差异在哪、谁在什么场景下赢。</div>
+    </div>
+
+    <div class="article-body">
+
+        <p>用户说了一句"我有事去不了了，要退票"。</p>
+        <p>背后是三大工程、十几个模块、两三次 LLM 调用在协作。</p>
+        <p>这篇文章把整个过程拆开讲清楚。</p>
+<br>
+        <p>以 <span class="highlight">Intercom Fin AI</span> 和 <span class="highlight">Decagon</span> 两个产品为例。先讲 Fin AI 怎么实现，再讲 Decagon 有什么不同。</p>
+
+
+        <div class="part-title">一、三大工程是什么</div>
+
+        <p>Agent 编程领域有三层工程准备。每一层干不同的活。</p>
+
+        <table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.92rem;">
+            <tr>
+                <th style="background:#1e293b;color:#fff;padding:0.6rem 0.8rem;text-align:left;font-weight:600;">工程</th>
+                <th style="background:#1e293b;color:#fff;padding:0.6rem 0.8rem;text-align:left;font-weight:600;">干什么</th>
+                <th style="background:#1e293b;color:#fff;padding:0.6rem 0.8rem;text-align:left;font-weight:600;">类比</th>
+            </tr>
+            <tr>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">Prompt Engineering</td>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">给 LLM 写说明书</td>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">员工手册</td>
+            </tr>
+            <tr>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">Context Engineering</td>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">给 LLM 塞资料夹</td>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">工位上的文件</td>
+            </tr>
+            <tr>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">Harness Engineering</td>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">给 LLM 装操作系统</td>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">车间控制室</td>
+            </tr>
+        </table>
+
+        <p>三者不是并列的功能。是<span class="highlight">一次 LLM 调用之前的三层准备</span>。</p>
+
+
+        <div class="part-title">二、Fin AI 的模块拆解</div>
+
+        <p>以退票场景为例。用户说"我有事去不了了，要退票"。</p>
+
+        <div class="section-title">Harness 层：编排控制</div>
+
+        <p><span class="highlight">意图路由</span>：判断这是退款意图，走 Custom Answer"退票流程"。</p>
+        <p><span class="highlight">工具编排</span>：查订单时调 API，用户确认后调退款 API。</p>
+        <p><span class="highlight">护栏</span>：退款金额超阈值？用户情绪激动？转人工。</p>
+<br>
+        <p>Harness 不生成回复。它控制流程——像<span class="highlight">状态机</span>，每步决定下一步往哪走。</p>
+
+        <div class="section-title">Context 层：上下文组装</div>
+
+        <p><span class="highlight">知识 RAG</span>：向量检索"退票政策"，命中"3 天内退 50%"。</p>
+        <p><span class="highlight">对话记忆</span>：管理历史轮次，第 2 轮才说退票也有上下文。</p>
+        <p><span class="highlight">客户数据</span>：查 CRM，查订单系统，拿到 #12345 ¥580。</p>
+<br>
+        <p>Context 不决定说什么。它决定<span class="highlight">LLM 这一轮能看到什么</span>。</p>
+<br>
+        <p>核心挑战：1000 篇文章只能塞 3 篇。哪 3 篇最相关？对话超 10 轮怎么压缩？什么时候查订单？</p>
+
+        <div class="section-title">Prompt 层：提示词组装</div>
+
+        <p><span class="highlight">系统提示词</span>：你是 XX 票务客服，不确定就转人工。</p>
+        <p><span class="highlight">响应模板</span>：Custom Answer 里写好的退票流程骨架。</p>
+        <p><span class="highlight">语气指令</span>：友好、专业、简洁。</p>
+<br>
+        <p>Prompt 不做决策。它把所有材料<span class="highlight">排版</span>成 LLM 最容易理解的格式。</p>
+
+
+        <div class="part-title">三、Admin 配置什么</div>
+
+        <p>Fin AI 的核心理念：让非技术人员配置。Admin 在后台设 5 类东西。</p>
+
+        <div class="section-title">5 类配置</div>
+
+        <p><span class="highlight">1. 知识库文章</span>：写退票政策 FAQ，会被向量化供检索。</p>
+        <p><span class="highlight">2. Custom Answer</span>：写退票流程骨架。不是死流程，是带条件的建议路径。LLM 会参考但可灵活变通。</p>
+        <p><span class="highlight">3. Agent 人格</span>：选语气，写品牌话术约束。</p>
+        <p><span class="highlight">4. API 工具</span>：注册退款接口，定义参数和返回格式。用 function calling 调。</p>
+        <p><span class="highlight">5. 转接规则</span>：退款超 ¥1000 转人工。连续 3 次不满转人工。API 失败转人工。</p>
+<br>
+        <p>用户配的是<span class="highlight">"材料"和"规则"</span>，不是代码。</p>
+
+
+        <div class="part-title">四、退票对话走一遍</div>
+
+        <div class="section-title">Turn 1：用户发起退票</div>
+
+        <p>用户说："我有事去不了了，要退票"</p>
+<br>
+        <p>Harness 接收。意图路由判断 = 退款意图。匹配到 Custom Answer"退票流程"。护栏检查：可以继续。</p>
+<br>
+        <p>Context 并行检索。RAG 命中"3 天内退 50%"。查 CRM 拿到 #12345 ¥580。首轮无历史。</p>
+<br>
+        <p>Prompt 组装。系统提示词 + 模板 + 知识 + 订单数据 + 用户消息，拼成完整 prompt。</p>
+<br>
+        <p>LLM 返回：</p>
+        <div class="quote-block">"我来帮您处理退票。您的订单 #12345（演唱会票 ¥580），距演出 3 天可退 50% 即 ¥290。确认退票吗？"</div>
+<br>
+        <p>Harness 后处理。检查合规，推送给用户。</p>
+
+        <div class="section-title">Turn 2：用户确认</div>
+
+        <p>用户说："是的，确认退票"</p>
+<br>
+        <p>Harness 判断这是确认执行。调退款 API：refund(order_id="12345", amount=290)。返回成功。</p>
+<br>
+        <p>Context 记录 Turn 1，无需重新检索。</p>
+<br>
+        <p>LLM 返回：</p>
+        <div class="quote-block">"退款已成功！¥290 将在 1-3 个工作日内退回。还有其他可以帮您的吗？"</div>
+
+
+        <div class="part-title">五、三层的关系：不是串行，是嵌套</div>
+
+        <p>Harness 是外层循环。每轮决定走什么流程。</p>
+        <p>需要知识就触发 Context 检索。需要回复就触发 Prompt 组装。需要转人就转。</p>
+<br>
+        <p><span class="highlight">Harness 调度 Context，Context 喂给 Prompt，Prompt 驱动 LLM，Harness 检查输出。</span></p>
+<br>
+        <p>整个对话是多轮循环。不是一次调用就结束。</p>
+
+
+        <div class="part-title">六、架构相同，竞争在哪</div>
+
+        <p>两个产品都有这三层。有厨房不等于菜好吃。</p>
+
+        <div class="section-title">维度一：每层做多深</div>
+
+        <table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.92rem;">
+            <tr>
+                <th style="background:#1e293b;color:#fff;padding:0.6rem 0.8rem;text-align:left;font-weight:600;">能力</th>
+                <th style="background:#1e293b;color:#fff;padding:0.6rem 0.8rem;text-align:left;font-weight:600;">一般产品</th>
+                <th style="background:#1e293b;color:#fff;padding:0.6rem 0.8rem;text-align:left;font-weight:600;">优秀产品</th>
+            </tr>
+            <tr>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">多步推理</td>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">一步查一个</td>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">链式：查A→根据A查B→调C</td>
+            </tr>
+            <tr>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">RAG 准确率</td>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">10 篇中 3 篇相关</td>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">5 篇中 4 篇相关</td>
+            </tr>
+            <tr>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">长对话记忆</td>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">超 10 轮就忘</td>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">20 轮还记得订单号</td>
+            </tr>
+            <tr>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">Function calling</td>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">准确率 85%</td>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">99% + 重试 + 降级</td>
+            </tr>
+        </table>
+
+        <p>85% 和 99% 差 14 个点。放到每天 10 万次对话里，就是<span class="highlight">14000 次退款失败</span>的差距。</p>
+
+        <div class="section-title">维度二：层间接缝</div>
+
+        <p>三层不是独立模块。<span class="highlight">协作质量</span>决定整体效果。</p>
+<br>
+        <p>Harness ↔ Context：用户说"好的"不需要检索。用户说"那退吧"需要查订单但不需要检索知识。少一次 RAG = 少 200ms 延迟。</p>
+<br>
+        <p>Prompt ↔ Harness：LLM 幻觉说"全额退款"。Harness 对比知识库发现政策是退 50%。拦截，重新生成。<span class="highlight">这层检查是安全关键</span>。</p>
+
+        <div class="section-title">维度三：工程之外</div>
+
+        <p><span class="highlight">Admin UX</span>：5 分钟配好 vs 2 天开发。决定谁能拿到非技术客户。</p>
+        <p><span class="highlight">数据飞轮</span>：100 万次对话 vs 1 万次。架构可以抄，数据不能抄。</p>
+        <p><span class="highlight">生态集成</span>：预置集成多 = 切换成本高 = 客户留存。</p>
+        <p><span class="highlight">成本效率</span>：多模型路由 vs 单模型。决定定价空间。</p>
+
+
+        <div class="part-title">七、Decagon 的差异：同骨架，不同肌肉</div>
+
+        <p>Decagon 架构本质上也是三层。差异在每层做得多深。</p>
+
+        <div class="section-title">Harness 层：三个关键差异</div>
+
+        <p><span class="highlight">1. AOP vs Custom Answer</span></p>
+        <p>Fin AI 的 Custom Answer 是对话模板。LLM 参考它生成回复，但也负责算退款金额。幻觉了就出错。</p>
+        <p>Decagon 的 AOP 是<span class="highlight">自然语言写的可执行程序</span>。退款金额用代码算，不是 LLM 算。LLM 只负责把数字说出来。</p>
+<br>
+        <div class="quote-block">Fin AI: LLM 算 ¥580 × 50% = ¥290 → 可能算错<br>Decagon: 代码算 ¥580 × 50% = ¥290 → 不会错</div>
+<br>
+        <p>把"不能错"的部分从 LLM 手里拿走。这就是<span class="highlight">代码级护栏</span>。</p>
+<br>
+        <p><span class="highlight">2. 多 Agent vs 单 Agent</span></p>
+        <p>Fin AI 基本是单 Agent，一个 LLM 调用处理一切。</p>
+        <p>Decagon 分工：意图识别用小模型，知识检索用专用 Agent，回复生成用大模型，情绪检测独立跑。</p>
+<br>
+        <p><span class="highlight">3. Supervisor model</span></p>
+        <p>Fin AI 生成后做基础护栏检查。Decagon 用独立 LLM 审查另一个 LLM 的输出。第二道防线。</p>
+
+        <div class="section-title">Context 层：两个关键差异</div>
+
+        <p><span class="highlight">1. 统一知识图谱 vs 基础 RAG</span></p>
+        <p>Fin AI 检索帮助中心文章。Decagon 关联帮助文档 + 历史工单 + 实时数据。</p>
+<br>
+        <p>用户说"上次你们给我退了，这次怎么不行？"</p>
+        <p>Fin AI 按当前政策回复，不知用户上次退过。</p>
+        <p>Decagon 查到上次是 7 天前退的（全额），这次 3 天内（50%）。回复有理有据。</p>
+<br>
+        <p><span class="highlight">2. 多模型自动路由</span></p>
+        <p>Fin AI 所有步骤用一个大模型。意图分类也用 GPT-4，贵且慢。</p>
+        <p>Decagon 意图分类用小模型 $0.001，生成用大模型 $0.02。每轮省 30%。每天 10 万次省 $900。</p>
+
+        <div class="section-title">Prompt 层：情绪自适应</div>
+
+        <p>Fin AI 语气是静态的。不管用户什么情绪都一个调。</p>
+        <p>Decagon 检测到用户愤怒，动态调整语气："非常抱歉，我立刻为您处理。"</p>
+
+
+        <div class="part-title">八、谁在什么场景下赢</div>
+
+        <div class="section-title">80% 的简单 case：Fin AI 够用</div>
+
+        <table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.92rem;">
+            <tr>
+                <th style="background:#1e293b;color:#fff;padding:0.6rem 0.8rem;text-align:left;font-weight:600;">场景</th>
+                <th style="background:#1e293b;color:#fff;padding:0.6rem 0.8rem;text-align:left;font-weight:600;">Fin AI 能不能搞定</th>
+            </tr>
+            <tr>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">信息查询：退票政策是什么</td>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">完全够</td>
+            </tr>
+            <tr>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">简单流程：帮我退票</td>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">够用</td>
+            </tr>
+            <tr>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">路由分流：转人工</td>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">够用</td>
+            </tr>
+            <tr>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">FAQ：营业时间</td>
+                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">完全够</td>
+            </tr>
+        </table>
+
+        <p>这些场景的共同特点：单轮或两轮解决，不需要复杂推理链。</p>
+
+        <div class="section-title">15% 的复杂 case：Decagon 拉开差距</div>
+
+        <p><span class="highlight">跨系统关联</span>："上次退错了钱"——Fin AI 不知上次记录，Decagon 知识图谱能查到。</p>
+        <p><span class="highlight">确定性推理</span>："退 2 张留 1 张"——Fin AI 用 LLM 算可能错，Decagon 用代码算不会错。</p>
+        <p><span class="highlight">情绪敏感</span>："第三次了！！"——Fin AI 正常语气回复，Decagon 调整语气并加速转人工。</p>
+        <p><span class="highlight">历史回溯</span>："按上次方案处理"——Fin AI 重新问，Decagon 直接执行。</p>
+
+        <div class="section-title">OTA 等高客单价行业：80% 法则</div>
+
+        <p>OTA 的特殊性：一个 case 交易金额几百到几万。但一个错误 case 的赔偿成本是交易金额的<span class="highlight">几倍</span>。</p>
+<br>
+        <p>人工处理一个复杂 case 成本 ¥8。AI 出错后的修复成本可能是 ¥500-5000。</p<br>
+        <p>那 15% 复杂 case 的自动化收益，<span class="highlight">不足以覆盖出错的风险成本</span>。</p>
+<br>
+        <p>不如直接转人工。快、准、安全。</p>
+<br>
+        <p>对 OTA 来说，真正的竞争焦点不是"谁能处理更多 case"。是<span class="highlight">谁能在 80% 简单 case 上做到更低成本 + 更好体验 + 更丝滑的转人工</span>。</p>
+<br>
+        <p>这个方向上，Fin AI 的性价比更高。</p>
+
+
+        <div class="part-title">九、总结</div>
+
+        <p><span class="highlight">架构是入场券，不是护城河。</span></p>
+<br>
+        <p>Intercom Fin AI 和 Decagon 都用三层架构。差异在于：</p>
+        <p>1. 每层执行深度——同样叫 RAG，准确率差 20 个点。</p>
+        <p>2. 层间接缝——Harness 能不能智能决定"这轮不检索"。</p>
+        <p>3. Admin UX——5 分钟配好 vs 2 天开发。</p>
+        <p>4. 数据飞轮——100 万次对话 vs 1 万次。这是最难追的壁垒。</p>
+<br>
+        <p>Decagon 在工程深度上全面领先。Fin AI 在配置体验和生态成熟度上有优势。</p>
+<br>
+        <p>但对 80% 的自动化客服场景来说，Fin AI 够用了。真正的竞争焦点是简单 case 的成本和体验，以及转人工的衔接质量。</p>
+
+    </div>
+
+    <div class="footer">
+        <div class="footer-meta">生成日期：2026-08-12</div>
+        <div class="footer-meta">来源：对话讨论整理（Intercom Fin AI / Decagon 架构分析）</div>
+        <div class="footer-meta">本文由 AI 辅助改写（LLM: Auto）</div>
+    </div>
+
+</div>
+</body>
+</html>
