@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightView · 附录 04 · Dharmesh Shah：LinkedIn agent.ai 告别帖</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+        .report-header {
+            text-align: center; margin-bottom: 2.5rem; padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .report-header h1 { font-size: 1.6rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem; }
+        .report-header .subtitle { font-size: 0.95rem; color: #64748b; }
+        .report-header .tag { font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.35rem; }
+        .report-header .meta { font-size: 0.8rem; color: #94a3b8; margin-top: 0.5rem; }
+        .section-title {
+            font-size: 1.15rem; font-weight: 700; color: #0f172a;
+            margin-top: 2rem; margin-bottom: 0.5rem; padding-bottom: 0.4rem;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex; align-items: center; gap: 0.4rem;
+        }
+        .section-title .emoji { font-size: 1.1rem; }
+        .tweet { padding: 1.2rem 0 1.2rem 0.8rem; border-bottom: 1px solid #eef2f6; }
+        .tweet:last-of-type { border-bottom: none; }
+        .tweet .tweet-label { font-weight: 600; font-size: 0.9rem; color: #2563eb; margin-bottom: 0.2rem; }
+        .tweet .tweet-body { font-size: 1rem; color: #1e293b; line-height: 1.8; }
+        .tweet .tweet-body p { margin-bottom: 0.3rem; }
+        .tweet .tweet-body p:last-child { margin-bottom: 0; }
+        .highlight { color: #16a34a; font-weight: 500; }
+        .footer {
+            text-align: center; margin-top: 3rem; padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8;
+        }
+        .back-link { display: block; text-align: center; margin-top: 1.5rem; color: #2563eb; text-decoration: none; font-size: 0.85rem; }
+        .back-link:hover { text-decoration: underline; }
+        @media (max-width: 640px) {
+            .container { padding: 1.5rem 1rem 3rem; }
+            .report-header h1 { font-size: 1.3rem; }
+            .section-title { font-size: 1.05rem; }
+            .tweet .tweet-body { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="report-header">
+        <div class="tag">InsightView · 附录 04 · By Claude</div>
+        <h1>Dharmesh Shah：LinkedIn——agent.ai 的告别与 Agent Builder 的诞生</h1>
+        <div class="subtitle">从 ChatSpot 到 Breeze Assistant，从 agent.ai 到 Agent Builder——一个实验场的战略回归</div>
+        <div class="meta">来源：LinkedIn · 2026 · 作者：Dharmesh Shah（HubSpot 联合创始人/CTO）</div>
+    </div>
+
+    <!-- ===== 📌 核心观点 ===== -->
+    <div class="section-title"><span class="emoji">📌</span> 核心观点</div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 1 · "Bye bye agent.ai. Hello HubSpot Agent Builder"</div>
+        <div class="tweet-body">
+            <p>Dharmesh 在 LinkedIn 上发布了一篇长帖，以 <span class="highlight">"Bye bye agent.ai. Hello HubSpot Agent Builder"</span> 作为核心宣告——agent.ai 作为独立品牌和产品正式结束，其能力被吸收进 HubSpot 核心产品变成 Agent Builder。这不是失败，是一次 <span class="highlight">"实验场毕业"</span>。</p>
+            <p>他写道："我最喜欢做产品的一点是，它们不总是到达你最初设想的地方。agent.ai 一开始想做'AI 代理的 LinkedIn'——代理的发现网络。最后我们发现最有价值的是让客户在 CRM 内 <span class="highlight">构建自己的代理</span>。"</p>
+            <p>这个告别标志着 HubSpot 的创新孵化模式完成了一个完整循环：独立实验 → 验证假设 → 积累用户 → 学习使用模式 → 吸收回核心产品。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 2 · "最好的代理是有最好上下文的代理"</div>
+        <div class="tweet-body">
+            <p>Dharmesh 在帖子中写下了一句后来成为 HubSpot AI 战略核心信条的话：<span class="highlight">"The best agents are the ones with the best context（最好的代理是有最好上下文的代理）"</span>。这句话解释了为什么 agent.ai 要被吸收回 HubSpot——因为 agent.ai 作为独立产品没有 CRM 上下文。</p>
+            <p>他说："在 agent.ai 上，一个代理可以帮你写博客、分析数据。但它不知道你的客户是谁、你的 deal 在哪个阶段、你的公司有多少人。这些上下文在 <span class="highlight">CRM 里</span>。如果一个代理不在 CRM 里，它就只有通用能力没有企业上下文。"</p>
+            <p>这个判断直接导向了 Agent Builder 的产品设计——不是一个独立的代理构建平台，是 <span class="highlight">"在 CRM 内构建代理"</span>，代理从构建的第一天就拥有完整的企业上下文。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 3 · CRM 是上下文的最佳载体</div>
+        <div class="tweet-body">
+            <p>Dharmesh 在帖子中论证了为什么 CRM 是 AI 代理上下文的最佳载体。他列了 CRM 天然拥有的上下文维度：<span class="highlight">客户身份</span>（谁）、<span class="highlight">关系历史</span>（发生过什么）、<span class="highlight">交易状态</span>（现在在哪）、<span class="highlight">沟通记录</span>（聊了什么）、<span class="highlight">服务历史</span>（出过什么问题）。</p>
+            <p>他说："这些不是 agent 需要额外获取的数据——它们已经在 CRM 里了 20 年。<span class="highlight">代理不需要去找上下文，代理生在上下文里</span>。这是 CRM 公司做 AI 代理的天然优势——不是技术优势，是数据位置优势。"</p>
+            <p>他还给了一个对比："一个独立的 AI 代理平台，要让代理理解一个客户，需要集成 5 个系统。在 HubSpot 里，代理 <span class="highlight">天生就知道</span>。"</p>
+        </div>
+    </div>
+
+    <!-- ===== 👤 访谈人背景 ===== -->
+    <div class="section-title"><span class="emoji">👤</span> 演讲人背景</div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 4 · Dharmesh 作为"实验型 CTO"的画像</div>
+        <div class="tweet-body">
+            <p>Dharmesh 在这篇 LinkedIn 帖子中展示了他作为 <span class="highlight">"实验型 CTO"</span> 的完整画像。他不是在指挥团队做产品——他在 <span class="highlight">亲自做实验</span>、验证假设、做出取舍。agent.ai 是他在 HubSpot Labs 的独立项目，从想法到上线他亲自动手。</p>
+            <p>他写道："有人问我为什么不交给团队做。我说 <span class="highlight">'实验阶段不能交给团队——因为团队会被流程拖慢'</span>。创始人做实验的价值不是产出代码，是 <span class="highlight">产出判断</span>——该不该继续、方向要不要调、什么时候收。"</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 5 · 从 ChatSpot 到 Breeze Assistant 的演化</div>
+        <div class="tweet-body">
+            <p>Dharmesh 在帖子中回顾了 HubSpot AI 产品的演化路径。2023 年他创建了 <span class="highlight">ChatSpot</span>——一个用自然语言查询 CRM 的工具。这是第一个验证"对话式 CRM"方向的产品。2024 年 ChatSpot 演化为 <span class="highlight">Breeze Assistant</span>——从查询工具升级为有记忆、可连外部工具的 AI 助手。</p>
+            <p>他说这条路径的设计逻辑是：先验证"人会不会用自然语言跟 CRM 对话"（ChatSpot），再验证"AI 助手能不能帮人做事"（Breeze Assistant），最后验证"人能不能构建自己的代理"（agent.ai → Agent Builder）。每一步都 <span class="highlight">在前一步验证后才推进</span>。</p>
+            <p>"我不是在做路线图，我在做 <span class="highlight">假设验证链</span>——每一步都是上一步的结论。"</p>
+        </div>
+    </div>
+
+    <!-- ===== 💬 行业 ===== -->
+    <div class="section-title"><span class="emoji">💬</span> 行业</div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 6 · agent.ai→Agent Builder 的吸收逻辑</div>
+        <div class="tweet-body">
+            <p>Dharmesh 在帖子中解释了为什么要把 agent.ai 吸收回 HubSpot，而不是让它继续独立成长。核心逻辑是：<span class="highlight">独立产品的增长天花板低于嵌入 CRM 的产品</span>。</p>
+            <p>他说："agent.ai 拿到了 300 万用户——这是一个好成绩。但 HubSpot 有 280,000+ 付费客户。如果每个客户平均建 3 个代理，那就是 840,000 个企业级代理——而且这些代理 <span class="highlight">有 CRM 上下文</span>，比 agent.ai 上的通用代理有用得多。"</p>
+            <p>这个吸收逻辑揭示了一个行业规律：AI 代理作为独立 B2C 产品价值有限，作为 B2B 嵌入式产品价值倍增——因为 <span class="highlight">企业上下文是代理价值的乘数</span>。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 7 · 独立实验场模式的行业意义</div>
+        <div class="tweet-body">
+            <p>Dharmesh 的告别帖对整个行业有一个重要的方法论贡献：<span class="highlight">大公司做 AI 不需要全部内部孵化</span>。用独立品牌、独立产品在公域市场验证假设、积累用户、学习使用模式，然后择机将验证过的能力吸收回核心产品。</p>
+            <p>他说这个模式的三个关键成功因素：一、<span class="highlight">独立运作</span>——不走大公司流程。二、<span class="highlight">明确退出条件</span>——什么时候收回核心要提前定义。三、<span class="highlight">吸收而非关闭</span>——不是关掉独立产品，是把验证过的能力融入核心。</p>
+            <p>"agent.ai 不是失败了被关掉，是 <span class="highlight">成功了被吸收</span>。这是两种完全不同的结局。"</p>
+        </div>
+    </div>
+
+    <!-- ===== 📦 公司 ===== -->
+    <div class="section-title"><span class="emoji">📦</span> 公司</div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 8 · 300 万用户使用 agent.ai</div>
+        <div class="tweet-body">
+            <p>Dharmesh 在帖子中公布了 agent.ai 的最终数据：<span class="highlight">300 万用户</span> 使用过 agent.ai，26,000 构建者创建了 1,800+ 公开代理。这些数字远超最初 100,000 用户的目标。</p>
+            <p>他说这些数字的意义不是"我们做了一个成功的产品"，是 <span class="highlight">"我们验证了三个假设"</span>：一、普通人会构建代理（不只是开发者）。二、代理之间会自发协作。三、最有价值的代理是那些有企业上下文的。前两个假设在 agent.ai 上验证了，第三个假设直接导向了 Agent Builder。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 9 · Agent Hub 统一管理</div>
+        <div class="tweet-body">
+            <p>Dharmesh 在帖子中提到了 Agent Builder 吸收后，HubSpot 推出了 <span class="highlight">Agent Hub</span>——一个统一管理所有代理（包括预构建和自定义）的界面。他说企业不会只有一个代理，而是多个代理协同工作，需要一个统一的管理面来 <span class="highlight">配置权限、监控表现、设定升级规则</span>。</p>
+            <p>他写道："Agent Hub 的设计原则是 <span class="highlight>'代理是团队成员不是工具'</span>——团队成员需要 onboarding、需要绩效评估、需要知道什么时候升级给人。"</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 10 · HubSpot 的创新孵化机制</div>
+        <div class="tweet-body">
+            <p>Dharmesh 在帖子中间接展示了 HubSpot 的创新孵化机制——一个 <span class="highlight">"Labs → 验证 → 吸收"</span> 的闭环。HubSpot Labs 是他领导的产品实验场，agent.ai 是 Labs 最大的实验。实验成功后不是变成独立业务线，而是 <span class="highlight">把验证过的能力融入核心产品</span>。</p>
+            <p>他说这个机制的核心是"不让实验产品背上 KPI"——agent.ai 没有收入目标、没有利润要求、没有 SLA。"一旦你给实验产品 KPI，它就不再是实验，变成了 <span class="highlight">被流程绑住的产品</span>。"</p>
+        </div>
+    </div>
+
+    <!-- ===== 🧩 产品 ===== -->
+    <div class="section-title"><span class="emoji">🧩</span> 产品</div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 11 · Agent Builder 的产品定位</div>
+        <div class="tweet-body">
+            <p>Dharmesh 在帖子中描述了 Agent Builder 的产品定位：让客户在 CRM 内 <span class="highlight">直接构建自定义代理</span>，不需要编程。用自然语言描述"我要一个代理帮我监控竞品定价变化并通知销售团队"，Agent Builder 就生成了。</p>
+            <p>他说 Agent Builder 和 agent.ai 的核心区别是：<span class="highlight">agent.ai 的代理是通用的</span>（任何场景但无企业上下文），<span class="highlight">Agent Builder 的代理是企业级的</span>（特定场景但有完整 CRM 上下文）。后者价值更高但需要 CRM 作为底座。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 12 · 代理的上下文层级</div>
+        <div class="tweet-body">
+            <p>Dharmesh 在帖子中阐述了他对代理上下文的理解。他把上下文分为五层：<span class="highlight">即时上下文</span>（当前对话）、<span class="highlight">用户上下文</span>（用户偏好）、<span class="highlight">客户上下文</span>（CRM 中的客户数据）、<span class="highlight">组织上下文</span>（公司流程和知识库）、<span class="highlight">行业上下文</span>（行业基准和模式）。</p>
+            <p>他说 agent.ai 只能提供前两层——即时和用户。Agent Builder 因为在 CRM 内，能提供 <span class="highlight">前四层</span>。第五层（行业上下文）是 Intelligence Layer 的目标——跨客户模式识别。</p>
+            <p>"一个代理的价值跟它拥有的上下文层级成正比。<span class="highlight">上下文越多层，代理越可靠</span>。"</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 13 · 产品演化的哲学</div>
+        <div class="tweet-body">
+            <p>Dharmesh 在帖子结尾写道：<span class="highlight">"我最喜欢做产品的一点是，它们不总是到达你最初设想的地方。"</span> 他说 agent.ai 一开始想做"代理的发现网络"——像 LinkedIn 但连接的是 AI 代理。最后发现最有价值的是"代理的构建工具"。</p>
+            <p>他说这种对实验结果的开放态度是创新的核心："如果你太执着于最初的想法，你会错过 <span class="highlight">数据告诉你的真相</span>。agent.ai 的用户告诉我们：他们不想要代理网络，他们想构建自己的代理。我们就听了。"</p>
+        </div>
+    </div>
+
+    <!-- ===== 🏗️ 组织 ===== -->
+    <div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 14 · 创始人即产品经理</div>
+        <div class="tweet-body">
+            <p>Dharmesh 在帖子中展示了一种独特的创始人角色——<span class="highlight">"创始人即产品经理"</span>。他不是在管理层 review 产品，是在产品层亲自做决策：agent.ai 要做什么、不做什么、什么时候收。这种角色在大公司极为罕见——大部分创始人在公司上市后变成了"战略指导者"。</p>
+            <p>他说："创始人做产品的价值不是'更懂'——是 <span class="highlight">'更快'</span>。我不需要写 PRD、过评审、对齐利益相关方。我知道客户要什么因为我直接看了数据。"</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 15 · 实验文化的组织条件</div>
+        <div class="tweet-body">
+            <p>Dharmesh 的告别帖间接回答了一个组织问题：什么条件下大公司能做独立实验？他说了三个条件：一、<span class="highlight">创始人支持</span>——CEO Yamini Rangan 全力支持 agent.ai 独立运作，没有要求它背收入指标。二、<span class="highlight">独立预算</span>——agent.ai 有独立预算，不和核心产品抢资源。三、<span class="highlight">明确退出机制</span>——不是永远独立，也不是随时可以收回。</p>
+            <p>他说："这三条缺一条，实验就会失败。创始人不支持会被关。没有独立预算会被饿死。没有退出机制会变成 <span class="highlight">僵尸产品</span>。"</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 16 · 对产品人的建议</div>
+        <div class="tweet-body">
+            <p>Dharmesh 在帖子最后给产品人提了一个建议：<span class="highlight">"让产品告诉你它想去哪，而不是你告诉产品它该去哪"</span>。他说 agent.ai 的演化路径不是规划的——是用户行为推的。用户想构建代理而不是发现代理，他就改了产品方向。</p>
+            <p>他说这个建议的反面是"执着于 vision"——"Vision 给你方向，但 <span class="highlight">数据给你真相</span>。当数据和 vision 冲突时，我选数据。这不是没有 vision，是 <span class="highlight">让 vision 进化</span>。"</p>
+        </div>
+    </div>
+
+    <a class="back-link" href="index.html">← 返回主报告</a>
+
+    <div class="footer">
+        InsightView · 附录 04 · Dharmesh Shah LinkedIn agent.ai 告别帖 · 2026-08-09 · 推文 16 条<br>
+        Generated by WorkBuddy
+    </div>
+
+</div>
+</body>
+</html>
