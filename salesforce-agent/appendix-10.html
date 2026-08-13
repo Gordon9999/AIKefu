@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>附录 10 · Atlas 推理引擎：Agentforce 的大脑</title><style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif; background:#f8fafc; color:#1e293b; line-height:1.8; }
+.container { max-width:680px; margin:0 auto; padding:2rem 1.2rem 4rem; background:#fff; min-height:100vh; }
+.report-header { text-align:center; padding:2rem 0 1.5rem; border-bottom:2px solid #e2e8f0; margin-bottom:1.5rem; }
+.report-header h1 { font-size:1.5rem; color:#0f172a; margin-bottom:0.3rem; }
+.report-header .tag { font-size:0.8rem; color:#64748b; }
+.report-header .date { font-size:0.8rem; color:#94a3b8; margin-top:0.3rem; }
+.section-title { font-size:1.15rem; font-weight:700; color:#0f172a; margin:1.8rem 0 0.8rem; padding-bottom:0.4rem; border-bottom:1px solid #e2e8f0; }
+.section-title .emoji { margin-right:0.3rem; }
+.tweet { padding:1.2rem 0 1.2rem 0.8rem; border-bottom:1px solid #eef2f6; }
+.tweet:last-of-type { border-bottom:none; }
+.tweet .tweet-label { font-weight:600; font-size:0.9rem; color:#2563eb; margin-bottom:0.2rem; }
+.tweet .tweet-body { font-size:1rem; color:#1e293b; line-height:1.8; }
+.tweet .tweet-body p { margin-bottom:0.3rem; }
+.tweet .tweet-body p:last-child { margin-bottom:0; }
+.highlight { color:#16a34a; font-weight:500; }
+.badge { display:inline-block; background:#dcfce7; color:#16a34a; font-size:0.7rem; padding:0.1rem 0.4rem; border-radius:4px; margin-left:0.4rem; }
+.appendix-index { margin-top:2rem; padding-top:1.5rem; border-top:2px solid #e2e8f0; }
+.appendix-index h2 { font-size:1.1rem; color:#0f172a; margin-bottom:0.8rem; }
+.appendix-index h3 { font-size:0.95rem; color:#475569; margin:1rem 0 0.4rem; }
+.appendix-index ol { margin-left:1.5rem; margin-bottom:0.8rem; }
+.appendix-index li { font-size:0.85rem; margin-bottom:0.3rem; }
+.appendix-index li a { color:#2563eb; text-decoration:none; }
+.appendix-index li a:hover { text-decoration:underline; }
+.footer { text-align:center; padding:1.5rem 0; font-size:0.75rem; color:#94a3b8; border-top:1px solid #e2e8f0; margin-top:2rem; }
+.product-evo { background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:1.2rem; margin:1rem 0 1.5rem; }
+.product-evo h3 { font-size:0.95rem; color:#0f172a; margin-bottom:0.8rem; }
+.product-evo svg { width:100%; height:auto; display:block; }
+.product-evo ul { margin-left:1.2rem; margin-top:0.8rem; }
+.product-evo li { font-size:0.85rem; color:#475569; margin-bottom:0.3rem; }
+.lf-body h2 { font-size:1.1rem; color:#0f172a; margin:1.5rem 0 0.6rem; padding-bottom:0.3rem; border-bottom:1px solid #e2e8f0; }
+.lf-body p { font-size:1rem; color:#1e293b; line-height:1.8; margin-bottom:0.5rem; }
+.lf-body ul { margin-left:1.5rem; margin-bottom:0.5rem; }
+.lf-body li { font-size:0.95rem; margin-bottom:0.2rem; }
+.lf-body blockquote { border-left:3px solid #2563eb; padding-left:1rem; margin:0.8rem 0; color:#475569; font-style:italic; }
+@media (max-width:680px) { .container { padding:1.5rem 1rem 3rem; } .report-header h1 { font-size:1.2rem; } }
+</style></head><body><div class="container"><div class="report-header"><div class="tag">InsightView · 附录 10 · By Claude</div><h1>附录 10 · Atlas 推理引擎：Agentforce 的大脑</h1></div><div class="section-title"><span class="emoji">📌</span> 核心观点</div><div class="tweet"><div class="tweet-label">推 1 · Atlas 是什么</div><div class="tweet-body"><p><span class="highlight">Atlas Reasoning Engine</span> 是 Agentforce 背后的 <span class="highlight">大脑</span>。</p><p>基于模拟人类思考与规划的专有系统构建。</p><p>运用高级 RAG 分析信息，为任务确定最优行动。</p></div></div><div class="section-title"><span class="emoji">👤</span> 访谈人背景</div><div class="tweet"><div class="tweet-label">推 8 · 背景信息</div><div class="tweet-body"><p>来源：📣 官方产品推广</p><p>录制时间：未提供</p><p>访谈人：未提供</p><p>访谈嘉宾：未提供</p><p>时长：未提供</p></div></div><div class="section-title"><span class="emoji">💬</span> 行业</div><div class="tweet"><div class="tweet-label">推 9 · 行业观点</div><div class="tweet-body"><p>本文行业观点详见核心观点与各维度板块。</p></div></div><div class="section-title"><span class="emoji">📦</span> 公司</div><div class="tweet"><div class="tweet-label">推 10 · 公司观点</div><div class="tweet-body"><p>本文公司相关观点见核心观点板块。</p></div></div><div class="section-title"><span class="emoji">🧩</span> 产品</div><div class="tweet"><div class="tweet-label">推 2 · ReAct 循环</div><div class="tweet-body"><p>采用 <span class="highlight">推理-行动-观察(ReAct)循环</span>：逐步思考 → 采取行动 → 验证结果。</p><p>循环往复直至达成用户目标，必要时中途请求澄清。</p><p>确保对话自然准确。</p></div></div><div class="tweet"><div class="tweet-label">推 4 · 可视化推理</div><div class="tweet-body"><p>Atlas 分享其 <span class="highlight">思考过程</span>——采取特定行动背后的逻辑。</p><p>让管理员可审查决策、预防错误并建立信任。</p><p>这些洞察可在 Agentforce 生成器中查看。</p></div></div><div class="section-title"><span class="emoji">🏗️</span> 组织</div><div class="tweet"><div class="tweet-label">推 12 · 组织观点</div><div class="tweet-body"><p>本文组织相关观点见核心观点板块。</p></div></div><div class="footer">InsightView · Salesforce 如何从 SaaS 的成功再次跨越 Agent 的挑战 · 2026</div></div></body></html>
