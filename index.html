@@ -43,6 +43,8 @@
         }
         .file-list { padding-left: 0.2rem; }
         .file-list .card { padding: 0.6rem 1rem; }
+        .dir-card { background: #f1f5f9; }
+        .dir-card .dir-name { font-weight: 600; color: #0f172a; }
         .toolbar { display: flex; justify-content: flex-end; margin-bottom: 1rem; }
         .refresh-btn {
             background: #fff; border: 1px solid #2563eb; color: #2563eb;
@@ -73,7 +75,7 @@
     <div class="report-header">
         <h1>📚 AIKefu · 目录导航</h1>
         <div class="subtitle">仓库内容索引（静态生成，秒开）</div>
-        <div class="meta">数据快照：2026-08-13 16:27 · 子目录含 index 页面时仅展示该目录</div>
+        <div class="meta">数据快照：2026-08-13 16:32 · 子目录含 index 时展示入口，无 index 时展开文件列表</div>
     </div>
 
     <div class="toolbar">
@@ -82,7 +84,7 @@
 
     <!-- 静态渲染的内容：不依赖 JS，必定显示 -->
     <div id="content">
-<div class="section-title">📁 子目录</div><div class="card"><span><span class="icon">📁</span><a href="https://gordon9999.github.io/AIKefu/biji/" target="_blank">biji</a></span></div><div class="card"><span><span class="icon">📁</span><a href="https://gordon9999.github.io/AIKefu/cresta/index.html" target="_blank">cresta</a></span><span class="badge">主页</span></div><div class="card"><span><span class="icon">📁</span><a href="https://gordon9999.github.io/AIKefu/day.ai/index.html" target="_blank">day.ai</a></span><span class="badge">主页</span></div><div class="card"><span><span class="icon">📁</span><a href="https://gordon9999.github.io/AIKefu/decagon/index.html" target="_blank">decagon</a></span><span class="badge">主页</span></div><div class="card"><span><span class="icon">📁</span><a href="https://gordon9999.github.io/AIKefu/hubspot/index.html" target="_blank">hubspot</a></span><span class="badge">主页</span></div><div class="card"><span><span class="icon">📁</span><a href="https://gordon9999.github.io/AIKefu/intercom/index.html" target="_blank">intercom</a></span><span class="badge">主页</span></div><div class="card"><span><span class="icon">📁</span><a href="https://gordon9999.github.io/AIKefu/rox.ai/index.html" target="_blank">rox.ai</a></span><span class="badge">主页</span></div><div class="card"><span><span class="icon">📁</span><a href="https://gordon9999.github.io/AIKefu/salesforce/index.html" target="_blank">salesforce</a></span><span class="badge">主页</span></div><div class="card"><span><span class="icon">📁</span><a href="https://gordon9999.github.io/AIKefu/servicenow/index.html" target="_blank">servicenow</a></span><span class="badge">主页</span></div><div class="card"><span><span class="icon">📁</span><a href="https://gordon9999.github.io/AIKefu/sierra-saas-disruption/index.html" target="_blank">sierra-saas-disruption</a></span><span class="badge">主页</span></div><div class="card"><span><span class="icon">📁</span><a href="https://gordon9999.github.io/AIKefu/sierra/index.html" target="_blank">sierra</a></span><span class="badge">主页</span></div><div class="card"><span><span class="icon">📁</span><a href="https://gordon9999.github.io/AIKefu/zendesk/index.html" target="_blank">zendesk</a></span><span class="badge">主页</span></div>
+<div class="section-title">📁 子目录</div><div class="card dir-card"><span><span class="icon">📁</span><span class="dir-name">biji</span></span><span class="badge">4 个页面</span></div><div class="card file-list"><span><span class="icon">📄</span><a href="https://gordon9999.github.io/AIKefu/biji/Will%20Agent%20Disrupt%20SaaS.html" target="_blank">Will Agent Disrupt SaaS.html</a></span></div><div class="card file-list"><span><span class="icon">📄</span><a href="https://gordon9999.github.io/AIKefu/biji/ai-customer-service-agent-architecture.html" target="_blank">ai-customer-service-agent-architecture.html</a></span></div><div class="card file-list"><span><span class="icon">📄</span><a href="https://gordon9999.github.io/AIKefu/biji/sierra-ai-agent-platform.html" target="_blank">sierra-ai-agent-platform.html</a></span></div><div class="card file-list"><span><span class="icon">📄</span><a href="https://gordon9999.github.io/AIKefu/biji/travel-agent-not-ota-endgame.html" target="_blank">travel-agent-not-ota-endgame.html</a></span></div><div class="card"><span><span class="icon">📁</span><a href="https://gordon9999.github.io/AIKefu/cresta/index.html" target="_blank">cresta</a></span><span class="badge">主页</span></div><div class="card"><span><span class="icon">📁</span><a href="https://gordon9999.github.io/AIKefu/day.ai/index.html" target="_blank">day.ai</a></span><span class="badge">主页</span></div><div class="card"><span><span class="icon">📁</span><a href="https://gordon9999.github.io/AIKefu/decagon/index.html" target="_blank">decagon</a></span><span class="badge">主页</span></div><div class="card"><span><span class="icon">📁</span><a href="https://gordon9999.github.io/AIKefu/hubspot/index.html" target="_blank">hubspot</a></span><span class="badge">主页</span></div><div class="card"><span><span class="icon">📁</span><a href="https://gordon9999.github.io/AIKefu/intercom/index.html" target="_blank">intercom</a></span><span class="badge">主页</span></div><div class="card"><span><span class="icon">📁</span><a href="https://gordon9999.github.io/AIKefu/rox.ai/index.html" target="_blank">rox.ai</a></span><span class="badge">主页</span></div><div class="card"><span><span class="icon">📁</span><a href="https://gordon9999.github.io/AIKefu/salesforce/index.html" target="_blank">salesforce</a></span><span class="badge">主页</span></div><div class="card"><span><span class="icon">📁</span><a href="https://gordon9999.github.io/AIKefu/servicenow/index.html" target="_blank">servicenow</a></span><span class="badge">主页</span></div><div class="card"><span><span class="icon">📁</span><a href="https://gordon9999.github.io/AIKefu/sierra-saas-disruption/index.html" target="_blank">sierra-saas-disruption</a></span><span class="badge">主页</span></div><div class="card"><span><span class="icon">📁</span><a href="https://gordon9999.github.io/AIKefu/sierra/index.html" target="_blank">sierra</a></span><span class="badge">主页</span></div><div class="card"><span><span class="icon">📁</span><a href="https://gordon9999.github.io/AIKefu/zendesk/index.html" target="_blank">zendesk</a></span><span class="badge">主页</span></div>
     </div>
 
     <div class="footer">Generated by AIKefu Index · <span id="footer-date"></span></div>
@@ -136,7 +138,12 @@
                 if (d.hasIndex) {
                     html += '<div class="card"><span><span class="icon">📁</span><a href="' + esc(BASE + d.dir + 'index.html') + '" target="_blank">' + esc(label) + '</a></span><span class="badge">主页</span></div>';
                 } else {
-                    html += '<div class="card"><span><span class="icon">📁</span><a href="' + esc(BASE + d.dir) + '" target="_blank">' + esc(label) + '</a></span></div>';
+                    // 无 index.html 的目录：GitHub Pages 不提供目录浏览，直接展开文件列表
+                    html += '<div class="card dir-card"><span><span class="icon">📁</span><span class="dir-name">' + esc(label) + '</span></span><span class="badge">' + d.files.length + ' 个页面</span></div>';
+                    d.files.sort(function (a, b) { return a.localeCompare(b, 'zh'); });
+                    for (var fi = 0; fi < d.files.length; fi++) {
+                        html += '<div class="card file-list"><span><span class="icon">📄</span><a href="' + esc(BASE + d.dir + encodeURIComponent(d.files[fi])) + '" target="_blank">' + esc(d.files[fi]) + '</a></span></div>';
+                    }
                 }
             }
         }
