@@ -1,0 +1,208 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>附录 04 · ITSM AI Agents：从 Virtual Agent 到 Agentic AI</title><style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif; background:#f8fafc; color:#1e293b; line-height:1.8; }
+.container { max-width:680px; margin:0 auto; padding:2rem 1.2rem 4rem; background:#fff; min-height:100vh; }
+.report-header { text-align:center; padding:2rem 0 1.5rem; border-bottom:2px solid #e2e8f0; margin-bottom:1.5rem; }
+.report-header h1 { font-size:1.5rem; color:#0f172a; margin-bottom:0.3rem; }
+.report-header .tag { font-size:0.8rem; color:#64748b; }
+.report-header .date { font-size:0.8rem; color:#94a3b8; margin-top:0.3rem; }
+.section-title { font-size:1.15rem; font-weight:700; color:#0f172a; margin:1.8rem 0 0.8rem; padding-bottom:0.4rem; border-bottom:1px solid #e2e8f0; }
+.section-title .emoji { margin-right:0.3rem; }
+.tweet { padding:1.2rem 0 1.2rem 0.8rem; border-bottom:1px solid #eef2f6; }
+.tweet:last-of-type { border-bottom:none; }
+.tweet .tweet-label { font-weight:600; font-size:0.9rem; color:#2563eb; margin-bottom:0.2rem; }
+.tweet .tweet-body { font-size:1rem; color:#1e293b; line-height:1.8; }
+.tweet .tweet-body p { margin-bottom:0.3rem; }
+.tweet .tweet-body p:last-child { margin-bottom:0; }
+.highlight { color:#16a34a; font-weight:500; }
+.badge { display:inline-block; background:#dcfce7; color:#16a34a; font-size:0.7rem; padding:0.1rem 0.4rem; border-radius:4px; margin-left:0.4rem; }
+.appendix-index { margin-top:2rem; padding-top:1.5rem; border-top:2px solid #e2e8f0; }
+.appendix-index h2 { font-size:1.1rem; color:#0f172a; margin-bottom:0.8rem; }
+.appendix-index h3 { font-size:0.95rem; color:#475569; margin:1rem 0 0.4rem; }
+.appendix-index ol { margin-left:1.5rem; margin-bottom:0.8rem; }
+.appendix-index li { font-size:0.85rem; margin-bottom:0.3rem; }
+.appendix-index li a { color:#2563eb; text-decoration:none; }
+.appendix-index li a:hover { text-decoration:underline; }
+.footer { text-align:center; padding:1.5rem 0; font-size:0.75rem; color:#94a3b8; border-top:1px solid #e2e8f0; margin-top:2rem; }
+@media (max-width:680px) { .container { padding:1.5rem 1rem 3rem; } .report-header h1 { font-size:1.2rem; } }
+</style></head><body><div class="container">
+<div class="report-header"><div class="tag">InsightView · 附录 04 · By Claude</div><h1>附录 04 · ITSM AI Agents：从 Virtual Agent 到 Agentic AI</h1><div class="date">来源：ServiceNow Community · ITSM AI Agents 博文</div></div>
+
+<div class="section-title"><span class="emoji">📌</span> 核心观点</div>
+
+<div class="tweet">
+<div class="tweet-label">推 1 · 2025年是 AI Agent 元年</div>
+<div class="tweet-body">
+<p>2025年被定义为 <span class="highlight">AI Agent 元年</span>。AI Agent 代表了超越传统 ML、Virtual Agent 和 GenAI 的变革性飞跃——不只是更聪明的对话，而是能自主推理并采取行动。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 2 · SaaS 的下一参与层</div>
+<div class="tweet-body">
+<p>SaaS 的基本角色是为知识工作者提供 UI 和数据库以简化工作流。AI 演进后，<span class="highlight">15-20% 的知识工作者任务</span>将由 AI Agent 处理。AI Agent 正成为企业的<span class="highlight">下一参与层和逻辑层</span>。</p>
+</div>
+</div>
+
+<div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+
+<div class="tweet">
+<div class="tweet-label">推 3 · 来源信息</div>
+<div class="tweet-body">
+<p>来源类型：<span class="highlight">ServiceNow Community</span> 官方博文，ITSM AI Agents 主题。发布时间未提供，访谈人未提供，嘉宾未提供。时长未提供。属于官方产品技术推广类内容。</p>
+</div>
+</div>
+
+<div class="section-title"><span class="emoji">💬</span> 行业</div>
+
+<div class="tweet">
+<div class="tweet-label">推 4 · 从 ML 到 GenAI 到 Agentic AI</div>
+<div class="tweet-body">
+<p>AI 在企业中的演化路径：传统 ML（预测）→ Virtual Agent（规则对话）→ GenAI（生成内容）→ <span class="highlight">Agentic AI</span>（自主推理+行动）。每一步都在扩大 AI 的自主性和行动范围。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 5 · 15-20% 任务将被 Agent 接管</div>
+<div class="tweet-body">
+<p><span class="highlight">15-20%</span> 的知识工作者任务将由 AI Agent 处理。这不是替代，而是重新分配——人聚焦判断和创意，agent 负责执行和协调。行业正在重新定义"工作"的组成。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 6 · 消除刚性决策树</div>
+<div class="tweet-body">
+<p>传统自动化依赖<span class="highlight">刚性决策树</span>，部署门槛高、维护成本大。AI Agent 用 LLM 驱动的自主推理替代决策树，<span class="highlight">显著降低部署门槛</span>——这是 agent 能大规模落地的关键。</p>
+</div>
+</div>
+
+<div class="section-title"><span class="emoji">📦</span> 公司</div>
+
+<div class="tweet">
+<div class="tweet-label">推 7 · 工作流、系统记录和领域上下文的所有权</div>
+<div class="tweet-body">
+<p>ServiceNow ITSM AI Agents 独特性的根基：<span class="highlight">对工作流、系统记录和领域上下文的所有权</span>。这不是外挂 AI，而是原生在平台数据和工作流之上的 agent。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 8 · 继承平台安全性</div>
+<div class="tweet-body">
+<p>ITSM AI Agents 直接继承 ServiceNow 平台的安全性和数据定义，<span class="highlight">不需要单独集成层</span>。这意味着 agent 从第一天起就具备企业级安全合规——这是竞品难以复制的优势。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 9 · 利用既有业务逻辑</div>
+<div class="tweet-body">
+<p>AI Agent 可以直接利用 ServiceNow 已有的业务逻辑：<span class="highlight">审批、分类、路由、优先级、升级</span>。22年积累的 ITSM 最佳实践成为 agent 的"企业常识"，而非从零学习。</p>
+</div>
+</div>
+
+<div class="section-title"><span class="emoji">🧩</span> 产品</div>
+
+<div class="tweet">
+<div class="tweet-label">推 10 · 核心能力：自主推理+行动</div>
+<div class="tweet-body">
+<p>AI Agent 的核心能力由 LLM 驱动，能做决策、采取行动、与环境交互，<span class="highlight">无需持续人工干预</span>。这是与 Virtual Agent 的根本区别——后者只能按预设路径对话，前者能自主完成端到端任务。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 11 · 直接访问实例数据</div>
+<div class="tweet-body">
+<p>ITSM AI Agents <span class="highlight">直接访问实例数据</span>，可调用集成、流程、脚本和工具。不需要额外 API 或中间层，agent 就在数据源头工作。这大幅降低了延迟和出错概率。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 12 · 多 agent 架构</div>
+<div class="tweet-body">
+<p>不同于单 agent 方法，ServiceNow 采用 <span class="highlight">多 agent 架构</span>：多个专家 agent 由编排器管理，<span class="highlight">以质量换延迟</span>。单个 agent 专门化于特定领域，协同完成复杂任务。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 13 · 端到端事件生命周期</div>
+<div class="tweet-body">
+<p>ITSM AI Agent 覆盖从<span class="highlight">偏转到分类、解决和关闭</span>的整个事件生命周期。可手动触发或自主运行，可定义哪些行动需要<span class="highlight">人工在环确认</span>。自主与可控并行。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 14 · 未来：Observability 与自动化测试</div>
+<div class="tweet-body">
+<p>未来能力包括 <span class="highlight">AI Agent Observability</span>（监控 agent 性能和影响）以及自动化测试和验证工具。agent 不是部署完就结束——持续的监控和验证是企业级 AI 的必要条件。</p>
+</div>
+</div>
+
+<div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+
+<div class="tweet">
+<div class="tweet-label">推 15 · 开箱即用的领域特定 agent</div>
+<div class="tweet-body">
+<p>ServiceNow 提供的是 <span class="highlight">开箱即用的领域特定 agent</span>，而非通用 AI 框架。这意味着企业不需要从零构建——基于 ITSM 最佳实践预配置的 agent 可以快速部署、快速见效。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 16 · 人工在环的可控设计</div>
+<div class="tweet-body">
+<p>agentic AI 不是完全自治。ServiceNow 的设计允许企业定义<span class="highlight">哪些行动需要人工在环确认</span>——在高风险操作上保留人类决策权，在低风险操作上释放 agent 自主性。这是企业能接受 agent 的组织前提。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 17 · 从 ITSM 出发的 agent 扩张</div>
+<div class="tweet-body">
+<p>ITSM 是 ServiceNow agent 战略的起点，但不是终点。从 IT 服务台出发，agent 能力将向<span class="highlight">案例管理、安全、财务、HR、法律</span>等全职能扩展。ITSM 是验证场，全企业是终局。</p>
+</div>
+</div>
+
+<div class="appendix-index">
+<h2>附录索引</h2>
+<h3>🎙️ 高管访谈</h3>
+<ol start="1">
+<li><a href="appendix-01.html">01 · McDermott：Blueprint for Agentic Business</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-02.html">02 · McDermott：硅谷误解了企业 AI</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-03.html">03 · Knowledge 2026：Welcome to Agentic Business</a> <span class="badge">已生成</span></li>
+</ol>
+<h3>📣 官方产品推广</h3>
+<ol start="4">
+<li><a href="appendix-04.html">04 · ITSM AI Agents：从 Virtual Agent 到 Agentic AI</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-05.html">05 · ServiceNow 完成 Moveworks 收购</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-06.html">06 · AI Control Tower + Action Fabric 发布</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-07.html">07 · NVIDIA OpenShell + Project Arc</a> <span class="badge">已生成</span></li>
+</ol>
+<h3>📊 财报分析</h3>
+<ol start="8">
+<li><a href="appendix-08.html">08 · 2025年Q4及全年财报</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-09.html">09 · 2025年Q2财报：Now Assist 冲刺10亿</a> <span class="badge">已生成</span></li>
+</ol>
+<h3>🔍 第三方评测</h3>
+<ol start="10">
+<li><a href="appendix-10.html">10 · Futurum：2026年企业 Agentic AI 领先厂商</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-11.html">11 · 企业 Agent 平台对比：Salesforce vs ServiceNow vs Microsoft</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-12.html">12 · 2026年企业软件 AI：什么真正在生产中运行</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-13.html">13 · 从系统记录到系统行动：六大平台趋同</a> <span class="badge">已生成</span></li>
+</ol>
+<h3>🤝 客户案例</h3>
+<ol start="14">
+<li><a href="appendix-14.html">14 · FedEx：每月500万工作流</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-15.html">15 · Honeywell、NHL 等客户案例</a> <span class="badge">已生成</span></li>
+</ol>
+<h3>🛠️ 工程与技术</h3>
+<ol start="16">
+<li><a href="appendix-16.html">16 · AI Control Tower 技术深度解析</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-17.html">17 · Zurich Release：Agentic AI 深度解析</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-18.html">18 · 2026 AI 原生许可：Assists 与消费</a> <span class="badge">已生成</span></li>
+</ol>
+<h3>🤖 生态对谈</h3>
+<ol start="19">
+<li><a href="appendix-19.html">19 · Agent 层吞噬 SaaS：3000亿美元市值蒸发</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-20.html">20 · 席位已死：Agentic AI 重写定价</a> <span class="badge">已生成</span></li>
+</ol>
+</div>
+
+<div class="footer">InsightView · ServiceNow 主题阅读综合报告 · 20 篇素材 · By Claude</div>
+</div></body></html>
