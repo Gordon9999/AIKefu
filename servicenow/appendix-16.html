@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>附录16 · AI Control Tower 技术深度：五维治理</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif; background:#f8fafc; color:#1e293b; line-height:1.8; }
+.container { max-width:680px; margin:0 auto; padding:2rem 1.2rem 4rem; background:#fff; min-height:100vh; }
+.report-header { text-align:center; padding:2rem 0 1.5rem; border-bottom:2px solid #e2e8f0; margin-bottom:1.5rem; }
+.report-header h1 { font-size:1.5rem; color:#0f172a; margin-bottom:0.3rem; }
+.report-header .tag { font-size:0.8rem; color:#64748b; }
+.report-header .date { font-size:0.8rem; color:#94a3b8; margin-top:0.3rem; }
+.section-title { font-size:1.15rem; font-weight:700; color:#0f172a; margin:1.8rem 0 0.8rem; padding-bottom:0.4rem; border-bottom:1px solid #e2e8f0; }
+.section-title .emoji { margin-right:0.3rem; }
+.tweet { padding:1.2rem 0 1.2rem 0.8rem; border-bottom:1px solid #eef2f6; }
+.tweet:last-of-type { border-bottom:none; }
+.tweet .tweet-label { font-weight:600; font-size:0.9rem; color:#2563eb; margin-bottom:0.2rem; }
+.tweet .tweet-body { font-size:1rem; color:#1e293b; line-height:1.8; }
+.tweet .tweet-body p { margin-bottom:0.3rem; }
+.tweet .tweet-body p:last-child { margin-bottom:0; }
+.highlight { color:#16a34a; font-weight:500; }
+.badge { display:inline-block; background:#dcfce7; color:#16a34a; font-size:0.7rem; padding:0.1rem 0.4rem; border-radius:4px; margin-left:0.4rem; }
+.appendix-index { margin-top:2rem; padding-top:1.5rem; border-top:2px solid #e2e8f0; }
+.appendix-index h2 { font-size:1.1rem; color:#0f172a; margin-bottom:0.8rem; }
+.appendix-index h3 { font-size:0.95rem; color:#475569; margin:1rem 0 0.4rem; }
+.appendix-index ol { margin-left:1.5rem; margin-bottom:0.8rem; }
+.appendix-index li { font-size:0.85rem; margin-bottom:0.3rem; }
+.appendix-index li a { color:#2563eb; text-decoration:none; }
+.appendix-index li a:hover { text-decoration:underline; }
+.footer { text-align:center; padding:1.5rem 0; font-size:0.75rem; color:#94a3b8; border-top:1px solid #e2e8f0; margin-top:2rem; }
+@media (max-width:680px) { .container { padding:1.5rem 1rem 3rem; } .report-header h1 { font-size:1.2rem; } }
+</style>
+</head>
+<body>
+<div class="container">
+<div class="report-header">
+<div class="tag">🛠️ 工程与技术 · 附录 16</div>
+<h1>AI Control Tower 技术深度：五维治理</h1>
+<div class="date">来源：NowSpectrum · 2026年</div>
+</div>
+
+<div class="section-title"><span class="emoji">📌</span>核心观点</div>
+
+<div class="tweet">
+<div class="tweet-label">推1</div>
+<div class="tweet-body">
+<p>AI Control Tower 是 ServiceNow 环境中每个 AI agent、模型和工作流的治理层——越来越多也涵盖外部 agent。</p>
+<p>核心问题是<span class="highlight">企业部署 AI agent 的速度快于治理能力</span>，数百个 agent 在断开系统中运行，没有统一视图。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推2</div>
+<div class="tweet-body">
+<p>五维治理框架构成完整的 AI agent 生命周期管理能力：<span class="highlight">Discover 发现、Govern 治理、Observe 观察、Secure 安全、Measure 度量</span>。</p>
+<p>每一维解决一个核心痛点——从资产可见性到权限控制，从行为监控到身份安全，再到投资回报度量。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推3</div>
+<div class="tweet-body">
+<p>KN26 演示了一个被入侵的 agent 通过 prompt injection 操纵，开始未授权定价更改。</p>
+<p>AI Control Tower <span class="highlight">实时检测异常行为，撤销 agent 权限，数秒内关闭</span>。这是治理层在真实攻击场景下的价值证明。</p>
+</div>
+</div>
+
+<div class="section-title"><span class="emoji">👤</span>访谈人背景</div>
+
+<div class="tweet">
+<div class="tweet-label">推4</div>
+<div class="tweet-body">
+<p>本文未涉及该维度。</p>
+</div>
+</div>
+
+<div class="section-title"><span class="emoji">💬</span>行业</div>
+
+<div class="tweet">
+<div class="tweet-label">推5</div>
+<div class="tweet-body">
+<p>企业部署 AI agent 的速度快于治理能力，这是一个行业性问题。数百个 agent 在断开系统中运行，没有统一视图。</p>
+<p><span class="highlight">95%的组织目前无法度量 AI 投资的业务价值</span>，这意味着绝大多数企业的 AI 支出是盲目的。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推6</div>
+<div class="tweet-body">
+<p>AI agent 生命周期管理成为新的运营责任——管理 agent 身份、策略和权限，就像管理用户账户、角色和组一样。</p>
+<p>这是<span class="highlight">企业 IT 治理的新范式</span>，管理员需要从"管人"扩展到"管 agent"。</p>
+</div>
+</div>
+
+<div class="section-title"><span class="emoji">📦</span>公司</div>
+
+<div class="tweet">
+<div class="tweet-label">推7</div>
+<div class="tweet-body">
+<p>ServiceNow 将 AI Control Tower 定位为<span class="highlight">跨环境统一治理层</span>，不仅治理 ServiceNow 自有 agent，也通过 Action Fabric 和30+企业集成治理第三方 agent。</p>
+<p>这使 ServiceNow 从工作流平台升级为企业 AI 治理中枢。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推8</div>
+<div class="tweet-body">
+<p>Microsoft 合作是最清晰的合作案例——<span class="highlight">Copilot Studio agent、Azure Foundry agent 和 ServiceNow AI Specialist 在同一治理层下运行</span>。</p>
+<p>这意味着企业可以用一个治理平面管理来自多个生态的 AI agent，开创跨平台 AI 治理先例。</p>
+</div>
+</div>
+
+<div class="section-title"><span class="emoji">🧩</span>产品</div>
+
+<div class="tweet">
+<div class="tweet-label">推9</div>
+<div class="tweet-body">
+<p>Discover（发现）能力自动识别全企业所有 AI 资产——ServiceNow agent、第三方 agent、AI 模型和工作流。</p>
+<p>所有数据<span class="highlight">馈入 CMDB</span>，建立 AI 资产的单一事实来源。没有发现，就没有治理。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推10</div>
+<div class="tweet-body">
+<p>Govern（治理）为每个 agent 设置策略、权限和护栏。定义允许行动、可访问系统、可代表用户、升级路径。</p>
+<p>关键优势是<span class="highlight">策略定义一次，跨所有 agent 一致执行</span>，避免治理碎片化。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推11</div>
+<div class="tweet-body">
+<p>Observe（观察）实时监控 agent 行为和运行时活动。每次 API 调用、记录更新、工作流触发、审批被记录和可观察。</p>
+<p><span class="highlight">异常检测标记偏离预期模式的行为</span>，在问题扩大前发出预警。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推12</div>
+<div class="tweet-body">
+<p>Secure（安全）将 AI agent 视为有权限、访问权和问责制的身份。集成 Veza 访问图技术，<span class="highlight">映射超300亿条权限记录</span>。</p>
+<p>Armis 收购进一步扩展到 IT、OT、IoT 和医疗设备，覆盖企业全资产面。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推13</div>
+<div class="tweet-body">
+<p>Measure（度量）跟踪 AI 投资的业务价值——解决率、时间节省、成本影响、ROI。</p>
+<p><span class="highlight">95%的组织目前无法度量这一点</span>，AI Control Tower 填补了 AI 投资回报的度量盲区。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推14</div>
+<div class="tweet-body">
+<p>通过 Action Fabric 和30+企业集成，可发现、观察和治理在其他环境中运行的 agent。</p>
+<p>这使<span class="highlight">跨平台 agent 治理</span>成为现实，企业不再被锁定在单一 AI 生态中。</p>
+</div>
+</div>
+
+<div class="section-title"><span class="emoji">🏗️</span>组织</div>
+
+<div class="tweet">
+<div class="tweet-label">推15</div>
+<div class="tweet-body">
+<p>对管理员的意义——AI agent 生命周期管理成为新运营责任。</p>
+<p>管理 agent 身份、策略和权限，<span class="highlight">就像管理用户账户、角色和组一样</span>。IT 团队的职责边界正在扩展。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推16</div>
+<div class="tweet-body">
+<p>第三方 agent 治理通过 Action Fabric 实现，Microsoft 合作最清晰。</p>
+<p>Copilot Studio agent、Azure Foundry agent 和 ServiceNow AI Specialist <span class="highlight">在同一治理层下运行</span>，开创跨平台 AI 治理先例。</p>
+<p>组织需要建立跨生态的 AI 治理能力，而非仅限于单一平台内部。</p>
+</div>
+</div>
+
+<div class="appendix-index">
+<h2>附录索引</h2>
+<h3>🎙️ 高管访谈</h3>
+<ol start="1"><li><a href="appendix-01.html">01 · McDermott：Blueprint for Agentic Business</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-02.html">02 · McDermott：硅谷误解了企业 AI</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-03.html">03 · Knowledge 2026：Welcome to Agentic Business</a> <span class="badge">已生成</span></li></ol>
+<h3>📣 官方产品推广</h3>
+<ol start="4"><li><a href="appendix-04.html">04 · ITSM AI Agents</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-05.html">05 · ServiceNow 完成 Moveworks 收购</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-06.html">06 · AI Control Tower + Action Fabric</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-07.html">07 · NVIDIA OpenShell + Project Arc</a> <span class="badge">已生成</span></li></ol>
+<h3>📊 财报分析</h3>
+<ol start="8"><li><a href="appendix-08.html">08 · 2025年Q4及全年财报</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-09.html">09 · Q2财报：Now Assist 冲刺10亿</a> <span class="badge">已生成</span></li></ol>
+<h3>🔍 第三方评测</h3>
+<ol start="10"><li><a href="appendix-10.html">10 · Futurum：Agentic AI 领先厂商</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-11.html">11 · 企业 Agent 平台对比</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-12.html">12 · 2026年企业软件 AI</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-13.html">13 · 从系统记录到系统行动</a> <span class="badge">已生成</span></li></ol>
+<h3>🤝 客户案例</h3>
+<ol start="14"><li><a href="appendix-14.html">14 · FedEx：每月500万工作流</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-15.html">15 · Honeywell、NHL 等客户案例</a> <span class="badge">已生成</span></li></ol>
+<h3>🛠️ 工程与技术</h3>
+<ol start="16"><li><a href="appendix-16.html">16 · AI Control Tower 技术深度</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-17.html">17 · Zurich Release Agentic AI</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-18.html">18 · 2026 AI 原生许可</a> <span class="badge">已生成</span></li></ol>
+<h3>🤖 生态对谈</h3>
+<ol start="19"><li><a href="appendix-19.html">19 · Agent 层吞噬 SaaS</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-20.html">20 · 席位已死</a> <span class="badge">已生成</span></li></ol>
+</div>
+
+<div class="footer">ServiceNow InsightView 报告 · 附录 16 · AI Control Tower 技术深度</div>
+</div>
+</body>
+</html>
