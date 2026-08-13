@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>附录 03 · Agents as a Service</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Noto Sans SC", sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.7; }
+        .container { max-width: 720px; margin: 0 auto; padding: 2rem 1.2rem; }
+        .report-header { text-align: center; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 2px solid #e2e8f0; }
+        .report-header .tag { font-size: 0.85rem; color: #64748b; margin-bottom: 0.5rem; letter-spacing: 0.05em; }
+        .report-header h1 { font-size: 1.5rem; color: #0f172a; margin-bottom: 0.4rem; }
+        .report-header .meta { font-size: 0.8rem; color: #94a3b8; margin-top: 0.4rem; }
+        .section-title { font-size: 1.2rem; font-weight: 700; color: #0f172a; margin: 2.5rem 0 0.5rem 0; padding-bottom: 0.5rem; border-bottom: 1px solid #e2e8f0; }
+        .section-title .emoji { margin-right: 0.4rem; }
+        .tweet { padding: 1.2rem 0 1.2rem 0.8rem; border-bottom: 1px solid #eef2f6; }
+        .tweet:last-of-type { border-bottom: none; }
+        .tweet .tweet-label { font-weight: 600; font-size: 0.9rem; color: #2563eb; margin-bottom: 0.3rem; }
+        .tweet .tweet-body { font-size: 1rem; color: #1e293b; line-height: 1.85; }
+        .tweet .tweet-body p { margin-bottom: 0.4rem; }
+        .tweet .tweet-body p:last-child { margin-bottom: 0; }
+        .highlight { color: #16a34a; font-weight: 500; }
+        .footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8; }
+        .nav { margin-top: 2rem; text-align: center; }
+        .nav a { color: #2563eb; text-decoration: none; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+<div class="report-header">
+    <div class="tag">InsightView · 附录 03 · By Auto</div>
+    <h1>Agents as a Service：Ghostwriter 与 Agent 即服务</h1>
+    <div class="meta">来源：Sierra 官方博客 · 2026 年 3 月 25 日 · 14 条推文</div>
+</div>
+
+<div class="section-title"><span class="emoji">📌</span> 核心观点</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 1 · 核心观点</div>
+    <div class="tweet-body">
+        <p>Sierra 将自身重新构想为<span class="highlight">Agent 即服务</span>平台——用户只需描述想要的结果，Agent 自主构建、执行并持续改进工作。Ghostwriter 是这个愿景的核心：一个构建其他 Agent 的 Agent。</p>
+        <p>Bret Taylor 将此定位为从 code → no-code → <span class="highlight">no clicks</span> 的范式转移。Web 应用的菜单、表单、表格开始像「没有马的马车」——建立在不再成立的假设之上。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 2 · 素材来源</div>
+    <div class="tweet-body">
+        <p>本文为 Sierra 官方博客文章，由联合创始人 Bret Taylor 和 Clay Bavor 撰写，宣布 Ghostwriter 发布和「Agent 即服务」愿景。</p>
+        <p>发布时间：2026 年 3 月 25 日 | 作者：Bret Taylor & Clay Bavor | 类型：官方产品发布</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">💬</span> 行业</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 3 · Code → No-code → No clicks 的演进逻辑</div>
+    <div class="tweet-body">
+        <p>Taylor 认为 2026 年初 Codex 和 Claude Code 等编码 Agent 带来了与 ChatGPT 同等量级的技术转变。编码 Agent 正在改变 Sierra 自己制作软件的方式——也预示了<span class="highlight">所有软件的未来工作方式</span>。</p>
+        <p>两个已经清晰的趋势：第一，随着点击变成 Prompt，构建 Agent 将变得像描述你想要什么一样简单。第二，与人不同，计算机不需要简单干净的界面——只需要直接访问底层数据和操作。</p>
+        <p>把这两点放在一起，Web 应用及其所有菜单、表单、表格开始感觉像<span class="highlight">「没有马的马车」</span>——建立在不再成立的假设之上的技术。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">📦</span> 公司</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 4 · Sierra 的自我重新定义</div>
+    <div class="tweet-body">
+        <p>Sierra 三年前成立，坚信 AI 将重塑客户体验。如今 Sierra 是领先的客户体验 AI Agent 平台，服务 <span class="highlight">40% 的 Fortune 50</span>，客户包括 ADT、Chime、Cigna、Nordstrom、Nubank、Ramp、Rocket Mortgage、SiriusXM、Singtel、Wayfair。</p>
+        <p>面对编码 Agent 带来的技术转变，Sierra 问自己：如果从零开始，会怎么构建 Sierra？答案就是 Ghostwriter——围绕一个接受你的指令并为你完成工作的 Agent 来重新构建整个平台。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🧩</span> 产品</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 5 · Ghostwriter：从零到一的 Agent 构建</div>
+    <div class="tweet-body">
+        <p>使用 Ghostwriter，用户不再需要编辑流程、编写集成、创建模拟或手动排障。你定义目标，Agent 交付结果。上传 SOP、客服通话转录、白板照片、流程文档、音频录音，或用自然语言描述目标。</p>
+        <p>Ghostwriter 接收所有输入，识别关键行为和边缘案例，生成<span class="highlight">生产级 Agent</span>——覆盖语音、聊天、邮件，30+ 语言，内置复杂护栏。</p>
+        <p>但真正难的不是从零到一，而是持续改进。这就是 Explorer 的角色。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 6 · Explorer：持续优化的反馈闭环</div>
+    <div class="tweet-body">
+        <p>Explorer 类似 ChatGPT Deep Research，但不是在互联网上做研究，而是用你的<span class="highlight">客户对话</span>来理解趋势并识别改进机会。</p>
+        <p>Ghostwriter 分析真实交互，识别改进机会，在沙盒环境中验证，然后准备供审查。分析、改进、测试、发布的循环自动运行——越来越好的 Agent 自然涌现。</p>
+        <p>这就是<span class="highlight">Agent 流水线</span>：Prompts, not clicks。没有菜单、表单或表格，没有 co-pilots——只有你定义的结果和交付结果的 Agent。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 7 · Agent Harness：Agent 的脚手架</div>
+    <div class="tweet-body">
+        <p>Agent 在有强脚手架时表现最好——工具、记忆、连贯的行动空间、规划和推理能力，以及正确的任务上下文。这些脚手架就是<span class="highlight">Agent Harness</span>。</p>
+        <p>构建 Ghostwriter 意味着将 Sierra 重新架构为<span class="highlight">headless infrastructure</span>——让 Agent 可以直接使用平台。Ghostwriter 可以访问平台的完整工作空间，以及在沙盒环境中安全测试和验证变更的清晰路径。</p>
+        <p>这让 Ghostwriter 能够可靠且自主地构建和改进最复杂的 Agent。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 8 · Agent OS 四大组件协同</div>
+    <div class="tweet-body">
+        <p><strong>Agent OS</strong>——核心操作层，一次构建全渠道部署（聊天、短信、WhatsApp、邮件、语音、ChatGPT）。</p>
+        <p><strong>Agent Data Platform（ADP）</strong>——统一企业对客户的所有认知，连接非结构化数据（聊天/通话）与结构化数据（CRM/账单），赋予 Agent 记忆和上下文。</p>
+        <p><strong>Ghostwriter</strong>——构建和优化 Agent 的 Agent，从自然语言输入生成生产级 Agent。</p>
+        <p><strong>Explorer</strong>——持续分析对话，主动发现问题和改进机会。配合 Monitors（主动识别需关注的对话）、Experiments（多变量测试优化）、Observability（全链路可观测）。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 9 · Linnaeus 和 Darwin：自研检索模型</div>
+    <div class="tweet-body">
+        <p>2026 年 4 月，Sierra 发布自研的检索和重排序模型 <span class="highlight">Linnaeus 和 Darwin</span>，相比通用模型将解决率提升了 <span class="highlight">16 个百分点</span>。</p>
+        <p>这是 Sierra 不只是套壳的又一个证明——在模型编排之上，还有自研的领域专用模型层，持续提升基线性能。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 10 · PCI 合规支付：Agent 完成完整交易</div>
+    <div class="tweet-body">
+        <p>Sierra 推出首个 <span class="highlight">Level 1 PCI 合规</span>的 AI Agent 支付能力——Agent 可以在单一对话中完成完整交易，无需暂停或转接。</p>
+        <p>这意味着 Sierra Agent 不只是回答问题和处理请求，还能<span class="highlight">直接完成支付闭环</span>——从客户咨询到付款完成，全流程自主。这极大扩展了 Agent 的价值边界。</p>
+    </div>
+</div>
+
+<div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 11 · Bret Taylor 的「点击按钮时代终结」宣言</div>
+    <div class="tweet-body">
+        <p>2026 年 4 月，Taylor 在 TechCrunch 活动上宣布<span class="highlight">「点击按钮的时代已经结束」</span>。传统软件界面已过时——用户将通过自然语言描述目标，Agent 解释意图、采取行动、交付结果。</p>
+        <p>他指出企业中许多现有工具使用频率极低：「新员工入职时会登录 Workday，开放注册期间也会用到它。」未来用户将通过自然语言完成工作，无需与软件界面直接交互。</p>
+        <p>但批评者指出，Sierra 自己也依赖前线部署工程师持续调优客户 Agent。Agent 在 demo 中的能力与生产环境中的可靠表现之间仍有<span class="highlight">显著差距</span>。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 12 · 部署速度：周而非月</div>
+    <div class="tweet-body">
+        <p>Nordstrom 的语音 Agent Nora 仅用<span class="highlight"> 5 周</span>上线。Singtel 10 周达到 70%+ 解决率。Cigna 8 周将患者认证时间缩短 80%。</p>
+        <p>这种部署速度是企业 SaaS 传统实施周期（数月甚至数年）的颠覆。Sierra 卖的不仅是价格，更是<span class="highlight">速度</span>。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 13 · 全球扩张：从美国到全球</div>
+    <div class="tweet-body">
+        <p>2026 年以来 Sierra 快速全球扩张：收购东京 Opera Tech；开设悉尼办公室覆盖澳洲；马德里办公室进入西班牙；伦敦和纽约已有据点。</p>
+        <p>Sierra 已经在西班牙与多家大型企业合作，在日本通过收购进入，在澳洲与领先企业合作。定位是<span class="highlight">全球企业的 Agent 基础设施</span>。</p>
+    </div>
+</div>
+
+<div class="tweet">
+    <div class="tweet-label">推 14 · Taylor 的双重身份与商业利益</div>
+    <div class="tweet-body">
+        <p>Taylor 同时是 Sierra CEO 和 OpenAI 董事会主席——这使他成为当前 AI 产业结构中<span class="highlight">人脉最广的人之一</span>。</p>
+        <p>他的公开声明既包含对领先实验室方向的真正洞察，也有明显的商业利益——加速推广 Sierra 销售的 Agent 产品。两者可以同时为真。</p>
+        <p>正确解读「按钮时代终结」的方式：这不是对当前软件的事实陈述，而是关于<span class="highlight">未来几年价值将流向何处</span>的方向性信号——来自正在构建下一代企业工具的人。</p>
+    </div>
+</div>
+
+<div class="nav">
+    <a href="appendix-02.html">← 上一篇</a> &nbsp;|&nbsp; <a href="index.html">返回主报告</a> &nbsp;|&nbsp; <a href="appendix-04.html">下一篇 →</a>
+</div>
+
+<div class="footer">
+    InsightView · 附录 03 · Agents as a Service · By Auto<br>
+    2026 年 8 月 9 日
+</div>
+
+</div>
+</body>
+</html>
