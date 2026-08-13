@@ -1,0 +1,217 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>附录 07 · NVIDIA OpenShell + Project Arc</title><style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif; background:#f8fafc; color:#1e293b; line-height:1.8; }
+.container { max-width:680px; margin:0 auto; padding:2rem 1.2rem 4rem; background:#fff; min-height:100vh; }
+.report-header { text-align:center; padding:2rem 0 1.5rem; border-bottom:2px solid #e2e8f0; margin-bottom:1.5rem; }
+.report-header h1 { font-size:1.5rem; color:#0f172a; margin-bottom:0.3rem; }
+.report-header .tag { font-size:0.8rem; color:#64748b; }
+.report-header .date { font-size:0.8rem; color:#94a3b8; margin-top:0.3rem; }
+.section-title { font-size:1.15rem; font-weight:700; color:#0f172a; margin:1.8rem 0 0.8rem; padding-bottom:0.4rem; border-bottom:1px solid #e2e8f0; }
+.section-title .emoji { margin-right:0.3rem; }
+.tweet { padding:1.2rem 0 1.2rem 0.8rem; border-bottom:1px solid #eef2f6; }
+.tweet:last-of-type { border-bottom:none; }
+.tweet .tweet-label { font-weight:600; font-size:0.9rem; color:#2563eb; margin-bottom:0.2rem; }
+.tweet .tweet-body { font-size:1rem; color:#1e293b; line-height:1.8; }
+.tweet .tweet-body p { margin-bottom:0.3rem; }
+.tweet .tweet-body p:last-child { margin-bottom:0; }
+.highlight { color:#16a34a; font-weight:500; }
+.badge { display:inline-block; background:#dcfce7; color:#16a34a; font-size:0.7rem; padding:0.1rem 0.4rem; border-radius:4px; margin-left:0.4rem; }
+.appendix-index { margin-top:2rem; padding-top:1.5rem; border-top:2px solid #e2e8f0; }
+.appendix-index h2 { font-size:1.1rem; color:#0f172a; margin-bottom:0.8rem; }
+.appendix-index h3 { font-size:0.95rem; color:#475569; margin:1rem 0 0.4rem; }
+.appendix-index ol { margin-left:1.5rem; margin-bottom:0.8rem; }
+.appendix-index li { font-size:0.85rem; margin-bottom:0.3rem; }
+.appendix-index li a { color:#2563eb; text-decoration:none; }
+.appendix-index li a:hover { text-decoration:underline; }
+.footer { text-align:center; padding:1.5rem 0; font-size:0.75rem; color:#94a3b8; border-top:1px solid #e2e8f0; margin-top:2rem; }
+@media (max-width:680px) { .container { padding:1.5rem 1rem 3rem; } .report-header h1 { font-size:1.2rem; } }
+</style></head><body><div class="container">
+<div class="report-header"><div class="tag">InsightView · 附录 07 · By Claude</div><h1>附录 07 · NVIDIA OpenShell + Project Arc</h1></div>
+
+<div class="section-title"><span class="emoji">📌</span> 核心观点</div>
+
+<div class="tweet">
+<div class="tweet-label">推 1 · 信任层架构</div>
+<div class="tweet-body">
+<p>NVIDIA OpenShell 与 ServiceNow AI Control Tower 的组合，正在构建<span class="highlight">自主 AI agent 的信任层</span>——让企业不仅能部署 agent，更能可审计地控制其每一个行动。</p>
+<p>核心转变：从"部署 agent 并希望它表现好"到<span class="highlight">"部署 agent 并可审计地控制其每个行动"</span>。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 2 · 安全+治理</div>
+<div class="tweet-body">
+<p>双层信任架构清晰分工：NVIDIA OpenShell 负责运行时安全沙盒，ServiceNow AI Control Tower 负责企业级治理与策略控制。</p>
+<p>这种<span class="highlight">安全+治理的双层设计</span>意味着 CISO 可以首次自信地审计和批准自主 AI——不是基于希望对 agent 行为的猜测，而是基于可观测可治理的证据。</p>
+</div>
+</div>
+
+<div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+
+<div class="tweet">
+<div class="tweet-label">推 3 · 来源背景</div>
+<div class="tweet-body">
+<p>本文来自 <span class="highlight">ServiceNow Community</span> 技术社区，发布于 2026 年 5 月，是 ServiceNow 对 NVIDIA Computex 发布 OpenShell 后的官方技术解读。</p>
+<p>素材定位为<span class="highlight">技术集成公告</span>，面向开发者与架构师群体，涉及运行时安全与治理的深层技术设计。</p>
+</div>
+</div>
+
+<div class="section-title"><span class="emoji">💬</span> 行业</div>
+
+<div class="tweet">
+<div class="tweet-label">推 4 · 自主 agent 新范式</div>
+<div class="tweet-body">
+<p>新一代企业 AI agent 的行为模式发生了质变：<span class="highlight">推理、写代码、执行、循环直到做对</span>——不回答问题就停，而是承担复杂多步工作、适应意外情况、自主运行数小时。</p>
+<p>这种 agent 对安全的要求远超传统 chatbot——每个文件读取、命令执行、网络调用都需要被治理。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 5 · 行业信号</div>
+<div class="tweet-body">
+<p>NVIDIA 选择在 Computex 发布 OpenShell，并与 ServiceNow 深度集成，释放了明确信号：<span class="highlight">自主 agent 的基础设施层正在形成</span>。</p>
+<p>GPU 厂商做安全运行时、工作流厂商做治理层——生态分工逐渐清晰，基础设施标准化将加速 agent 在企业中的采纳。</p>
+</div>
+</div>
+
+<div class="section-title"><span class="emoji">📦</span> 公司</div>
+
+<div class="tweet">
+<div class="tweet-label">推 6 · 信任为核心</div>
+<div class="tweet-body">
+<p>ServiceNow 通过 Project Arc 证明其在自主 agent 领域的策略：<span class="highlight">从零构建，信任层为核心</span>。</p>
+<p>不是给现有产品加 agent 功能，而是以安全可审计为前提重新设计 agent 架构，这体现了治理优先的 DNA。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 7 · Project Arc</div>
+<div class="tweet-body">
+<p>Project Arc 是 ServiceNow 的可信任自主 agent 项目，核心能力包括：通过 Action Fabric 拥有<span class="highlight">平台全部力量</span>，每个关键行动在 OpenShell 中运行，每个行动由 AI Control Tower 治理。</p>
+<p>策略集中设置，行为持续监控，每个文件读取、命令执行和 API 调用被完整记录。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 8 · 生态伙伴选择</div>
+<div class="tweet-body">
+<p>ServiceNow 选择 NVIDIA 作为运行时安全伙伴而非自建沙盒，说明公司策略是<span class="highlight">聚焦治理层，与基础设施合作伙伴分工</span>。</p>
+<p>这种务实的生态合作策略有助于加速产品上市，同时保持治理优势。</p>
+</div>
+</div>
+
+<div class="section-title"><span class="emoji">🧩</span> 产品</div>
+
+<div class="tweet">
+<div class="tweet-label">推 9 · OpenShell 机制</div>
+<div class="tweet-body">
+<p>NVIDIA OpenShell 提供<span class="highlight">安全沙盒运行时</span>：agent 从零权限开始，每个资源必须显式授权。</p>
+<p>每个文件读取、命令执行、网络调用都经过 OpenShell，实现了最小权限的强制执行——agent 不会获得任何未授权的系统访问能力。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 10 · AI Control Tower 治理</div>
+<div class="tweet-body">
+<p>ServiceNow AI Control Tower 提供三层治理能力：<span class="highlight">发现</span>企业中每个活跃自主 agent，定义<span class="highlight">角色感知策略</span>，观察 LLM 调用和工具调用，提供<span class="highlight">kill switch</span>。</p>
+<p>从发现到监控到紧急切断，形成完整的治理闭环。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 11 · 行动记录</div>
+<div class="tweet-body">
+<p>每个关键行动的完整审计链路：<span class="highlight">策略集中设置 → 行为持续监控 → 每个文件读取、命令执行和 API 调用被记录</span>。</p>
+<p>这种全链路可观测性让安全团队第一次拥有了对自主 agent 的完整审计能力。</p>
+</div>
+</div>
+
+<div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+
+<div class="tweet">
+<div class="tweet-label">推 12 · CISO 视角</div>
+<div class="tweet-body">
+<p>整个架构设计围绕 CISO 的审批需求展开：<span class="highlight">"CISO 可以自信地审计和批准自主 AI，不是因为他们希望它表现好，而是因为他们能看到、治理和安全其采取的每个行动"</span>。</p>
+<p>从安全团队的视角出发设计产品，是 ServiceNow 在治理赛道建立信任的关键策略。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 13 · 企业采纳门槛</div>
+<div class="tweet-body">
+<p>自主 agent 在企业中大规模部署的最大障碍不是能力，而是<span class="highlight">信任与合规</span>。</p>
+<p>OpenShell + AI Control Tower 的组合直接针对这一门槛——让安全审批从一个信念问题变成一个审计问题。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 14 · 零权限起点</div>
+<div class="tweet-body">
+<p>OpenShell 的核心设计哲学极具安全性：agent 从<span class="highlight">零权限</span>开始运行，每个系统资源必须显式授权。</p>
+<p>这颠覆了传统应用安全模型——不是先授权再限制，而是默认拒绝一切，只开放必要的权限。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 15 · 行业意义</div>
+<div class="tweet-body">
+<p>NVIDIA + ServiceNow 的信任层组合代表了<span class="highlight">硬件安全能力与软件治理能力的首次深度耦合</span>，专为自主 agent 场景设计。</p>
+<p>这可能成为企业自主 AI 部署的标准参考架构，后续会有更多运行时和治理平台跟进类似模式。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 16 · 总结</div>
+<div class="tweet-body">
+<p>OpenShell + Project Arc 不只是一次技术集成，而是定义了<span class="highlight">可信任自主 agent 的架构蓝图</span>。</p>
+<p>运行时安全沙盒 + 企业治理平面 + 全链路审计 = 让自主 AI 从技术 demo 走向企业生产环境。</p>
+</div>
+</div>
+
+<div class="appendix-index">
+<h2>附录索引</h2>
+<h3>🎙️ 高管访谈</h3>
+<ol start="1">
+<li><a href="appendix-01.html">01 · McDermott：Blueprint for Agentic Business</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-02.html">02 · McDermott：硅谷误解了企业 AI</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-03.html">03 · Knowledge 2026：Welcome to Agentic Business</a> <span class="badge">已生成</span></li>
+</ol>
+<h3>📣 官方产品推广</h3>
+<ol start="4">
+<li><a href="appendix-04.html">04 · ITSM AI Agents：从 Virtual Agent 到 Agentic AI</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-05.html">05 · ServiceNow 完成 Moveworks 收购</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-06.html">06 · AI Control Tower + Action Fabric 发布</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-07.html">07 · NVIDIA OpenShell + Project Arc</a> <span class="badge">已生成</span></li>
+</ol>
+<h3>📊 财报分析</h3>
+<ol start="8">
+<li><a href="appendix-08.html">08 · 2025年Q4及全年财报</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-09.html">09 · 2025年Q2财报：Now Assist 冲刺10亿</a> <span class="badge">已生成</span></li>
+</ol>
+<h3>🔍 第三方评测</h3>
+<ol start="10">
+<li><a href="appendix-10.html">10 · Futurum：2026年企业 Agentic AI 领先厂商</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-11.html">11 · 企业 Agent 平台对比</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-12.html">12 · 2026年企业软件 AI：什么真正在生产中运行</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-13.html">13 · 从系统记录到系统行动</a> <span class="badge">已生成</span></li>
+</ol>
+<h3>🤝 客户案例</h3>
+<ol start="14">
+<li><a href="appendix-14.html">14 · FedEx：每月500万工作流</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-15.html">15 · Honeywell、NHL 等客户案例</a> <span class="badge">已生成</span></li>
+</ol>
+<h3>🛠️ 工程与技术</h3>
+<ol start="16">
+<li><a href="appendix-16.html">16 · AI Control Tower 技术深度解析</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-17.html">17 · Zurich Release：Agentic AI 深度解析</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-18.html">18 · 2026 AI 原生许可</a> <span class="badge">已生成</span></li>
+</ol>
+<h3>🤖 生态对谈</h3>
+<ol start="19">
+<li><a href="appendix-19.html">19 · Agent 层吞噬 SaaS</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-20.html">20 · 席位已死：Agentic AI 重写定价</a> <span class="badge">已生成</span></li>
+</ol>
+</div>
+
+<div class="footer">InsightView · ServiceNow 主题阅读综合报告 · 20 篇素材 · By Claude</div>
+</div></body></html>
