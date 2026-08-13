@@ -1,0 +1,225 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>附录 06 · AI Control Tower + Action Fabric 发布</title><style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif; background:#f8fafc; color:#1e293b; line-height:1.8; }
+.container { max-width:680px; margin:0 auto; padding:2rem 1.2rem 4rem; background:#fff; min-height:100vh; }
+.report-header { text-align:center; padding:2rem 0 1.5rem; border-bottom:2px solid #e2e8f0; margin-bottom:1.5rem; }
+.report-header h1 { font-size:1.5rem; color:#0f172a; margin-bottom:0.3rem; }
+.report-header .tag { font-size:0.8rem; color:#64748b; }
+.report-header .date { font-size:0.8rem; color:#94a3b8; margin-top:0.3rem; }
+.section-title { font-size:1.15rem; font-weight:700; color:#0f172a; margin:1.8rem 0 0.8rem; padding-bottom:0.4rem; border-bottom:1px solid #e2e8f0; }
+.section-title .emoji { margin-right:0.3rem; }
+.tweet { padding:1.2rem 0 1.2rem 0.8rem; border-bottom:1px solid #eef2f6; }
+.tweet:last-of-type { border-bottom:none; }
+.tweet .tweet-label { font-weight:600; font-size:0.9rem; color:#2563eb; margin-bottom:0.2rem; }
+.tweet .tweet-body { font-size:1rem; color:#1e293b; line-height:1.8; }
+.tweet .tweet-body p { margin-bottom:0.3rem; }
+.tweet .tweet-body p:last-child { margin-bottom:0; }
+.highlight { color:#16a34a; font-weight:500; }
+.badge { display:inline-block; background:#dcfce7; color:#16a34a; font-size:0.7rem; padding:0.1rem 0.4rem; border-radius:4px; margin-left:0.4rem; }
+.appendix-index { margin-top:2rem; padding-top:1.5rem; border-top:2px solid #e2e8f0; }
+.appendix-index h2 { font-size:1.1rem; color:#0f172a; margin-bottom:0.8rem; }
+.appendix-index h3 { font-size:0.95rem; color:#475569; margin:1rem 0 0.4rem; }
+.appendix-index ol { margin-left:1.5rem; margin-bottom:0.8rem; }
+.appendix-index li { font-size:0.85rem; margin-bottom:0.3rem; }
+.appendix-index li a { color:#2563eb; text-decoration:none; }
+.appendix-index li a:hover { text-decoration:underline; }
+.footer { text-align:center; padding:1.5rem 0; font-size:0.75rem; color:#94a3b8; border-top:1px solid #e2e8f0; margin-top:2rem; }
+@media (max-width:680px) { .container { padding:1.5rem 1rem 3rem; } .report-header h1 { font-size:1.2rem; } }
+</style></head><body><div class="container">
+<div class="report-header"><div class="tag">InsightView · 附录 06 · By Claude</div><h1>附录 06 · AI Control Tower + Action Fabric 发布</h1></div>
+
+<div class="section-title"><span class="emoji">📌</span> 核心观点</div>
+
+<div class="tweet">
+<div class="tweet-label">推 1 · 治理升级</div>
+<div class="tweet-body">
+<p>ServiceNow 在 Knowledge 2026 上发布了全新的<span class="highlight">受治理自主工作平台</span>，标志着企业 AI 治理从"可见性"阶段正式迈入"全生命周期控制"阶段。</p>
+<p>Amit Zavery 说："一年前 AI Control Tower 给企业 AI 可见性，今天它<span class="highlight">治理跨每个 agent、模型、数据集、资产和身份的整个 AI 生命周期</span>"。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 2 · 三大支柱</div>
+<div class="tweet-body">
+<p>整个平台架构围绕三大支柱展开：Act（AI 专家执行真实工作）、Action Fabric（开放平台接入任意 agent）、Secure（发现与治理每个网络资产和身份）。</p>
+<p>这不是简单的功能叠加，而是<span class="highlight">从孤立任务到端到端自主执行</span>的架构级变革。</p>
+</div>
+</div>
+
+<div class="section-title"><span class="emoji">👤</span> 访谈人背景</div>
+
+<div class="tweet">
+<div class="tweet-label">推 3 · 来源背景</div>
+<div class="tweet-body">
+<p>本文素材来自 <span class="highlight">ServiceNow 官方新闻室</span>，于 2026 年 5 月 Knowledge 2026 大会期间发布。</p>
+<p>发布人是 ServiceNow 首席产品官 Amit Zavery，代表公司在产品战略层面的最新官宣。</p>
+</div>
+</div>
+
+<div class="section-title"><span class="emoji">💬</span> 行业</div>
+
+<div class="tweet">
+<div class="tweet-label">推 4 · 企业 AI 混乱</div>
+<div class="tweet-body">
+<p>标题直接点出行业痛点：<span class="highlight">"将企业 AI 混乱转为控制"</span>。当前企业面临的局面是 agent 数量爆发但缺乏统一治理，每个部门可能都在引入不同的 AI agent。</p>
+<p>ServiceNow 的答案是提供统一的治理平面，让混乱变为有序。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 5 · MCP 标准</div>
+<div class="tweet-body">
+<p>Action Fabric 通过<span class="highlight">GA 的 MCP Server</span> 安全触发受治理企业行动，支持 ServiceNow 原生、Claude、Copilot 或自建 agent。</p>
+<p>这标志着 MCP 协议从实验性标准走向<span class="highlight">企业级生产环境</span>的正式落地。</p>
+</div>
+</div>
+
+<div class="section-title"><span class="emoji">📦</span> 公司</div>
+
+<div class="tweet">
+<div class="tweet-label">推 6 · 平台定位</div>
+<div class="tweet-body">
+<p>ServiceNow 正在将自己重新定位为<span class="highlight">受治理的自主工作平台</span>，而不仅是工作流自动化工具。</p>
+<p>核心差异化在于治理优先——让企业可以放心地把真实工作交给 AI 专家执行。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 7 · 收购补强</div>
+<div class="tweet-body">
+<p>安全栈通过收购补强：<span class="highlight">Armis</span> 闭合资产可见性与网络风险之间的差距，<span class="highlight">Veza</span> 带来 AI 原生身份智能。</p>
+<p>Veza 能力尤为关键——能映射人、机器和 AI agent 身份的权限，在 agent 数量激增时确保身份安全。</p>
+</div>
+</div>
+
+<div class="section-title"><span class="emoji">🧩</span> 产品</div>
+
+<div class="tweet">
+<div class="tweet-label">推 8 · Autonomous Workforce</div>
+<div class="tweet-body">
+<p>Autonomous Workforce 从处理孤立任务升级为<span class="highlight">端到端执行整个工作</span>。新 AI 专家覆盖 CRM、员工体验、IT 运营和安全与风险四大领域。</p>
+<p>ServiceNow 内部已用 Autonomous Workforce 处理<span class="highlight">超 90% 员工 IT 请求</span>，吃自己的狗粮。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 9 · 惊人效率</div>
+<div class="tweet-body">
+<p>L1 服务台 AI 专家解决分配 IT 案例<span class="highlight">速度比人工快 99%</span>，Autonomous CRM 每月解决超<span class="highlight">1 亿客户案例</span>、编排 1600 万订单、配置 700 万报价。</p>
+<p>这些数字说明自主工作不只是概念验证，已经在规模运行中产生实质生产力提升。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 10 · Action Fabric</div>
+<div class="tweet-body">
+<p>Action Fabric 是向<span class="highlight">任何 AI agent 开放</span>的平台层——无论 ServiceNow 原生 agent、Anthropic Claude、Microsoft Copilot 还是企业自建 agent。</p>
+<p>通过 MCP Server 实现标准化的行动触发，这意味着 agent 生态从围墙花园走向<span class="highlight">互操作开放平台</span>。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 11 · AI Control Tower 扩展</div>
+<div class="tweet-body">
+<p>扩展后的 AI Control Tower 提供<span class="highlight">发现、观察、治理和安全企业 AI</span>的端到端解决方案。</p>
+<p>对比一年前仅提供可见性，现在的 Control Tower 已经是一套完整的 AI 生命周期治理套件。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 12 · 安全栈</div>
+<div class="tweet-body">
+<p>通过 Armis + Veza 的双收购，ServiceNow 构建了从<span class="highlight">资产可见性到身份智能</span>的安全闭环。</p>
+<p>Armis 解决网络风险暴露面，Veza 解决 agent 时代的身份权限难题，两者叠加形成治理的基础设施层。</p>
+</div>
+</div>
+
+<div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+
+<div class="tweet">
+<div class="tweet-label">推 13 · Booking.com</div>
+<div class="tweet-body">
+<p>Booking.com 作为客户案例之一被提及，表明平台在<span class="highlight">高流量消费级场景</span>中也有落地。</p>
+<p>旅游预订行业的复杂客户交互场景，对自主 agent 的准确性和响应速度要求极高。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 14 · Honeywell</div>
+<div class="tweet-body">
+<p>Honeywell 部署 AI 助手 "Red"，<span class="highlight">消除了大部分服务台对话</span>。</p>
+<p>这是一个典型的制造业巨头在 IT 服务场景中实现自主化的案例，说明自主 agent 在传统行业的渗透正在加速。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 15 · NHL</div>
+<div class="tweet-body">
+<p>NHL（国家冰球联盟）采用 ServiceNow 平台<span class="highlight">专注于交付非凡球迷体验</span>。</p>
+<p>体育联盟的选型说明自主工作平台不限于 IT/HR 场景，也能应用于面向消费者的体验优化。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 16 · PayPal & Ulta</div>
+<div class="tweet-body">
+<p>PayPal 和 Ulta 也被列为客户案例，分别代表<span class="highlight">金融科技与零售消费</span>两个垂直行业的采纳。</p>
+<p>多元化的客户阵容证明自主工作平台的场景通用性和行业适应性。</p>
+</div>
+</div>
+
+<div class="tweet">
+<div class="tweet-label">推 17 · 战略意义</div>
+<div class="tweet-body">
+<p>从纯产品角度看，本次发布实质上是 ServiceNow 从<span class="highlight">工作流平台向 AI 治理平台</span>的战略跃迁。</p>
+<p>Control Tower + Action Fabric 的组合构成了企业 AI 时代的"操作系统"——既管理 agent 的执行，又管理 agent 的安全与合规。</p>
+</div>
+</div>
+
+<div class="appendix-index">
+<h2>附录索引</h2>
+<h3>🎙️ 高管访谈</h3>
+<ol start="1">
+<li><a href="appendix-01.html">01 · McDermott：Blueprint for Agentic Business</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-02.html">02 · McDermott：硅谷误解了企业 AI</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-03.html">03 · Knowledge 2026：Welcome to Agentic Business</a> <span class="badge">已生成</span></li>
+</ol>
+<h3>📣 官方产品推广</h3>
+<ol start="4">
+<li><a href="appendix-04.html">04 · ITSM AI Agents：从 Virtual Agent 到 Agentic AI</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-05.html">05 · ServiceNow 完成 Moveworks 收购</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-06.html">06 · AI Control Tower + Action Fabric 发布</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-07.html">07 · NVIDIA OpenShell + Project Arc</a> <span class="badge">已生成</span></li>
+</ol>
+<h3>📊 财报分析</h3>
+<ol start="8">
+<li><a href="appendix-08.html">08 · 2025年Q4及全年财报</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-09.html">09 · 2025年Q2财报：Now Assist 冲刺10亿</a> <span class="badge">已生成</span></li>
+</ol>
+<h3>🔍 第三方评测</h3>
+<ol start="10">
+<li><a href="appendix-10.html">10 · Futurum：2026年企业 Agentic AI 领先厂商</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-11.html">11 · 企业 Agent 平台对比</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-12.html">12 · 2026年企业软件 AI：什么真正在生产中运行</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-13.html">13 · 从系统记录到系统行动</a> <span class="badge">已生成</span></li>
+</ol>
+<h3>🤝 客户案例</h3>
+<ol start="14">
+<li><a href="appendix-14.html">14 · FedEx：每月500万工作流</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-15.html">15 · Honeywell、NHL 等客户案例</a> <span class="badge">已生成</span></li>
+</ol>
+<h3>🛠️ 工程与技术</h3>
+<ol start="16">
+<li><a href="appendix-16.html">16 · AI Control Tower 技术深度解析</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-17.html">17 · Zurich Release：Agentic AI 深度解析</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-18.html">18 · 2026 AI 原生许可</a> <span class="badge">已生成</span></li>
+</ol>
+<h3>🤖 生态对谈</h3>
+<ol start="19">
+<li><a href="appendix-19.html">19 · Agent 层吞噬 SaaS</a> <span class="badge">已生成</span></li>
+<li><a href="appendix-20.html">20 · 席位已死：Agentic AI 重写定价</a> <span class="badge">已生成</span></li>
+</ol>
+</div>
+
+<div class="footer">InsightView · ServiceNow 主题阅读综合报告 · 20 篇素材 · By Claude</div>
+</div></body></html>
