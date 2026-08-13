@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>附录 12 · Agentforce 架构详解：六层技术栈</title><style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif; background:#f8fafc; color:#1e293b; line-height:1.8; }
+.container { max-width:680px; margin:0 auto; padding:2rem 1.2rem 4rem; background:#fff; min-height:100vh; }
+.report-header { text-align:center; padding:2rem 0 1.5rem; border-bottom:2px solid #e2e8f0; margin-bottom:1.5rem; }
+.report-header h1 { font-size:1.5rem; color:#0f172a; margin-bottom:0.3rem; }
+.report-header .tag { font-size:0.8rem; color:#64748b; }
+.report-header .date { font-size:0.8rem; color:#94a3b8; margin-top:0.3rem; }
+.section-title { font-size:1.15rem; font-weight:700; color:#0f172a; margin:1.8rem 0 0.8rem; padding-bottom:0.4rem; border-bottom:1px solid #e2e8f0; }
+.section-title .emoji { margin-right:0.3rem; }
+.tweet { padding:1.2rem 0 1.2rem 0.8rem; border-bottom:1px solid #eef2f6; }
+.tweet:last-of-type { border-bottom:none; }
+.tweet .tweet-label { font-weight:600; font-size:0.9rem; color:#2563eb; margin-bottom:0.2rem; }
+.tweet .tweet-body { font-size:1rem; color:#1e293b; line-height:1.8; }
+.tweet .tweet-body p { margin-bottom:0.3rem; }
+.tweet .tweet-body p:last-child { margin-bottom:0; }
+.highlight { color:#16a34a; font-weight:500; }
+.badge { display:inline-block; background:#dcfce7; color:#16a34a; font-size:0.7rem; padding:0.1rem 0.4rem; border-radius:4px; margin-left:0.4rem; }
+.appendix-index { margin-top:2rem; padding-top:1.5rem; border-top:2px solid #e2e8f0; }
+.appendix-index h2 { font-size:1.1rem; color:#0f172a; margin-bottom:0.8rem; }
+.appendix-index h3 { font-size:0.95rem; color:#475569; margin:1rem 0 0.4rem; }
+.appendix-index ol { margin-left:1.5rem; margin-bottom:0.8rem; }
+.appendix-index li { font-size:0.85rem; margin-bottom:0.3rem; }
+.appendix-index li a { color:#2563eb; text-decoration:none; }
+.appendix-index li a:hover { text-decoration:underline; }
+.footer { text-align:center; padding:1.5rem 0; font-size:0.75rem; color:#94a3b8; border-top:1px solid #e2e8f0; margin-top:2rem; }
+.product-evo { background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:1.2rem; margin:1rem 0 1.5rem; }
+.product-evo h3 { font-size:0.95rem; color:#0f172a; margin-bottom:0.8rem; }
+.product-evo svg { width:100%; height:auto; display:block; }
+.product-evo ul { margin-left:1.2rem; margin-top:0.8rem; }
+.product-evo li { font-size:0.85rem; color:#475569; margin-bottom:0.3rem; }
+.lf-body h2 { font-size:1.1rem; color:#0f172a; margin:1.5rem 0 0.6rem; padding-bottom:0.3rem; border-bottom:1px solid #e2e8f0; }
+.lf-body p { font-size:1rem; color:#1e293b; line-height:1.8; margin-bottom:0.5rem; }
+.lf-body ul { margin-left:1.5rem; margin-bottom:0.5rem; }
+.lf-body li { font-size:0.95rem; margin-bottom:0.2rem; }
+.lf-body blockquote { border-left:3px solid #2563eb; padding-left:1rem; margin:0.8rem 0; color:#475569; font-style:italic; }
+@media (max-width:680px) { .container { padding:1.5rem 1rem 3rem; } .report-header h1 { font-size:1.2rem; } }
+</style></head><body><div class="container"><div class="report-header"><div class="tag">InsightView · 附录 12 · By Claude</div><h1>附录 12 · Agentforce 架构详解：六层技术栈</h1></div><div class="section-title"><span class="emoji">📌</span> 核心观点</div><div class="tweet"><div class="tweet-label">推 1 · 六层架构</div><div class="tweet-body"><p>Agentforce 六层架构：</p><p>① <span class="highlight">渠道层</span>：Slack/聊天/SMS/Voice</p><p>② Agentforce 层：Atlas + Agent Builder</p><p>③ 信任层：Einstein Trust Layer</p><p>④ 模型层：Salesforce 调优 + 外部 LLM</p><p>⑤ 数据层：CRM + 知识库 + Data Cloud</p><p>⑥ 平台层：Flows/Apex/REST API</p></div></div><div class="section-title"><span class="emoji">👤</span> 访谈人背景</div><div class="tweet"><div class="tweet-label">推 8 · 背景信息</div><div class="tweet-body"><p>来源：🛠️ 工程与技术</p><p>录制时间：未提供</p><p>访谈人：未提供</p><p>访谈嘉宾：未提供</p><p>时长：未提供</p></div></div><div class="section-title"><span class="emoji">💬</span> 行业</div><div class="tweet"><div class="tweet-label">推 9 · 行业观点</div><div class="tweet-body"><p>本文行业观点详见核心观点与各维度板块。</p></div></div><div class="section-title"><span class="emoji">📦</span> 公司</div><div class="tweet"><div class="tweet-label">推 10 · 公司观点</div><div class="tweet-body"><p>本文公司相关观点见核心观点板块。</p></div></div><div class="section-title"><span class="emoji">🧩</span> 产品</div><div class="tweet"><div class="tweet-label">推 2 · 渠道层</div><div class="tweet-body"><p>同一智能体可在任何渠道运行：<span class="highlight">Slack</span>、Experience Cloud、Lightning UI、嵌入式聊天、邮件、SMS、Voice。</p><p>Agentforce Voice 通过 Amazon Connect、Five9、Genesys 等 IVR 合作伙伴实现。</p><p>渠道无关架构让智能体部署灵活性大幅提升。</p></div></div><div class="tweet"><div class="tweet-label">推 3 · Atlas 处理流程</div><div class="tweet-body"><p>Atlas 处理一次请求的完整流程：</p><p>上下文组装 → 主题分类 → 计划生成 → 行动执行 → 响应生成 → <span class="highlight">护栏检查</span></p><p>整个过程通常 <span class="highlight">2-5秒</span> 完成。</p></div></div><div class="tweet"><div class="tweet-label">推 4 · 模型层</div><div class="tweet-body"><p>Model Builder 允许连接外部 LLM：<span class="highlight">OpenAI、Anthropic、Azure OpenAI、Google Vertex AI</span>。</p><p>默认 Salesforce 调优模型不满足特定领域需求时使用。</p><p>企业数据驻留要求强制特定云提供商时也可用。</p></div></div><div class="tweet"><div class="tweet-label">推 5 · 数据 grounding 三层</div><div class="tweet-body"><p>① <span class="highlight">CRM 记录 grounding</span>：查询 Salesforce 对象获取实时数据</p><p>② <span class="highlight">知识库 grounding</span>：Salesforce Knowledge 文章通过向量搜索</p><p>③ <span class="highlight">Data Cloud grounding</span>：统一客户档案，结合 CRM + 外部源</p><p>没有 grounding，智能体只能基于对话内容推理。</p></div></div><div class="tweet"><div class="tweet-label">推 7 · 常见架构错误</div><div class="tweet-body"><p>① <span class="highlight">topics 太多</span>：增加分类复杂度，应从少而宽开始</p><p>② <span class="highlight">actions 描述模糊</span>：LLM 按描述选择 action，需像 API 文档一样精确</p><p>③ <span class="highlight">agent 权限过大</span>：应给最小必要权限</p><p>④ <span class="highlight">没有 fallback topic</span>：范围外请求会产生不可预测行为</p><p>⑤ <span class="highlight">知识文章过时</span>：矛盾文章是幻觉最常见原因</p></div></div><div class="section-title"><span class="emoji">🏗️</span> 组织</div><div class="tweet"><div class="tweet-label">推 12 · 组织观点</div><div class="tweet-body"><p>本文组织相关观点见核心观点板块。</p></div></div><div class="footer">InsightView · Salesforce 如何从 SaaS 的成功再次跨越 Agent 的挑战 · 2026</div></div></body></html>
