@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightView · 附录 02 · Dharmesh Shah：TEDxBoston 演讲</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+        .report-header {
+            text-align: center; margin-bottom: 2.5rem; padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .report-header h1 { font-size: 1.6rem; font-weight: 700; color: #0f172a; margin-bottom: 0.5rem; }
+        .report-header .subtitle { font-size: 0.95rem; color: #64748b; }
+        .report-header .tag { font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.35rem; }
+        .report-header .meta { font-size: 0.8rem; color: #94a3b8; margin-top: 0.5rem; }
+        .section-title {
+            font-size: 1.15rem; font-weight: 700; color: #0f172a;
+            margin-top: 2rem; margin-bottom: 0.5rem; padding-bottom: 0.4rem;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex; align-items: center; gap: 0.4rem;
+        }
+        .section-title .emoji { font-size: 1.1rem; }
+        .tweet { padding: 1.2rem 0 1.2rem 0.8rem; border-bottom: 1px solid #eef2f6; }
+        .tweet:last-of-type { border-bottom: none; }
+        .tweet .tweet-label { font-weight: 600; font-size: 0.9rem; color: #2563eb; margin-bottom: 0.2rem; }
+        .tweet .tweet-body { font-size: 1rem; color: #1e293b; line-height: 1.8; }
+        .tweet .tweet-body p { margin-bottom: 0.3rem; }
+        .tweet .tweet-body p:last-child { margin-bottom: 0; }
+        .highlight { color: #16a34a; font-weight: 500; }
+        .footer {
+            text-align: center; margin-top: 3rem; padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0; font-size: 0.8rem; color: #94a3b8;
+        }
+        .back-link { display: block; text-align: center; margin-top: 1.5rem; color: #2563eb; text-decoration: none; font-size: 0.85rem; }
+        .back-link:hover { text-decoration: underline; }
+        @media (max-width: 640px) {
+            .container { padding: 1.5rem 1rem 3rem; }
+            .report-header h1 { font-size: 1.3rem; }
+            .section-title { font-size: 1.05rem; }
+            .tweet .tweet-body { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="report-header">
+        <div class="tag">InsightView · 附录 02 · By Claude</div>
+        <h1>Dharmesh Shah：TEDxBoston——如何与 AI 竞争并获胜</h1>
+        <div class="subtitle">HubSpot 联合创始人/CTO 谈 AI 时代的竞争哲学、提示词法则与人类的不可替代性</div>
+        <div class="meta">来源：TEDxBoston · 2025-07-02 · 演讲人：Dharmesh Shah（HubSpot 联合创始人/CTO）</div>
+    </div>
+
+    <!-- ===== 📌 核心观点 ===== -->
+    <div class="section-title"><span class="emoji">📌</span> 核心观点</div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 1 · 与 AI 竞争 vs 用 AI 竞争：一个民调</div>
+        <div class="tweet-body">
+            <p>Dharmesh 开场做了一个现场民调。他问观众："你认为未来 5 年，你是要 <span class="highlight">compete against AI（跟 AI 竞争）</span> 还是 <span class="highlight">compete using AI（用 AI 竞争）</span>？" 结果约 1/3 的人选了"跟 AI 竞争"，2/3 选了"用 AI 竞争"。</p>
+            <p>他的反应是：那 1/3 的人 <span class="highlight">"基本完了"</span>。他说这不是开玩笑——历史已经给了答案："你不会想跟蒸汽机竞争，你想用蒸汽机。你不会想跟搜索引擎竞争，你想用搜索引擎。" AI 不是对手，是杠杆。</p>
+            <p>这个开场奠定了整场演讲的基调：<span class="highlight">AI 是放大器不是替代器</span>——放大你的判断力、创造力、影响力。那些试图"赢过 AI"的人，就像试图赢过计算器的人。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 2 · AI 是"autocomplete with a PhD"</div>
+        <div class="tweet-body">
+            <p>Dharmesh 给 AI 下了一个绝佳的定义：<span class="highlight">"AI 就是 autocomplete with a PhD（带博士级的自动补全）"</span>。它本质上就是当你输入"亲爱的"时，它猜你要写"客户"还是"老婆"——只是猜的粒度从词到了段落、到了方案、到了策略。</p>
+            <p>这个定义的价值在于它把 AI 从神秘拉回日常：<span class="highlight">你不需要理解 Transformer 架构就能用 AI</span>——就像你不需要理解搜索引擎的 PageRank 算法就能用 Google。关键不是技术原理，是 <span class="highlight">怎么跟它协作</span>。</p>
+            <p>他说："我用这个定义不是因为轻视 AI，是因为 <span class="highlight">降低心理门槛</span>。太多人因为觉得 AI 神秘就不开始用。先把它当 autocomplete——你天天在用 autocomplete，你已经会了。"</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 3 · "This is the decade of AI agents"</div>
+        <div class="tweet-body">
+            <p>Dharmesh 在演讲中做了一个大胆判断：<span class="highlight">"This is the decade of AI agents（这是 AI 代理的十年）"</span>。他解释这个判断的逻辑：2020 年代前半段是 LLM 的十年——模型能力从无到有。后半段是 agent 的十年——从"能回答"到"能做事"。</p>
+            <p>他说 agent 和 LLM 的区别是：LLM 给你 <span class="highlight">信息</span>，agent 给你 <span class="highlight">结果</span>。你问 LLM"怎么解决这个客户工单"，它给你步骤。你让 agent 解决，它直接解决了——不需要你执行。</p>
+            <p>他还给了一个预测："到 2030 年，大多数知识工作者的同事里 <span class="highlight">会有至少一个 AI agent</span>——不是工具，是同事。你要学的不是怎么用工具，是怎么跟 agent 协作。"</p>
+        </div>
+    </div>
+
+    <!-- ===== 👤 访谈人背景 ===== -->
+    <div class="section-title"><span class="emoji">👤</span> 演讲人背景</div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 4 · Dharmesh Shah：创始人即实验者</div>
+        <div class="tweet-body">
+            <p><span class="highlight">Dharmesh Shah</span> 是 HubSpot 的联合创始人兼 CTO，2006 年与 Brian Halligan 在 MIT 的宿舍里一起创立了公司。他是波士顿创业圈的标志性人物——不是因为会做 PR，而是因为 <span class="highlight">还在写代码</span>。在一个 300 亿美元市值的公司里，CTO 还在一线做 side project 是非常罕见的。</p>
+            <p>他创建 ChatSpot（后来演化为 Breeze Assistant），独立推出 agent.ai 实验平台（3 个月 258,000 用户），然后吸收回 HubSpot 变成 Agent Builder。这种"独立实验 → 验证假设 → 吸收回核心"的模式，是他作为创始 CTO 的独特创新方法。</p>
+            <p>他在 TEDxBoston 演讲中自嘲："有人问我你一个 300 亿公司的 CTO 为什么还在做 side project。我说因为 <span class="highlight">大公司的创新不能靠开会，要靠动手做</span>。"</p>
+        </div>
+    </div>
+
+    <!-- ===== 💬 行业 ===== -->
+    <div class="section-title"><span class="emoji">💬</span> 行业</div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 5 · AI 时代的行业竞争格局</div>
+        <div class="tweet-body">
+            <p>Dharmesh 在演讲中谈到了 AI 对行业竞争格局的影响。他说 AI 时代最危险的竞争不是"谁 AI 更强"，而是 <span class="highlight">"谁先用起来"</span>。技术的边际成本在趋近于零——今天的 GPT-4 明天可能变成免费 API。这意味着技术优势的时间窗口在缩短。</p>
+            <p>他说："三年前你需要一个 AI 团队才能用 AI。今天你需要的是一个 <span class="highlight">好奇心</span>。三年后你需要的是对'代理怎么协作'的理解。技术门槛在下降，但 <span class="highlight">认知门槛</span> 在上升——会用 AI 的人和不会用的人差距在拉大。"</p>
+            <p>他还给了一个行业判断："SaaS 行业里会出现两类公司——AI 原生的和 AI 附加的。<span class="highlight">AI 附加的会活下来但长不大</span>。AI 原生的会重新定义品类。"</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 6 · 代理网络 vs 工具市场</div>
+        <div class="tweet-body">
+            <p>Dharmesh 提出了一个行业结构判断：AI 时代会从"工具市场"走向 <span class="highlight">"代理网络"</span>。传统 SaaS 是你买一个工具、学一个工具、用一个工具——工具之间是孤岛。AI 时代是代理之间能互相调用、共享上下文、协同完成任务。</p>
+            <p>他说 agent.ai 的设计哲学就是验证这个判断——一个代理可以调用另一个代理的能力，不需要人做中间人。"比如你的 Sales Agent 需要数据 enrichment，它不是打开 Clearbit 网站，是 <span class="highlight">直接调用 Data Agent 的 API</span>。代理间的协作才是效率质变。"</p>
+        </div>
+    </div>
+
+    <!-- ===== 📦 公司 ===== -->
+    <div class="section-title"><span class="emoji">📦</span> 公司</div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 7 · HubSpot 的 AI 文化基因</div>
+        <div class="tweet-body">
+            <p>Dharmesh 在演讲中谈到 HubSpot 内部的 AI 文化。他说他作为 CTO 做的一件最重要的事不是建 AI 产品，是 <span class="highlight">"让 AI 变成所有人的习惯"</span>。他亲自给全员做 AI 培训，推出了"be bold, learn fast"作为公司核心价值观的更新。</p>
+            <p>他说："文化的改变不能靠 email——要靠 <span class="highlight">仪式</span>。我们设了 AI 学习日、Hackathon、内部代理构建比赛。现在 94% 员工周活跃用 AI，员工自建 3900+ 个内部代理。这不是 CTO 要求的，是文化驱动的。"</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 8 · agent.ai 的实验意义</div>
+        <div class="tweet-body">
+            <p>Dharmesh 在 TEDxBoston 上提到了 agent.ai——他独立推出的 AI 代理网络。到演讲时（2025-07），agent.ai 已有 <span class="highlight">200 万用户、26,000 构建者</span>。他说这个数字远超最初 100,000 用户的目标。</p>
+            <p>他说 agent.ai 的意义不是"做一个产品"，是 <span class="highlight">"做一个实验场"</span>——验证三件事：一、普通人会不会构建代理；二、代理之间会不会自发协作；三、什么场景的代理最先被用起来。这些数据后来成了 Agent Builder 的产品依据。</p>
+        </div>
+    </div>
+
+    <!-- ===== 🧩 产品 ===== -->
+    <div class="section-title"><span class="emoji">🧩</span> 产品</div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 9 · 60/30/10 提示词法则</div>
+        <div class="tweet-body">
+            <p>Dharmesh 在演讲中分享了他个人总结的 <span class="highlight">60/30/10 提示词法则</span>——已经成为了 HubSpot 内部 AI 培训的标配方法论：</p>
+            <p><strong>60%</strong>：用已知有效的 prompt。不要每次都从头写——建立你自己的"prompt 库"，反复用验证过的 prompt。这是效率的基线。</p>
+            <p><strong>30%</strong>：在已有 prompt 基础上 <span class="highlight">迭代优化</span>。调一个参数、加一个约束、换一个格式。这是进步的来源。</p>
+            <p><strong>10%</strong>：尝试 <span class="highlight">全新用例</span>——你从没试过的 prompt。这是创新的来源。也是 10% 不是更多——因为大部分新尝试会失败，但那 1% 成功的可能改变工作方式。</p>
+            <p>他说："大多数人犯的错是 100% 时间都在从头写 prompt。<span class="highlight">那不是创新，是浪费</span>。"</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 10 · TEAM 策略：个人 AI 转型方法论</div>
+        <div class="tweet-body">
+            <p>Dharmesh 在演讲中推出了 <span class="highlight">TEAM 策略</span>——一个让"个人英雄主义变成团队习惯"的方法论：</p>
+            <p><strong>Triage（分诊）</strong>：把日常工作分为三类——AI 能独立做的、AI 能辅助做的、必须人做的。第一类交给 AI，第三类专注人。</p>
+            <p><strong>Experiment（实验）</strong>：每周至少试一个新 AI 用例——不是为了结果，是为了 <span class="highlight">让团队对 AI 的可能性保持敏感</span>。</p>
+            <p><strong>Automate（自动化）</strong>：把验证过的 AI 用例变成 <span class="highlight">团队标准流程</span>——不是某个人用，是所有人用。</p>
+            <p><strong>Measure（衡量）</strong>：跟踪 AI 节省了多少时间、提升了多少质量。<span class="highlight">不衡量就没有持续</span>。</p>
+            <p>他说："TEAM 不是技术策略，是组织行为策略。<span class="highlight">AI 转型最大的障碍不是技术，是习惯</span>。"</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 11 · agent.ai 的产品哲学</div>
+        <div class="tweet-body">
+            <p>Dharmesh 谈到 agent.ai 的设计哲学时说了一个重要的产品原则：<span class="highlight">"让普通人能构建代理，不是让开发者构建代理"</span>。agent.ai 不要求用户会编程——用自然语言描述"我要一个代理帮我监控竞品定价"，agent.ai 就生成了。</p>
+            <p>他说这个设计的底层逻辑是："代理构建的瓶颈不是技术能力，是 <span class="highlight">想象力</span>——你想不到代理能做什么，就不会去构建。所以降低构建门槛的目的是让更多人'试一下'，然后发现意外用例。"</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 12 · 提示词工程不是工程</div>
+        <div class="tweet-body">
+            <p>Dharmesh 在演讲中对"prompt engineering"这个叫法提出了异议。他说 prompt 不是工程——<span class="highlight">是写作</span>。"工程有标准答案，写作没有。好的 prompt 像好的写作：清晰、有上下文、有约束。差的 prompt 像差的写作：模糊、没有背景、要求不明确。"</p>
+            <p>他给了一个实用建议："写 prompt 时问自己——如果把这个 prompt 给一个 <span class="highlight">新同事</span>，他能做到吗？如果不能，你的 prompt 不够好。因为 AI 跟新同事一样——它聪明但没有上下文。"</p>
+        </div>
+    </div>
+
+    <!-- ===== 🏗️ 组织 ===== -->
+    <div class="section-title"><span class="emoji">🏗️</span> 组织</div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 13 · 人类的不可替代性：EQ > IQ</div>
+        <div class="tweet-body">
+            <p>Dharmesh 在演讲结尾提出了一个核心论点：<span class="highlight">"AI 时代人类最不可替代的能力不是 IQ，是 EQ"</span>。他的论据是：AI 在 IQ 维度上——逻辑推理、信息处理、模式识别——会持续超越人类。但 EQ 维度——共情、信任、关系建立——AI 没有真实生命体验，做不到真正的共情。</p>
+            <p>他说："一个 AI agent 可以说正确的话，但 <span class="highlight">正确的话不等于有效的话</span>。当你的客户愤怒时，你需要的不是一个正确答案，是有人理解你为什么愤怒。AI 可以模仿理解，但不能真正理解。"</p>
+            <p>这个论点的战略含义是：AI 时代 <span class="highlight">人际能力比技术能力更值钱</span>——因为技术能力可以被 AI 放大或替代，人际能力不能。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 14 · 创始人为什么还在写代码</div>
+        <div class="tweet-body">
+            <p>Dharmesh 谈到了一个被人反复问的问题——为什么一个 300 亿美元公司的 CTO 还在写代码。他的回答揭示了一种独特的创新哲学：<span class="highlight">"大公司的创新瓶颈不是创意，是验证"</span>。你有 100 个 idea，但大公司验证一个 idea 需要 6 个月、3 个会议、2 个 PRD。他选择自己写代码——3 天就能验证一个假设。</p>
+            <p>他说："我不是不信任团队。我是相信 <span class="highlight">实验速度</span> 的价值。agent.ai 不是公司规划的，是我实验室里的一个周末项目。3 个月 258,000 用户证明了假设。然后公司再决定要不要吸收。"</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 15 · "be bold, learn fast" 价值观</div>
+        <div class="tweet-body">
+            <p>Dharmesh 在演讲中提到了他对 HubSpot 核心价值观的更新——从原来的"HEART"（Humble、Empathetic、Adaptable、Remarkable、Transparent）增加了 <span class="highlight">"be bold, learn fast"</span>。他说这不是文化口号，是 <span class="highlight">行为标准</span>——bold 意味着敢做有风险的事，learn fast 意味着失败了快速学。</p>
+            <p>他说："AI 时代最大的文化风险不是不够 bold，是 <span class="highlight">不够 fast at learning</span>。因为 AI 每周都在变，你的'正确答案'每周都在过时。如果你不能快速更新认知，你的 bold 就变成了固执。"</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 16 · 从个人 AI 到团队 AI</div>
+        <div class="tweet-body">
+            <p>Dharmesh 在演讲中提到了一个 HubSpot 内部观察：<span class="highlight">AI 使用的最大断层不是个人级和团队级之间，是团队级和公司级之间</span>。个人 AI 用得好很容易——一个人发现一个好 prompt 就提升了。团队 AI 用得好需要标准流程和共享知识。公司级 AI 用得好需要 <span class="highlight">组织设计</span> 的变革。</p>
+            <p>他说 HubSpot 解决这个断层的方式是"三分类推进策略"——把团队按 AI 成熟度分为 Pace setters（已领先，不减速）、Near-in wins（差一点，领导力注意力是关键瓶颈）和 Big bets（需专项投资），差异化推进。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 17 · AI 时代的创业机会</div>
+        <div class="tweet-body">
+            <p>Dharmesh 在演讲结尾给创业者提了一个判断：<span class="highlight">"AI 时代最大的创业机会不是做一个 AI 产品，是用 AI 重新做一个品类"</span>。他的意思是——不要去做一个"AI 版的 X"（比如 AI 版 Salesforce），要用 AI 重新定义这个品类解决的问题。</p>
+            <p>他说："Salesforce 解决的是'怎么管理客户关系'。AI 时代这个问题可能不需要管理了——因为代理自动做了。创业机会是 <span class="highlight">'代理替你管理客户关系后，你还需要什么？'</span> 这个问题还没有人回答。"</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 18 · 总结：AI 是放大器</div>
+        <div class="tweet-body">
+            <p>Dharmesh 在演讲最后总结了他整场的核心信息：<span class="highlight">AI 不是替代器，是放大器</span>——它放大你的判断力、创造力、影响力。但放大器是中性的——它放大好的也放大差的。</p>
+            <p>他说："用 AI 竞争的人会赢过跟 AI 竞争的人。<span class="highlight">但放大 EQ 的人会赢过只放大 IQ 的人</span>。因为 IQ 的部分 AI 会帮你，EQ 的部分只有你能做。"</p>
+            <p>这句话也解释了为什么他在演讲中反复强调 EQ > IQ——不是安慰，是战略判断：<span class="highlight">在 AI 放大 IQ 之后，EQ 变成了人类最后的差异化</span>。</p>
+        </div>
+    </div>
+
+    <a class="back-link" href="index.html">← 返回主报告</a>
+
+    <div class="footer">
+        InsightView · 附录 02 · Dharmesh Shah TEDxBoston 演讲 · 2026-08-09 · 推文 18 条<br>
+        Generated by WorkBuddy
+    </div>
+
+</div>
+</body>
+</html>
