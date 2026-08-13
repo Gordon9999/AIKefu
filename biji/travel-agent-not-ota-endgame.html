@@ -153,162 +153,61 @@
         <p>用户不再"使用 Booking 搜酒店"，而是把一次旅行目标交给它。</p>
         <p>这个判断听起来顺理成章。但现实检验之后，我发现它只对了一半。</p>
 
-        <!-- ============ 第一部分：初版判断 ============ -->
-        <div class="part-title">第一版判断：OTA 会变成 AI 驱动的交易与履约网络</div>
+        <!-- ============ 第一部分：初版判断（简化速览） ============ -->
+    <div class="part-title">第一版判断：OTA 会变成 AI 驱动的交易与履约网络</div>
 
-        <div class="section-title">一、最先消失的是"货架式搜索"</div>
-        <p>现在 Booking、Expedia 很大一部分产品价值，来自：</p>
-        <p>聚合酒店、展示价格、评论和图片、排序筛选、帮助用户完成预订。</p>
-        <p>但这些信息非常适合被大模型重新组织。</p>
-        <br>
-        <p>未来用户可能直接说：</p>
-        <p>10月带父母去日本七天，不要频繁换酒店，酒店离地铁近，预算3万元，避开游客特别多的地方。</p>
-        <br>
-        <p>Agent 会自己完成：</p>
-        <p>理解家庭成员和隐性要求；比较目的地、航班、酒店；读取取消政策；平衡价格、位置和舒适度；生成三套完整方案；获得授权后直接预订。</p>
-        <br>
-        <p>所以，搜索框、筛选器、列表页不会完全消失，但会从主入口退化为辅助工具。</p>
-        <p><span class="highlight">OTA 辛苦积累二十年的"搜索与排序产品"，会被压缩到一次 Agent 调用里。</span></p>
+    <p>一句话概括：<span class="highlight">前台从货架变成 Agent，后台从信息撮合变成交易基础设施。</span>核心逻辑是五条：</p>
+    <br>
+    <p><strong>1. 货架式搜索最先消失。</strong>OTA 辛苦积累二十年的"搜索与排序产品"，会被压缩到一次 Agent 调用里——搜索框、筛选器、列表页从主入口退化为辅助工具。</p>
+    <p><strong>2. 平台真正的下一步是"旅行执行 Agent"。</strong>订单不再是一次交易，而是持续十几天甚至几个月的任务；Booking 的 Connected Trip 会从交叉销售逻辑，升级成持续执行逻辑。</p>
+    <p><strong>3. 前台可能被别人拿走，后台反而更加重要。</strong>ChatGPT、Google、抖音都可能截走用户入口，但库存、价格、支付和售后仍要经过 OTA——平台从显性的流量品牌，变成隐性的交易基础设施。<span class="highlight">界面可能被去中介化，履约却很难被去中介化。</span></p>
+    <br>
+    <p>未来会发生这样的分层：</p>
+    <table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.92rem;">
+        <tr>
+            <th style="background:#1e293b;color:#fff;padding:0.6rem 0.8rem;text-align:left;font-weight:600;">层次</th>
+            <th style="background:#1e293b;color:#fff;padding:0.6rem 0.8rem;text-align:left;font-weight:600;">谁可能掌握</th>
+            <th style="background:#1e293b;color:#fff;padding:0.6rem 0.8rem;text-align:left;font-weight:600;">核心价值</th>
+        </tr>
+        <tr>
+            <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">用户入口</td>
+            <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">ChatGPT、Google、抖音、OTA Agent</td>
+            <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">理解用户、生成方案</td>
+        </tr>
+        <tr>
+            <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">决策与编排</td>
+            <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">旅行 Agent</td>
+            <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">跨品类组合、动态决策</td>
+        </tr>
+        <tr>
+            <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">交易网络</td>
+            <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">Booking、Expedia、航旅平台</td>
+            <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">库存、价格、预订、支付</td>
+        </tr>
+        <tr>
+            <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">履约与风险</td>
+            <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">OTA、供应商、保险机构</td>
+            <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">改签、退款、兜底、赔付</td>
+        </tr>
+        <tr>
+            <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">实际供给</td>
+            <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">酒店、航司、景区</td>
+            <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">提供服务</td>
+        </tr>
+    </table>
+    <br>
+    <p><strong>4. 护城河会改变。</strong>从流量、酒店数量和评论，变成可执行的供给网络、跨供应商履约能力、支付与信用、真实结果数据——静态信息很容易被 AI 获取，<span class="highlight">可靠执行权很难复制</span>。</p>
+    <p><strong>5. 商业模式会从流量抽佣变成多层收费，行业也不会是一家吃掉全部。</strong>更可能拆成三类：拥有用户的旅行 Agent、拥有交易网络的平台、拥有独特供给的经营者。<span class="highlight">OTA 最大的风险，是失去上层的用户决策权，只剩下层的交易履约权。</span></p>
+    <br>
+    <p>对去哪儿的启示：不能只做"能聊天、能推荐"的助手，那层能力很快会成为标配；真正该建设的是用户 Agent、交易编排系统、履约网络三层——把低价升级成 <span class="highlight">Agent 能够理解和执行的结构化低价</span>。</p>
 
-        <div class="section-title">二、平台真正的下一步是"旅行执行 Agent"</div>
-        <p>今天的 AI Trip Planner，大部分还是"会聊天的搜索框"。真正的变化不是生成行程，而是拥有执行能力。</p>
-        <br>
-        <p>一个完整的旅行 Agent 应当连续完成：</p>
-        <p>理解需求；生成方案；检查实时库存和价格；预订机票、酒店、用车和门票；处理支付、身份和权益；监控航变、天气与签证风险；自动改签、取消和索赔；旅行结束后处理发票与报销。</p>
-        <br>
-        <p>这时，<span class="highlight">旅行订单不再是一次交易，而是一个持续运行十几天甚至几个月的任务。</span></p>
-        <p>Booking 已经把方向明确称为 Connected Trip：把住宿、航班、地面交通、景点、支付连接起来，并将 AI 放在这一愿景的中心（Booking Holdings 投资者介绍）。</p>
-        <br>
-        <p>但要注意："Connected Trip"原来是交叉销售逻辑，AI 时代会把它升级成持续执行逻辑。</p>
-        <p>以前是订完酒店，再推销机票。</p>
-        <p>未来是 Agent 持有整个旅行目标，根据变化重新安排所有环节。</p>
+    <div class="quote-block">
+        <p><strong>最后我的核心判断是：</strong></p>
+        <p>OTA 1.0卖库存，OTA 2.0卖比较和流量，OTA 3.0卖完整交易，下一代平台卖的是"替用户承担一次旅行的决策与履约责任"。</p>
+        <p><span class="highlight">谁只是生成答案，谁就会成为薄薄的一层功能；谁能够可靠地执行、修改并为结果负责，谁才是下一代平台。</span></p>
+    </div>
 
-        <div class="section-title">三、前台可能被别人拿走，后台反而更加重要</div>
-        <p>Booking、Expedia 最大的危险，并不是另一家 OTA，而是：</p>
-        <p>ChatGPT；Google Gemini；Apple/Siri；航空公司和酒店自己的 Agent；银行、信用卡和会员体系；抖音、小红书等内容入口。</p>
-        <p>用户可能在这些入口完成决策，不再打开 OTA App。</p>
-        <p>Google 已经把旅行规划、航班酒店信息和预订合作伙伴放进 AI 体验中，合作方包括 Booking、Expedia、Marriott 等（The Verge）。</p>
-        <br>
-        <p>这意味着未来可能发生一个重要分层：</p>
-        <table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.92rem;">
-            <tr>
-                <th style="background:#1e293b;color:#fff;padding:0.6rem 0.8rem;text-align:left;font-weight:600;">层次</th>
-                <th style="background:#1e293b;color:#fff;padding:0.6rem 0.8rem;text-align:left;font-weight:600;">谁可能掌握</th>
-                <th style="background:#1e293b;color:#fff;padding:0.6rem 0.8rem;text-align:left;font-weight:600;">核心价值</th>
-            </tr>
-            <tr>
-                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">用户入口</td>
-                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">ChatGPT、Google、抖音、OTA Agent</td>
-                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">理解用户、生成方案</td>
-            </tr>
-            <tr>
-                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">决策与编排</td>
-                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">旅行 Agent</td>
-                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">跨品类组合、动态决策</td>
-            </tr>
-            <tr>
-                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">交易网络</td>
-                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">Booking、Expedia、航旅平台</td>
-                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">库存、价格、预订、支付</td>
-            </tr>
-            <tr>
-                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">履约与风险</td>
-                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">OTA、供应商、保险机构</td>
-                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">改签、退款、兜底、赔付</td>
-            </tr>
-            <tr>
-                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">实际供给</td>
-                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">酒店、航司、景区</td>
-                <td style="padding:0.55rem 0.8rem;border-bottom:1px solid #eef2f6;">提供服务</td>
-            </tr>
-        </table>
-        <p>因此，Booking 和 Expedia 可能变得有点像旅游业的"支付宝＋AWS＋交易所"：</p>
-        <p>消费者未必知道订单由谁提供；但库存查询、价格确认、支付和售后仍经过它。</p>
-        <p>平台从显性的流量品牌，变成隐性的交易基础设施。</p>
-        <p><span class="highlight">界面可能被去中介化，履约却很难被去中介化。</span></p>
-
-        <div class="section-title">四、Booking 和 Expedia 可能走向不同终局</div>
-        <p><span class="highlight">Booking：全球消费者旅行 Agent</span></p>
-        <p>Booking 更可能继续强化：Booking.com 品牌；Genius 会员；全球酒店供给；支付能力；Connected Trip；直接面向消费者的个人旅行 Agent。</p>
-        <p>它希望掌握从需求产生到旅行结束的整个用户关系。</p>
-        <br>
-        <p>其最终形态可能是：</p>
-        <p>一个知道你过去住过什么酒店、预算多少、喜欢什么位置，并可以替你完成全部交易的全球旅行管家。</p>
-        <p>Booking 的优势是酒店供给密度、转化数据和跨国交易能力。</p>
-        <p>弱点是机票、内容灵感和用户日常入口并不占绝对优势。</p>
-        <br>
-        <p><span class="highlight">Expedia：旅游行业的交易基础设施</span></p>
-        <p>Expedia 很可能越来越偏向双重结构：</p>
-        <p>前台继续经营 Expedia、Hotels.com、Vrbo；后台成为银行、航空公司、零售平台和其他 Agent 的旅游供应商。</p>
-        <p>这个方向已经很明显。2025年第四季度，<span class="highlight">Expedia B2B 总预订额增长24%</span>，明显高于B2C的5%（Expedia 2025年业绩）。</p>
-        <br>
-        <p>Expedia 的未来可能更像：</p>
-        <p>任何公司要在自己的 App 或 Agent 里卖酒店，都可以调用 Expedia 的库存、定价、支付和客服能力。</p>
-        <p>也就是说，Booking 更想成为"旅行领域的超级 Agent"，Expedia 更有可能成为"所有旅行 Agent 背后的平台"。</p>
-
-        <div class="section-title">五、真正的护城河也会改变</div>
-        <p>过去 OTA 的护城河主要是：</p>
-        <p>流量；SEO和广告投放能力；酒店数量；评论数量；App品牌；用户搜索和转化数据。</p>
-        <br>
-        <p>下一阶段会变成：</p>
-        <p><span class="highlight">1. 可执行的供给网络</span></p>
-        <p>不只是"我知道这家酒店多少钱"，而是：价格是否真实；能否立即确认；是否支持变更；退款规则能否机器执行；出问题谁承担损失。</p>
-        <p>静态信息很容易被 AI 获取，<span class="highlight">可靠执行权很难复制</span>。</p>
-        <br>
-        <p><span class="highlight">2. 跨供应商履约能力</span></p>
-        <p>一次旅行可能涉及五六个供应商。</p>
-        <p>航班取消以后，Agent 是否能同时：延后接机；修改酒店入住；调整门票；重新计算总成本；判断由谁赔偿。</p>
-        <p>这里不是简单的 LLM 问题，而是复杂的权限、规则、资金和责任问题。</p>
-        <br>
-        <p><span class="highlight">3. 支付与信用</span></p>
-        <p>未来 Agent 自动交易，需要平台提供：用户授权额度；虚拟卡；多币种结算；延迟付款；价格保障；退款垫付；欺诈识别。</p>
-        <p><span class="highlight">OTA 会越来越像金融机构。</span></p>
-        <br>
-        <p><span class="highlight">4. 真实结果数据</span></p>
-        <p>未来最有价值的不是用户点击了哪家酒店，而是：用户最终是否满意；什么推荐导致取消；哪类酒店实际投诉率高；什么情况下应该贵一点但更可靠；哪个供应商在航变时真正配合。</p>
-        <p>这是"决策—执行—结果"的闭环数据，也是通用 AI 入口短时间内不容易获得的。</p>
-
-        <div class="section-title">六、商业模式会从"流量抽佣"变成多层收费</div>
-        <p>未来收入结构可能包括：</p>
-        <p>交易佣金；Agent成交服务费；支付和汇兑收入；保险与价格保障；供应商软件费；B2B API费用；售后履约费；广告和推荐费。</p>
-        <br>
-        <p>但广告业务会受到挑战。</p>
-        <p>今天酒店可以花钱买排序；未来 Agent 理论上应该为用户寻找最优方案。如果平台一边代表用户，一边收供应商竞价费用，会出现明显的利益冲突。</p>
-        <br>
-        <p>所以未来会分出两种 Agent：</p>
-        <p><span class="highlight">卖方 Agent</span>：帮助平台和酒店成交，靠佣金赚钱。</p>
-        <p><span class="highlight">买方 Agent</span>：真正代表用户，可能由用户、会员或信用卡机构付费。</p>
-        <p>这可能成为未来旅行平台最大的制度性矛盾。</p>
-
-        <div class="section-title">七、最终不会是"一家公司吃掉全部"</div>
-        <p>更可能形成三类公司：</p>
-        <p><span class="highlight">第一类：拥有用户的旅行 Agent</span>——负责理解需求、记忆偏好和做决策。可能是 Booking，也可能是 ChatGPT、Google、抖音或者银行。</p>
-        <p><span class="highlight">第二类：拥有交易网络的平台</span>——负责供给、价格、支付、预订和售后。Booking、Expedia、携程在这里仍然很强。</p>
-        <p><span class="highlight">第三类：拥有独特供给的经营者</span>——大型酒店集团、航空公司、邮轮、景区继续掌握实际产品，并通过多个 Agent 分销。</p>
-        <br>
-        <p>所以 OTA 不会简单被 AI 消灭，而是会被拆成两部分：</p>
-        <p><span class="highlight">上层的用户决策权，和下层的交易履约权。</span></p>
-        <p>它们现在同时拥有两者；未来最大的风险是失去第一部分，只剩第二部分。</p>
-
-        <div class="section-title">对去哪儿更直接的启示</div>
-        <p>对去哪儿来说，不能只做一个"能聊天、能推荐"的旅行助手。那层能力很快会成为标配，也很容易被通用模型替代。</p>
-        <p>真正该建设的是三层：</p>
-        <p>上层：用户 Agent——理解"便宜但不能太折腾"这样的真实偏好。</p>
-        <p>中层：交易编排系统——跨机票、酒店、火车、用车进行组合和动态调整。</p>
-        <p>底层：履约网络——价格可信、订单可执行、异常可处理、责任可承担。</p>
-        <br>
-        <p>去哪儿最值得利用的，不只是低价，而是把低价升级成：</p>
-        <p><span class="highlight">Agent 能够理解和执行的结构化低价。</span></p>
-        <p>例如，它不只是找到最低票价，而是知道：便宜200元但要凌晨出发，用户是否接受；分开出票的风险是什么；行李费加进去以后是否还便宜；航变以后谁负责；这次节省的钱值不值得增加失败概率。</p>
-        <p>这恰好把"结构化低价"和旅行 Agent 连在了一起。</p>
-
-        <div class="quote-block">
-            <p><strong>最后我的核心判断是：</strong></p>
-            <p>OTA 1.0卖库存，OTA 2.0卖比较和流量，OTA 3.0卖完整交易，下一代平台卖的是"替用户承担一次旅行的决策与履约责任"。</p>
-            <p><span class="highlight">谁只是生成答案，谁就会成为薄薄的一层功能；谁能够可靠地执行、修改并为结果负责，谁才是下一代平台。</span></p>
-        </div>
-
-        <!-- ============ 第二部分：现实反驳 ============ -->
+    <!-- ============ 第二部分：现实反驳 ============ -->
         <div class="part-title">但做了这么久，我发现现实并非如此</div>
         <p>好像做了这么久，并非如此。</p>
         <p>比如行程规划，我们实际生活中的行程规划基本不是靠理性推荐，而是自己去看非常多的视频和图文，形成兴趣。</p>
