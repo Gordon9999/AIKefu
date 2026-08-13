@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>附录 11 · Atlas 推理引擎技术解析：六步循环</title><style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif; background:#f8fafc; color:#1e293b; line-height:1.8; }
+.container { max-width:680px; margin:0 auto; padding:2rem 1.2rem 4rem; background:#fff; min-height:100vh; }
+.report-header { text-align:center; padding:2rem 0 1.5rem; border-bottom:2px solid #e2e8f0; margin-bottom:1.5rem; }
+.report-header h1 { font-size:1.5rem; color:#0f172a; margin-bottom:0.3rem; }
+.report-header .tag { font-size:0.8rem; color:#64748b; }
+.report-header .date { font-size:0.8rem; color:#94a3b8; margin-top:0.3rem; }
+.section-title { font-size:1.15rem; font-weight:700; color:#0f172a; margin:1.8rem 0 0.8rem; padding-bottom:0.4rem; border-bottom:1px solid #e2e8f0; }
+.section-title .emoji { margin-right:0.3rem; }
+.tweet { padding:1.2rem 0 1.2rem 0.8rem; border-bottom:1px solid #eef2f6; }
+.tweet:last-of-type { border-bottom:none; }
+.tweet .tweet-label { font-weight:600; font-size:0.9rem; color:#2563eb; margin-bottom:0.2rem; }
+.tweet .tweet-body { font-size:1rem; color:#1e293b; line-height:1.8; }
+.tweet .tweet-body p { margin-bottom:0.3rem; }
+.tweet .tweet-body p:last-child { margin-bottom:0; }
+.highlight { color:#16a34a; font-weight:500; }
+.badge { display:inline-block; background:#dcfce7; color:#16a34a; font-size:0.7rem; padding:0.1rem 0.4rem; border-radius:4px; margin-left:0.4rem; }
+.appendix-index { margin-top:2rem; padding-top:1.5rem; border-top:2px solid #e2e8f0; }
+.appendix-index h2 { font-size:1.1rem; color:#0f172a; margin-bottom:0.8rem; }
+.appendix-index h3 { font-size:0.95rem; color:#475569; margin:1rem 0 0.4rem; }
+.appendix-index ol { margin-left:1.5rem; margin-bottom:0.8rem; }
+.appendix-index li { font-size:0.85rem; margin-bottom:0.3rem; }
+.appendix-index li a { color:#2563eb; text-decoration:none; }
+.appendix-index li a:hover { text-decoration:underline; }
+.footer { text-align:center; padding:1.5rem 0; font-size:0.75rem; color:#94a3b8; border-top:1px solid #e2e8f0; margin-top:2rem; }
+.product-evo { background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:1.2rem; margin:1rem 0 1.5rem; }
+.product-evo h3 { font-size:0.95rem; color:#0f172a; margin-bottom:0.8rem; }
+.product-evo svg { width:100%; height:auto; display:block; }
+.product-evo ul { margin-left:1.2rem; margin-top:0.8rem; }
+.product-evo li { font-size:0.85rem; color:#475569; margin-bottom:0.3rem; }
+.lf-body h2 { font-size:1.1rem; color:#0f172a; margin:1.5rem 0 0.6rem; padding-bottom:0.3rem; border-bottom:1px solid #e2e8f0; }
+.lf-body p { font-size:1rem; color:#1e293b; line-height:1.8; margin-bottom:0.5rem; }
+.lf-body ul { margin-left:1.5rem; margin-bottom:0.5rem; }
+.lf-body li { font-size:0.95rem; margin-bottom:0.2rem; }
+.lf-body blockquote { border-left:3px solid #2563eb; padding-left:1rem; margin:0.8rem 0; color:#475569; font-style:italic; }
+@media (max-width:680px) { .container { padding:1.5rem 1rem 3rem; } .report-header h1 { font-size:1.2rem; } }
+</style></head><body><div class="container"><div class="report-header"><div class="tag">InsightView · 附录 11 · By Claude</div><h1>附录 11 · Atlas 推理引擎技术解析：六步循环</h1></div><div class="section-title"><span class="emoji">📌</span> 核心观点</div><div class="tweet"><div class="tweet-label">推 1 · Atlas 定位</div><div class="tweet-body"><p><span class="highlight">Atlas Reasoning Engine</span> 不是「Salesforce 里的 ChatGPT」。</p><p>是多模型推理系统，决定智能体做什么、什么顺序、用什么信息。</p><p>在用户请求和可调用工具之间的规划和执行层。</p></div></div><div class="section-title"><span class="emoji">👤</span> 访谈人背景</div><div class="tweet"><div class="tweet-label">推 9 · 背景信息</div><div class="tweet-body"><p>来源：🛠️ 工程与技术</p><p>录制时间：未提供</p><p>访谈人：未提供</p><p>访谈嘉宾：未提供</p><p>时长：未提供</p></div></div><div class="section-title"><span class="emoji">💬</span> 行业</div><div class="tweet"><div class="tweet-label">推 10 · 行业观点</div><div class="tweet-body"><p>本文行业观点详见核心观点与各维度板块。</p></div></div><div class="section-title"><span class="emoji">📦</span> 公司</div><div class="tweet"><div class="tweet-label">推 11 · 公司观点</div><div class="tweet-body"><p>本文公司相关观点见核心观点板块。</p></div></div><div class="section-title"><span class="emoji">🧩</span> 产品</div><div class="tweet"><div class="tweet-label">推 2 · 六步循环①理解意图</div><div class="tweet-body"><p>步骤1 <span class="highlight">理解意图</span>：解析用户输入确定请求类型。</p><p>不是关键词匹配，而是从对话历史解释上下文。</p><p>映射到可用的 agent topics，定义智能体被允许的范围。</p></div></div><div class="tweet"><div class="tweet-label">推 3 · 六步循环②RAG检索</div><div class="tweet-body"><p>步骤2 <span class="highlight">RAG 检索上下文</span>：向 Data Cloud 发出检索查询。</p><p>拉取最相关的客户记录、案例历史、产品目录到推理窗口。</p><p>这是区分 grounded 响应和幻觉的关键——读取真实记录而非训练数据。</p></div></div><div class="tweet"><div class="tweet-label">推 4 · 六步循环③④规划执行</div><div class="tweet-body"><p>步骤3 <span class="highlight">规划行动序列</span>：构建计划——调用哪些 actions、什么顺序、什么参数。</p><p>步骤4 <span class="highlight">执行行动</span>：调用 Salesforce 记录操作、Flows、Apex、外部 API 或 MuleSoft。</p><p>每个行动返回结果，引擎在决定下一步前纳入结果。</p></div></div><div class="tweet"><div class="tweet-label">推 5 · 六步循环⑤⑥验证响应</div><div class="tweet-body"><p>步骤5 <span class="highlight">验证输出</span>：检查输出是否与意图和上下文一致。</p><p>不一致则重新规划和执行额外步骤。</p><p>步骤6 <span class="highlight">响应</span>：最终输出返回用户，完整推理轨迹通过 Trust Layer 记录。</p></div></div><div class="tweet"><div class="tweet-label">推 6 · Trust Layer</div><div class="tweet-body"><p><span class="highlight">Einstein Trust Layer</span> 包裹每个请求和响应。</p><p>Mask PII、扫描毒性和提示注入、执行零数据保留协议。</p><p>记录每个操作供审计。数据不离开 Salesforce 基础设施。</p></div></div><div class="tweet"><div class="tweet-label">推 7 · 架构优势</div><div class="tweet-body"><p>与独立 AI 工具的最大架构优势：<span class="highlight">不需要单独集成层</span>。</p><p>Agent 操作是原生 Salesforce 操作。</p><p>自动应用共享规则、验证规则和触发器——继承用户权限。</p></div></div><div class="tweet"><div class="tweet-label">推 8 · Data Cloud grounding</div><div class="tweet-body"><p><span class="highlight">Data Cloud</span> 作为 grounding 层。</p><p>统一来自 org 和外部源的数据到单一可查询 CDP。</p><p>没有 Data Cloud，跨实体上下文缺失——VIP 和流失风险小账户得到相同通用答案。</p></div></div><div class="section-title"><span class="emoji">🏗️</span> 组织</div><div class="tweet"><div class="tweet-label">推 13 · 组织观点</div><div class="tweet-body"><p>本文组织相关观点见核心观点板块。</p></div></div><div class="footer">InsightView · Salesforce 如何从 SaaS 的成功再次跨越 Agent 的挑战 · 2026</div></div></body></html>
