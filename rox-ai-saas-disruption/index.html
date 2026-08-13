@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightView · Rox AI 将如何颠覆 SaaS</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Noto Sans SC", sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2rem 1.2rem;
+        }
+        .report-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .report-header .tag {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.05em;
+        }
+        .report-header h1 {
+            font-size: 1.8rem;
+            color: #0f172a;
+            margin-bottom: 0.4rem;
+            font-weight: 700;
+        }
+        .report-header .subtitle {
+            font-size: 1rem;
+            color: #475569;
+        }
+        .report-header .meta {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-top: 0.6rem;
+        }
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 2.5rem 0 0.5rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .section-title .emoji { margin-right: 0.4rem; }
+        .tweet {
+            padding: 1.2rem 0 1.2rem 0.8rem;
+            border-bottom: 1px solid #eef2f6;
+        }
+        .tweet:last-of-type { border-bottom: none; }
+        .tweet .tweet-label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #7c3aed;
+            margin-bottom: 0.3rem;
+        }
+        .tweet .tweet-body {
+            font-size: 1rem;
+            color: #1e293b;
+            line-height: 1.85;
+        }
+        .tweet .tweet-body p { margin-bottom: 0.4rem; }
+        .tweet .tweet-body p:last-child { margin-bottom: 0; }
+        .highlight { color: #7c3aed; font-weight: 500; }
+        .product-evo {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1rem 0 1.5rem 0;
+        }
+        .product-evo h3 {
+            font-size: 1.1rem;
+            color: #0f172a;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .product-evo svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .report-footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid #e2e8f0;
+            color: #94a3b8;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="report-header">
+        <div class="tag">InsightView · 独立主题报告</div>
+        <h1>Rox AI 将如何颠覆 SaaS</h1>
+        <div class="subtitle">"Legacy SaaS is becoming invisible as agents automate revenue growth"</div>
+        <div class="meta">调研日期：2026 年 8 月 9 日 · 推文式报告</div>
+    </div>
+
+    <!-- 核心观点 -->
+    <div class="section-title"><span class="emoji">📌</span>核心观点</div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 1 · 核心论点</div>
+        <div class="tweet-body">
+            <p>Rox AI CEO Ishan Mukherjee 在 Databricks 合作发布会上说了一句话：<span class="highlight">"Legacy SaaS is becoming invisible as agents automate revenue growth."</span></p>
+            <p>这不是营销口号。这是 Rox 的战略蓝图——当 AI Agent 能自主完成销售工作流，传统 SaaS 工具的价值就从"帮你做事"降级为"被 Agent 远程操作的后台数据库"。UI 层价值归零，数据层成为唯一资产。</p>
+            <p>Rox 的打法是：不替换你的 CRM，而是用 Agent Swarm 架空它。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 2 · 三维度成功归因</div>
+        <div class="tweet-body">
+            <p>Rox 2 年做到 $1.2B 独角兽（$8M ARR，150 倍估值倍数），三个维度解释这场豪赌：</p>
+            <p>① <span class="highlight">范式翻转</span>：System of Record 从 CRM 迁移到数据仓库——Rox 仓库原生架构恰好踩中趋势</p>
+            <p>② <span class="highlight">Agent Swarm 护城河</span>：一个账户一个专属 Agent，7×24 自主监控、研究、外联——不是"帮你做得更快"，而是"替你做"</p>
+            <p>③ <span class="highlight">创始人基因</span>：Ishan Mukherjee 是可观测性领域出身（Pixie 创始人→New Relic CGO），把可观测性的"监控一切"思维带入了销售——每个账户都像被监控的微服务</p>
+        </div>
+    </div>
+
+    <!-- 主题简介 -->
+    <div class="section-title"><span class="emoji">🏢</span>主题简介</div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 3 · 公司画像</div>
+        <div class="tweet-body">
+            <p>Rox AI，2024 年成立于旧金山，创始人 Ishan Mukherjee（前 New Relic 首席增长官、Pixie 联合创始人）。</p>
+            <p>融资轨迹：$50M 种子轮（Sequoia 领投）+ A 轮（General Catalyst 领投，GV 跟投），2026 年 3 月 General Catalyst 领投新一轮，估值 $1.2B。</p>
+            <p>核心数据：5000+ 组织，25M Agent 运行，预计 2025 年底 $8M ARR。客户包括 MongoDB、Ramp、New Relic、Confluent、Together AI、BetterUp、Couchbase。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 4 · 创始人的洞察</div>
+        <div class="tweet-body">
+            <p>Mukherjee 的起点观察很锐利：销售团队花在更新 CRM 上的时间比实际卖东西还多。CRM 是 20 年前设计的，不是为 AI 时代构建的。</p>
+            <p>但他的解法不是重建 CRM——而是让 Agent 代替人去做所有 CRM 操作。他在 LinkedIn 写道：<span class="highlight">"Legacy SaaS doesn't have the full picture, and bolting on AI features won't fix that."</span></p>
+            <p>关键洞见：Agent 只有在拥有完整上下文时才能驱动真实收入。而完整上下文不在 CRM 里——它在数据仓库里。</p>
+        </div>
+    </div>
+
+    <!-- 公司战略 -->
+    <div class="section-title"><span class="emoji">📦</span>公司战略</div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 5 · 覆盖派路线：不换 CRM，架空它</div>
+        <div class="tweet-body">
+            <p>Rox 走的是"覆盖派"路线——不要求企业换掉 Salesforce 或 HubSpot，而是把 Agent 挂在现有系统之上。</p>
+            <p>这不是妥协，是战略。企业 CRM 里有 20 年的数据积累和流程配置，替换成本极高。Rox 的逻辑是：<span class="highlight">UI 层归我，数据层归你</span>——Agent 在前端做所有事，CRM 沦为后台被远程操作的数据库。</p>
+            <p>如果成功，Salesforce 就变成了"Agent 操作的存储引擎"，而 Rox 成为用户真正交互的界面。这是用 Agent 架空 SaaS 的终极打法。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 6 · 仓库原生：押注 System of Record 迁移</div>
+        <div class="tweet-body">
+            <p>Rox 最核心的战略赌注：企业正在把客户数据从 CRM 迁移到数据仓库（Snowflake / Databricks / BigQuery），仓库正在成为新的 System of Record。</p>
+            <p>Rox 原生运行在客户仓库之上——Agent 直接查询仓库数据，不需要搬数据。这是和所有传统 SaaS 的本质区别：</p>
+            <p>传统 SaaS：数据在 SaaS 厂商的数据库里，你只是租户。</p>
+            <p>Rox：数据在你自己的仓库里，Rox 只跑 Agent 逻辑。</p>
+            <p>这意味着数据主权完全归客户，企业安全团队不再有阻力——这是 Rox 能拿下 Global 2000 大客户的关键。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 7 · 整合 GTM Stack：消灭碎片化</div>
+        <div class="tweet-body">
+            <p>AWS 案例研究揭示了一个惊人的数字：<span class="highlight">10000+ 工具</span>被设计来解决收入团队碎片化的工作流——账户研究、pipeline 生成、外联、会议录制、数据录入……</p>
+            <p>Rox 的定位是"垂直整合的收入栈"——用一个平台替换掉这一切。从 pipeline 生成到交易管理到续约扩展，全生命周期覆盖。</p>
+            <p>这不是"更好的 CRM"，这是"CRM + Gong + Outreach + ZoomInfo + Clari + Apollo + ZoomInfo + 6sense……"的终结者。每消灭一个 SaaS 工具，Rox 就吞并一块预算。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 8 · 定价革命：Agent Actions 取代 per-seat</div>
+        <div class="tweet-body">
+            <p>Rox 的定价模型本身就是对 SaaS 的颠覆：</p>
+            <p>免费版：2000 Agent Actions/月，全部功能开放</p>
+            <p>Core 版：$50/月，5000 Actions/月</p>
+            <p>企业版：定制报价，六位数年合同</p>
+            <p>关键设计：<span class="highlight">所有功能在所有版本中全部开放</span>——唯一区别是 Agent Actions 用量。这是纯粹的消费阶梯模型，不是传统的功能门控 SaaS 分层。</p>
+            <p>更激进的是：Actions 不过期但也不滚存，用完就"提前续费"重置。Agent 7×24 后台监控也在消耗 Actions——空闲账户也在烧预算。这让支出真正与价值挂钩，而不是与座位数挂钩。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 9 · Databricks 战略合作：基础设施绑定</div>
+        <div class="tweet-body">
+            <p>2026 年 3 月，Rox 宣布与 Databricks 合作推出 "Built On Databricks" 解决方案——Rox 直接运行在 Databricks Lakehouse 之上。</p>
+            <p>这不是普通的集成，是基础设施层绑定。Databricks 提供数据湖仓基础（开放格式、治理、客户控制），Rox 提供 Agent 工作流层。</p>
+            <p>Databricks VP GTM Heather Akuiyibo 的表态很直接：<span class="highlight">"Revenue teams have world-class data in Databricks and need agents that can turn that data into action."</span></p>
+            <p>这形成了"现代企业 GTM 栈"：仓库是地基，Agent 是引擎，传统 SaaS 被跳过。</p>
+        </div>
+    </div>
+
+    <!-- 产品战略 -->
+    <div class="section-title"><span class="emoji">🧩</span>产品战略</div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 10 · Agent Swarm 架构</div>
+        <div class="tweet-body">
+            <p>Rox 的核心产品是"Agent Swarm"——一个账户分配一个专属 AI Agent，7×24 自主运行。</p>
+            <p>每个 Agent 的工作流涵盖：</p>
+            <p>· 研究与富化：扫描公开数据源（新闻、招聘、财报、博客），构建账户画像</p>
+            <p>· 风险监控：实时检测客户流失信号、续约风险</p>
+            <p>· 个性化外联：基于实时触发器起草并发送超个性化消息</p>
+            <p>· CRM 更新：自动写回 Salesforce/HubSpot，保持记录最新</p>
+            <p>· 会议支持：会前准备简报、会中实时辅助、会后自动笔记</p>
+            <p>· RFP 自动填写：技术文档和安全问卷从数周缩短到数分钟</p>
+            <p>Agent 用 Amazon SQS 事件驱动，始终在线。底层用 Claude Sonnet 4 via Amazon Bedrock 做推理和工具调用。</p>
+        </div>
+    </div>
+
+    <div class="product-evo">
+        <h3>Rox AI 产品演进路线</h3>
+        <svg viewBox="0 0 680 280" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="roxGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            <!-- Timeline line -->
+            <line x1="60" y1="140" x2="620" y2="140" stroke="#e2e8f0" stroke-width="3" />
+            <line x1="60" y1="140" x2="620" y2="140" stroke="url(#roxGrad1)" stroke-width="3" />
+
+            <!-- Phase 1: 2024 Q1 -->
+            <circle cx="80" cy="140" r="8" fill="#7c3aed" />
+            <text x="80" y="115" text-anchor="middle" font-size="11" fill="#7c3aed" font-weight="600">2024 Q1</text>
+            <text x="80" y="170" text-anchor="middle" font-size="12" fill="#0f172a" font-weight="600">创立</text>
+            <text x="80" y="185" text-anchor="middle" font-size="10" fill="#64748b">仓库原生架构</text>
+            <text x="80" y="198" text-anchor="middle" font-size="10" fill="#64748b">Agent Swarm 原型</text>
+
+            <!-- Phase 2: 2024 Q4 -->
+            <circle cx="220" cy="140" r="8" fill="#7c3aed" />
+            <text x="220" y="115" text-anchor="middle" font-size="11" fill="#7c3aed" font-weight="600">2024 Q4</text>
+            <text x="220" y="170" text-anchor="middle" font-size="12" fill="#0f172a" font-weight="600">$50M 融资</text>
+            <text x="220" y="185" text-anchor="middle" font-size="10" fill="#64748b">Sequoia 种子轮</text>
+            <text x="220" y="198" text-anchor="middle" font-size="10" fill="#64748b">GC A 轮 + GV</text>
+
+            <!-- Phase 3: 2025 Q3 -->
+            <circle cx="360" cy="140" r="8" fill="#7c3aed" />
+            <text x="360" y="115" text-anchor="middle" font-size="11" fill="#7c3aed" font-weight="600">2025 Q3</text>
+            <text x="360" y="170" text-anchor="middle" font-size="12" fill="#0f172a" font-weight="600">正式上线</text>
+            <text x="360" y="185" text-anchor="middle" font-size="10" fill="#64748b">Autopilot 工作流</text>
+            <text x="360" y="198" text-anchor="middle" font-size="10" fill="#64748b">Command 自然语言编排</text>
+
+            <!-- Phase 4: 2026 Q1 -->
+            <circle cx="500" cy="140" r="8" fill="#7c3aed" />
+            <text x="500" y="115" text-anchor="middle" font-size="11" fill="#7c3aed" font-weight="600">2026 Q1</text>
+            <text x="500" y="170" text-anchor="middle" font-size="12" fill="#0f172a" font-weight="600">$1.2B 独角兽</text>
+            <text x="500" y="185" text-anchor="middle" font-size="10" fill="#64748b">Databricks 战略合作</text>
+            <text x="500" y="198" text-anchor="middle" font-size="10" fill="#64748b">Gartner 上线</text>
+
+            <!-- Phase 5: 2026 Q2+ -->
+            <circle cx="610" cy="140" r="8" fill="#c084fc" stroke="#7c3aed" stroke-width="2" />
+            <text x="610" y="115" text-anchor="middle" font-size="11" fill="#7c3aed" font-weight="600">2026 Q2+</text>
+            <text x="610" y="170" text-anchor="middle" font-size="12" fill="#0f172a" font-weight="600">Autofill Beta</text>
+            <text x="610" y="185" text-anchor="middle" font-size="10" fill="#64748b">MCP 协议支持</text>
+            <text x="610" y="198" text-anchor="middle" font-size="10" fill="#64748b">多 Agent 编排</text>
+
+            <!-- Bottom annotations -->
+            <rect x="60" y="225" width="560" height="40" rx="8" fill="#f5f3ff" stroke="#ddd6fe" />
+            <text x="340" y="242" text-anchor="middle" font-size="11" fill="#7c3aed" font-weight="600">核心演进逻辑</text>
+            <text x="340" y="258" text-anchor="middle" font-size="10" fill="#64748b">监控账户 → 自主行动 → 整合 GTM Stack → 让 Legacy SaaS 隐形</text>
+        </svg>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 11 · Command 自然语言编排</div>
+        <div class="tweet-body">
+            <p>Rox 的交互界面叫 Command——用自然语言编排多个 Agent。说一句"帮我准备 ACME 续约会议"，Command 会自动分发任务：研究账户→映射干系人→起草外联→更新 CRM，一个工作流搞定。</p>
+            <p>这本质上是把 SaaS 的"点击式 UI"换成了"对话式 UI"。用户不再需要在 10 个工具之间切换——他们只需要和 Rox 对话。</p>
+            <p>多界面策略：Rox App、Slack、MS Teams、macOS 桌面端、Chrome 扩展、iOS 移动端、MCP API——Agent 嵌入用户已有的工作流，不要求用户打开新界面。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 12 · 知识图谱：私有 + 公开双层架构</div>
+        <div class="tweet-body">
+            <p>Rox 构建了双层知识图谱，这是 Agent 做出高质量决策的基础：</p>
+            <p><span class="highlight">私有知识图谱</span>：结合 CRM 数据、邮件、通话转录、产品使用数据、计费数据、会议录制——存储在 Amazon Aurora PostgreSQL 中，每个客户独立。</p>
+            <p><span class="highlight">公开知识图谱</span>：用 AWS Lambda 大规模提取新闻、招聘信息、财务数据、博客、新闻稿、产品发布信息——持续更新，给所有客户共享外部上下文。</p>
+            <p>两层融合后，每个 Agent 对账户的理解比任何单一 SaaS 工具都完整。这就是 Mukherjee 说的"full context"——Agent 只有看到全貌才能做真实工作。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 13 · 仓库原生的两种部署模式</div>
+        <div class="tweet-body">
+            <p>Rox 提供两种仓库部署选项，精准覆盖不同成熟度的企业客户：</p>
+            <p><span class="highlight">Redshift Data Share</span>：面向已有数据管道的企业——Rox 只管计算，数据留在客户的 Redshift 生产集群上，Rox 基础设施上不存储任何静态数据。这是最高级别的数据主权保证。</p>
+            <p><span class="highlight">Rox 管理的 Redshift</span>：面向没有专门数据团队的客户——Rox 通过 ETL 从各业务系统收集数据，整合到 Rox 管理的 Redshift 集群中。</p>
+            <p>这种灵活性让 Rox 既能服务 MongoDB 这样有成熟数据基础设施的大厂，也能服务没有仓库的中小客户。Databricks / Snowflake / BigQuery 同理。</p>
+        </div>
+    </div>
+
+    <!-- 组织文化 -->
+    <div class="section-title"><span class="emoji">🏗️</span>组织文化与未来</div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 14 · 可观测性基因：把销售当微服务监控</div>
+        <div class="tweet-body">
+            <p>Mukherjee 的背景深刻影响了 Rox 的架构哲学。他创立的 Pixie 是 Kubernetes 可观测性工具——监控微服务集群的健康状态。</p>
+            <p>Rox 的 Agent Swarm 本质上把同样的思维移植到了销售：每个客户账户 = 一个被监控的微服务，Agent = 监控探针，知识图谱 = 可观测性平台。</p>
+            <p>这种基因让 Rox 在"Agent 自主性"上走得更远——传统 SaaS 背景的创始人会本能地加"人在环中"的安全阀，而可观测性背景的创始人会优先追求"全自动化 + 实时告警"。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 15 · 客户成果与验证</div>
+        <div class="tweet-body">
+            <p>Beta 测试期间的数据（AWS 联合案例研究）：</p>
+            <p>· 销售代表生产力提升 <span class="highlight">50%</span></p>
+            <p>· 销售速度提升 <span class="highlight">20%</span></p>
+            <p>· 每代表收入翻倍 <span class="highlight">2x</span></p>
+            <p>· 新代表达到完全生产力速度提升 <span class="highlight">50%</span></p>
+            <p>MongoDB CIO Deepa Gopinath："It's like having a rocket engine for your AI needs for your go to market organization. It's fast, it's scalable, and it's safe."</p>
+            <p>但必须指出：$1.2B 估值对 $8M ARR = 150 倍倍数，是 SaaS 历史上对年轻公司最高的估值之一。G2 上零独立评价——这是信仰投资，不是数据投资。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 16 · Sequoia 晚宴信号</div>
+        <div class="tweet-body">
+            <p>2025 年底，Mukherjee 和 Sequoia 在纽约联合举办了一场 CIO 晚宴，从 LinkedIn 帖子可以看出行业心态的转变：</p>
+            <p>"6 个月前，对话还是关于生产力。今天，对话变成了关于直接与收入挂钩的自动化。"</p>
+            <p>三个关键共识：</p>
+            <p>① 模型已经足够好，Agent 今天就能驱动真实收入——但前提是拥有每个账户的完整上下文</p>
+            <p>② Legacy SaaS 没有完整画面，"bolt on AI" 修不好——领导者在寻找 AI 原生平台</p>
+            <p>③ 从 SaaS 工具迁移到 AI 原生工具是董事会级优先事项——"if" 已经不在讨论范围内了</p>
+            <p>这场晚宴是 Rox 融资叙事的核心载体：不是卖产品，是卖"趋势不可避免"的共识。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 17 · 关键风险</div>
+        <div class="tweet-body">
+            <p>① <span class="highlight">估值泡沫风险</span>：$1.2B / $8M ARR = 150 倍，如果 ARR 增速放缓，估值修正压力极大</p>
+            <p>② <span class="highlight">Agent Action 定价不透明</span>：公开页面没有每 Action 美元价格，客户难以预算——一个多步工作流可能消耗 5-50 个 Actions，10 人团队可能 2-3 周用完 5000 个</p>
+            <p>③ <span class="highlight">数据基础设施门槛</span>：如果客户没有数据仓库和 Salesforce，Rox 不适用——天然限制了 TAM 到大企业</p>
+            <p>④ <span class="highlight">竞争夹击</span>：上面有 Salesforce Agentforce + ServiceNow AI Control Tower 做平台级防御，旁边有 Day AI / Lightfield 从替换派路线进攻，Rox 处在三面受敌的位置</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 18 · 终局展望</div>
+        <div class="tweet-body">
+            <p>Rox 的终极愿景：成为"收入操作系统"——不是更好的 CRM，而是替代整个 GTM Stack 的 Agent 平台。</p>
+            <p>如果成功，企业 GTM 架构将从"SaaS 工具矩阵"变成"仓库 + Agent Swarm"两层结构：数据在仓库（Snowflake/Databricks），Agent 在 Rox，传统 SaaS 工具全部消失。</p>
+            <p>这就是 Mukherjee 说的"Legacy SaaS is becoming invisible"的完整含义——不是 SaaS 被替换，是 SaaS 变成不可见的后台基础设施，而 Rox 成为用户唯一交互的收入引擎。</p>
+            <p>这是对 SaaS 商业模式最激进的挑战：不是做一个更好的 SaaS，而是让 SaaS 这个品类本身变得多余。</p>
+        </div>
+    </div>
+
+    <div class="report-footer">
+        InsightView · Rox AI 将如何颠覆 SaaS · 2026.08.09
+    </div>
+</div>
+</body>
+</html>
