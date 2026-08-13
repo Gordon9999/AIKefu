@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightView · Day AI 如何挑战 SaaS</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Noto Sans SC", sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2rem 1.2rem;
+        }
+        .report-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .report-header .tag {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.05em;
+        }
+        .report-header h1 {
+            font-size: 1.8rem;
+            color: #0f172a;
+            margin-bottom: 0.4rem;
+            font-weight: 700;
+        }
+        .report-header .subtitle {
+            font-size: 1rem;
+            color: #475569;
+        }
+        .report-header .meta {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-top: 0.6rem;
+        }
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 2.5rem 0 0.5rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .section-title .emoji { margin-right: 0.4rem; }
+        .tweet {
+            padding: 1.2rem 0 1.2rem 0.8rem;
+            border-bottom: 1px solid #eef2f6;
+        }
+        .tweet:last-of-type { border-bottom: none; }
+        .tweet .tweet-label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #0891b2;
+            margin-bottom: 0.3rem;
+        }
+        .tweet .tweet-body {
+            font-size: 1rem;
+            color: #1e293b;
+            line-height: 1.85;
+        }
+        .tweet .tweet-body p { margin-bottom: 0.4rem; }
+        .tweet .tweet-body p:last-child { margin-bottom: 0; }
+        .highlight { color: #0891b2; font-weight: 500; }
+        .product-evo {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1rem 0 1.5rem 0;
+        }
+        .product-evo h3 {
+            font-size: 1.1rem;
+            color: #0f172a;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .product-evo svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .report-footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid #e2e8f0;
+            color: #94a3b8;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="report-header">
+        <div class="tag">InsightView · 独立主题报告</div>
+        <h1>Day AI 如何挑战 SaaS</h1>
+        <div class="subtitle">"The Cursor of CRM" — CRM should be built for AI agents, not for humans</div>
+        <div class="meta">调研日期：2026 年 8 月 9 日 · 推文式报告</div>
+    </div>
+
+    <!-- 核心观点 -->
+    <div class="section-title"><span class="emoji">📌</span>核心观点</div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 1 · 核心论点</div>
+        <div class="tweet-body">
+            <p>Day AI 联合创始人 Christopher O'Donnell 说：<span class="highlight">"This is the Cursor for CRM — high-impact, difficult work you'd ask it to do that a human wouldn't do full-time."</span></p>
+            <p>这句话定义了 Day AI 对 SaaS 的挑战方式：不是做一个更好的 CRM，而是做一个"CRM 里的 Cursor"——就像 Cursor 重新定义了 IDE 一样，Day AI 要重新定义 CRM 这个品类本身。</p>
+            <p>核心颠覆逻辑：CRM 应该为 AI Agent 设计，不是为人设计。当 Agent 成为 CRM 的主要用户，人就从"数据录入员"变回"销售员"。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 2 · 三维度成功归因</div>
+        <div class="tweet-body">
+            <p>Day AI 从 2023 年创立到 2026 年 2 月 GA，Sequoia 连续领投两轮（$4M 种子 + $20M A 轮），三个维度解释这场押注：</p>
+            <p>① <span class="highlight">范式翻转</span>：从"System of Record"到"System of Delay"再到"System of Action"——CRM 三级跳</p>
+            <p>② <span class="highlight">Context Graph 架构</span>：不只记录"发生了什么"，而是捕获"为什么发生"——为 AI Agent 构建可推理的上下文图谱</p>
+            <p>③ <span class="highlight">创始人基因</span>：O'Donnell + Pici 在 HubSpot 用十年构建了世界级 CRM，现在赌"人不应该手动录入数据"——这是对自己前产品核心假设的自我颠覆</p>
+        </div>
+    </div>
+
+    <!-- 主题简介 -->
+    <div class="section-title"><span class="emoji">🏢</span>主题简介</div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 3 · 公司画像</div>
+        <div class="tweet-body">
+            <p>Day AI，2023 年成立于马萨诸塞州 Winchester（不在硅谷——这本身就是一种姿态），约 35 人团队。</p>
+            <p>融资轨迹：2024 年 6 月 $4M 种子轮（Sequoia 领投），2026 年 2 月 $20M Series A（Sequoia 再次领投，Greenoaks / Conviction / Sound Ventures / Permanent Capital 跟投），累计 $24M。</p>
+            <p>核心数据：120+ 客户闭门测试 15 个月后 2026 年 2 月正式 GA。Pat Grady（Sequoia 合伙人）加入董事会。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 4 · 创始人的自我颠覆</div>
+        <div class="tweet-body">
+            <p>Christopher O'Donnell 在 HubSpot 待了十年，负责构建 HubSpot CRM 和 Sales Hub——正是帮助 HubSpot 上市的核心产品。他还联合创立了 ProfitWell（2022 年以 $200M 被 Paddle 收购）。</p>
+            <p>联合创始人 Michael Pici 是 HubSpot 的销售与产品负责人。</p>
+            <p>他们的赌注有一个非常具体的形状：他们看着生成式 AI 在"阅读混乱的人类对话"上变得足够好，恰好在这一刻，CRM 的核心弱点——依赖人把对话转录成字段——变得可以修复了。</p>
+            <p>他们没有在 CRM 上加 AI 功能。他们问的是：<span class="highlight">如果 CRM 从第一行代码就假设 AI 存在，它会长什么样？</span></p>
+        </div>
+    </div>
+
+    <!-- 公司战略 -->
+    <div class="section-title"><span class="emoji">📦</span>公司战略</div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 5 · 替换派路线：从零重建 CRM</div>
+        <div class="tweet-body">
+            <p>Day AI 走的是"替换派"路线——不是在 Salesforce 上加 AI，而是从零重建一个为 AI Agent 设计的 CRM。</p>
+            <p>O'Donnell 的原话：<span class="highlight">"You can't just bolt new AI onto Legacy CRM. CRM has become a rigid, incomplete set of customer data. It was built to store information on business cards and proposals, not generate productivity, insights, and alignment from massive amounts of unstructured conversation data."</span></p>
+            <p>这个判断的关键洞察是：传统 CRM 的数据模型是为"结构化输入"设计的——字段、下拉菜单、复选框。但客户关系的真实信息存在于"非结构化对话"中——邮件、通话、Slack。AI 时代需要全新的数据模型来承载这些。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 6 · CRMx：定义新品类</div>
+        <div class="tweet-body">
+            <p>Day AI 把自己的产品品类命名为 CRMx——"x" 代表 context（上下文）。</p>
+            <p>传统 CRM 记录"发生了什么"：一笔交易关闭了、一次会议发生了、一份合同续约了。</p>
+            <p>CRMx 捕获"为什么发生"：交易为什么关闭？过程中出现了哪些异议？哪些关系真正起了作用？每一次互动、每一个信号、每一个数据点，加上连接它们的推理链。</p>
+            <p>这是让 AI 能像人一样理解你的业务的基础——不只是数据，是数据之间的因果关系。O'Donnell 说今天的 CRM 无法回答"我们最好的销售好在哪里"这样的问题，因为它们缺乏上下文。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 7 · 定价革命：按 Assistant 收费，不按人头收费</div>
+        <div class="tweet-body">
+            <p>Day AI 的定价模型直接挑战 SaaS 的 per-seat 范式：</p>
+            <p><span class="highlight">按 AI Assistant 收费</span>，而不是按人类座位收费。无限人类用户可以免费查看。</p>
+            <p>这意味着一个 15 人团队如果只有 3 人驱动 pipeline，Day AI 可能比传统 CRM 便宜得多。成本与头_count 解耦，与 AI 产出挂钩。</p>
+            <p>更重要的是未来的定价暗示：Day AI 正在引入消费式定价——按 AI Agent 完成的工作量收费，而不是固定月费。这是从"软件订阅"到"AI 劳动力"的范式迁移。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 8 · 三幕历史叙事</div>
+        <div class="tweet-body">
+            <p>Day AI 把 CRM 的颠覆讲成了一个三幕故事，这个叙事本身就是融资利器：</p>
+            <p>第一幕：Salesforce 工业化了云端 CRM——把软件搬到云上，按席位收费</p>
+            <p>第二幕：HubSpot 普及了 SMB CRM——让中小企业也能用，简化操作</p>
+            <p>第三幕：AI 解锁了"解压缩的、叙事优先"的 CRM 模型——这在手动数据录入时代是不可行的</p>
+            <p>O'Donnell 和 Pici 恰好是第二幕的作者，现在他们要写第三幕。<span class="highlight">这不是外部挑战者的叙事，这是内部颠覆者的叙事</span>——"我们建了它，我们知道它哪里错了，我们知道怎么修。"</p>
+        </div>
+    </div>
+
+    <!-- 产品战略 -->
+    <div class="section-title"><span class="emoji">🧩</span>产品战略</div>
+
+    <div class="product-evo">
+        <h3>Day AI 产品演进路线</h3>
+        <svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="dayGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#0891b2;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#0d9488;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            <!-- Timeline line -->
+            <line x1="60" y1="150" x2="620" y2="150" stroke="#e2e8f0" stroke-width="3" />
+            <line x1="60" y1="150" x2="620" y2="150" stroke="url(#dayGrad1)" stroke-width="3" />
+
+            <!-- Phase 1: 2023 Q2 -->
+            <circle cx="80" cy="150" r="8" fill="#0891b2" />
+            <text x="80" y="125" text-anchor="middle" font-size="11" fill="#0891b2" font-weight="600">2023 Q2</text>
+            <text x="80" y="180" text-anchor="middle" font-size="12" fill="#0f172a" font-weight="600">创立</text>
+            <text x="80" y="195" text-anchor="middle" font-size="10" fill="#64748b">离开 HubSpot</text>
+            <text x="80" y="208" text-anchor="middle" font-size="10" fill="#64748b">"不为 AI 加 copilot"</text>
+
+            <!-- Phase 2: 2024 Q2 -->
+            <circle cx="220" cy="150" r="8" fill="#0891b2" />
+            <text x="220" y="125" text-anchor="middle" font-size="11" fill="#0891b2" font-weight="600">2024 Q2</text>
+            <text x="220" y="180" text-anchor="middle" font-size="12" fill="#0f172a" font-weight="600">$4M 种子轮</text>
+            <text x="220" y="195" text-anchor="middle" font-size="10" fill="#64748b">Sequoia 领投</text>
+            <text x="220" y="208" text-anchor="middle" font-size="10" fill="#64748b">120 客户闭门测试</text>
+
+            <!-- Phase 3: 2025 -->
+            <circle cx="360" cy="150" r="8" fill="#0891b2" />
+            <text x="360" y="125" text-anchor="middle" font-size="11" fill="#0891b2" font-weight="600">2025 全年</text>
+            <text x="360" y="180" text-anchor="middle" font-size="12" fill="#0f172a" font-weight="600">闭门打磨</text>
+            <text x="360" y="195" text-anchor="middle" font-size="10" fill="#64748b">Context Graph 架构</text>
+            <text x="360" y="208" text-anchor="middle" font-size="10" fill="#64748b">EAV 写入路径</text>
+
+            <!-- Phase 4: 2026 Q1 -->
+            <circle cx="500" cy="150" r="8" fill="#0891b2" />
+            <text x="500" y="125" text-anchor="middle" font-size="11" fill="#0891b2" font-weight="600">2026 Q1</text>
+            <text x="500" y="180" text-anchor="middle" font-size="12" fill="#0f172a" font-weight="600">$20M A 轮 + GA</text>
+            <text x="500" y="195" text-anchor="middle" font-size="10" fill="#64748b">CRMx 正式发布</text>
+            <text x="500" y="208" text-anchor="middle" font-size="10" fill="#64748b">Pat Grady 入董事会</text>
+
+            <!-- Phase 5: 2026 Q2+ -->
+            <circle cx="610" cy="150" r="8" fill="#67e8f9" stroke="#0891b2" stroke-width="2" />
+            <text x="610" y="125" text-anchor="middle" font-size="11" fill="#0891b2" font-weight="600">2026 Q2+</text>
+            <text x="610" y="180" text-anchor="middle" font-size="12" fill="#0f172a" font-weight="600">全 GTM 扩展</text>
+            <text x="610" y="195" text-anchor="middle" font-size="10" fill="#64748b">MCP / SDK 开放</text>
+            <text x="610" y="208" text-anchor="middle" font-size="10" fill="#64748b">消费式定价</text>
+
+            <!-- Bottom annotations -->
+            <rect x="60" y="235" width="560" height="45" rx="8" fill="#ecfeff" stroke="#a5f3fc" />
+            <text x="340" y="252" text-anchor="middle" font-size="11" fill="#0891b2" font-weight="600">核心演进逻辑</text>
+            <text x="340" y="268" text-anchor="middle" font-size="10" fill="#64748b">System of Record → System of Delay → System of Action</text>
+            <text x="340" y="278" text-anchor="middle" font-size="9" fill="#94a3b8">手动录入 → 环境捕获 → 对话式交互</text>
+        </svg>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 9 · Context Graph：为 Agent 构建的可推理数据模型</div>
+        <div class="tweet-body">
+            <p>Day AI 的核心资产是 Context Graph——一个专为 AI Agent 导航设计的上下文图谱，而不是为人设计的表单数据库。</p>
+            <p>传统 CRM 的数据模型：联系人→公司→机会→活动，扁平表结构，人需要手动关联。</p>
+            <p>Context Graph 的数据模型：每一次互动、每一个信号、每一个数据点，加上连接它们的推理链。Agent 可以遍历整个图谱来回答"哪些顶级账户在显示早期流失信号，为什么？"——几秒钟出答案，而不是分析师花一周连三张表。</p>
+            <p>护城河不是 UI，不是功能——是高信号客户上下文与显式溯源的聚合。模型越好，Context Graph 越有价值。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 10 · 零手动录入：环境智能捕获</div>
+        <div class="tweet-body">
+            <p>Day AI 的数据采集方式是对 SaaS 的根本性颠覆：</p>
+            <p>传统 CRM：人打开界面→手动填写字段→点击保存。数据是"录入"的。</p>
+            <p>Day AI：系统自动监听 Gmail/Outlook 邮件、Zoom/Meet/Teams 通话、Slack 对话、日历事件——LLM 决定创建和更新哪些记录。数据是"捕获"的。</p>
+            <p>效果：CRM 变成了一个"已经填满的 CRM"——每个关系自动分类和摘要，你可以快速构建投资人列表、销售前景列表或当前客户列表，而不需要告诉 Day AI 谁是谁。在正确的时间提醒你跟进，不需要手动创建任务。</p>
+            <p>这是从"人服务软件"到"软件服务人"的本质翻转。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 11 · EAV 写入路径与信任机制</div>
+        <div class="tweet-body">
+            <p>AI 自动生成记录最大的顾虑是信任——AI 写错了怎么办？Day AI 的架构回答是 <span class="highlight">EAV（Entity-Attribute-Value）写入路径</span>：</p>
+            <p>每一个事实——无论是数据富化、LLM 推断还是人类修正——都存储在 EAV 存储中。调解视图将人类修正的排名高于机器推断。</p>
+            <p>这意味着：你做的每一次修正都是持久的，不会在下一次数据摄入时被覆盖。这是 AI 原生 CRM 类别中对信任问题最具体的回答。</p>
+            <p>Materialize 和 Inngest 的工程案例研究对 Day AI 的 CQRS 架构做了异常透明的分析——在同类产品中，这种工程透明度很罕见。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 12 · 对话式界面：不是表单，是聊天</div>
+        <div class="tweet-body">
+            <p>Day AI 的界面组织围绕"对话"和"助手"，而不是"表单"。用户用自然语言提问，CRMx 跨整个业务推理来回答。</p>
+            <p>三个工具折叠成一个界面：会议助手 + CRM + 知识库——过去需要三个标签页的工具，现在在一个地方。</p>
+            <p>O'Donnell 的亲身使用场景（也是最好的产品演示）：在 Sequoia 董事会上，他的 Day AI Assistant 坐在旁边。有人提问时他不记下来追后查——直接问"我们哪些顶级账户在显示早期流失信号，为什么？"几秒后得到答案：三个风险账户、干系人参与度的具体变化、未解决问题的时间线、每个账户的推荐下一步。</p>
+            <p>这让会议从"为过去记账"变成"塑造未来"。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 13 · 双模式部署：替换或并行</div>
+        <div class="tweet-body">
+            <p>Day AI 的部署策略精准覆盖两类客户：</p>
+            <p><span class="highlight">创业公司</span>：Day AI 完全替换你的 CRM——从第一天就没有 Salesforce/HubSpot，直接用 AI 原生架构</p>
+            <p><span class="highlight">扩张期公司</span>：Day AI 可以与现有 CRM 并行运行——把所有客户上下文统一到一个地方，同时不中断现有流程</p>
+            <p>这种双模式是聪明的 GTM 策略：先吃创业公司市场（低摩擦、高增长），同时不放弃大企业（渐进式迁移）。如果下一代创业公司从第一天就不用 Salesforce，那就是长期最大的结构性威胁。</p>
+        </div>
+    </div>
+
+    <!-- 组织文化 -->
+    <div class="section-title"><span class="emoji">🏗️</span>组织文化与未来</div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 14 · CRM 构建者的自我颠覆</div>
+        <div class="tweet-body">
+            <p>O'Donnell 和 Pici 的身份本身就是 Day AI 最强的叙事资产。</p>
+            <p>花了十年构建世界级 CRM，然后着手让它过时——这需要一种特定的勇气。他们在 HubSpot 的工作让他们比任何人都了解传统 CRM 的架构限制。他们不是从外部猜测 CRM 哪里错了——他们是从内部知道。</p>
+            <p>Sequoia 合伙人 Pat Grady 两次领投并加入董事会，这本身就是对"创始人基因"的背书。Sequoia 在 CRM 领域只下了 Day AI 一个注——在 Rox AI、Lightfield、Attio 等一堆竞争者中选择了"自我颠覆者"。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 15 · 集成生态：Slack + MCP + SDK</div>
+        <div class="tweet-body">
+            <p>Day AI 的扩展策略不是做更多功能，而是做更深的嵌入：</p>
+            <p><span class="highlight">Slack 优先工作流</span>：在 Slack 里 @DayAI 就可以摘要、更新机会、创建行动——在你已有的对话中工作</p>
+            <p><span class="highlight">MCP（Model Context Protocol）集成</span>：让 Claude Desktop 等外部 AI 助手能安全连接到 Day AI 的业务数据——Day AI 成为 Agent 生态的数据源</p>
+            <p><span class="highlight">SDK 开发者接口</span>：构建自定义应用，通过 MCP 工具和 OAuth 查询联系人、机会、会议和转录</p>
+            <p>这本质上是把 Day AI 从"CRM 产品"升级为"Agent 基础设施层"——不只自己用 Context Graph，还让其他 Agent 也能访问。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 16 · 关键风险</div>
+        <div class="tweet-body">
+            <p>① <span class="highlight">信任问题</span>：AI 生成的记录是"当前但未验证的"——Altis 调研显示 Day AI 的数据质量排名垫底。人类修正可以覆盖 LLM 推断，但如果用户不修正呢？</p>
+            <p>② <span class="highlight">早期阶段</span>：120 客户 vs Attio 的 5000 客户，没有 G2 评价，没有公开定价金额——这是更早期的赌注</p>
+            <p>③ <span class="highlight">规模挑战</span>：对创业公司可以完全替换 CRM，但大企业的 RevOps 需求成熟后可能"毕业"回 HubSpot/Salesforce——Attio 已经在经历这个痛点</p>
+            <p>④ <span class="highlight">Sequoia 的压力</span>：两轮领投意味着高期望——如果 12 个月内 ARR 增速不够快，可能面临降估值融资</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 17 · 与 Rox AI 的路线对比</div>
+        <div class="tweet-body">
+            <p>Day AI 和 Rox AI 是 AI 原生 CRM 赛道最值得对比的两条路线：</p>
+            <p><span class="highlight">Rox AI（覆盖派）</span>：不换 CRM，Agent 架空它。面向 Global 2000 大企业，仓库原生，$1.2B 估值。核心赌注：仓库取代 CRM 成为 System of Record。</p>
+            <p><span class="highlight">Day AI（替换派）</span>：从零重建 CRM。面向创业公司和 SMB，Context Graph 原生，$24M 融资。核心赌注：AI 生成记录比人工录入更准确、更及时。</p>
+            <p>两条路线的共同敌人是 Salesforce。但覆盖派让 CRM 退化成数据库，替换派让 CRM 直接消失。谁会赢？可能两者都会——不同规模的企业需要不同的答案。</p>
+        </div>
+    </div>
+
+    <div class="tweet">
+        <div class="tweet-label">推 18 · 终局展望</div>
+        <div class="tweet-body">
+            <p>Day AI 的终极愿景：不只是销售，而是整个 GTM 运动的基础设施——从首次接触到续约，全部由 AI 编排。</p>
+            <p>如果成功，企业 CRM 架构将从"人操作 SaaS 界面录入数据"变成"AI Agent 自动捕获对话→构建上下文→推理决策→执行行动"。人只负责与客户对话，其余全部由 AI 完成。</p>
+            <p>这是 O'Donnell 说的"bringing clarity back"的完整含义——创业者在第一天的清晰度和控制感，不必随着规模扩张而消失。CRM 从"系统的延迟"变回"系统的行动"。</p>
+            <p>对 SaaS 行业的启示：当一个品类的核心价值（数据录入与管理）被 AI 完全自动化，这个品类的 SaaS 产品就失去了存在意义。Day AI 不只是在挑战 Salesforce——它在挑战"人需要操作软件"这个 SaaS 的底层假设。</p>
+        </div>
+    </div>
+
+    <div class="report-footer">
+        InsightView · Day AI 如何挑战 SaaS · 2026.08.09
+    </div>
+</div>
+</body>
+</html>
